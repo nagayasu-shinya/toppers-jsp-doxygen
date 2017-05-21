@@ -11,49 +11,49 @@
  *  Copyright (C) 2007 by KURUSUGAWA Electronics Industry Inc, JAPAN
  *  Copyright (C) 2008 by Takahisa Yokota
  *
- *  �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ�狼��Free Software Foundation 
- *  �ˤ�äƸ�ɽ����Ƥ��� GNU General Public License �� Version 2 �˵�
- *  �Ҥ���Ƥ���������������˸¤ꡤ�ܥ��եȥ��������ܥ��եȥ�����
- *  ����Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ������ۡʰʲ���
- *  ���ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
- *      ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
- *      ����������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
- *      �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
- *      ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
- *      �ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
- *        �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
- *        ��𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
- *      ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  によって公表されている GNU General Public License の Version 2 に記
+ *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+ *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+ *  利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
  * 
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- *  ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����Ŭ�Ѳ�ǽ����
- *  �ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ����������Ѥˤ��ľ
- *  ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ�����ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+ *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+ *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
  *  @(#) $Id: mcfuart.c,v 1.3 2005/07/06 00:45:07 honda Exp $
  */
 
 /*
- *   COLDFIRE��¢UART�� �ʰץɥ饤��
+ *   COLDFIRE内蔵UART用 簡易ドライバ
  */
 
 #include <s_services.h>
 #include "mcfuart.h"
 
 /*
- *  ���ꥢ��I/O�ݡ��ȴ����֥��å������
+ *  シリアルI/Oポート管理ブロックの定義
  */
-/* �����ϥݡ��Ȥ������sys_config.c */
-/* ����ߥ٥����ֹ�������hw_serial.h */
-/* �����֥��å��������mcfuart.c */
+/* 入出力ポートの設定はsys_config.c */
+/* 割込みベクタ番号の設定はhw_serial.h */
+/* 管理ブロックの設定はmcfuart.c */
 
 #ifndef GDB_STUB
 
@@ -74,28 +74,28 @@ const SIOPINIB siopinib_table[TNUM_PORT] = {
 
 #if defined(TTM)
 /*
- *  ���ꥢ��I/O�ݡ��ȴ����֥��å������
- *  ��2ch���ݡ��Ȥ˳�ĥ������Ͻ�����ѤΥǡ�����ޤ��
+ *  シリアルI/Oポート管理ブロックの定義
+ *  　2chサポートに拡張する場合は初期値用のデータも含める
  */
 struct sio_port_control_block
 {
-	VP_INT exinf;				/* ��ĥ���� */
-	BOOL openflag;				/* �����ץ�Ѥߥե饰 */
+	VP_INT exinf;				/* 拡張情報 */
+	BOOL openflag;				/* オープン済みフラグ */
 };
 #endif
 /*
- *  ���ꥢ��I/O�ݡ��ȴ����֥��å��Υ��ꥢ
+ *  シリアルI/Oポート管理ブロックのエリア
  */
 static SIOPCB siopcb_table[TNUM_PORT];
 
 /*
- *  ���ꥢ��I/O�ݡ���ID��������֥��å�����Ф�����Υޥ���
+ *  シリアルI/OポートIDから管理ブロックを取り出すためのマクロ
  */
 #define INDEX_SIOP(siopid)	((UINT)((siopid) - 1))
 #define get_siopcb(siopid)	(&(siopcb_table[INDEX_SIOP(siopid)]))
 
 /*
- *  ʸ��������Ǥ��뤫��
+ *  文字を受信できるか？
  */
 Inline BOOL
 mcfuart_getready (SIOPCB * siopcb)
@@ -104,7 +104,7 @@ mcfuart_getready (SIOPCB * siopcb)
 }
 
 /*
- *  ʸ���������Ǥ��뤫��
+ *  文字を送信できるか？
  */
 Inline BOOL
 mcfuart_putready (SIOPCB * siopcb)
@@ -114,7 +114,7 @@ mcfuart_putready (SIOPCB * siopcb)
 }
 
 /*
- *  ��������ʸ���μ�Ф�
+ *  受信した文字の取出し
  */
 Inline char
 mcfuart_getchar (SIOPCB * siopcb)
@@ -125,7 +125,7 @@ mcfuart_getchar (SIOPCB * siopcb)
 }
 
 /*
- *  ��������ʸ���ν����
+ *  送信する文字の書込み
  */
 Inline void
 mcfuart_putchar (SIOPCB * siopcb, char c)
@@ -135,7 +135,7 @@ mcfuart_putchar (SIOPCB * siopcb, char c)
 }
 
 /*
- *  SIO�ɥ饤�Фν�����롼����
+ *  SIOドライバの初期化ルーチン
  */
 void
 mcfuart_initialize ()
@@ -143,7 +143,7 @@ mcfuart_initialize ()
 	SIOPCB *siopcb;
 	UINT i;
         /*
-	 *  ���륢��I/O�ݡ��ȴ����֥��å��ν����
+	 *  シルアルI/Oポート管理ブロックの初期化
 	 */
 	for (siopcb = siopcb_table, i = 0; i < TNUM_PORT; siopcb++, i++) {
 		siopcb->openflag = FALSE;
@@ -152,7 +152,7 @@ mcfuart_initialize ()
 }
 
 /*
- *  �����ץ󤷤Ƥ���ݡ��Ȥ����뤫��
+ *  オープンしているポートがあるか？
  */
 BOOL
 mcfuart_openflag (ID siopid)
@@ -161,14 +161,14 @@ mcfuart_openflag (ID siopid)
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��ȤΥ����ץ�
+ *  シリアルI/Oポートのオープン
  */
 SIOPCB *
 mcfuart_opn_por (ID siopid, VP_INT exinf)
 {
         volatile int i;
 	SIOPCB *siopcb = get_siopcb(siopid);
-        // �������
+        // 送信停止
   	sil_wrb_mem ((VB *) (siopcb->siopinib->reg_base + MCF_UART_UCR), (VB) (MCF_UART_UCR_MISC_RR));
     	sil_wrb_mem ((VB *) (siopcb->siopinib->reg_base + MCF_UART_UCR), (VB) (MCF_UART_UCR_MISC_RT));
       	sil_wrb_mem ((VB *) (siopcb->siopinib->reg_base + MCF_UART_UCR), (VB) (MCF_UART_UCR_MISC_RRC));
@@ -180,11 +180,11 @@ mcfuart_opn_por (ID siopid, VP_INT exinf)
         sil_wrb_mem ((VB *) (siopcb->siopinib->reg_base + MCF_UART_UBG1), (VB) (siopcb->siopinib->brr >> 8));
     	sil_wrb_mem ((VB *) (siopcb->siopinib->reg_base + MCF_UART_UBG2), (VB) (siopcb->siopinib->brr & 0x00ff));
 
-         /*  ����ߵ���  */
+         /*  割込み許可  */
         siopcb->imr = (VB)MCF_UART_UIMR_RXRDY;
     	sil_wrb_mem ((VB *) (siopcb->siopinib->reg_base + MCF_UART_UIMR), (VB) (siopcb->imr));
 
-        /*  ����������  */
+        /*  送受信許可  */
   	sil_wrb_mem ((VB *) (siopcb->siopinib->reg_base + MCF_UART_UCR), (VB) (MCF_UART_UCR_TC_EN | MCF_UART_UCR_RC_EN));
 
 	siopcb->exinf = exinf;
@@ -199,15 +199,15 @@ mcfuart_opn_por (ID siopid, VP_INT exinf)
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��ȤΥ�������
+ *  シリアルI/Oポートのクローズ
  */
 void
 mcfuart_cls_por (SIOPCB * siopcb)
 {
-	/*  �������ػ�  */
+	/*  送受信禁止  */
   	sil_wrb_mem ((VB *) (siopcb->siopinib->reg_base + MCF_UART_UCSR),
 				 (VB) (MCF_UART_UCR_TC_DIS | MCF_UART_UCR_RC_DIS));
-	/*  ����߶ػ�  */
+	/*  割込み禁止  */
 	sil_wrb_mem ((VB *) (siopcb->siopinib->reg_base + MCF_UART_UIMR), 0);
         if (siopcb->siopinib->reg_base == (IPSBAR + 0x00000200)) {    
           sil_wrw_mem (MCF_INTC_IMRL(MCF_INTC0), sil_rew_mem(MCF_INTC_IMRL(MCF_INTC0)) | (1 << TBIT_GP0));
@@ -218,7 +218,7 @@ mcfuart_cls_por (SIOPCB * siopcb)
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��Ȥؤ�ʸ������
+ *  シリアルI/Oポートへの文字送信
  */
 BOOL
 mcfuart_snd_chr (SIOPCB * siopcb, char c)
@@ -231,7 +231,7 @@ mcfuart_snd_chr (SIOPCB * siopcb, char c)
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��Ȥ����ʸ������
+ *  シリアルI/Oポートからの文字受信
  */
 INT
 mcfuart_rcv_chr (SIOPCB * siopcb)
@@ -243,16 +243,16 @@ mcfuart_rcv_chr (SIOPCB * siopcb)
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��Ȥ���Υ�����Хå��ε���
+ *  シリアルI/Oポートからのコールバックの許可
  */
 void
 mcfuart_ena_cbr (SIOPCB * siopcb, UINT cbrtn)
 {
 	switch (cbrtn) {
-	case SIO_ERDY_SND:			/* �����������׵����� */
+	case SIO_ERDY_SND:			/* 送信割り込み要求を許可 */
                 siopcb->imr |= MCF_UART_UIMR_TXRDY;
 		break;
-	case SIO_ERDY_RCV:			/* �����������׵����� */
+	case SIO_ERDY_RCV:			/* 受信割り込み要求を許可 */
                 siopcb->imr |= MCF_UART_UIMR_RXRDY;
 		break;
 	}
@@ -260,16 +260,16 @@ mcfuart_ena_cbr (SIOPCB * siopcb, UINT cbrtn)
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��Ȥ���Υ�����Хå��ζػ�
+ *  シリアルI/Oポートからのコールバックの禁止
  */
 void
 mcfuart_dis_cbr (SIOPCB * siopcb, UINT cbrtn)
 {
 	switch (cbrtn) {
-	case SIO_ERDY_SND:			/* �����������׵��ػ� */
+	case SIO_ERDY_SND:			/* 送信割り込み要求を禁止 */
                 siopcb->imr &= ~MCF_UART_UIMR_TXRDY;
 		break;
-	case SIO_ERDY_RCV:			/* �����������׵��ػ� */
+	case SIO_ERDY_RCV:			/* 受信割り込み要求を禁止 */
                 siopcb->imr &= ~MCF_UART_UIMR_RXRDY;
 		break;
 	}
@@ -277,7 +277,7 @@ mcfuart_dis_cbr (SIOPCB * siopcb, UINT cbrtn)
 }
 
 /*
- * �ݡ���󥰤ˤ��ʸ��������
+ * ポーリングによる文字の送信
  */
 void
 mcfuart_putc_pol (ID portid, char c)
@@ -287,7 +287,7 @@ mcfuart_putc_pol (ID portid, char c)
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��Ȥ��Ф�����������߽���
+ *  シリアルI/Oポートに対する送信割込み処理
  */
 Inline void
 mcfuart_isr_siop (SIOPCB * siopcb)
@@ -296,19 +296,19 @@ mcfuart_isr_siop (SIOPCB * siopcb)
         uisr &= siopcb->imr;
 	if ((uisr & MCF_UART_UISR_TXRDY) && mcfuart_putready (siopcb)) {
 		/*
-		 *  �������Υ�����Хå��롼�����ƤӽФ���
+		 *  送信通知コールバックルーチンを呼び出す．
 		 */
 		mcfuart_ierdy_snd (siopcb->exinf);
 	}
 	else if ((uisr & MCF_UART_UISR_RXRDY) && mcfuart_getready (siopcb)) {
 		/*
-		 *  �������Υ�����Хå��롼�����ƤӽФ���
+		 *  送信通知コールバックルーチンを呼び出す．
 		 */
 		mcfuart_ierdy_rcv (siopcb->exinf);
         }
 }
 
-/* �����߸��� */
+/* 割り込み検出 */
 void
 mcfuart_isr (void)
 {
@@ -318,7 +318,7 @@ mcfuart_isr (void)
 }
 
 #if TNUM_PORT >= 2
-/* �����߸��� */
+/* 割り込み検出 */
 void
 mcfuart_isr2 (void)
 {

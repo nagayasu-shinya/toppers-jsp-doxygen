@@ -8,36 +8,36 @@
  *  Copyright (C) 2004-2010 by Embedded and Real-Time Systems Laboratory
  *              Graduate School of Information Science, Nagoya Univ., JAPAN
  * 
- *  �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ������������˸¤ꡤ�ܥ��եȥ���
- *  �����ܥ��եȥ���������Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ�
- *  �����ۡʰʲ������ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭�����
- *      ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ�����
- *      ��������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻���
- *      �Ǥ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ����Ѽԥ�
- *      �˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ�����̵��
- *      �ڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻���
- *      �Ǥ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ������������ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭������
- *        ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ���
- *        �𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»��
- *      ����⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ��ޤ���
- *      �ܥ��եȥ������Υ桼���ޤ��ϥ���ɥ桼������Τ����ʤ���ͳ�˴��
- *      �����ᤫ��⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+ *  上記著作権者は，以下の (1)〜(4) の条件を満たす場合に限り，本ソフトウェ
+ *  ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改変・
+ *  再配布（以下，利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作権
+ *      表示，この利用条件および下記の無保証規定が，そのままの形でソース
+ *      コード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使用
+ *      できる形で再配布する場合には，再配布に伴うドキュメント（利用者マ
+ *      ニュアルなど）に，上記の著作権表示，この利用条件および下記の無保
+ *      証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使用
+ *      できない形で再配布する場合には，次のいずれかの条件を満たすこと．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著作
+ *        権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに報
+ *        告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損害
+ *      からも，上記著作権者およびTOPPERSプロジェクトを免責すること．また，
+ *      本ソフトウェアのユーザまたはエンドユーザからのいかなる理由に基づ
+ *      く請求からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
  *
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ���
- *  ��TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����λ�����Ū���Ф�
- *  ��Ŭ������ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ�����������
- *  �ˤ��ľ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ����
- *  ��ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者およ
+ *  びTOPPERSプロジェクトは，本ソフトウェアに関して，特定の使用目的に対す
+ *  る適合性も含めて，いかなる保証も行わない．また，本ソフトウェアの利用
+ *  により直接的または間接的に生じたいかなる損害に関しても，その責任を負
+ *  わない．
  */
 
 /*
- *  �ץ����å���¸�⥸�塼���Xstormy16�ѡ�
+ *  プロセッサ依存モジュール（Xstormy16用）
  */
 
 #include "jsp_kernel.h"
@@ -47,18 +47,18 @@
 #include <cpu_sfrs.h>
 
 /*
- *  ������ƥ��å��μ���
+ *  タイムティックの周期
  */
 UINT _kernel_tic_nume = 1u ;
 
 /*
- *  �ץ����å���¸�ν����
+ *  プロセッサ依存の初期化
  */
 void
 cpu_initialize(void)
 {
                                 /*
-                                 *  �㳰�ε���
+                                 *  例外の許可
                                  */
     __UNLOCK_EXCP() ;               /* unlock writing EXCPL/EXCPH */
     __SFR_BITSET( __EXCPL, 0 ) ;    /* enable invalid instruction exception */
@@ -66,23 +66,23 @@ cpu_initialize(void)
     __SFR_BITSET( __EXCPL, 4 ) ;    /* enable outrange access exception */
     __LOCK_EXCP() ;                 /* lock writing EXCPL/EXCPH */
                                 /*
-                                 *  �����ͥ륿���ޡ��ε�ư
+                                 *  カーネルタイマーの起動
                                  */
     hw_timer_initialize() ;
 }
 
 /*
- *  �ץ����å���¸�ν�λ����
+ *  プロセッサ依存の終了処理
  */
 void
 cpu_terminate(void)
 {
                                 /*
-                                 *  �����ͥ륿���ޡ������
+                                 *  カーネルタイマーの停止
                                  */
     hw_timer_terminate() ;
                                 /*
-                                 *  �㳰�ζػ�
+                                 *  例外の禁止
                                  */
     __UNLOCK_EXCP() ;               /* unlock writing EXCPL/EXCPH */
     __SFR_BITCLR( __EXCPL, 0 ) ;    /* disable invalid instruction exception */
@@ -92,7 +92,7 @@ cpu_terminate(void)
 }
 
 /*
- *  �����ߥϥ�ɥ����Ͽ
+ *  割り込みハンドラの登録
  */
 void _kernel_define_inh(INHNO inhno, FP inthdr)
 {
@@ -103,7 +103,7 @@ void _kernel_define_inh(INHNO inhno, FP inthdr)
 }
 
 /*
- *  �㳰�ϥ�ɥ����Ͽ
+ *  例外ハンドラの登録
  */
 void _kernel_define_exc(EXCNO excno, FP exchdr)
 {
@@ -114,7 +114,7 @@ void _kernel_define_exc(EXCNO excno, FP exchdr)
 }
 
 /*
- *  �������åȥ����ƥ��ʸ������
+ *  ターゲットシステムの文字出力
  */
 void sys_putc(char c)
 {
@@ -122,7 +122,7 @@ void sys_putc(char c)
 }
 
 /*
- *  ���������Ԥ�
+ *  微少時間待ち
  */
 void sil_dly_nse( UINT dlytim )
 {

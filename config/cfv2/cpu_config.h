@@ -8,111 +8,111 @@
  *  Copyright (C) 2007 by KURUSUGAWA Electronics Industry Inc, JAPAN
  *  Copyright (C) 2008 by Takahisa Yokota
  * 
- *  �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ�狼��Free Software Foundation 
- *  �ˤ�äƸ�ɽ����Ƥ��� GNU General Public License �� Version 2 �˵�
- *  �Ҥ���Ƥ���������������˸¤ꡤ�ܥ��եȥ��������ܥ��եȥ�����
- *  ����Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ������ۡʰʲ���
- *  ���ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
- *      ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
- *      ����������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
- *      �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
- *      ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
- *      �ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
- *        �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
- *        ��𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
- *      ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  によって公表されている GNU General Public License の Version 2 に記
+ *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+ *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+ *  利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
  * 
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- *  ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����Ŭ�Ѳ�ǽ����
- *  �ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ����������Ѥˤ��ľ
- *  ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ�����ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+ *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+ *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
  *  @(#) $Id: cpu_config.h,v 1.14 2003/07/08 14:57:12 hiro Exp $
  */
 
 /*
- *	�ץ����å���¸�⥸�塼���CFV2�ѡ�
+ *	プロセッサ依存モジュール（CFV2用）
  *
- *  ���Υ��󥯥롼�ɥե�����ϡ�t_config.h �Τߤ��饤�󥯥롼�ɤ���롥
- *  ¾�Υե����뤫��ľ�ܥ��󥯥롼�ɤ��ƤϤʤ�ʤ���
+ *  このインクルードファイルは，t_config.h のみからインクルードされる．
+ *  他のファイルから直接インクルードしてはならない．
  */
 
 #ifndef _CPU_CONFIG_H_
 #define _CPU_CONFIG_H_
 
 /*
- *  �����ͥ����������̾�Υ�͡���
+ *  カーネルの内部識別名のリネーム
  */
 #include <cpu_rename.h>
 
 /*
- *  ���ͥǡ���ʸ�����ѥޥ��������
+ *  数値データ文字列化用マクロの定義
  */
 #include <util.h>
 
 /*
- *  �桼�����������
+ *  ユーザー定義情報
  */
 #include <user_config.h>
 
 /*
- *  �����ǽ�ʺǹ�ͥ����
+ *  設定可能な最高優先度
  */
 #ifdef GDB_STUB
-#define MAX_IPM  0x6	/* �����֤���ξ���ͥ����6��CPU���å�   */
+#define MAX_IPM  0x6	/* スタブありの場合は優先度6でCPUロック   */
 #else
-#define MAX_IPM  0x7	/* �����֤ʤ��ξ��Ϻǹ�ͥ���٤�CPU���å� */
+#define MAX_IPM  0x7	/* スタブなしの場合は最高優先度でCPUロック */
 #endif /*  GDB_STUB  */
 
 #define str_MAX_IPM  		TO_STRING(MAX_IPM)
 
 /*
- *  �ץ����å����ü�̿��Υ���饤��ؿ����
+ *  プロセッサの特殊命令のインライン関数定義
  */
 #ifndef _MACRO_ONLY
 #include <cpu_insn.h>
 #endif /* _MACRO_ONLY */
 
 /*
- *  chg_ipm/get_ipm �򥵥ݡ��Ȥ��뤫�ɤ��������
+ *  chg_ipm/get_ipm をサポートするかどうかの定義
  */
 #define	SUPPORT_CHG_IPM
 
 /*
- *  TCB ��Υե�����ɤΥӥå��������
+ *  TCB 中のフィールドのビット幅の定義
  *
- *  cpu_context.h ��������������쥬��Ȥ��������Ȥΰ�¸���δط��ǡ�
- *  cpu_context.h �ˤ�������ʤ���
+ *  cpu_context.h に入れる方がエレガントだが，参照の依存性の関係で，
+ *  cpu_context.h には入れられない．
  */
-#define	TBIT_TCB_TSTAT		8	/* tstat �ե�����ɤΥӥå��� */
-#define	TBIT_TCB_PRIORITY	8	/* priority �ե�����ɤΥӥå��� */
+#define	TBIT_TCB_TSTAT		8	/* tstat フィールドのビット幅 */
+#define	TBIT_TCB_PRIORITY	8	/* priority フィールドのビット幅 */
 
 #ifndef _MACRO_ONLY
 /*
- *  ����������ƥ����ȥ֥��å������
+ *  タスクコンテキストブロックの定義
  */
 typedef struct task_context_block {
-	VP	msp;		/* �����å��ݥ��� */
-	FP	pc;		/* �ץ�����५���� */
+	VP	msp;		/* スタックポインタ */
+	FP	pc;		/* プログラムカウンタ */
 } CTXB;
 
 /*
- *  ����ߥޥ������饤�֥��
+ *  割込みマスク操作ライブラリ
  *
- *  ����ߥޥ�����intmask�ˤϡ�IPM��Interrupt Priority Mask�ˤ�8�ӥå�
- *  ���˥��եȤ�����ΤǤ��롥
+ *  割込みマスク（intmask）は，IPM（Interrupt Priority Mask）を8ビット
+ *  左にシフトしたものである．
  */
 
 /*
- *  ���ߤγ���ߥޥ������ɽФ�
+ *  現在の割込みマスクの読出し
  */
 Inline UH
 current_intmask()
@@ -121,7 +121,7 @@ current_intmask()
 }
 
 /*
- *  ����ߥޥ���������
+ *  割込みマスクの設定
  */
 Inline void
 set_intmask(UH intmask)
@@ -130,12 +130,12 @@ set_intmask(UH intmask)
 }
 
 /*
- *  ����ߡ�CPU�㳰�ͥ��ȥ�����
+ *  割込み／CPU例外ネストカウンタ
  */
 extern UW	intnest;
 
 /*
- *  �����ƥ���ֻ���
+ *  システム状態参照
  */
 
 Inline BOOL
@@ -154,14 +154,14 @@ sense_lock()
 #define i_sense_lock	sense_lock
 
 /*
- *  CPU���å��Ȥ��β���ʥ���������ƥ������ѡ�
+ *  CPUロックとその解除（タスクコンテキスト用）
  *
- *  task_intmask �ϡ�chg_ipm �򥵥ݡ��Ȥ��뤿����ѿ���chg_ipm �򥵥ݡ�
- *  �Ȥ��ʤ����ˤϡ�task_intmask ����� 0 �ˤʤäƤ���ȹͤ���Ф褤��
+ *  task_intmask は，chg_ipm をサポートするための変数．chg_ipm をサポー
+ *  トしない場合には，task_intmask が常に 0 になっていると考えればよい．
  */
 
 #ifdef SUPPORT_CHG_IPM
-extern UH	task_intmask;	/* ����������ƥ����ȤǤγ���ߥޥ��� */
+extern UH	task_intmask;	/* タスクコンテキストでの割込みマスク */
 #endif /* SUPPORT_CHG_IPM */
 
 Inline void
@@ -175,8 +175,8 @@ t_unlock_cpu()
 {
 #ifdef SUPPORT_CHG_IPM
 	/*
-	 *  t_unlock_cpu ���ƤӽФ����Τ� CPU���å����֤ΤߤǤ��뤿
-	 *  �ᡤ����������� task_intmask ���񤭴���뤳�ȤϤʤ���
+	 *  t_unlock_cpu が呼び出されるのは CPUロック状態のみであるた
+	 *  め，処理の途中で task_intmask が書き換わることはない．
 	 */
 	set_intmask(task_intmask);
 #else /* SUPPORT_CHG_IPM */
@@ -185,10 +185,10 @@ t_unlock_cpu()
 }
 
 /*
- *  CPU���å��Ȥ��β�����󥿥�������ƥ������ѡ�
+ *  CPUロックとその解除（非タスクコンテキスト用）
  */
 
-extern UH	int_intmask;	/* �󥿥�������ƥ����ȤǤγ���ߥޥ��� */
+extern UH	int_intmask;	/* 非タスクコンテキストでの割込みマスク */
 
 Inline void
 i_lock_cpu()
@@ -196,9 +196,9 @@ i_lock_cpu()
 	UH	intmask;
 
 	/*
-	 *  ����ѿ� intmask ��ȤäƤ���Τϡ�current_intmask() ���
-	 *  ���ľ��˳���ߤ�ȯ��������ư���줿����ߥϥ�ɥ����
-	 *  int_intmask ���ѹ�������ǽ�������뤿��Ǥ��롥
+	 *  一時変数 intmask を使っているのは，current_intmask() を呼
+	 *  んだ直後に割込みが発生し，起動された割込みハンドラ内で
+	 *  int_intmask が変更される可能性があるためである．
 	 */
 	intmask = current_intmask();
 	disint();
@@ -212,52 +212,52 @@ i_unlock_cpu()
 }
 
 /*
- *  �������ǥ����ѥå���
+ *  タスクディスパッチャ
  */
 
 /*
- *  �ǹ�ͥ���̥������ؤΥǥ����ѥå���cpu_support.S��
+ *  最高優先順位タスクへのディスパッチ（cpu_support.S）
  *
- *  dispatch �ϡ�����������ƥ����Ȥ���ƤӽФ��줿�����ӥ����������
- *  ��ǡ�CPU���å����֤ǸƤӽФ��ʤ���Фʤ�ʤ���
+ *  dispatch は，タスクコンテキストから呼び出されたサービスコール処理
+ *  内で，CPUロック状態で呼び出さなければならない．
  */
 extern void	dispatch(void);
 
 /*
- *  ���ߤΥ���ƥ����Ȥ�ΤƤƥǥ����ѥå���cpu_support.S��
+ *  現在のコンテキストを捨ててディスパッチ（cpu_support.S）
  *
- *  exit_and_dispatch �ϡ�CPU���å����֤ǸƤӽФ��ʤ���Фʤ�ʤ���
+ *  exit_and_dispatch は，CPUロック状態で呼び出さなければならない．
  */
 extern void	exit_and_dispatch(void);
 
 #endif  /* _MACRO_ONLY */
 
 /*
- *  ����ߥϥ�ɥ顿CPU�㳰�ϥ�ɥ������
+ *  割込みハンドラ／CPU例外ハンドラの設定
  */
 
 /*
- *  �㳰�٥����ơ��֥�����
- *  �����ޥ���������
- *  ������KERNEL_HAS_A_VECTOR_TABLE
- *  �������������ͥ뤬�㳰�٥����ơ��֥�����
- *  ������SIO_RESERVED
- *  �����������ꥢ��ǥХ������ǥХå��ˤ�äƻ��Ѥ���Ƥ���
+ *  例外ベクタテーブルの定義
+ *  　　マクロの説明
+ *  　　　KERNEL_HAS_A_VECTOR_TABLE
+ *  　　　　カーネルが例外ベクタテーブルを持つ
+ *  　　　SIO_RESERVED
+ *  　　　　シリアルデバイスがデバッガによって使用されている
  */
 #ifndef _MACRO_ONLY
 
 #ifdef KERNEL_HAS_A_VECTOR_TABLE
-extern FP vector_table[];	/*  �㳰�٥����ơ��֥�  */
+extern FP vector_table[];	/*  例外ベクタテーブル  */
 #endif /* KERNEL_HAS_A_VECTOR_TABLE */
 
 typedef struct exc_vector_entry {
-	FP	exchdr;			/* �㳰�ϥ�ɥ�ε�ư���� */
+	FP	exchdr;			/* 例外ハンドラの起動番地 */
 } EXCVE;
 
 /*
- *  ����ߥϥ�ɥ������
+ *  割込みハンドラの設定
  *
- *  �٥��ȥ��ֹ� inhno �γ���ߥϥ�ɥ�ε�ư���Ϥ� inthdr �����ꤹ�롥
+ *  ベクトル番号 inhno の割込みハンドラの起動番地を inthdr に設定する．
  */
 Inline void
 define_inh(INHNO inhno, FP inthdr)
@@ -271,8 +271,8 @@ define_inh(INHNO inhno, FP inthdr)
 
 #ifdef KERNEL_HAS_A_VECTOR_TABLE
 
-/* SIO_RESERVED�ϻ��Ѥ��ʤ���sys_config.h�ǥ����Ȥˤ��Ƥ��� */
-/*#ifdef SIO_RESERVED	*//*  ���ꥢ������ߤ��򤱤�  */
+/* SIO_RESERVEDは使用しない。sys_config.hでコメントにしてある */
+/*#ifdef SIO_RESERVED	*//*  シリアル割り込みは避ける  */
 /*	if ((inhno != RXI0) && (inhno != TXI0))*/
 /*#endif *//* SIO_RESERVED */ 
 	vector_table[inhno] = inthdr;
@@ -283,9 +283,9 @@ define_inh(INHNO inhno, FP inthdr)
 }
 
 /*
- *  CPU�㳰�ϥ�ɥ������
+ *  CPU例外ハンドラの設定
  *
- *  �٥��ȥ��ֹ� excno ��CPU�㳰�ϥ�ɥ�ε�ư���Ϥ� exchdr �����ꤹ�롥
+ *  ベクトル番号 excno のCPU例外ハンドラの起動番地を exchdr に設定する．
  */
 Inline void
 define_exc(EXCNO excno, FP exchdr)
@@ -293,41 +293,41 @@ define_exc(EXCNO excno, FP exchdr)
 	define_inh(excno, exchdr);
 }
 
-/*  C����롼����δؿ�̾�������������Υ�٥������  
- *     kernel_cfg.c�ǻ���
+/*  C言語ルーチンの関数名から入口処理のラベルを生成  
+ *     kernel_cfg.cで使用
  */
 #define	INT_ENTRY(inthdr)	_kernel_##inthdr##_entry
 #define	EXC_ENTRY(exchdr)	_kernel_##exchdr##_entry
 
 
 /*
- *  ����ߥϥ�ɥ顿CPU�㳰�ϥ�ɥ�����������ζ�����ʬ
+ *  割込みハンドラ／CPU例外ハンドラの入口処理の共通部分
  *
- *	ColdFire�Ǥϡ�����ߤ�CPU�㳰�ΰ������ۤȤ��Ʊ���ʤΤǡ�
- *	���������Υޥ����ⶦ�̤�������Ƥ���
+ *	ColdFireでは、割込みとCPU例外の扱いがほとんど同じなので、
+ *	入口処理のマクロも共通に定義している
  *
- *��������
- *	label�����������Υ�٥�
- *	inthdr��C����롼�������Ƭ���ɥ쥹
- *	common_routine��cpu_support.S���ʬ���襢�ɥ쥹
- *			interrupt_entry������ߤξ��
- *			cpu_exception_entry��CPU�㳰�ξ��
+ *　　引数
+ *	label：入口処理のラベル
+ *	inthdr：C言語ルーチンの先頭アドレス
+ *	common_routine：cpu_support.S内の分岐先アドレス
+ *			interrupt_entry：割込みの場合
+ *			cpu_exception_entry：CPU例外の場合
  *
- *�����쥸��������
- *��������d1������߼���ľ���SR�Υ��ԡ�
- *��������a0��C����롼�������Ƭ���ɥ쥹
+ *　　レジスタ割当
+ *　　　　d1：割込み受付直後のSRのコピー
+ *　　　　a0：C言語ルーチンの先頭アドレス
  *
- *	����ߤ�CPU�㳰�������
- *	������CPU�㳰�ϥ�ɥ�˰�����Ϳ����
- *	������CPU�㳰�Ǥϡ��㳰ȯ������IPM��Ʊ���ͤǳ���ߤ���Ĥ���
- *		��CPU�㳰�ˤ�ꡢIPM���Ѳ������ʤ���
+ *	割込みとCPU例外の相違点
+ *	　　・CPU例外ハンドラに引数を与える
+ *	　　・CPU例外では、例外発生時のIPMと同じ値で割込みを許可する
+ *		（CPU例外により、IPMを変化させない）
  *
- *	����������ߥϥ�ɥ�ξ��				
- *	����  	����߼��ջ��˥ϡ��ɥ�������IPM�����ꤹ��	
- *	����  	����ߵ��ĤˤϤ���IPM���ͤ��Ѥ���		
- *	������CPU�㳰�ϥ�ɥ�ξ��				
- *	����  	CPU�㳰���ջ���IPM���ͤ��Ѳ����ʤ�		
- *	����  	����ߵ��Ĥˤ�CPU�㳰ȯ������IPM���ͤ��Ѥ���	
+ *	　　・割込みハンドラの場合				
+ *	　　  	割込み受付時にハードウェアがIPMを設定する	
+ *	　　  	割込み許可にはこのIPMの値を用いる		
+ *	　　・CPU例外ハンドラの場合				
+ *	　　  	CPU例外受付時にIPMの値は変化しない		
+ *	　　  	割込み許可にはCPU例外発生時のIPMの値を用いる	
  */
 #define	HANDLER_ENTRY_PROC(label, handler, common_routine)		   \
 asm(".text								\n"\
@@ -335,21 +335,21 @@ asm(".text								\n"\
 "	.global "#label"						\n"\
 #label":								\n"\
 "	lea.l   -16(%sp), %sp		\n"                                \
-"	movem.l %d0-%d1/%a0-%a1, (%sp)	\n" /* ������å��쥸��������¸ */ \
-				/*  ����߶ػߤ�SR�����ν���  		*/ \
+"	movem.l %d0-%d1/%a0-%a1, (%sp)	\n" /* スクラッチレジスタを保存 */ \
+				/*  割込み禁止とSR復元の準備  		*/ \
 "	move.w	%sr,%d1							\n"\
-	/*  ����߶ػ�  						*/ \
-	/*     ����ߤ�ػߤ��������̤γ���ߤ����ä������������� 	*/ \
-	/*     cpu_suppourt.S��ret_int�򻲾� 				*/ \
+	/*  割込み禁止  						*/ \
+	/*     割込みを禁止する前に別の割込みが入った場合の注意点は 	*/ \
+	/*     cpu_suppourt.Sのret_intを参照 				*/ \
 "	move.l	#("str_MAX_IPM" << 8),%d0	                        \n"\
 "	ori.l	#0x00002000,%d0	                                        \n"\
 "	move.w	%d0,%sr	                                                \n"\
 "	move.l	#"#handler", %a0				                \n"\
-"	jbra	_kernel_"#common_routine"        \n" /* C����롼�������Ƭ���ɥ쥹*/\
+"	jbra	_kernel_"#common_routine"        \n" /* C言語ルーチンの先頭アドレス*/\
 )
 
 /*
- *  ����ߥϥ�ɥ�����������������ޥ���
+ *  割込みハンドラの入口処理の生成マクロ
  *
  */
 #define INTHDR_ENTRY(inthdr)	INTHDR_ENTRY2(INT_ENTRY(inthdr), inthdr)
@@ -360,7 +360,7 @@ asm(".text								\n"\
 
 
 /*
- *  CPU�㳰�ϥ�ɥ�����������������ޥ���
+ *  CPU例外ハンドラの入口処理の生成マクロ
  */
 #define	EXCHDR_ENTRY(exchdr)	EXCHDR_ENTRY2(EXC_ENTRY(exchdr), exchdr)
 
@@ -368,32 +368,32 @@ asm(".text								\n"\
 	extern void entry(void);					\
 	HANDLER_ENTRY_PROC(entry, exchdr, cpu_exception_entry)
 	/*
-	 *  void entry()��ñ�ʤ륨��ȥ�Υ�٥�ʤΤǡ�
-	 *  �������դ��ʤ�
+	 *  void entry()は単なるエントリのラベルなので、
+	 *  引数は付けない
 	 */
 
 /*
- *  CPU�㳰��ȯ���������Υ����ƥ���֤λ���
+ *  CPU例外の発生した時のシステム状態の参照
  */
 
 /*
- *  CPU�㳰��ȯ���������Υ���ƥ����Ȥλ���
+ *  CPU例外の発生した時のコンテキストの参照
  */
 Inline BOOL
 exc_sense_context(VP p_excinf)
 {
 	/* 
-	 *  ������Ӥ���Τϡ����߼¹����CPU�㳰��ʬ
-	 *  ����ߥͥ��ȥ����󥿤����󥯥���Ȥ���Ƥ��뤿�� 	
+	 *  １と比較するのは、現在実行中のCPU例外の分
+	 *  割込みネストカウンタがインクリメントされているため 	
 	 *  
-	 *  CPU�㳰��������������̤�CPU�㳰��ȯ�����ʤ��Ȳ���
-	 *  ���Ƥ���
+	 *  CPU例外の入口処理中に別のCPU例外は発生しないと仮定
+	 *  している
 	 */
 	return(intnest > 0);
 }
 
 /*
- *  CPU�㳰��ȯ����������CPU���å����֤λ���
+ *  CPU例外の発生した時のCPUロック状態の参照
  */
 Inline BOOL
 exc_sense_lock(VP p_excinf)
@@ -402,16 +402,16 @@ exc_sense_lock(VP p_excinf)
 }
 
 /*
- *  �ץ����å���¸�ν����
+ *  プロセッサ依存の初期化
  */
 extern void	cpu_initialize(void);
 
 /*
- *  �ץ����å���¸�ν�λ������
+ *  プロセッサ依存の終了時処理
  */
 extern void	cpu_terminate(void);
 /*
- *  �����Υ������ϻ��Υ����å���¤�����
+ *  下記のログ出力時のスタック構造の定義
  */
 typedef struct exc_stack {
 	VW	d0;
@@ -430,13 +430,13 @@ typedef struct exc_stack {
 	VW	a5;
 	VW	a6;
 	VW	a7;
-	VW	sr;	/*  ���ơ��������쥸����  	*/
-	VW	pc;	/*  �ץ�����ࡦ������  	*/
+	VW	sr;	/*  ステータス・レジスタ  	*/
+	VW	pc;	/*  プログラム・カウンタ  	*/
 } EXCSTACK;
 
 
 /*
- * �㳰ȯ�����Υ������� (cpu_config.c, cpu_support.S)
+ * 例外発生時のログ出力 (cpu_config.c, cpu_support.S)
  */
 extern void     cpu_experr(EXCSTACK *);
 
@@ -444,37 +444,37 @@ extern void     cpu_experr(EXCSTACK *);
 
 
 /*
- *  �㳰�٥��������ꤹ��ǥե���Ȥ���
- *  	�ʲ����㳰�װ��ǥǥե���ȤȤϰۤʤ��㳰�٥��������
- *	������ϡ�sys_config.h�ǳ�������ޥ�����������롣
+ *  例外ベクタに設定するデフォルトの値
+ *  	以下の例外要因でデフォルトとは異なる例外ベクタを定義
+ *	する場合は、sys_config.hで該当するマクロを定義する。
  */
-#define RESET_VECTOR 	start		/*  �ꥻ�åȥ٥���  */
-#define INIT_STACK  	STACKTOP	/*  �����å��ݥ��󥿤ν����  */
+#define RESET_VECTOR 	start		/*  リセットベクタ  */
+#define INIT_STACK  	STACKTOP	/*  スタックポインタの初期値  */
 
-#define RESERVED_VECTOR	RESET_VECTOR	/*  �����ƥ�ͽ��Υꥻ�åȥ٥���  */
-					/*  �ºݤˤϻ��Ѥ���ʤ�  */
+#define RESERVED_VECTOR	RESET_VECTOR	/*  システム予約のリセットベクタ  */
+					/*  実際には使用されない  */
 
-#ifndef ACC_VECTOR	/*  �����������顼  */
+#ifndef ACC_VECTOR	/*  アクセスエラー  */
 #define ACC_VECTOR	RESET_VECTOR
 #endif /* ACC_VECTOR */
 
-#ifndef ADD_VECTOR	/*  �����������顼  */
+#ifndef ADD_VECTOR	/*  アクセスエラー  */
 #define ADD_VECTOR	RESET_VECTOR
 #endif /* ACC_VECTOR */
 
-#ifndef II_VECTOR	/*  ����̿��  */
+#ifndef II_VECTOR	/*  不当命令  */
 #define II_VECTOR	RESET_VECTOR
 #endif /* II_VECTOR */
 
-#ifndef PV_VECTOR	/*  �����å�����̿��  */
+#ifndef PV_VECTOR	/*  スロット不当命令  */
 #define PV_VECTOR	RESET_VECTOR
 #endif /* SII_VECTOR */
 
-#ifndef CAE_VECTOR	/*  CPU���ɥ쥹���顼  */
+#ifndef CAE_VECTOR	/*  CPUアドレスエラー  */
 #define CAE_VECTOR	RESET_VECTOR
 #endif /* CAE_VECTOR */
 
-#ifndef DAE_VECTOR	/*  DMA���ɥ쥹���顼  */
+#ifndef DAE_VECTOR	/*  DMAアドレスエラー  */
 #define DAE_VECTOR	RESET_VECTOR
 #endif /* DAE_VECTOR */
 

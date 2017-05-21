@@ -10,44 +10,44 @@
  *              Graduate School of Information Science, Nagoya Univ., JAPAN
  *                2009 by Suikan
  *
- *  �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ�狼��Free Software Foundation
- *  �ˤ�äƸ�ɽ����Ƥ��� GNU General Public License �� Version 2 �˵�
- *  �Ҥ���Ƥ���������������˸¤ꡤ�ܥ��եȥ��������ܥ��եȥ�����
- *  ����Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ������ۡʰʲ���
- *  ���ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
- *      ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
- *      ����������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
- *      �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
- *      ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
- *      �ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
- *        �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
- *        ��𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
- *      ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
+ *  によって公表されている GNU General Public License の Version 2 に記
+ *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+ *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+ *  利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
  *
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- *  ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����Ŭ�Ѳ�ǽ����
- *  �ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ����������Ѥˤ��ľ
- *  ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ�����ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+ *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+ *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  *
  */
 
 /*
- *    �������åȥ����ƥ��¸�⥸�塼���CQ-FRK-NXP-ARM��
+ *    ターゲットシステム依存モジュール（CQ-FRK-NXP-ARM）
  */
 
 #include "jsp_kernel.h"
 #include <lpc2388.h>
 
 /*
- *  ������ѤΥơ��֥�
+ *  割込み用のテーブル
  */
 #define VICVectAddress ((volatile FP **)0xFFFFF100)
 
@@ -55,7 +55,7 @@
 
 
 /*
- *  ����ߴ�Ϣ�ν����(LPC2388����)
+ *  割込み関連の初期化(LPC2388共通)
  */
 void
 init_IRQ()
@@ -69,8 +69,8 @@ init_IRQ()
 extern unsigned int __data_start;
 
 /*
- * LPC2388��SRAM�ΰ��FLASH�Υ٥��ȥ�򥳥ԡ�����
- * ��ޥåפ��롣LPC2388���̤�ɬ�ס�
+ * LPC2388のSRAM領域にFLASHのベクトルをコピーし、
+ * リマップする。LPC2388共通で必要。
  */
 void
 init_vector()
@@ -78,20 +78,20 @@ init_vector()
 	unsigned char *flash, *sram;
 	int i;
 
-		/* ROM�������ɤ�SRAM���ư�������ɤǤϡ��㳰�٥��ȥ�ΰ������㤦��
-		 * ROM��������ϡ�SRAM REMAP������Flash ROM����㳰�٥��ȥ���ͤ�
-		 * SRAM��Υ�ޥå��ΰ�˰ܤ��ʤ���Фʤ�ʤ���������SRAM���ư���
-		 * ���ϡ���ޥå��ΰ�ؤϥǥХå�������ͤ�񤭹��ࡣ
-		 * ���Τ��ᡢ��ޥå��ΰ�ν������礬ɬ�פ��ݤ���Ƚ�̤�Ԥ���Ƚ�̤�
-		 * __data_start���ͤ�Ȥ��������ͤ�lpc2388_sram.ld�����0�˽��������
-		 * ���롣lpc2388.ld����Ǥ��󥼥��Υ��ɥ쥹����������롣�������äơ�
-		 * ��ޥå��ΰ�ν������__data_start���󥼥��ΤȤ������Ԥ��� */
+		/* ROM化コードとSRAM上で動くコードでは、例外ベクトルの扱いが違う。
+		 * ROM化する場合は、SRAM REMAPの前にFlash ROM上の例外ベクトルの値を
+		 * SRAM上のリマップ領域に移さなければならない。一方、SRAM上で動作する
+		 * 場合は、リマップ領域へはデバッガが初期値を書き込む。
+		 * このため、リマップ領域の初期化手順が必要か否かの判別を行う。判別は
+		 * __data_startの値を使う。この値はlpc2388_sram.ldの中で0に初期化して
+		 * いる。lpc2388.ldの中では非ゼロのアドレスが代入される。したがって、
+		 * リマップ領域の初期化は__data_startが非ゼロのときだけ行う。 */
 	if ( __data_start != 0 )
 	{
-		flash =(unsigned char*) 0;				/* FLASH����Ƭ���ɥ쥹 */
-		sram = (unsigned char*) 0x40000000;	/* SRAM����Ƭ���ɥ쥹 */
+		flash =(unsigned char*) 0;				/* FLASHの先頭アドレス */
+		sram = (unsigned char*) 0x40000000;	/* SRAMの先頭アドレス */
 
-			/* FLASH����Ƭ64�Х��Ȥ�SRAM�˥��ԡ� */
+			/* FLASHの先頭64バイトをSRAMにコピー */
 		for (i=0; i<64; i++)
 		{
 			*sram = *flash;
@@ -99,19 +99,19 @@ init_vector()
 			flash++;
 		}
 	}
-		/* SRAM ��٥��ȥ륨�ꥢ�˥�ޥåפ��� */
+		/* SRAM をベクトルエリアにリマップする */
 	MEMMAP = 0x02;
 }
 
 /*
- * LPC2388��¸��UART������롼����sys_putc()�Ѥ�uart0���������롣
+ * LPC2388依存のUART初期化ルーチン。sys_putc()用にuart0を初期化する。
  */
 #define	DLAB 0x80
 void
 init_uart0()
 {
     /*
-     *  ʬ���������
+     *  分周比の設定
      */
     /* Divisor Enable */
 	U0LCR |= DLAB;
@@ -120,16 +120,16 @@ init_uart0()
     /* Divisor Disable */
     U0LCR &= ~DLAB;
 
-    /* �⡼������, �ѥ�ƥ�̵�� 8bit data, 1 stop bit */
+    /* モード設定, パリティ無し 8bit data, 1 stop bit */
     U0LCR = 0x03;
 
-    /* ����߶ػ� */
+    /* 割込み禁止 */
     U0IER = 0;
 }
 
 /*
- *  �����ƥཪλ�եå����ե����०�����˥����ƥཪλAPI������ʤ�
- *  �����Ƥ֤Ȥ褤��
+ *  システム終了フック。ファームウェアにシステム終了APIがあるなら
+ *  それを呼ぶとよい。
  */
 void
 sys_exit()
@@ -141,31 +141,31 @@ sys_exit()
 
 
 /*
- *  �������åȥ����ƥ��ʸ�����ϡ�syslog����������ư�������˥ץ��Ȥ�Ԥ������
- *  �롼����Ǥ��ꡢ�����Ǥϥݡ���󥰤�ԤäƤ��롣LF���椬�����Ƥ����顢
- *  CR LF���Ѵ����ƥץ��Ȥ��롣sys_putc�ϥǥХ������������ʤ���
- *  �������kernel_start()����ǽ���äƤ���Ȳ��ꤷ�Ƥ��롣
+ *  ターゲットシステムの文字出力。syslogタスクが起動する前にプリントを行うための
+ *  ルーチンであり、内部ではポーリングを行っている。LF記号が送られてきたら、
+ *  CR LFに変換してプリントする。sys_putcはデバイスを初期化しない。
+ *  初期化はkernel_start()の中で終わっていると仮定している。
  */
 
 void
 sys_putc(char c)
 {
-	if ( c== 0x0A )			/* �⤷ LF �ʤ�� */
-		sys_putc( 0x0D );	/* CR���ʸ������ */
+	if ( c== 0x0A )			/* もし LF ならば */
+		sys_putc( 0x0D );	/* CRを一文字送信 */
 
 	while( !( U0LSR & (1<<5)) )
-		;		/* UART0 LSR��THRE��1�ˤʤ�ޤ��Ԥġ�1�ʤ�������쥸����������*/
+		;		/* UART0 LSRのTHREが1になるまで待つ。1ならば送信レジスタ空き。*/
 
-	U0THR = c;	/* ��ʸ������ */
+	U0THR = c;	/* 一文字送信 */
 }
 
 
 /*
- *  ����ߥϥ�ɥ������
+ *  割込みハンドラの設定
  *
- *  ������ֹ� inhno �γ���ߥϥ�ɥ�ε�ư���Ϥ� inthdr �����ꤹ�롥
- *  VICVectAddress[]��Ʊ̾�Υ쥸������˥ޥåפ���Ƥ��롣�������äơ�
- *  define_inh��Ƥ֤ȡ�VICVectAddressX�쥸���������������롣
+ *  割込み番号 inhno の割込みハンドラの起動番地を inthdr に設定する．
+ *  VICVectAddress[]は同名のレジスタ列にマップされている。したがって、
+ *  define_inhを呼ぶと、VICVectAddressXレジスタが初期化される。
  */
 void
 define_inh(INHNO inhno, FP inthdr)
@@ -176,7 +176,7 @@ define_inh(INHNO inhno, FP inthdr)
 }
 
 /*
- *  ̤����γ���ߤ����ä����ν���
+ *  未定義の割込みが入った場合の処理
  */
 void
 undef_interrupt(){
@@ -186,10 +186,10 @@ undef_interrupt(){
 
 
 /*
- * �����ߤΥ��͡��֥롢�ǥ������֥�
+ * 割り込みのイネーブル、ディセーブル
  */
 /*
- * intno�Ǥ���蘆�������ߤ��ǥ������֥�ˤʤ롣
+ * intnoであらわされる割り込みがディセーブルになる。
  */
 ER dis_int(INTNO intno)
 {
@@ -200,7 +200,7 @@ ER dis_int(INTNO intno)
 }
 
 /*
- * intno�Ǥ���蘆�������ߤ����͡��֥�ˤʤ롣
+ * intnoであらわされる割り込みがイネーブルになる。
  */
 ER ena_int(INTNO intno)
 {
@@ -211,7 +211,7 @@ ER ena_int(INTNO intno)
 }
 
 /*
- * �����ߥ��͡��֥�ޥ�������ꤹ�롣�ޥ�����VICIntEnable�����������
+ * 割り込みイネーブルマスクを指定する。マスクはVICIntEnableに代入される
  */
 ER chg_ims(unsigned int enableMask)
 {
@@ -221,7 +221,7 @@ ER chg_ims(unsigned int enableMask)
 }
 
 /*
- * �����ߥ��͡��֥�ޥ����������
+ * 割り込みイネーブルマスクを取得。
  */
 ER get_ims(unsigned int *p_enableMask)
 {

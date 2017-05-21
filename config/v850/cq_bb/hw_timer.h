@@ -6,37 +6,37 @@
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
  * 
- *  �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ�狼��Free Software Foundation 
- *  �ˤ�äƸ�ɽ����Ƥ��� GNU General Public License �� Version 2 �˵�
- *  �Ҥ���Ƥ���������������˸¤ꡤ�ܥ��եȥ��������ܥ��եȥ�����
- *  ����Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ������ۡʰʲ���
- *  ���ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
- *      ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
- *      ����������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
- *      �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
- *      ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
- *      �ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
- *        �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
- *        ��𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
- *      ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  によって公表されている GNU General Public License の Version 2 に記
+ *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+ *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+ *  利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
  * 
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- *  ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����Ŭ�Ѳ�ǽ����
- *  �ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ����������Ѥˤ��ľ
- *  ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ�����ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+ *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+ *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
  */
 
 /*
- *	�������åȰ�¸�����ޥ⥸�塼���D70F3716GC ��¢�������ѡ�
+ *	ターゲット依存タイマモジュール（D70F3716GC 内蔵タイマ用）
  */
 
 #ifndef _HW_TIMER_H_
@@ -46,20 +46,20 @@
 
 #ifndef _MACRO_ONLY
 
-/* �����ƥॿ���ޡ���TMM0����� */
-#define	TIMER_INT_PRIORITY		0		/* ������ͥ����(0���ǹ��7������) */
-#define	TIMER_COMPAREVALUE		((CPU_CLOCK>>1)/1000)		/* fx/2��1msec���� */
+/* システムタイマーはTMM0を使用 */
+#define	TIMER_INT_PRIORITY		0		/* 割り込み優先度(0が最高で7が最低) */
+#define	TIMER_COMPAREVALUE		((CPU_CLOCK>>1)/1000)		/* fx/2で1msecを作る */
 
 
 #define WAIT __asm("nop;nop;nop;nop;nop");
 
 /*
- *  �����޳���ߥϥ�ɥ�Υ٥����ֹ�
+ *  タイマ割込みハンドラのベクタ番号
  */
 #define	INHNO_TIMER	       (0x28)
 
 /*
- *  �������ͤ�����ɽ���η�
+ *  タイマ値の内部表現の型
  */
 typedef UW	CLOCK;
 
@@ -67,25 +67,25 @@ typedef UW	CLOCK;
 #define TO_USEC(clock)      ((clock) * 1000 / TIMER_CLOCK)
 
 /*
- *  �����ޤε�ư����
+ *  タイマの起動処理
  *
- *  �����ޤ�������������Ū�ʥ����޳�����׵��ȯ�������롥
+ *  タイマを初期化し，周期的なタイマ割込み要求を発生させる．
  */
 Inline void
 hw_timer_initialize(void)
 {
-	/* �����޽���� */
+	/* タイマ初期化 */
 	sil_wrb_mem((VP)TM0CTL0, sil_reb_mem((VP)TM0CTL0) | ~0x80);	/* Stop */
 	sil_wrb_mem((VP)TM0CTL0, 1);		/* fx/2 */
 	sil_wrh_mem((VP)TM0CMP0, TIMER_COMPAREVALUE);
 	sil_wrb_mem((VP)TM0CTL0, 0x80 | sil_reb_mem((VP)TM0CTL0));	/* Start */
 
-	/* ������׵�������Ĥġ�����ߵ��Ĥˤ��ơ�ͥ���٤����ꤹ�� */
+	/* 割込み要求を解除しつつ、割込み許可にして、優先度を設定する */
 	sil_wrb_mem((VP)TM0EQIC0, TIMER_INT_PRIORITY);
 }
 
 /*
- *  �����޳�����׵�Υ��ꥢ
+ *  タイマ割込み要求のクリア
  */
 Inline void
 hw_timer_int_clear(void)
@@ -93,20 +93,20 @@ hw_timer_int_clear(void)
 }
 
 /*
- *  �����ޤ���߽���
+ *  タイマの停止処理
  *
- *  �����ޤ�ư�����ߤ����롥
+ *  タイマの動作を停止させる．
  */
 Inline void
 hw_timer_terminate(void)
 {
-	/* ����ߤ�ޥ������� */
+	/* 割込みをマスクする */
 	sil_wrb_mem((VP)TM0EQIC0, sil_reb_mem((VP)TM0EQIC0) | 0x40);
 	sil_wrb_mem((VP)TM0CTL0, (~0x08) & sil_reb_mem((VP)TM0CTL0));	/* Stop */
 }
 
 /*
- *  �����ޤθ����ͤ��ɽФ�
+ *  タイマの現在値の読出し
  */
 Inline CLOCK
 hw_timer_get_current(void)
@@ -115,7 +115,7 @@ hw_timer_get_current(void)
 }
 
 /*
- *  �����޳�����׵�Υ����å�
+ *  タイマ割込み要求のチェック
  */
 Inline BOOL
 hw_timer_fetch_interrupt(void)

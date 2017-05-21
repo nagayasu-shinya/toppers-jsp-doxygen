@@ -6,32 +6,32 @@
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
  * 
- *  ��L���쌠�҂́C�ȉ��� (1)�`(4) �̏������CFree Software Foundation 
- *  �ɂ���Č��\����Ă��� GNU General Public License �� Version 2 �ɋL
- *  �q����Ă�������𖞂����ꍇ�Ɍ���C�{�\�t�g�E�F�A�i�{�\�t�g�E�F�A
- *  �����ς������̂��܂ށD�ȉ������j���g�p�E�����E���ρE�Ĕz�z�i�ȉ��C
- *  ���p�ƌĂԁj���邱�Ƃ𖳏��ŋ�������D
- *  (1) �{�\�t�g�E�F�A���\�[�X�R�[�h�̌`�ŗ��p����ꍇ�ɂ́C��L�̒���
- *      ���\���C���̗��p��������щ��L�̖��ۏ؋K�肪�C���̂܂܂̌`�Ń\�[
- *      �X�R�[�h���Ɋ܂܂�Ă��邱�ƁD
- *  (2) �{�\�t�g�E�F�A���C���C�u�����`���ȂǁC���̃\�t�g�E�F�A�J���Ɏg
- *      �p�ł���`�ōĔz�z����ꍇ�ɂ́C�Ĕz�z�ɔ����h�L�������g�i���p
- *      �҃}�j���A���Ȃǁj�ɁC��L�̒��쌠�\���C���̗��p��������щ��L
- *      �̖��ۏ؋K����f�ڂ��邱�ƁD
- *  (3) �{�\�t�g�E�F�A���C�@��ɑg�ݍ��ނȂǁC���̃\�t�g�E�F�A�J���Ɏg
- *      �p�ł��Ȃ��`�ōĔz�z����ꍇ�ɂ́C���̂����ꂩ�̏����𖞂�����
- *      �ƁD
- *    (a) �Ĕz�z�ɔ����h�L�������g�i���p�҃}�j���A���Ȃǁj�ɁC��L�̒�
- *        �쌠�\���C���̗��p��������щ��L�̖��ۏ؋K����f�ڂ��邱�ƁD
- *    (b) �Ĕz�z�̌`�Ԃ��C�ʂɒ�߂���@�ɂ���āCTOPPERS�v���W�F�N�g��
- *        �񍐂��邱�ƁD
- *  (4) �{�\�t�g�E�F�A�̗��p�ɂ�蒼�ړI�܂��͊ԐړI�ɐ����邢���Ȃ鑹
- *      �Q������C��L���쌠�҂����TOPPERS�v���W�F�N�g��Ɛӂ��邱�ƁD
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  によって公表されている GNU General Public License の Version 2 に記
+ *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+ *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+ *  利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
  * 
- *  �{�\�t�g�E�F�A�́C���ۏ؂Œ񋟂���Ă�����̂ł���D��L���쌠�҂�
- *  ���TOPPERS�v���W�F�N�g�́C�{�\�t�g�E�F�A�Ɋւ��āC���̓K�p�\����
- *  �܂߂āC�����Ȃ�ۏ؂��s��Ȃ��D�܂��C�{�\�t�g�E�F�A�̗��p�ɂ�蒼
- *  �ړI�܂��͊ԐړI�ɐ����������Ȃ鑹�Q�Ɋւ��Ă��C���̐ӔC�𕉂�Ȃ��D
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+ *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+ *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
  *  @(#) $Id$
  */
@@ -46,7 +46,7 @@
 
 /*
  *
- *  �����݂̏o���������
+ *  割込みの出入り口処理
  *         
  */        
         .text
@@ -55,23 +55,23 @@
 IRQ_Handler:
 
         /* 
-         * �����݃��[�h 
+         * 割込みモード 
          * 
-         * cpsr��spsr_irq�ɕ��A�悪r14_irq(lp)�ɓ���C
-         * spsr_irq��r14_irq��r13(sp)_irq�� r14,r13�ƂȂ�D
+         * cpsrがspsr_irqに復帰先がr14_irq(lp)に入り，
+         * spsr_irqとr14_irqとr13(sp)_irqが r14,r13となる．
          */
 
         /* 
-         *  �^�X�N�̓��쎞���[�h(�X�[�p�[�o�C�U�[���[�h)��
+         *  タスクの動作時モード(スーパーバイザーモード)へ
          */
 	mov   sp,#(CPSR_SVC | CPSR_FIQ_BIT | CPSR_IRQ_BIT) 
         msr   cpsr_all, sp
-        stmfd sp!, {r0-r3,ip,lr,pc} /* pc�̓_�~�[ */
+        stmfd sp!, {r0-r3,ip,lr,pc} /* pcはダミー */
 
 
   
         /*
-         * spsr�Ɩ߂�Ԓn���擾���邽�߂�IRQ���[�h��
+         * spsrと戻り番地を取得するためにIRQモードへ
          */
 	mov   r0,#(CPSR_IRQ | CPSR_FIQ_BIT | CPSR_IRQ_BIT)
         msr   cpsr,r0
@@ -79,7 +79,7 @@ IRQ_Handler:
         mrs   r1,spsr
    
         /*
-         *  �X�[�p�[�o�C�U�[���[�h��
+         *  スーパーバイザーモードに
          */
         msr   cpsr_all, sp
         str   r0, [sp,#0x18] /* Store pc */
@@ -87,7 +87,7 @@ IRQ_Handler:
 
 
         /*
-         *  ���d���荞�݂�����
+         *  多重割り込みか判定
          */
         ldr     r2, =interrupt_count
         ldr     r3, [r2]
@@ -95,13 +95,13 @@ IRQ_Handler:
         str     r0, [r2]
         cmp     r3, #0x00
 
-	moveq   r2,sp            /* �l�X�g���荞�݂łȂ��ꍇ */
-        ldreq   sp,=STACKTOP     /* �X�^�b�N�̕ύX    */
-        stmeqfd sp!,{r2}         /* �^�X�N�X�^�b�N�̕ۑ� */
+	moveq   r2,sp            /* ネスト割り込みでない場合 */
+        ldreq   sp,=STACKTOP     /* スタックの変更    */
+        stmeqfd sp!,{r2}         /* タスクスタックの保存 */
 
 	
 	/*
-         *  �����݃n���h���A�h���X�擾�Ƃ̕ۑ�
+         *  割込みハンドラアドレス取得との保存
          */
 	ldr	r2, vic_vect_addr
 	ldr	r0, [r2]
@@ -109,7 +109,7 @@ IRQ_Handler:
 	str	r0, [r2]
 	
 	/* 
-         * ���荞�݋��� 
+         * 割り込み許可 
          */                
         mov     r2,#(CPSR_SVC|CPSR_FIQ_BIT)
         msr     cpsr,r2
@@ -121,13 +121,13 @@ IRQ_Handler:
         mov     pc, r0
 
         /* 
-         * ���荞�݋֎~ 
+         * 割り込み禁止 
          */
         mov     r2,#(CPSR_SVC|CPSR_FIQ_BIT|CPSR_IRQ_BIT) 
         msr     cpsr,r2
 
 	/*
-         *  EOI���s
+         *  EOI発行
          */
 	ldr	r2, =handler_address
 	ldr	r0, [r2]
@@ -135,7 +135,7 @@ IRQ_Handler:
 	str	r0, [r2]
 
 	/* 
-         * �����݃l�X�g��(interrupt_count) �f�N�������g 
+         * 割込みネスト回数(interrupt_count) デクリメント 
          */
         ldr     r2, =interrupt_count
         ldr     r1, [r2]        
@@ -145,7 +145,7 @@ IRQ_Handler:
         bne     return_to_task_irq
         
         /* 
-         * �^�X�N�X�^�b�N�̕��A 
+         * タスクスタックの復帰 
          */
         ldmfd   sp!,{r0}         
         mov     sp, r0        
@@ -160,16 +160,16 @@ IRQ_Handler:
 
 return_to_task_irq:
         /*
-         *  ���A����
-         *  ���荞�݋��ƂȂ邪�^�X�N�R���e�L�X�g��ɕۑ����Ă��邽�߁C
-         *  ���͂Ȃ�
+         *  復帰処理
+         *  割り込み許可となるがタスクコンテキスト上に保存しているため，
+         *  問題はない
          */
-        ldmfd   sp!,{r1}           /* CPSR�̕��A���� */
-        msr     spsr, r1           /* ���荞�݋���   */
-        ldmfd   sp!,{r0-r3,ip,lr,pc}^ /*�^�X�N���A + �����݋��� */
+        ldmfd   sp!,{r1}           /* CPSRの復帰処理 */
+        msr     spsr, r1           /* 割り込み許可   */
+        ldmfd   sp!,{r0-r3,ip,lr,pc}^ /*タスク復帰 + 割込み許可 */
 
         /*
-         *  ����`�̊����݂��������Ƃ��ɌĂяo��
+         *  未定義の割込みが入ったときに呼び出す
          */    
 undefined_interrupt:
          b      undef_interrupt

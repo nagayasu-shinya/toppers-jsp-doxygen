@@ -1,7 +1,7 @@
-            �� TOPPERS/JSP�����ͥ� �桼�����ޥ˥奢�� ��
-                         ��M16C �������åȰ�¸����
+            ＝ TOPPERS/JSPカーネル ユーザズマニュアル ＝
+                         （M16C ターゲット依存部）
 
-            ��Release 1.4.4�б����ǽ�����: 20-May-2011��
+            （Release 1.4.4対応，最終更新: 20-May-2011）
 
 ------------------------------------------------------------------------ 
  TOPPERS/JSP Kernel
@@ -16,376 +16,376 @@
  Copyright (C) 2003-2004 by Platform Development Center
                                          RIOCH COMPANY,LTD. JAPAN
 
- �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ�狼��Free Software Foundation 
- �ˤ�äƸ�ɽ����Ƥ��� GNU General Public License �� Version 2 �˵�
- �Ҥ���Ƥ���������������˸¤ꡤ�ܥ��եȥ��������ܥ��եȥ�����
- ����Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ������ۡʰʲ���
- ���ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
-     ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
-     ����������˴ޤޤ�Ƥ��뤳�ȡ�
- (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
-     �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
-     �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
-     ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
-     �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
-     �ȡ�
-   (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
-       �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
-   (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
-       ��𤹤뤳�ȡ�
- (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
-     ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+ 上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ によって公表されている GNU General Public License の Version 2 に記
+ 述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+ を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+ 利用と呼ぶ）することを無償で許諾する．
+ (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+     権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+     スコード中に含まれていること．
+ (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+     用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+     者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+     の無保証規定を掲載すること．
+ (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+     用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+     と．
+   (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+       作権表示，この利用条件および下記の無保証規定を掲載すること．
+   (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+       報告すること．
+ (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+     害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
 
- �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����Ŭ�Ѳ�ǽ����
- �ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ����������Ѥˤ��ľ
- ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ�����ʤ���
+ 本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+ 含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+ 接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
 
 ------------------------------------------------------------------------
 
-1.  M16C �������åȰ�¸���γ���
+1.  M16C ターゲット依存部の概要
 
-1.1  �������åȥ����ƥ�
+1.1  ターゲットシステム
 
-M16C �������åȰ�¸���ϡ��������åȥ����ƥ�Ȥ���
-���������Żҳ�����Ҥ� OASKS16 �ڤ� OAKS16-MINI �򥵥ݡ��Ȥ��Ƥ��롥
-OAKS16 �ϥץ����å��Ȥ��� M30620FCAFP-CPU ��OAKS16-MINI ��
-M30262F8FG-CPU����ܤ��Ƥ��롥
+M16C ターゲット依存部は，ターゲットシステムとして
+オークス電子株式会社の OASKS16 及び OAKS16-MINI をサポートしている．
+OAKS16 はプロセッサとして M30620FCAFP-CPU を，OAKS16-MINI は
+M30262F8FG-CPUを搭載している．
 
-1.2 ��ȯ�Ķ��ȼ¹ԴĶ�
+1.2 開発環境と実行環境
 
-��ȯ�Ķ��ϡ���ͥ������쥯�ȥ��˥��������γ�ȯ�ġ������Ѥ��롥
-�ӥ�ɴ�������ˡ�Ȥ��ơ�2�Ĥη��֤��Ѱդ��Ƥ��롥
+開発環境は，ルネサスエレクトロニクス社製の開発ツールを使用する．
+ビルド管理の方法として，2つの形態を用意している．
 
-�ҤȤĤϡ���ͥ������쥯�ȥ��˥������������糫ȯ�Ķ� TM ����Ѥ���
-��ȯ��Ԥ���ˡ�Ǥ��롥
+ひとつは，ルネサスエレクトロニクス社製の統合開発環境 TM を使用して
+開発を行う方法である．
 
-�⤦�ҤȤĤϡ�DOS�뤫�� make ���ޥ�ɤ��Ѥ��Ƴ�ȯ��Ԥ���ˡ�Ǥ��롥
-��������������ˡ�ϰʲ��ξ�郎ɬ�פǤ��롥
-	��OAKS16 �������åȰ�¸���ǳ�ȯ��Ԥ����ˤΤ����Ѳ�ǽ
-	����ȯ�ġ��� NC30WA ���饤�֥�ꥢ������Ѳ�ǽ���ǤǤ��뤳��
-	���ʺǶ��̵��ɾ���ǥ���ѥ���Ϥ��ξ����������Ƥ����
-	��perl �����ѤǤ��뤳��
+もうひとつは，DOS窓から make コマンドを用いて開発を行う方法である．
+ただし，この方法は以下の条件が必要である．
+	・OAKS16 ターゲット依存部で開発を行う場合にのみ利用可能
+	・開発ツール NC30WA がライブラリアンを利用可能な版であること
+	　（最近の無償評価版コンパイラはこの条件を満たしている）
+	・perl が利用できること
 
-��ȯ�Ķ��ξܺ٤˴ؤ��Ƥϡ�tools/M16C-RENESAS �ǥ��쥯�ȥ����
-README.txt �򻲾ȤΤ��ȡ�
+開発環境の詳細に関しては，tools/M16C-RENESAS ディレクトリ中の
+README.txt を参照のこと．
 
-�¹ԴĶ��� Windows �����󥹥ȡ��뤵��Ƥ��ơ����ġ����ꥢ��ݡ��Ȥ�
-��ܤ���PC ������С��ץ������Υӥ�ɤ���ӥܡ��ɾ�Ǥμ¹Ԥ���ǽ�Ǥ��롥
+実行環境は Windows がインストールされていて，かつ，シリアルポートを
+搭載したPC があれば，プログラムのビルドおよびボード上での実行が可能である．
 
-1.3  ���ݡ��Ȥ��뵡ǽ�γ���
+1.3  サポートする機能の概要
 
-�������åȰ�¸�Ȥ���Ƥ��뵡ǽ���Ф��륵�ݡ��Ⱦ����ϰʲ����̤ꡥ
-	����ǽɾ���ѥ����ƥ���ﻲ�ȵ�ǽ (vxget_tim) �� ���ݡ���
-	������ߥޥ������ѹ������� (chg_ixx�� get_ixx)��̤���ݡ���
-	�������ߤζػߤȵ���(dis_int��ena_int)��̤���ݡ���
+ターゲット依存とされている機能に対するサポート状況は以下の通り．
+	・性能評価用システム時刻参照機能 (vxget_tim) ： サポート
+	・割込みマスクの変更・参照 (chg_ixx， get_ixx)：未サポート
+	・割り込みの禁止と許可(dis_int，ena_int)：未サポート
 
-1.4  ¾�Υ������åȤؤΥݡ��ƥ���
+1.4  他のターゲットへのポーティング
 
-M16C �� CPU���¿���ΥǥХ�������������Ƥ��ꡤSFR �Ȥ���������
-���첽����Ƥ��롥���Τ��� M16C ���꡼���� CPU ����ܤ���ܡ��ɤǤ���С�
-�ݡ��ƥ��󥰤��ưפ˽����Ȼפ��롥
+M16C は CPU上に多くのデバイスが実装されており，SFR という形式で
+統一化されている．そのため M16C シリーズの CPU を搭載するボードであれば，
+ポーティングは容易に出来ると思われる．
 
-1.5  ���ꥢ��ݡ���
+1.5  シリアルポート
 
-�������åȥܡ��ɤˤ� UART1 �ݡ��Ȥ���������Ƥ��ꡤ�ޤ� UART0 �ݡ��Ȥ�
-��ĥ��ǽ�ȤʤäƤ��롥�������åȰ�¸���Υ��ꥢ��ɥ饤�ФǤ� 2�ĤΥݡ���
-��ɬ�פ˱��������Ѳ�ǽ�ȤʤäƤ��롥
-�ʤ���OAKS16-MINI �ǤΥ��ꥢ��ɥ饤�Фϡ�RAM�������� 2KB�Ȥ�������Τ���
-XON/XOFF �ڤӥ��������ε�ǽ�ˤ��б����Ƥ��ʤ���
+ターゲットボードには UART1 ポートが実装されており，また UART0 ポートが
+拡張可能となっている．ターゲット依存部のシリアルドライバでは 2つのポート
+が必要に応じて利用可能となっている．
+なお，OAKS16-MINI 版のシリアルドライバは，RAMサイズが 2KBという制約のため
+XON/XOFF 及びエコー等の機能には対応していない．
 
-���ꥢ��ݡ��Ȥ������ʲ��˼����� 
-	���ܡ��쥤�ȡ�19200[bps]��
-	���ǡ���Ĺ��8 �ӥåȡ�
-	�����ȥåץӥåȡ�1 �ӥåȡ�
-	���ѥ�ƥ��ʤ���
+シリアルポートの設定を以下に示す． 
+	・ボーレイト，19200[bps]．
+	・データ長，8 ビット．
+	・ストップビット，1 ビット．
+	・パリティなし．
 
-1.6  �оݤȤ��륽���������ɤ�ʸ��������
+1.6  対象とするソースコードの文字コード
 
-TOPPERS�ץ��������Ȥ����������� TOPPERS/JSP �����ͥ�Υѥå������ϡ�
-ʸ�������ɵڤӲ��ԥ����ɤ� EUC+LF �ڤ� SJIS+CRLF �� 2�ĤΥѥ������
-�ѥå�������¸�ߤ��롥EUC+LF�ǤΥѥå������Ǥ����������ɤ���Ÿ���塤
-ʸ���������Ѵ�����л��Ѳ�ǽ�Ȼפ��뤬��M16C��¸�������Ѥ�����ϡ�
-SJIS+CRLF �Υѥå����������������ɤ��뤳�Ȥ�侩���롥
+TOPPERSプロジェクトから公開される TOPPERS/JSP カーネルのパッケージは，
+文字コード及び改行コードが EUC+LF 及び SJIS+CRLF の 2つのパターンの
+パッケージが存在する．EUC+LF版のパッケージでもダウンロードして展開後，
+文字コード変換すれば使用可能と思われるが，M16C依存部を利用する場合は，
+SJIS+CRLF のパッケージをダウンロードすることを推奨する．
 
 
-2.  M16C �ץ����å���¸���ε�ǽ
+2.  M16C プロセッサ依存部の機能
 
-������Ǥϡ������ͥ뤪��ӥ����ƥॵ���ӥ��ε�ǽ����ǡ�M16C��¸����ʬ
-�ˤĤ��Ʋ��⤹�롥
+この節では，カーネルおよびシステムサービスの機能の中で，M16C依存の部分
+について解説する．
 
-2.1  �ǡ�����
+2.1  データ型
 
-int ���� unsigned int ���Υ������� 16�ӥåȤǤ��롥�ޤ���_int64_ �ˤ�
-�б����Ƥ��ʤ���
+int 型と unsigned int 型のサイズは 16ビットである．また，_int64_ には
+対応していない．
 
-�ݥ��󥿤˴ؤ��ơ�M16C �Ǥ�16�ӥå�Ĺ�� near �ݥ��󥿵ڤ� 32�ӥå�Ĺ��
-far �ݥ��󥿤�¸�ߤ��롥near �ݥ��󥿤� RAM �ڤӥǥХ����Υݡ����ΰ�Ǥ���
-SFR(Special Function Register) �򥢥���������٤Υݥ��󥿤Ǥ��롥
-������far �ݥ��󥿤� near �ݥ��󥿤ǥ���������ǽ���ΰ�˲ä�
-ROM �ΰ�ޤǥ�����������ǽ�ʥݥ��󥿤Ǥ��롥
-���Τ褦�˥��������ۤʤ�2����Υݥ��󥿤�¸�ߤ��뤿�ᡤ�桼���ץ������
-����������硤�ݥ��󥿤Υ�������ռ�����ɬ�פ����롥
+ポインタに関して，M16C では16ビット長の near ポインタ及び 32ビット長の
+far ポインタが存在する．near ポインタは RAM 及びデバイスのポート領域である
+SFR(Special Function Register) をアクセスする為のポインタである．
+一方，far ポインタは near ポインタでアクセス可能な領域に加え
+ROM 領域までアクセスが可能なポインタである．
+このようにサイズが異なる2種類のポインタが存在するため，ユーザプログラム
+を作成する場合，ポインタのサイズを意識する必要がある．
 
-��ITRON 4.0 ���ͤΥǡ�����������˴ؤ�������Υݡ��ƥ��󥰤Ǥ�
-VP �� near �ݥ��󥿡�VP_INT �� far �ݥ��󥿤Ȥ��Ƥ��롥
+μITRON 4.0 仕様のデータ型の定義に関し，今回のポーティングでは
+VP を near ポインタ，VP_INT を far ポインタとしている．
 
-�ޤ���size_t ���Υǡ����������ˤĤ��Ƥϡ���ͥ������쥯�ȥ��˥�����
-C����ѥ��� NC30WA V.5.40 Release00 �ʹߤ��ǤǤ�32�ӥåȤǤ��뤬��
-�����������ǤΥ���ѥ���Ǥ�16�ӥåȤȡ����ꥵ�������ۤʤ뤿�ᡤ
-���դ�ɬ�פǤ��롥
+また，size_t 型のデータサイズについては，ルネサスエレクトロニクス製
+Cコンパイラ NC30WA V.5.40 Release00 以降の版では32ビットであるが，
+それより前の版のコンパイラでは16ビットと，既定サイズが異なるため，
+注意が必要である．
 
 
-2.2  ����ߴ�����ǽ�ȳ���ߥϥ�ɥ�
+2.2  割込み管理機能と割込みハンドラ
 
-M16C ��CPU���å����֤μ����ϥե饰�쥸������γ���ߵ��ĥե饰(I�ե饰)
-���Ѥ��ƹԤ���CPU���å����֤Ǥ� I�ե饰�� 0 �����ꤵ�졤�ϡ��ɥ�����
-�ޥ����֥����ߤ϶ػߡʼ��դ���α�ˤ���롥CPU���å�������֤Ǥ� I�ե饰
-�� 1 �����ꤵ�졤(�����ͥ���٥�٥�(IPL)���ͤˤ��뤬��)�ޥ�����ǽ��
-������׵�μ��դ���ǽ�Ȥʤ롥
+M16C のCPUロック状態の実装はフラグレジスタ中の割込み許可フラグ(Iフラグ)
+を用いて行う．CPUロック状態では Iフラグが 0 に設定され，ハードウェア
+マスカブル割込みは禁止（受付が保留）される．CPUロック解除状態では Iフラグ
+が 1 に設定され，(割込み優先度レベル(IPL)の値にもよるが，)マスク可能な
+割込み要求の受付が可能となる．
 
-M16C ��¸���ˤ����륫���ͥ�������γ���ߤϡ�NMI �ΤߤǤ��롥
+M16C 依存部におけるカーネル管理外の割込みは，NMI のみである．
 
-DEF_INH �ǻ��ꤹ�����ߥϥ�ɥ��ֹ��inhno�ˤϡ�M16C�ǤΥ��եȥ�����
-������ֹ��ɽ�������Υǡ�������INHNO�ˤ� char�����������Ƥ��롥
+DEF_INH で指定する割込みハンドラ番号（inhno）は，M16Cでのソフトウェア
+割込み番号を表し，そのデータ型（INHNO）は char型に定義されている．
 
-M16C �ץ����å��Ǥϡ�����ߤ����������Υ��ɥ쥹�����ߥ٥����ǻ��ꤹ�롥
-����ߥ٥����ϲ��ѥ٥����ڤӸ���٥������鹽�����졤���Τ������ѥ٥���
-�ˤĤ��Ƥ� VECTOR_ADR (start.a30) �ǻ��ꤵ�줿���ɥ쥹����Ū�����֤���롥
-�ܳ�ȯ�Ķ��Ǥϡ�����ե�����졼�����ˤ���������줿 kernel_cfg.c ��
-���Ƥ���Ϥ�������ߥ٥�������������桼�ƥ���ƥ����Ѱդ��Ƥ��롥
+M16C プロセッサでは，割込みの入口処理のアドレスを割込みベクタで指定する．
+割込みベクタは可変ベクタ及び固定ベクタから構成され，そのうち可変ベクタ
+については VECTOR_ADR (start.a30) で指定されたアドレスへ静的に配置される．
+本開発環境では，コンフィギュレーションにより生成された kernel_cfg.c の
+内容を解析し，割込みベクタを生成するユーティリティを用意している．
 
-���Υ桼�ƥ���ƥ��� m16cvec.exe �Ȥ���̾�Τ� utils/m16c-renesas 
-�ǥ��쥯�ȥ���֤��졤���������줿 kernel_cfg.c �����Ƥ���Ϥ���
-����ߥ٥�������ե����� m16cvec.inc���������롥
-m16cvec.inc �ե������ CPU �Υ������ȥ��åץ⥸�塼��Ǥ��� start.a30
-���饤�󥯥롼�ɤ���롥
+このユーティリティは m16cvec.exe という名称で utils/m16c-renesas 
+ディレクトリに置かれ，前処理された kernel_cfg.c の内容を解析して
+割込みベクタ定義ファイル m16cvec.incを生成する．
+m16cvec.inc ファイルは CPU のスタートアップモジュールである start.a30
+からインクルードされる．
 
-�ʤ���DEF_INH �γ���ߥϥ�ɥ��ֹ�Ȥ���̤������ϰϤ��ͤ���ꤷ����硤
-���� DEF_INH �ǻ��ꤷ���ؿ������������Ƥ��ʤ�������Ѥγ���ߥϥ�ɥ�
-�Ȥ��ƻȤ���褦�ˡ����ꤵ��롥
-���Τ��ᡤ������ˡ��Ȥ��С��桼����̤����ΡʤĤޤꡤDEF_INH ���������
-���ʤ��˳���ߤ�ȯ���������Υϥ�ɥ�����ꤹ�뤳�Ȥ��Ǥ��롥
+なお，DEF_INH の割込みハンドラ番号として未定義の範囲の値を指定した場合，
+その DEF_INH で指定した関数が，定義されていない割込み用の割込みハンドラ
+として使われるように，設定される．
+そのため，この方法を使えば，ユーザは未定義の（つまり，DEF_INH で定義して
+いない）割込みが発生した場合のハンドラを設定することができる．
 
 
-2.3  CPU �㳰������ǽ�� CPU �㳰�ϥ�ɥ�
+2.3  CPU 例外管理機能と CPU 例外ハンドラ
 
-DEF_EXC �ǻ��ꤹ���㳰�ϥ�ɥ��ֹ��excno�ˤϡ�M16C�ǤΥ��եȥ����������
-�ֹ��ɽ�������Υǡ�������EXCNO�ˤ� char �����������Ƥ��롥
+DEF_EXC で指定する例外ハンドラ番号（excno）は，M16Cでのソフトウェア割込み
+番号を表し，そのデータ型（EXCNO）は char 型に定義されている．
 
-CPU�㳰�Ȥ��ơ��ϡ��ɥ������Υ�ޥ����֥����ߤȥ��եȥ������Υ�ޥ���
-�֥����ߤ����롥�ϡ��ɥ������Υ�ޥ����֥����ߤˤĤ��Ƥϡ�
-�ꥻ�åȤ����������ߥ٥��������꤬��ǽ�Ǥ��롥
+CPU例外として，ハードウェアノンマスカブル割込みとソフトウェアノンマスカ
+ブル割込みがある．ハードウェアノンマスカブル割込みについては，
+リセットを除き，割込みベクタの設定が可能である．
 
-CPU�㳰�ϥ�ɥ���б�����٥����ϡ�����ߥϥ�ɥ�κݤ�Ʊ�ͤ�
-m16cvec.exe ���Ѥ��� m16cvec.inc �����ꤹ�롥
-�ʤ���CPU�㳰�ϥ�ɥ��ֹ�Ȥ���̤������ͤ����ꤷ�����ϡ�
-�������Ƥ��ʤ�CPU�㳰�ϥ�ɥ�Υϥ�ɥ�Ȥ������ꤵ��롥
-���Τ��ᡤ�桼����̤�����CPU�㳰��ȯ���������Υϥ�ɥ��
-���ꤹ�뤳�Ȥ��Ǥ��롥
+CPU例外ハンドラに対応するベクタは，割込みハンドラの際と同様に
+m16cvec.exe を用いて m16cvec.inc に設定する．
+なお，CPU例外ハンドラ番号として未定義の値を設定した場合は，
+定義されていないCPU例外ハンドラのハンドラとして設定される．
+そのため，ユーザは未定義のCPU例外が発生した場合のハンドラを
+設定することができる．
 
-2.4  �������ȥ��åץ⥸�塼��
+2.4  スタートアップモジュール
 
-M16C ��¸���Υ������ȥ��åץ⥸�塼�� (start.a30) �ϼ��˼����������¹�
-�����塤�����ͥ� (kernel_start) ��ư���롥��������kernel_start ����
-��äƤ��뤳�Ȥ����ꤷ�Ƥ��ʤ����Ÿ�����ľ��˵�ư����륹�����ȥ��å�
-�⥸�塼��γ������Ϥ� m16cvec.inc �Υ٥��������� _hardware_start ��
-����Ƥ��뤬�����줬���֤���륢�ɥ쥹�ͤϥ�󥯻��˷��ꤵ��롥
+M16C 依存部のスタートアップモジュール (start.a30) は次に示す初期化を実行
+した後，カーネル (kernel_start) を起動する．ただし，kernel_start から
+戻ってくることは想定していない．電源投入直後に起動されるスタートアップ
+モジュールの開始番地は m16cvec.inc のベクタ定義より _hardware_start と
+されているが，それが配置されるアドレス値はリンク時に決定される．
 
-(1) �����å��ݥ��󥿤�����
+(1) スタックポインタの設定
 
-(2) CPU��Ϣ�ν������
+(2) CPU関連の初期設定
 
-�ץ����å��⡼�ɤ�����ȥ����å��������Ԥ���
+プロセッサモードの設定とクロックの設定を行う．
 
-(3) hardware_init_hook �θƽФ�(̤�¹�)
+(3) hardware_init_hook の呼出し(未実行)
 
-M16C������֥�ϡ�C���쥳��ѥ����Ʊ�����ä��ץꥳ��ѥ����������
-���ʤ���hardware_init_hook ��Ƚ�꤬�Ǥ��ʤ������б����Ƥ��ʤ���
-�ºݡ�M16C�Υϡ��ɥ���������˴ؤ��Ƥϡ�sys_initialize()�ؿ���ǹԤä�
-�⽽ʬ���б��Ǥ���ȹͤ�����ΤǤ�������б����Ƥ�������������
+M16Cアセンブラは，C言語コンパイラと同期を取ったプリコンパイル処理がで
+きない．hardware_init_hook の判定ができないため対応していない．
+実際，M16Cのハードウェア設定に関しては，sys_initialize()関数中で行って
+も十分に対応できると考えられるのでそちらで対応していただきたい．
 
-(4) bss���������� data���������ν����
+(4) bssセクションと dataセクションの初期化
 
-bss���������򥼥����ꥢ���롥�ޤ���data�����������������롥
+bssセクションをゼロクリアする．また，dataセクションを初期化する．
 
-(5) software_init_hook �θƽФ�
+(5) software_init_hook の呼出し
 
-software_init_hook ���ͤ� 0 �Ǥʤ���С�software_init_hook ��ƤӽФ���
-software_init_hook �ϥ����ͥ뵯ư���ˡ����եȥ������Ķ� (�饤�֥����)
-��¸�ν������Ԥ�������Ѱդ���Ƥ��롥
+software_init_hook の値が 0 でなければ，software_init_hook を呼び出す．
+software_init_hook はカーネル起動前に，ソフトウェア環境 (ライブラリ等)
+依存の初期化を行うために用意されている．
 
-software_init_hook ������� cpu_config.c ��ǹԤ�������Ǥ� 0 �˲�����
-����Ƥ��롥�ȼ����̤ξ��� software_init_hook ����������硤�ޥ���
-�Ȥ��� EXTERNAL_SOFT_HOOK ��������롥���Τ褦�ˤ���С������ѿ������
-�ޤޤ�ʤ��ʤ뤿�ᡤ�����Ǥ����꤬��ǽ�Ȥʤ롥
-�㤨�С��饤�֥��ν������ʤɤ�Ԥ��������ϡ�����������ѿ������
-�Ԥ����Ȥ���ǽ�Ȥʤ롥
+software_init_hook の定義は cpu_config.c 中で行う．既定では 0 に仮設定
+されている．独自に別の場所で software_init_hook を定義する場合，マクロ
+として EXTERNAL_SOFT_HOOK を定義する．そのようにすれば，元の変数定義は
+含まれなくなるため，外部での設定が可能となる．
+例えば，ライブラリの初期設定などを行いたい場合は，外部からの変数定義を
+行うことが可能となる．
 
-(6) �����ͥ�ε�ư
+(6) カーネルの起動
 
-kernel_start ��ʬ�����������ͥ��ư���롥kernel_start ����꥿����
-�Ƥ��뤳�Ȥ����ꤷ�Ƥ��ʤ���
+kernel_start へ分岐し，カーネルを起動する．kernel_start からリターンし
+てくることは想定していない．
 
-2.5  �����ȯ�����Υ����å������̤ˤĤ���
+2.5  割込み発生時のスタック使用量について
 
-�����ͥ뵯ư���ڤӡ������ȯ�����ϥ������ѤΥ����å��Ȥ��̤γ�������Ѥ�
-�����å�����Ѥ��Ƥ��롥���Υ����å��ΰ�� RAMEND �Ȥ����ޥ�����
-���ꤵ�줿���ɥ쥹������������˸������������ΰ�˳��ݤ���롥
-���Τ��ᡤ�����ƥ൯ư���ˤϤ����ΰ����ݤ���ɬ�פ����롥
+カーネル起動，及び，割込み発生時はタスク用のスタックとは別の割込み専用の
+スタックを使用している．このスタック領域は RAMEND というマクロで
+指定されたアドレスから低位方向に向かうメモリ上の領域に確保される．
+そのため，システム起動時にはこの領域を確保する必要がある．
 
-����ߥͥ��ȥ�٥뤬 0�ʤĤޤꡤ�������¹���ˤǳ���ߤ�ȯ������ȡ�
-����������ƥ������ѥ����å��˥쥸��������¸�����塤������ѥ����å���
-�����å����ڤ��ؤ��롥���Τ��ᡤ����������ƥ������ѥ����å��ˤ�
-���ѥ쥸�������ե饰��PC �ʤ� 20�Х��Ȥ��ΰ褬;ʬ��ɬ�פȤʤ롥
+割込みネストレベルが 0（つまり，タスク実行中）で割込みが発生すると，
+タスクコンテキスト用スタックにレジスタを保存した後，割込み用スタックに
+スタックを切り替える．そのため，タスクコンテキスト用スタックには
+汎用レジスタ，フラグ，PC など 20バイトの領域が余分に必要となる．
 
-����ߥͥ��ȥ�٥뤬 1 �ʾ�ξ��� �ʤĤޤꡤ�󥿥�������ƥ����ȡˤ�
-������׵᤬�����դ���줿��硤����ߥ����å��˥쥸��������¸����롥
-����ˤϳ����ȯ�����20�Х��Ȥ���ɬ�פǤ��롥����˲ä������줾���
-����߽����롼����ǻ��Ѥ���륹���å���������ɬ�פȤʤ롥
+割込みネストレベルが 1 以上の状態 （つまり，非タスクコンテキスト）で
+割込み要求が受け付けられた場合，割込みスタックにレジスタが保存される．
+これには割込み発生毎に20バイトずつ必要である．それに加え，それぞれの
+割込み処理ルーチンで使用されるスタックサイズが必要となる．
 
-3.  �����ƥ��¸���ε�ǽ
+3.  システム依存部の機能
 
-3.1  �����ƥ९���å��ɥ饤��
+3.1  システムクロックドライバ
 
-�����ƥ९���å��ɥ饤�Ф� isig_tim ��ƤӽФ������ϡ�sys_defs.h �����
-TIC_NUME �� TIC_DENO ���������Ƥ����ɸ��� 1�ߥ��ü����ˡ�
-����������ѹ����뤳�Ȥǡ�isig_tim ��ƤӽФ��������ѹ����뤳�Ȥ��Ǥ��롥
-�������������ޤ����٤�1���äǤ��뤿�ᡤ1����ñ�̤�ü���ˤʤ��ͤ����ꤷ��
-���ˤϡ�isig_tim�θƽФ������˸����������뤳�Ȥˤʤ롥
+システムクロックドライバが isig_tim を呼び出す周期は，sys_defs.h の中の
+TIC_NUME と TIC_DENO で定義されている（標準は 1ミリ秒周期）．
+この定義を変更することで，isig_tim を呼び出す周期を変更することができる．
+ただし，タイマの精度が1μ秒であるため，1μ秒単位で端数になる値を設定した
+場合には，isig_timの呼出し周期に誤差が生じることになる．
 
-3.2  ��ǽɾ���ѥ����ƥ���ﻲ�ȵ�ǽ
+3.2  性能評価用システム時刻参照機能
 
-M16C�Ǥϡ���ǽɾ���ѥ����ƥ���ﻲ�ȵ�ǽ (vxget_tim) �򥵥ݡ��Ȥ��Ƥ��롥
-OAKS16 �Ǥ����� 0.0625[us]��OAKS16-MINI�Ǥ����� 1.6[us]�Ǥ��롥SYSUTIM
-���� UW �� (32 �ӥå����ʤ�������) �Ǥ��롥
+M16Cでは，性能評価用システム時刻参照機能 (vxget_tim) をサポートしている．
+OAKS16 では精度 0.0625[us]，OAKS16-MINIでは精度 1.6[us]である．SYSUTIM
+型は UW 型 (32 ビット符号なし整数型) である．
 
-3.3  ���ꥢ�륤�󥿥ե������ɥ饤��
+3.3  シリアルインタフェースドライバ
 
-OAKS16��OAKS16-MINI �Ǥ� UART0 �� UART1 �� 2�ĤΥ��ꥢ��ݡ��Ȥ�
-�ܡ��ɾ�˼����Ǥ��롥���Τ������ͥ������������줿 UART1 ��
-���������Ѥ˻��Ѥ��Ƥ��롥
+OAKS16，OAKS16-MINI では UART0 と UART1 の 2つのシリアルポートが
+ボード上に実装できる．このうちコネクタが実装された UART1 を
+ログ出力用に使用している．
 
 
-3.4  ����ޥå�
+3.4  メモリマップ
 
-3.4.1  OAKS16�Υ���ޥå�
+3.4.1  OAKS16のメモリマップ
 
-(1)  �¹ԴĶ�
+(1)  実行環境
 
-     0x00000 - 0x003ff  SFR�ΰ�
-     0x00400 - 0x02bff  ��¡ RAM��data_NE��data_NO��bss_NE��bss_NO
-     0xe0000 - 0xffdff  ��¢ ROM��program��rom_FE��rom_FO��data_NEI��
+     0x00000 - 0x003ff  SFR領域
+     0x00400 - 0x02bff  内臓 RAM，data_NE，data_NO，bss_NE，bss_NO
+     0xe0000 - 0xffdff  内蔵 ROM，program，rom_FE，rom_FO，data_NEI，
                                   data_NOI
-     0xffe00 - 0xfffdb  ��¢ ROM���ϡ��ɡ����եȳ���ߥ٥����ΰ� (vector)
-     0xfffdc - 0xfffff  ��¢ ROM���ϡ���CPU�㳰�٥����ΰ�(fvector)
+     0xffe00 - 0xfffdb  内蔵 ROM，ハード，ソフト割込みベクタ領域 (vector)
+     0xfffdc - 0xfffff  内蔵 ROM，ハードCPU例外ベクタ領域(fvector)
 
-3.4.2  OAKS16-MINI�Υ���ޥå�
+3.4.2  OAKS16-MINIのメモリマップ
 
-(1)  �¹ԴĶ�
+(1)  実行環境
 
-     0x00000 - 0x003ff  SFR�ΰ�
-     0x00400 - 0x00bff  ��¡ RAM��data_NE��data_NO��bss_NE��bss_NO
-     0xe0000 - 0xffdff  ��¢ ROM��program��rom_FE��rom_FO��data_NEI��
+     0x00000 - 0x003ff  SFR領域
+     0x00400 - 0x00bff  内臓 RAM，data_NE，data_NO，bss_NE，bss_NO
+     0xe0000 - 0xffdff  内蔵 ROM，program，rom_FE，rom_FO，data_NEI，
                                   data_NOI
-     0xffe00 - 0xfffdb  ��¢ ROM���ϡ��ɡ����եȳ���ߥ٥����ΰ� (vector)
-     0xfffdc - 0xfffff  ��¢ ROM���ϡ���CPU�㳰�٥����ΰ�(fvector)
+     0xffe00 - 0xfffdb  内蔵 ROM，ハード，ソフト割込みベクタ領域 (vector)
+     0xfffdc - 0xfffff  内蔵 ROM，ハードCPU例外ベクタ領域(fvector)
 
-4.  ��ȯ
+4.  開発
 
-4.1  ��ȯ�Ķ��ι���
+4.1  開発環境の構築
 
-��ȯ�Ķ��ϡ�Windows XP (Service Pack 3)��ư���ǧ������
-���۴Ķ��ϥ�ͥ������쥯�ȥ��˥��������γ�ȯ�Ķ����Ѥ��롥
-�ӥ�ɴ�����ˡ�Ȥ��ơ��ʲ��� 2�Ĥ����롥
+開発環境は，Windows XP (Service Pack 3)で動作確認した．
+構築環境はルネサスエレクトロニクス社製の開発環境を用いる．
+ビルド管理方法として，以下の 2つがある．
 
-(1)  ��ͥ������쥯�ȥ��˥������������糫ȯ�Ķ� TM ����Ѥ����Ķ�
+(1)  ルネサスエレクトロニクス社製の統合開発環境 TM を使用した環境
 
-	�оݡ�OAKS16�ܡ��ɡ�OAKS16-MINI�ܡ���
-	��������ͥ������쥯�ȥ��˥����Ҥ����糫ȯ�Ķ� TM V3.20 ���Ѥ��ƹ��ۤ��롥
-			���κݡ������ͥ�����饤�֥�경�������ۤ���
-	ư���ǧ����ѥ��顧
-			NC30WA Version 5.45 Release 1 ̵��ɾ����
-			NC30WA Version 5.10 Release 1 Entry��
-	����2011ǯ5������Ǥκǿ���(NC30WA Version 6.00 Release 00) ��
-	    �ġ���λ����ѹ��ˤ�긽�����Ǥ��б����Ƥ��ʤ���
+	対象：OAKS16ボード，OAKS16-MINIボード
+	方式：ルネサスエレクトロニクス社の統合開発環境 TM V3.20 を用いて構築する．
+			その際，カーネル部をライブラリ化せず構築する
+	動作確認コンパイラ：
+			NC30WA Version 5.45 Release 1 無償評価版
+			NC30WA Version 5.10 Release 1 Entry版
+	注）2011年5月時点での最新版(NC30WA Version 6.00 Release 00) は
+	    ツールの仕様変更により現時点では対応していない．
 
-(2)  DOS�뤫�� make ���ޥ�ɤ��Ѥ��Ƴ�ȯ��Ԥ��Ķ�
+(2)  DOS窓から make コマンドを用いて開発を行う環境
 
-	�оݡ�OAKS16 �ܡ���
-	������DOS�뤫��make��Ȥäƹ���
-			�����ͥ�����饤�֥�경���ƹ��ۤ���
-	ư���ǧ����ѥ��顧
-		NC30WA Version 5.45 Release 1 ̵��ɾ����
-	����¾ɬ�ץġ���
-		GNU make (version 3.80 ��ư���ǧ��)
-		Perl (ư���ǧ�� Active Perl v5.6.1 �ڤ� v5.12.2�ǹԤä�)
+	対象：OAKS16 ボード
+	方式：DOS窓からmakeを使って構築
+			カーネル部をライブラリ化して構築する
+	動作確認コンパイラ：
+		NC30WA Version 5.45 Release 1 無償評価版
+	その他必要ツール
+		GNU make (version 3.80 で動作確認済)
+		Perl (動作確認は Active Perl v5.6.1 及び v5.12.2で行った)
 
-��������������ξ��� NC30WA �Υ��󥹥ȡ�����ˤ����դ�ɬ�פǤ��롥
-�Ƕ���ǤǤϵ����ͤȤ��� C:\Program Files �ʲ��˥��󥹥ȡ��뤵��뤬��
-TM �ڤ� make �ϥѥ�ʸ������˶��򤬴ޤޤ���硤������ư��ʤ���
-���Τ��ᡤ���󥹥ȡ�����ѥ��������ޤޤʤ��褦�ˤ���ɬ�פ����롥
+ただし，いずれの場合も NC30WA のインストール先には注意が必要である．
+最近の版では規定値として C:\Program Files 以下にインストールされるが，
+TM 及び make はパス文字列中に空白が含まれる場合，正しく動作しない．
+そのため，インストール先パスが空白を含まないようにする必要がある．
 
-�ޤ�����������Ÿ�����֤ȥġ���Υ��󥹥ȡ�����Ȥ��ۤʤ�ɥ饤�֤�
-���֤���Ƥ��빽���⡤�����ư��ʤ���礬���뤿�ᡤ�侩���ʤ���
+また，ソースの展開位置とツールのインストール先とが異なるドライブに
+配置されている構成も，正常に動作しない場合があるため，推奨しない．
 
-4.2  ���糫ȯ�Ķ�TM���Ѥ�������
+4.2  統合開発環境TMを用いた構築
 
-OAKS16 �ե륭�åȤޤ��� OAKS16 MINI �ե륭�åȤ�ź�դγ�ȯ�Ķ����Ѥ���
-M16C�Ѥ� TOPPERS/JSP �����ͥ���ۤ��롥�¹Ԥϡ�FlashROM �񤭹���
-�ġ��� FlashSta ���Ѥ������ۤ��� MOT �ե������ܡ��ɾ�Υե�å���
-ROM �ؽ񤭹��ळ�Ȥˤ��Ԥ���
+OAKS16 フルキットまたは OAKS16 MINI フルキットに添付の開発環境を用いて
+M16C用の TOPPERS/JSP カーネルを構築する．実行は，FlashROM 書き込み
+ツール FlashSta を用い，構築した MOT ファイルをボード上のフラッシュ
+ROM へ書き込むことにより行う．
 
-�������äơ����糫ȯ�Ķ� TM������ѥ��� NC30WA���ե�å���ROM �񤭹���
-�ġ��� FlashSta �⥤�󥹥ȡ��뤹��ɬ�פ����롥
+したがって，統合開発環境 TM，コンパイラ NC30WA，フラッシュROM 書き込み
+ツール FlashSta もインストールする必要がある．
 
-�ޤ����������åȥץ������ι��ۤˤϡ���ȯ�ۥ��Ⱦ��ư��롤
-����ե�����졼�� cfg/cfg.exe �ڤ� M16C�������å���ͭ�Υ桼�ƥ���ƥ�
-�ץ������ utils/m16c-renesas/{m16cvec.exe, m16coffset.exe} ���Ѥ��롥
-�����Υץ������ϥ���ѥ���ѤߤΤ�Τ��Ѱդ���Ƥ��뤬��
-�ץ��������ѹ����������Ϻƹ��ۤ���ɬ�פ����롥
+また，ターゲットプログラムの構築には，開発ホスト上で動作する，
+コンフィギュレータ cfg/cfg.exe 及び M16Cターゲット特有のユーティリティ
+プログラム utils/m16c-renesas/{m16cvec.exe, m16coffset.exe} も用いる．
+これらのプログラムはコンパイル済みのものが用意されているが，
+プログラムを変更したい場合は再構築する必要がある．
 
-4.2.1 �ġ���ι���
+4.2.1 ツールの構築
 
-cfg.exe �ι��ۤˤĤ��Ƥ� user.txt �ʤɤ򻲾ȤΤ��ȡ�
-utils/m16c-renesas ��Υġ��� m16coffset.exe �� m16cvec.exe ��
-���ۤ����硤MinGW (Minimalist GNU for Windows)����Ѥ��롥
-(���ʤߤˡ�cfg.exe �Υӥ�ɤ� MinGW ���б���ǽ�Ǥ����
+cfg.exe の構築については user.txt などを参照のこと．
+utils/m16c-renesas 上のツール m16coffset.exe と m16cvec.exe を
+構築する場合，MinGW (Minimalist GNU for Windows)を使用する．
+(ちなみに，cfg.exe のビルドも MinGW で対応可能である）
 
-�̾�ϴ��˥���ѥ���ѤߤΤ�Τ��Ѱդ���Ƥ��뤿�ᡤ�������
-���Ѥ���Ф褤��
+通常は既にコンパイル済みのものが用意されているため，そちらを
+利用すればよい．
 
 MinGW (Minimalist GNU for Windows)
 http://www.mingw.org/
-http://sourceforge.net/projects/mingw/  (���󥹥ȡ����������)
+http://sourceforge.net/projects/mingw/  (インストーラの入手先)
 
-4.2.2 TM �˥ץ��������Ȥ����򤷥ӥ�ɤ��롥
+4.2.2 TM にプロジェクトを選択しビルドする．
 
-(1) �ץ�������������ե�������ѹ�
+(1) プロジェクト設定ファイルの変更
 
-�������ˤ�äƤ�����(1)�ν񤭴�����Ԥ�ʤ��Ƥ�ġ��뤬�ѥ��������
-��ưŪ�˹Ԥ���礬���뤿�ᡤ���꤬�������Ȥ��˽񤭴�����Ԥ��Ф褤��
+注：場合によっては本節(1)の書き換えを行わなくてもツールがパスの設定を
+自動的に行う場合があるため，問題が生じたときに書き換えを行えばよい．
 
-tools/M16C-RENESAS �ʲ��ˤ��롤TM �Υץ�������������ե�����
-Jsp14sample1.tmi��Jsp14sample1.tmk��Jsp14sample1m.tmi��Jsp14sample1m.tmk 
-���������Ƥˤ����Хѥ����꤬�Ԥ��Ƥ���ս꤬���롥
+tools/M16C-RENESAS 以下にある，TM のプロジェクト設定ファイル
+Jsp14sample1.tmi，Jsp14sample1.tmk，Jsp14sample1m.tmi，Jsp14sample1m.tmk 
+の設定内容には絶対パス指定が行われている箇所がある．
 
-������ʬ�����ߤ� tools/M16C-RENESAS �ǥ��쥯�ȥ�����Хѥ��Ȱۤʤ���ϡ�
-TM ��Ȥäƥץ��������Ȥ������Ԥ����ˡ����ǥ�����Ȥä����Хѥ��������
-�񤭴����롥�ʲ���Jsp14sample1.tmi��Jsp14sample1.tmk����򼨤���
+その部分が現在の tools/M16C-RENESAS ディレクトリの絶対パスと異なる場合は，
+TM を使ってプロジェクトの設定を行う前に，エディタを使って絶対パスの設定を
+書き換える．以下にJsp14sample1.tmiとJsp14sample1.tmkの例を示す．
 
 ---Jsp14sample1.tmi ---
 [PROJECT]
 ProjectName=Jsp14sample1
-WorkingDirectory=C:\usr\TOPPERS\jsp-1.4\tools\R16C-RENESAS                	<-���Хѥ�
+WorkingDirectory=C:\usr\TOPPERS\jsp-1.4\tools\R16C-RENESAS                	<-絶対パス
 OutputDirectory=.
-ProjectFile=C:\usr\TOPPERS\jsp-1.4\tools\R16C-RENESAS\Jsp14sample1.tmk    	<-���Хѥ�
-ProjectInfoFile=C:\usr\TOPPERS\jsp-1.4\tools\R16C-RENESAS\Jsp14sample1.tmi	<-���Хѥ�
+ProjectFile=C:\usr\TOPPERS\jsp-1.4\tools\R16C-RENESAS\Jsp14sample1.tmk    	<-絶対パス
+ProjectInfoFile=C:\usr\TOPPERS\jsp-1.4\tools\R16C-RENESAS\Jsp14sample1.tmi	<-絶対パス
 TargetName=M16C Family
 Type=1
-GoalFile=C:\usr\TOPPERS\jsp-1.4\tools\R16C-RENESAS\Jsp14sample1.x30       	<-���Хѥ�
+GoalFile=C:\usr\TOPPERS\jsp-1.4\tools\R16C-RENESAS\Jsp14sample1.x30       	<-絶対パス
 [NC]
 Name=NC30WA
 Version=V.4.00 Release 2
@@ -405,97 +405,97 @@ Version=V.4.00 Release 2
 
 DELETE	=	@-del
 LNLIST	=	$(PROJECT).cmd
-PRJDIR	=	C:\usr\TOPPERS\jsp-1.4\tools\R16C-RENESAS	<-���Хѥ�
+PRJDIR	=	C:\usr\TOPPERS\jsp-1.4\tools\R16C-RENESAS	<-絶対パス
 LMC	=	LMC30
 CC	=	NC30
 	:
 
-(2) �ץ��������ȤΥ����ץ�
+(2) プロジェクトのオープン
 
-(2-1) Windows ��˥塼���� TM ��ư���롥
-(2-2) TM ����ư�������Open Project�ץ�˥塼�򳫤���
-(2-3) tools/M16C-RENESAS �ǥ��쥯�ȥ���� Jsp14sample1.tmk �ޤ���
-      Jsp14sample1m.tmk �����򤹤롥
-      OAKS16�Ѥι��ۤ�Ԥ����ϡ�Jsp14sample1.tmk��OAKS16 MINI�Ѥι��ۤ�
-      �Ԥ����ϡ�Jsp14sample1m.tmk �����򤹤롥
-(2-4) �����������ѥ���ΰ㤤�ˤ�������˥塼��ɽ��������礬���롥
-      ���δĶ��ϡ�NC30WA ����ѥ���� Version 5.10 Entry �ǵڤ� Version 5.45 
-      �ˤ�ɾ����ԤäƤ��롥���ߤδĶ��ˤ������ä����ꤹ�롥
+(2-1) Windows メニューから TM を起動する．
+(2-2) TM が起動したら「Open Project」メニューを開く．
+(2-3) tools/M16C-RENESAS ディレクトリ中の Jsp14sample1.tmk または
+      Jsp14sample1m.tmk を選択する．
+      OAKS16用の構築を行う場合は，Jsp14sample1.tmkを，OAKS16 MINI用の構築を
+      行う場合は，Jsp14sample1m.tmk を選択する．
+(2-4) 選択時，コンパイラの違いにより設定メニューが表示される場合がある．
+      この環境は，NC30WA コンパイラの Version 5.10 Entry 版及び Version 5.45 
+      にて評価を行っている．現在の環境にしたがって設定する．
 
-(3) �ץ�ץ����å��λ���
+(3) プリプロセッサの指定
 
-�ӥ�ɲ����ǥץ�ץ����å�����Ѥ��뤿�ᡤ��ȯ�Ķ������󥹥ȡ��뤵�줿
-���˱����� CPP �Ȥ���̾���Υޥ������ѹ����롥
+ビルド過程でプリプロセッサを使用するため，開発環境がインストールされた
+場所に応じて CPP という名前のマクロを変更する．
 
-(3-1) TM ���� Project Editor ��ư���롥
-(3-2) ɽ������륦����ɥ��Υ�˥塼�ǡ֥ץ��������� �� �ޥ����֥饦����
-      �����򤹤롥
-(3-3) CPP �Ȥ���̾���Υޥ����򡤳�ȯ�Ķ��Υ��󥹥ȡ�����˱������Խ����롥
-     �����ˤ� cpp30.exe �Ȥ����¹ԥե�����Υե�ѥ�̾�����ꤹ�롥
+(3-1) TM から Project Editor を起動する．
+(3-2) 表示されるウィンドウのメニューで「プロジェクト → マクロブラウザ」
+      を選択する．
+(3-3) CPP という名前のマクロを，開発環境のインストール先に応じて編集する．
+     ここには cpp30.exe という実行ファイルのフルパス名を設定する．
 
-(4) �ץ��������ȤΥӥ��
+(4) プロジェクトのビルド
 
-(4-1) ����塤�֥�ӥ�ɡץ�˥塼�����򤷥ӥ�ɤ�Ԥ���
+(4-1) 設定後，「リビルド」メニューを選択しビルドを行う．
 
-�ӥ�ɤ���λ����ȡ����Υǥ��쥯�ȥ���� Jsp14sample1.mot �ޤ���
-Jsp14sample1m.mot �Ȥ���̾�ΤΥե����뤬��������롥
-TM������Ȥ��ƥ������ե�����ΰ�¸���������ԤäƤ��ʤ��Τǡ�
-���ۻ��ϡ֥�ӥ�ɡפǥӥ�ɤ��뤳�Ȥ�侩���롥
+ビルドが完了すると，このディレクトリ中に Jsp14sample1.mot または
+Jsp14sample1m.mot という名称のファイルが生成される．
+TMの設定としてソースファイルの依存性の設定を行っていないので，
+構築時は「リビルド」でビルドすることを推奨する．
 
 
-4.2.3 FlashSta���Ѥ��ƥե�å���ROM�˽񤭹���
+4.2.3 FlashStaを用いてフラッシュROMに書き込む
 
-��ȯ�ѤΥѥ�����ȥܡ��ɤȤ�RS-232C�����֥��Ȥä���³���롥
-CNVSS �ԥ�򥸥��ѡ��ԥ��Ȥäƥ��硼�Ȥ����롥
+開発用のパソコンとボードとを，RS-232Cケーブルを使って接続する．
+CNVSS ピンをジャンパーピンを使ってショートさせる．
 
-�Ÿ�����³�����Ÿ������å��򥪥�ˤ��롥������ FlashSta��ư���롥
-Select Program��˥塼�ˤƥݡ��Ȥ����򤷤ơ�OK�ץܥ���򲡲����롥
-ID Check��˥塼��ɽ�����줿���Refer..�ץܥ���򲡲�����
-��������MOT�ե���������򤹤롥
+電源を接続し，電源スイッチをオンにする．そして FlashStaを起動する．
+Select Programメニューにてポートを選択して「OK」ボタンを押下する．
+ID Checkメニューが表示されたら「Refer..」ボタンを押下し，
+生成したMOTファイルを選択する．
 
-Select Program ����ä��顤��OK�ץܥ���򲡲��� M16C Flash Start 
-��˥塼��ɽ�����롥
-�ޤ�����Erase�ץܥ���򲡲������ե�å���ROM�򥯥ꥢ���롥
-���θ塤��Program..�ץܥ���򲡲����ץ������ν񤭹��ߤ�Ԥ���
-�񤭹��ߤ���λ�����顤��Exit�ץܥ���򲡲���FlashSta��λ�����롥
-�Ÿ����ڤꡤCNVSS�ԥ󤫤饸���ѡ��ԥ�򳰤���
+Select Program に戻ったら，「OK」ボタンを押下し M16C Flash Start 
+メニューが表示する．
+まず，「Erase」ボタンを押下し，フラッシュROMをクリアする．
+その後，「Program..」ボタンを押下しプログラムの書き込みを行う．
+書き込みが終了したら，「Exit」ボタンを押下しFlashStaを終了させる．
+電源を切り，CNVSSピンからジャンパーピンを外す．
 
-4.2.4. sample1�μ¹�
+4.2.4. sample1の実行
 
-�ѥ�����˥��ꥢ�롦�����ߥʥ��Ω���夲�롥
-����ϰʲ����̤ꡥ
+パソコンにシリアル・ターミナルを立ち上げる．
+設定は以下の通り．
 
  Baud rate:19200
  Data:8 bit
  Parity:none
  Stop:1 bit
 
-Flow control��OAKS16 MINI�Ǥ�none��OAKS16�Ǥ�none�Ǥ�Xob/Xoff�Τɤ��餫��
-���ꤹ�뤳��.�Ÿ��������ȡ�sample1���¹Ԥ���롥
+Flow controlはOAKS16 MINIではnone，OAKS16ではnoneでもXob/Xoffのどちらかに
+設定すること.電源を入れると，sample1が実行される．
 
 
-4.3 DOS�뤫��make���ޥ�ɤ��Ѥ�������
+4.3 DOS窓からmakeコマンドを用いた構築
 
-GNU make ���Ѥ���M16C�Ѥ�TOPPERS/JSP���ۤ�����ˡ�򼨤���
-������ˡ�� OAKS16 �ξ��Τ��б����Ƥ��롥
-����ѥ���ϥ饤�֥�ꥢ���ޤ� NC30WA���Ǥ�����Ȥ��Ƥ��롥
-���ߤǤϡ���ͥ������쥯�ȥ��˥����Υ����֥����Ȥ���̵��ɾ���Ǥ������ǽ�Ǥ��롥
+GNU make を用いてM16C用のTOPPERS/JSPを構築する方法を示す．
+この方法は OAKS16 の場合のみ対応している．
+コンパイラはライブラリアンを含む NC30WAの版を前提としている．
+現在では，ルネサスエレクトロニクスのウェブサイトから無償評価版が入手可能である．
 
-���Υ���ѥ���� Entry�ǤǤϥ饤�֥�ꥢ�� lb30.exe ���ޤޤ�ʤ����Ȥ�
-���뤿�ᡤ���Τޤޥӥ�ɤ��뤳�Ȥ�����ʤ������ξ��ϥ饤�֥�경
-���ʤ��褦�� Makefile (�ºݤΥե�����̾�� sample �ǥ��쥯�ȥ��
-Makefile.m16c-oaks16 ) ��񤭴�����ɬ�פ����롥
+過去のコンパイラの Entry版ではライブラリアン lb30.exe が含まれないことが
+あるため，そのままビルドすることが出来ない．その場合はライブラリ化
+しないように Makefile (実際のファイル名は sample ディレクトリの
+Makefile.m16c-oaks16 ) を書き換える必要がある．
 
-���ۤˤ����äƤϡ�����ե�����졼�� cfg.exe �� cfg �ǥ��쥯�ȥ�ˡ�
-4.2.1 �Ǽ������ġ��롤���ʤ�� m16coffset.exe ����� m16cvec.exe �� 
-utils/m16c-renesas �ǥ��쥯�ȥ�ˡ����줾��¸�ߤ��Ƥ��뤳�Ȥ�����Ȥʤ롥
-�̾���Ѱդ���Ƥ����Τ����Ѥ���Ф褤��
-�ޤ�����ȯ�ġ��� NC30WA�Ϥ��餫���ᥤ�󥹥ȡ��뤷�Ƥ������Ȥ�ɬ�פǤ��롥
+構築にあたっては，コンフィギュレータ cfg.exe が cfg ディレクトリに，
+4.2.1 で示したツール，すなわち m16coffset.exe および m16cvec.exe が 
+utils/m16c-renesas ディレクトリに，それぞれ存在していることが前提となる．
+通常は用意されているものを利用すればよい．
+また，開発ツール NC30WAはあらかじめインストールしておくことが必要である．
 
 
-4.3.1 ��ȯ�ġ��������
+4.3.1 開発ツールの入手
 
-�ġ���ϰʲ��Υ����Ȥ��������ǽ��
+ツールは以下のサイトから入手可能．
 
 GNU Make 
 http://www.mingw.org/
@@ -504,163 +504,163 @@ Active Perl
 http://www.activestate.com/
 
 
-4.3.2 ����ץ�ץ������ι�����ˡ�ˤĤ���
+4.3.2 サンプルプログラムの構築方法について
 
-����ץ�ץ������ι�����ˡ�ϴ���Ū�� doc/user.txt �� ��7.4 ����ץ�
-�ץ������ι��ۡפǼ����줿��ˡ�˽�򤷤Ƥ��롥������������ե������
-������󥹥���ץ����� perl �ǽ񤫤줿������ץȤϤ��Τޤ� Windows �� 
-DOS���WindowsXP�Ǥϡ֥��ޥ�ɥץ���ץȡסˤξ�Ǥϻ��Ѥ��뤳�Ȥ�
-�Ǥ��ʤ������Τ��ᡤutils/m16c-renesas �ǥ��쥯�ȥ���Ѱդ��줿��
-���Ѥ� Perl������ץȤ���Ѥ��롥
+サンプルプログラムの構築方法は基本的に doc/user.txt の 「7.4 サンプル
+プログラムの構築」で示された方法に準拠している．ただし，コンフィギュレ
+ーションスクリプト等の perl で書かれたスクリプトはそのまま Windows の 
+DOS窓（WindowsXPでは「コマンドプロンプト」）の上では使用することが
+できない．そのため，utils/m16c-renesas ディレクトリに用意された，
+専用の Perlスクリプトを使用する．
 
-4.3.3 ����ե�����졼����󥹥���ץȤμ¹�
+4.3.3 コンフィギュレーションスクリプトの実行
 
    > mkdir OBJ
    > cd OBJ
    > perl ..\utils\m16c-renesas\configure.m16c
 
-�����������ꤷ�ʤ�����
+何も引数を指定しない場合は
 -C m16c -S oaks16 -T renesas -p \perl\bin\perl
-�Ȥ������ץ�������ꤷ�� configure ��¹Ԥ�������Ʊ��ư���Ԥ���
+というオプションを指定して configure を実行した場合と同じ動作を行う．
 
-���ν����ˤ�ꡤ�����ȥǥ��쥯�ȥ�ˤϰʲ��Υե����뤬���������
-	��Makefile
-	������ץ�ץ�������ѤΥ���ե�����졼�����ե������sample1.cfg��
-	������ץ�ץ���������Ρ�sample1.h�����sample1.c��
-������Makefile�ν�����ɬ�פʤ�С�������Ԥ��Τ�¾�Υ������åȤξ���Ʊ���Ǥ��롥
+この処理により，カレントディレクトリには以下のファイルが生成される
+	・Makefile
+	・サンプルプログラム用のコンフィギュレーションファイル（sample1.cfg）
+	・サンプルプログラム本体（sample1.hおよびsample1.c）
+ここでMakefileの修正が必要ならば，修正を行うのは他のターゲットの場合と同じである．
 
-4.3.4 ��¸�ط��ե��������������ӥ���ץ�ץ������Υ����ɥ⥸�塼�����
+4.3.4 依存関係ファイルの生成およびサンプルプログラムのロードモジュール作成
 
-��¸�ط��ե����� Makefile.depend ����ӥ����ɥ⥸�塼�� jsp.mot ���������
-�ˤϼ��Τ褦�˼¹Ԥ��롥MinGW �� make �����Ѥ����硤make �������
-mingw32-make ��¹Ԥ���ɬ�פ����뤫�⤷��ʤ���
+依存関係ファイル Makefile.depend およびロードモジュール jsp.mot を作成する
+には次のように実行する．MinGW の make を利用する場合，make の代わりに
+mingw32-make を実行する必要があるかもしれない．
 
    > make depend
    > make
 
-make depend �μ¹Բ����ˤ����ƥץ�ץ����å�(cpp30.exe)���Ѥ��뤬��
-�ġ���Υ��󥹥ȡ�����˱����ơ��ץ�ץ����å����ޥ�ɤΥե�ѥ�̾��
-Ŭ�ڤ����ꤹ��ɬ�פ����롥
+make depend の実行過程においてプリプロセッサ(cpp30.exe)を用いるが，
+ツールのインストール先に応じて，プリプロセッサコマンドのフルパス名を
+適切に設定する必要がある．
 
-����ϥץ����å���¸���ǥ��쥯�ȥ�(config/m16c-renesas)�ˤ��� Makefile.config
-����� CPP �Ȥ����ѿ��ǹԤäƤ��롥������ʬ�򥤥󥹥ȡ�����˱����ƽ񤭴����롥
+設定はプロセッサ依存部ディレクトリ(config/m16c-renesas)にある Makefile.config
+の中の CPP という変数で行っている．この部分をインストール場所に応じて書き換える．
 
-4.3.5 �ե�å���ROM �ؤν񤭹��ߤ���ӥ���ץ�ץ������μ¹�
+4.3.5 フラッシュROM への書き込みおよびサンプルプログラムの実行
 
-���ۤ��� MOT�ե������ FlashSta ���ޥ���Ѥ��ơ��ܡ��ɾ�Υե�å���ROM��
-�񤭹����礫����Ͼ嵭 4.2.3��4.2.4�������������Ƥ�Ʊ���Ǥ��롥
+構築した MOTファイルを FlashSta コマンド用いて，ボード上のフラッシュROMに
+書き込む手順から先は上記 4.2.3，4.2.4で説明した内容と同じである．
 
-4.3.6 OAKS16-MINI���б��ˤĤ���
+4.3.6 OAKS16-MINIの対応について
 
-OAKS16-MINI �ѤΥ����ͥ���ۤ�����ϡ�Makefile.m16c-oaks16_mini ��
-���Ѥ��롥OAKS16-MINI�ǤΥ����ͥ�Ǥϡ����ꥵ�����︺�ΰ٤ˡ�
-������ǽ�ϥ����������Ƥ��ʤ������Τ��ᡤ����ե�����졼����󡦥ե������
-��������ɬ�פ����롥sample1.cfg ���28���ܤ�
-��#include "@(SRCDIR)/systask/logtask.cfg"�פΤιԤ������뤫��
-�ޤ��ϥ����Ȳ����ƥ�����ǽ�������������ʤ��褦������Ԥä��塤�ӥ�ɤ��롥
-¾�μ���OAKS16�Ǥ�Ʊ�ͤǤ��롥
+OAKS16-MINI 用のカーネルを構築する場合は，Makefile.m16c-oaks16_mini を
+使用する．OAKS16-MINI版のカーネルでは，メモリサイズ削減の為に，
+ログ機能はタスク化していない．そのため，コンフィギュレーション・ファイルを
+修正する必要がある．sample1.cfg 中の28行目の
+「#include "@(SRCDIR)/systask/logtask.cfg"」のの行を削除するか，
+またはコメント化してログ機能がタスク化しないよう修正を行った後，ビルドする．
+他の手順はOAKS16版と同様である．
 
-4.4  �ǥХå�
+4.4  デバッガ
 
-OAKS16 ����� OAKS16-MINI �ˤϡ�KD30 �ǥХå���ź�դ���Ƥ��롥
-���ΥǥХå��ϥե�å��� ROM ��� KD30 ��˥����� UART1 ���Ѥ���
-�̿���Ԥ��ǥХå���ǽ��¸����롥�ܥ����ͥ�ϥե�å���ROM ���
-�񤭹��ߤ�Ԥ��¹Ԥ��롥�����ͥ��񤭹���ݡ���¸�Υ�˥����ץ�������
-��񤭤���١������ͥ�¹Ի��� KD30 �ǥХå��ϻ��ѤǤ��ʤ���
+OAKS16 および OAKS16-MINI には，KD30 デバッガが添付されている．
+このデバッガはフラッシュ ROM 上の KD30 モニターと UART1 を用いて
+通信を行いデバッグ機能を実現する．本カーネルはフラッシュROM 上に
+書き込みを行い実行する．カーネルを書き込む際，既存のモニタープログラムを
+上書きする為，カーネル実行時は KD30 デバッカは使用できない．
 
-�Ƥ� KD30 ��Ȥ��������ϡ�KD30 ��°�Υ�˥��ץ�������ե�å��� ROM
-�ؽ񤭹���ɬ�פ����롥
+再び KD30 を使いたい場合は，KD30 付属のモニタプログラムをフラッシュ ROM
+へ書き込む必要がある．
 
-�ʤ����ܥ����ͥ�� TOPPERS ���� WG �ǳ�ȯ���줿��TOPPERS���������ߥʡ���
-�ζ�����б����Ƥ��롥���ΰ١�����ǻ��Ѥ��Ƥ���֥���������˥����פ�
-ʻ�Ѥ��뤳�Ȥˤ�ꡤTOPPERS/JSP �¹���Υ���ڤ� SFR �λ��Ȥ����ꡤ
-�������δ��������ɽ������ǽ�Ȥʤ롥ɬ�פʾ��ϡ֥���������˥����פȤ�
-ʻ�Ѥ򴫤�롥
+なお，本カーネルは TOPPERS 教育 WG で開発された「TOPPERS初級実装セミナー」
+の教材に対応している．その為，教材で使用している「タスク・モニター」と
+併用することにより，TOPPERS/JSP 実行中のメモリ及び SFR の参照や設定，
+タスクの管理や状態表示が可能となる．必要な場合は「タスク・モニター」との
+併用を勧める．
 
-4.5  ����ѥ��륹���å�
+4.5  コンパイルスイッチ
 
-�ʲ��Υ���ѥ��륹���å������꤬��ǽ�Ǥ��롥
+以下のコンパイルスイッチの設定が可能である．
 
 (1)   NEED_API
 
-����ѥ������NEED_API ��ޥ����������� api.h �� cpu_config.h �˥��󥯥롼��
-����롥����ˤ�ꡤ�饤�֥�경�ΰ٤�ʬ�䥳��ѥ�����޻ߤ��뤳�Ȥ��Ǥ��롥
+コンパイル時，NEED_API をマクロ定義すると api.h が cpu_config.h にインクルード
+される．これにより，ライブラリ化の為の分割コンパイルを抑止することができる．
 
 (2)   EXTERNAL_SOFT_HOOK
 
-����ѥ������EXTERNAL_SOFT_HOOK��ޥ�������� software_init_hook ��
-�������åȰ�¸�����������ʤ��ʤ롥���äơ��桼��¦��software_init_hook
-�������Ϳ���뤳�Ȥ��Ǥ��롥
+コンパイル時，EXTERNAL_SOFT_HOOKをマクロすると software_init_hook が
+ターゲット依存部で定義されなくなる．従って，ユーザ側でsoftware_init_hook
+の定義を与えることができる．
 
 (3)   MON
 
-������֥�����ͤ������Ԥ����̾�� MON=0 �Ȥ��ƹ��ۤ��롥
-MON=1 �Ȥ���ȥ������ڤ��ؤ����˥�������˥�����Ѥδؿ��ƤӽФ���Ԥ�
-�褦�ˤʤ롥����϶����ѤΥ�������˥���ʻ�Ѥ�����ˤ��������Ԥ���
+アセンブル時に値の定義を行う．通常は MON=0 として構築する．
+MON=1 とするとタスク切り替え時にタスクモニタリング用の関数呼び出しを行う
+ようになる．これは教育用のタスクモニタと併用する場合にこの設定を行う．
 
-5.  �ե����빽��
+5.  ファイル構成
 
-5.1  �ǥ��쥯�ȥꡦ�ե����빽��
+5.1  ディレクトリ・ファイル構成
 
 (1)   config/m16c-renesas
 
-      api.h            ��饤�֥�경����API���
-      cpu_config.c     M16C�ץ����å���¸���� C �ؿ�
-      cpu_config.h     M16C�ץ����å���¸���ι������
-      cpu_context.h    M16C�ץ����å���¸���Υ���ƥ��������
-      cpu_defs.h       M16C�ץ����å���¸���Υ��ץꥱ������������
-      cpu_insn.h       M16C�ץ����å��Υ�����֥� inline �ؿ�
-      cpu_rename.def   �����ͥ����������̾�Υ�͡���Ȥ��β��������ꥹ��
-      cpu_rename.h     �����ͥ����������̾�Υ�͡�������
-      cpu_support.a30  M16C�ץ����å��Υ�����֥�ؿ�
-      cpu_unrename.h   �����ͥ����������̾�Υ�͡����������
-      Makefile.config  Makefile �� M16C��¸���
-      makeoffset.c     offset.inc �������ݡ��ȴؿ�
-      start.a30        �������ȥ��åץ⥸�塼��
-      tool_config.h    M16C�ץ����å��γ�ȯ�Ķ���¸�⥸�塼�����
-      tool_defs.h      M16C�ץ����å��γ�ȯ�Ķ���¸���
+      api.h            非ライブラリ化時のAPI定義
+      cpu_config.c     M16Cプロセッサ依存部の C 関数
+      cpu_config.h     M16Cプロセッサ依存部の構成定義
+      cpu_context.h    M16Cプロセッサ依存部のコンテキスト操作
+      cpu_defs.h       M16Cプロセッサ依存部のアプリケーション用定義
+      cpu_insn.h       M16Cプロセッサのアセンブリ inline 関数
+      cpu_rename.def   カーネルの内部識別名のリネームとその解除の定義リスト
+      cpu_rename.h     カーネルの内部識別名のリネームの定義
+      cpu_support.a30  M16Cプロセッサのアセンブリ関数
+      cpu_unrename.h   カーネルの内部識別名のリネーム解除の定義
+      Makefile.config  Makefile の M16C依存定義
+      makeoffset.c     offset.inc 生成サポート関数
+      start.a30        スタートアップモジュール
+      tool_config.h    M16Cプロセッサの開発環境依存モジュール定義
+      tool_defs.h      M16Cプロセッサの開発環境依存定義
 
 (2)   config/m16c-renesas/oak16/
 
-      hw_serial.cfg    SIO�ɥ饤�ФΥ���ե�����졼�����ե�����
-      hw_serial.h      OAKS16��SIO�ɥ饤�ФΥإå��ե�����
-      hw_timer.h       OAKS16�ѥ��������롼����
-      Makefile.config  Makefile �� OAKS16�ܡ��ɰ�¸���
-      Makefile.kernel  �����ͥ�Υե����빽�������(M16C��)
-      oaks16.h         M30620FCAFP�ץ����å������
-      sfr_uart.c       OAKS16��SIO�ɥ饤�Ф�C�ؿ�
-      sfr_uart.h       OAKS16��SIO�ɥ饤�ФΥإå��ե�����
-      sys_config.c     OAKS16�ܡ��ɰ�¸���� C �ؿ�
-      sys_config.h     OAKS16�ܡ��ɰ�¸���ι������
-      sys_defs.h       OAKS16�ܡ��ɰ�¸���Υ��ץꥱ������������
-      sys_rename.def   �����ͥ����������̾�Υ�͡���Ȥ��β��������ꥹ��
-      sys_rename.h     �����ͥ����������̾�Υ�͡�������
-      sys_unrename.h   �����ͥ����������̾�Υ�͡����������
+      hw_serial.cfg    SIOドライバのコンフィギュレーションファイル
+      hw_serial.h      OAKS16用SIOドライバのヘッダファイル
+      hw_timer.h       OAKS16用タイマ操作ルーチン
+      Makefile.config  Makefile の OAKS16ボード依存定義
+      Makefile.kernel  カーネルのファイル構成の定義(M16C用)
+      oaks16.h         M30620FCAFPプロセッサの定義
+      sfr_uart.c       OAKS16用SIOドライバのC関数
+      sfr_uart.h       OAKS16用SIOドライバのヘッダファイル
+      sys_config.c     OAKS16ボード依存部の C 関数
+      sys_config.h     OAKS16ボード依存部の構成定義
+      sys_defs.h       OAKS16ボード依存部のアプリケーション用定義
+      sys_rename.def   カーネルの内部識別名のリネームとその解除の定義リスト
+      sys_rename.h     カーネルの内部識別名のリネームの定義
+      sys_unrename.h   カーネルの内部識別名のリネーム解除の定義
 
 (3)   config/m16c-renesas/oaks16_mini/
 
-      hw_serial.cfg    SIO�ɥ饤�ФΥ���ե�����졼�����ե�����
-      hw_serial.h      OAKS16-MINI��SIO�ɥ饤��
-      hw_timer.h       OAKS16-MINI�ѥ��������롼����
-      Makefile.config  Makefile �� OAKS16-MINI�ܡ��ɰ�¸���
-      Makefile.kernel  �����ͥ�Υե����빽�������(M16C��)
-      oaks16mini.h     M30262F8FG�ץ����å������
-      serial_mini.c    ��ά��OAKS16-MINI�ѥ��ꥢ��ɥ饤�С�
-      sys_config.c     OAKS16-MINI�ܡ��ɰ�¸���� C �ؿ�
-      sys_config.h     OAKS18-MINI�ܡ��ɰ�¸���ι������
-      sys_defs.h       OAKS16-MINI�ܡ��ɰ�¸���Υ��ץꥱ������������
-      sys_rename.def   �����ͥ����������̾�Υ�͡���Ȥ��β��������ꥹ��
-      sys_rename.h     �����ͥ����������̾�Υ�͡�������
-      sys_unrename.h   �����ͥ����������̾�Υ�͡����������
-      syslog_mini.c    �ʰ׷������ƥ�����ץ������
+      hw_serial.cfg    SIOドライバのコンフィギュレーションファイル
+      hw_serial.h      OAKS16-MINI用SIOドライバ
+      hw_timer.h       OAKS16-MINI用タイマ操作ルーチン
+      Makefile.config  Makefile の OAKS16-MINIボード依存定義
+      Makefile.kernel  カーネルのファイル構成の定義(M16C用)
+      oaks16mini.h     M30262F8FGプロセッサの定義
+      serial_mini.c    簡略型OAKS16-MINI用シリアルドライバー
+      sys_config.c     OAKS16-MINIボード依存部の C 関数
+      sys_config.h     OAKS18-MINIボード依存部の構成定義
+      sys_defs.h       OAKS16-MINIボード依存部のアプリケーション用定義
+      sys_rename.def   カーネルの内部識別名のリネームとその解除の定義リスト
+      sys_rename.h     カーネルの内部識別名のリネームの定義
+      sys_unrename.h   カーネルの内部識別名のリネーム解除の定義
+      syslog_mini.c    簡易型システムログプログラム
 
 (4)   sample/
 
       Makefile.m16c-oaks16
-                   �饤�֥�귿 OAKS16��JSP ���ۤ��뤿��� make �ե�����
+                   ライブラリ型 OAKS16用JSP を構築するための make ファイル
 
-(5)   ����¾
+(5)   その他
 
       tools/M16C-RENESAS/
       utils/m16c-renesas/
-      �����ˤĤ��Ƥϡ�tools/M16C-RENESAS/README.txt �򻲾ȤΤ��ȡ�
+      これらについては，tools/M16C-RENESAS/README.txt を参照のこと．

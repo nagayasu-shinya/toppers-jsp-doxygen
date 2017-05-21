@@ -7,7 +7,7 @@ OUTPUT_ARCH(arm)
 PROVIDE(hardware_init_hook = 0);
 PROVIDE(software_init_hook = 0);
 PROVIDE(software_term_hook = 0);
-PROVIDE(__data_start = 0);	/* �����ͤ�chip_config.c�� init_vector��ǻȤ� */
+PROVIDE(__data_start = 0);	/* この値はchip_config.cの init_vector中で使う */
 PROVIDE(__data_end = 0);
 
 MEMORY
@@ -25,7 +25,7 @@ MEMORY
 
 SECTIONS
 {
-		/* SRAM��ư����硢�٥��ȥ�ν���ͤϥ�ޥå��ΰ�˥ǥХå������֤��롣 */
+		/* SRAMで動作する場合、ベクトルの初期値はリマップ領域にデバッガが配置する。 */
     .vector : AT(0x40000000)
     {
         KEEP(start.o(.vector))

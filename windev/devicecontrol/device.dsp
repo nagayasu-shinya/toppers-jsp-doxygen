@@ -1,28 +1,28 @@
 # Microsoft Developer Studio Project File - Name="device" - Package Owner=<4>
 # Microsoft Developer Studio Generated Build File, Format Version 6.00
-# ** ÊÔ½¸¤·¤Ê¤¤¤Ç¤¯¤À¤µ¤¤ **
+# ** ç·¨é›†ã—ãªã„ã§ãã ã•ã„ **
 
 # TARGTYPE "Win32 (x86) Dynamic-Link Library" 0x0102
 
 CFG=device - Win32 Debug
-!MESSAGE ¤³¤ì¤ÏÍ­¸ú¤Ê¥á¥¤¥¯¥Õ¥¡¥¤¥ë¤Ç¤Ï¤¢¤ê¤Ş¤»¤ó¡£ ¤³¤Î¥×¥í¥¸¥§¥¯¥È¤ò¥Ó¥ë¥É¤¹¤ë¤¿¤á¤Ë¤Ï NMAKE ¤ò»ÈÍÑ¤·¤Æ¤¯¤À¤µ¤¤¡£
-!MESSAGE [¥á¥¤¥¯¥Õ¥¡¥¤¥ë¤Î¥¨¥¯¥¹¥İ¡¼¥È] ¥³¥Ş¥ó¥É¤ò»ÈÍÑ¤·¤Æ¼Â¹Ô¤·¤Æ¤¯¤À¤µ¤¤
+!MESSAGE ã“ã‚Œã¯æœ‰åŠ¹ãªãƒ¡ã‚¤ã‚¯ãƒ•ã‚¡ã‚¤ãƒ«ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’ãƒ“ãƒ«ãƒ‰ã™ã‚‹ãŸã‚ã«ã¯ NMAKE ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
+!MESSAGE [ãƒ¡ã‚¤ã‚¯ãƒ•ã‚¡ã‚¤ãƒ«ã®ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆ] ã‚³ãƒãƒ³ãƒ‰ã‚’ä½¿ç”¨ã—ã¦å®Ÿè¡Œã—ã¦ãã ã•ã„
 !MESSAGE 
 !MESSAGE NMAKE /f "device.mak".
 !MESSAGE 
-!MESSAGE NMAKE ¤Î¼Â¹Ô»ş¤Ë¹½À®¤ò»ØÄê¤Ç¤­¤Ş¤¹
-!MESSAGE ¥³¥Ş¥ó¥É ¥é¥¤¥ó¾å¤Ç¥Ş¥¯¥í¤ÎÀßÄê¤òÄêµÁ¤·¤Ş¤¹¡£Îã:
+!MESSAGE NMAKE ã®å®Ÿè¡Œæ™‚ã«æ§‹æˆã‚’æŒ‡å®šã§ãã¾ã™
+!MESSAGE ã‚³ãƒãƒ³ãƒ‰ ãƒ©ã‚¤ãƒ³ä¸Šã§ãƒã‚¯ãƒ­ã®è¨­å®šã‚’å®šç¾©ã—ã¾ã™ã€‚ä¾‹:
 !MESSAGE 
 !MESSAGE NMAKE /f "device.mak" CFG="device - Win32 Debug"
 !MESSAGE 
-!MESSAGE ÁªÂò²ÄÇ½¤Ê¥Ó¥ë¥É ¥â¡¼¥É:
+!MESSAGE é¸æŠå¯èƒ½ãªãƒ“ãƒ«ãƒ‰ ãƒ¢ãƒ¼ãƒ‰:
 !MESSAGE 
-!MESSAGE "device - Win32 Debug" ("Win32 (x86) Dynamic-Link Library" ÍÑ)
-!MESSAGE "device - Win32 Unicode Debug" ("Win32 (x86) Dynamic-Link Library" ÍÑ)
-!MESSAGE "device - Win32 Release MinSize" ("Win32 (x86) Dynamic-Link Library" ÍÑ)
-!MESSAGE "device - Win32 Release MinDependency" ("Win32 (x86) Dynamic-Link Library" ÍÑ)
-!MESSAGE "device - Win32 Unicode Release MinSize" ("Win32 (x86) Dynamic-Link Library" ÍÑ)
-!MESSAGE "device - Win32 Unicode Release MinDependency" ("Win32 (x86) Dynamic-Link Library" ÍÑ)
+!MESSAGE "device - Win32 Debug" ("Win32 (x86) Dynamic-Link Library" ç”¨)
+!MESSAGE "device - Win32 Unicode Debug" ("Win32 (x86) Dynamic-Link Library" ç”¨)
+!MESSAGE "device - Win32 Release MinSize" ("Win32 (x86) Dynamic-Link Library" ç”¨)
+!MESSAGE "device - Win32 Release MinDependency" ("Win32 (x86) Dynamic-Link Library" ç”¨)
+!MESSAGE "device - Win32 Unicode Release MinSize" ("Win32 (x86) Dynamic-Link Library" ç”¨)
+!MESSAGE "device - Win32 Unicode Release MinDependency" ("Win32 (x86) Dynamic-Link Library" ç”¨)
 !MESSAGE 
 
 # Begin Project
@@ -55,7 +55,7 @@ BSC32=bscmake.exe
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /debug /machine:I386 /pdbtype:sept
 # ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /debug /machine:I386 /pdbtype:sept
-# Begin Custom Build - ÅĞÏ¿¤ò¹Ô¤Ã¤Æ¤¤¤Ş¤¹
+# Begin Custom Build - ç™»éŒ²ã‚’è¡Œã£ã¦ã„ã¾ã™
 OutDir=.\Debug
 TargetPath=.\Debug\device.dll
 InputPath=.\Debug\device.dll
@@ -89,7 +89,7 @@ BSC32=bscmake.exe
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /debug /machine:I386 /pdbtype:sept
 # ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /debug /machine:I386 /pdbtype:sept
-# Begin Custom Build - ÅĞÏ¿¤ò¹Ô¤Ã¤Æ¤¤¤Ş¤¹
+# Begin Custom Build - ç™»éŒ²ã‚’è¡Œã£ã¦ã„ã¾ã™
 OutDir=.\DebugU
 TargetPath=.\DebugU\device.dll
 InputPath=.\DebugU\device.dll
@@ -102,7 +102,7 @@ SOURCE="$(InputPath)"
 	echo regsvr32 exec. time > "$(OutDir)\regsvr32.trg" 
 	goto end 
 	:NOTNT 
-	echo ·Ù¹ğ : Windows 95 ¤Ë Unicode DLL ¤òÅĞÏ¿¤¹¤ë¤³¤È¤Ï¤Ç¤­¤Ş¤»¤ó 
+	echo è­¦å‘Š : Windows 95 ã« Unicode DLL ã‚’ç™»éŒ²ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“ 
 	:end 
 	
 # End Custom Build
@@ -129,7 +129,7 @@ BSC32=bscmake.exe
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /machine:I386
 # ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /machine:I386
-# Begin Custom Build - ÅĞÏ¿¤ò¹Ô¤Ã¤Æ¤¤¤Ş¤¹
+# Begin Custom Build - ç™»éŒ²ã‚’è¡Œã£ã¦ã„ã¾ã™
 OutDir=.\ReleaseMinSize
 TargetPath=.\ReleaseMinSize\device.dll
 InputPath=.\ReleaseMinSize\device.dll
@@ -163,7 +163,7 @@ BSC32=bscmake.exe
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /machine:I386
 # ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /machine:I386
-# Begin Custom Build - ÅĞÏ¿¤ò¹Ô¤Ã¤Æ¤¤¤Ş¤¹
+# Begin Custom Build - ç™»éŒ²ã‚’è¡Œã£ã¦ã„ã¾ã™
 OutDir=.\ReleaseMinDependency
 TargetPath=.\ReleaseMinDependency\device.dll
 InputPath=.\ReleaseMinDependency\device.dll
@@ -197,7 +197,7 @@ BSC32=bscmake.exe
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /machine:I386
 # ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /machine:I386
-# Begin Custom Build - ÅĞÏ¿¤ò¹Ô¤Ã¤Æ¤¤¤Ş¤¹
+# Begin Custom Build - ç™»éŒ²ã‚’è¡Œã£ã¦ã„ã¾ã™
 OutDir=.\ReleaseUMinSize
 TargetPath=.\ReleaseUMinSize\device.dll
 InputPath=.\ReleaseUMinSize\device.dll
@@ -210,7 +210,7 @@ SOURCE="$(InputPath)"
 	echo regsvr32 exec. time > "$(OutDir)\regsvr32.trg" 
 	goto end 
 	:NOTNT 
-	echo ·Ù¹ğ : Windows 95 ¤Ë Unicode DLL ¤òÅĞÏ¿¤¹¤ë¤³¤È¤Ï¤Ç¤­¤Ş¤»¤ó 
+	echo è­¦å‘Š : Windows 95 ã« Unicode DLL ã‚’ç™»éŒ²ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“ 
 	:end 
 	
 # End Custom Build
@@ -237,7 +237,7 @@ BSC32=bscmake.exe
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /machine:I386
 # ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /machine:I386
-# Begin Custom Build - ÅĞÏ¿¤ò¹Ô¤Ã¤Æ¤¤¤Ş¤¹
+# Begin Custom Build - ç™»éŒ²ã‚’è¡Œã£ã¦ã„ã¾ã™
 OutDir=.\ReleaseUMinDependency
 TargetPath=.\ReleaseUMinDependency\device.dll
 InputPath=.\ReleaseUMinDependency\device.dll
@@ -250,7 +250,7 @@ SOURCE="$(InputPath)"
 	echo regsvr32 exec. time > "$(OutDir)\regsvr32.trg" 
 	goto end 
 	:NOTNT 
-	echo ·Ù¹ğ : Windows 95 ¤Ë Unicode DLL ¤òÅĞÏ¿¤¹¤ë¤³¤È¤Ï¤Ç¤­¤Ş¤»¤ó 
+	echo è­¦å‘Š : Windows 95 ã« Unicode DLL ã‚’ç™»éŒ²ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“ 
 	:end 
 	
 # End Custom Build

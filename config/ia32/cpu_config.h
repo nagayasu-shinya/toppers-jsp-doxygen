@@ -8,90 +8,90 @@
  *  Copyright (C) 2002 by Monami software, Limited Partners.
  *  Copyright (C) 2008-     by Monami Software Limited Partnership, JAPAN
  * 
- *  �嵭����Ԥϡ��ʲ���(1)��(4)�ξ������������˸¤ꡤ�ܥ��եȥ���
- *  �����ܥ��եȥ���������Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ������
- *  �ѡ������ۡʰʲ������ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
- *      ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
- *      ����������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
- *      �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
- *      ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
- *      �ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
- *        �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
- *        ��𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
- *      ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
- *      �ޤ����ܥ��եȥ������Υ桼���ޤ��ϥ���ɥ桼������Τ����ʤ���
- *      ͳ�˴�Ť����ᤫ��⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ�
- *      ���դ��뤳�ȡ�
+ *  上記著作権者は，以下の(1)〜(4)の条件を満たす場合に限り，本ソフトウェ
+ *  ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改
+ *  変・再配布（以下，利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
+ *      また，本ソフトウェアのユーザまたはエンドユーザからのいかなる理
+ *      由に基づく請求からも，上記著作権者およびTOPPERSプロジェクトを
+ *      免責すること．
  * 
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- *  ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����λ�����Ū
- *  ���Ф���Ŭ������ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ���
- *  �������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤��
- *  ����Ǥ�����ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，特定の使用目的
+ *  に対する適合性も含めて，いかなる保証も行わない．また，本ソフトウェ
+ *  アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
+ *  の責任を負わない．
  * 
  *  @(#) $Id: cpu_config.h,v 1.1 2004/07/21 02:49:36 monaka Exp $
  */
 
 /*
- *	�ץ����å���¸�⥸�塼���i386�ѡ�
+ *	プロセッサ依存モジュール（i386用）
  */
 
 #ifndef _CPU_CONFIG_H_
 #define _CPU_CONFIG_H_
 
 /*
- *  �����ͥ����������̾�Υ�͡���
+ *  カーネルの内部識別名のリネーム
  */
 #include <cpu_rename.h>
 
 /*
- *  �ץ����å����ü�̿��Υ���饤��ؿ����
+ *  プロセッサの特殊命令のインライン関数定義
  */
 #ifndef _MACRO_ONLY
 #include <cpu_insn.h>
 #endif /* _MACRO_ONLY */
 
 /*
- *  TCB ��Ϣ�����
+ *  TCB 関連の定義
  *
- *  cpu_context.h ��������������쥬��Ȥ��������Ȥΰ�¸���δط��ǡ�
- *  cpu_context.h �ˤ�������ʤ���
+ *  cpu_context.h に入れる方がエレガントだが，参照の依存性の関係で，
+ *  cpu_context.h には入れられない．
  */
 
 /*
- *  TCB ��Υե�����ɤΥӥå��������
+ *  TCB 中のフィールドのビット幅の定義
  */
-#define	TBIT_TCB_PRIORITY	8	/* priority �ե�����ɤΥӥå��� */
-#define	TBIT_TCB_TSTAT		8	/* tstat �ե�����ɤΥӥå��� */
-#define	TBIT_TCB_TWAIT		8	/* twait �ե�����ɤΥӥå��� */
+#define	TBIT_TCB_PRIORITY	8	/* priority フィールドのビット幅 */
+#define	TBIT_TCB_TSTAT		8	/* tstat フィールドのビット幅 */
+#define	TBIT_TCB_TWAIT		8	/* twait フィールドのビット幅 */
 
 #ifndef _MACRO_ONLY
 /*
- *  ����������ƥ����ȥ֥��å������
+ *  タスクコンテキストブロックの定義
  */
 typedef struct task_context_block {
-	VP	esp;		/* �����å��ݥ��� */
-	FP	eip;		/* �ץ�����५���� */
+	VP	esp;		/* スタックポインタ */
+	FP	eip;		/* プログラムカウンタ */
 } CTXB;
 
 /*
- *  �����ߤΥͥ��Ȳ��
+ *  割り込みのネスト回数
  *
- *  1�ʾ�λ����󥿥�������ƥ����Ȥˤʤ롣�����ߥϥ�ɥ���㳰�ϥ�ɥ��
- *  �������ǥ��󥯥���ȡ��ǥ�����Ȥ���롣
+ *  1以上の時は非タスクコンテキストになる。割り込みハンドラや例外ハンドラの
+ *  出入口でインクリメント・デクリメントされる。
  */
 extern UW nest;
 
 /*
- *  �����ƥ���ֻ���
+ *  システム状態参照
  */
 
 Inline BOOL
@@ -115,7 +115,7 @@ sense_lock()
 #define i_sense_lock	sense_lock
 
 /*
- *  CPU���å��Ȥ��β��
+ *  CPUロックとその解除
  *
  */
 
@@ -136,30 +136,30 @@ Inline void x_unlock_cpu(void) {
 #define t_unlock_cpu() x_unlock_cpu()
 
 /*
- *  �������ǥ����ѥå���
+ *  タスクディスパッチャ
  */
 
 /*
- *  �ǹ�ͥ���̥������ؤΥǥ����ѥå���cpu_support.S��
+ *  最高優先順位タスクへのディスパッチ（cpu_support.S）
  *
- *  dispatch �ϡ�����������ƥ����Ȥ���ƤӽФ��줿�����ӥ����������
- *  ��ǡ�CPU���å����֤ǸƤӽФ��ʤ���Фʤ�ʤ���
+ *  dispatch は，タスクコンテキストから呼び出されたサービスコール処理
+ *  内で，CPUロック状態で呼び出さなければならない．
  */
 extern void	dispatch(void);
 
 /*
- *  ���ߤΥ���ƥ����Ȥ�ΤƤƥǥ����ѥå���cpu_support.S��
+ *  現在のコンテキストを捨ててディスパッチ（cpu_support.S）
  *
- *  exit_and_dispatch �ϡ�CPU���å����֤ǸƤӽФ��ʤ���Фʤ�ʤ���
+ *  exit_and_dispatch は，CPUロック状態で呼び出さなければならない．
  */
 extern void	exit_and_dispatch(void);
 
 /*
- *  CPU�㳰�ϥ�ɥ������
+ *  CPU例外ハンドラの設定
  */
 
 /*
- *  �㳰�ϥ�ɥ�ν�����������cpu_support.S��
+ *  例外ハンドラの出入口処理（cpu_support.S）
  */
 extern void exception0(void);
 extern void exception1(void);
@@ -182,25 +182,25 @@ extern void exception18(void);
 extern void exception19(void);
 
 /*
- *  CPU�㳰�ϥ�ɥ�Υơ��֥��cpu_config.c��
+ *  CPU例外ハンドラのテーブル（cpu_config.c）
  *
- *  CPU�㳰�ϥ�ɥ�ϰ�ö���Υơ��֥����Ͽ���졢�̤��Ѱդ��줿����������
- *  ��ƤӽФ���
+ *  CPU例外ハンドラは一旦このテーブルに登録され、別に用意された出入口処理
+ *  を呼び出す。
  */
 extern FP exc_table[0x20];
 
 /*
- *  CPU�㳰�ϥ�ɥ������
- *  �٥��ȥ��ֹ� excno ��CPU�㳰�ϥ�ɥ�ε�ư���Ϥ� exchdr ������
+ *  CPU例外ハンドラの設定
+ *  ベクトル番号 excno のCPU例外ハンドラの起動番地を exchdr に設定
  */
 extern void define_exc(EXCNO excno, FP exchdr);
 
 /*
- *  CPU�㳰�ϥ�ɥ�ν���������
+ *  CPU例外ハンドラの出入口処理
  */
 
 /*
- *  CPU�㳰�ϥ�ɥ�ν����������������ޥ���
+ *  CPU例外ハンドラの出入口処理の生成マクロ
  */
 
 #define EXCHDR_ENTRY(exchdr) extern void exchdr(VP p_excinf)
@@ -208,11 +208,11 @@ extern void define_exc(EXCNO excno, FP exchdr);
 #define EXC_ENTRY(exchdr) exchdr
 
 /*
- *  CPU�㳰��ȯ���������Υ����ƥ���֤λ���
+ *  CPU例外の発生した時のシステム状態の参照
  */
 
 /*
- *  CPU�㳰��ȯ���������Υ���ƥ����Ȥλ���
+ *  CPU例外の発生した時のコンテキストの参照
  */
 Inline BOOL
 exc_sense_context(VP p_excinf)
@@ -221,7 +221,7 @@ exc_sense_context(VP p_excinf)
 }
 
 /*
- *  CPU�㳰��ȯ����������CPU���å����֤λ���
+ *  CPU例外の発生した時のCPUロック状態の参照
  */
 Inline BOOL
 exc_sense_lock(VP p_excinf)
@@ -230,17 +230,17 @@ exc_sense_lock(VP p_excinf)
 }
 
 /*
- *  �ץ����å���¸�ν����
+ *  プロセッサ依存の初期化
  */
 extern void	cpu_initialize(void);
 
 /*
- *  �ץ����å���¸�ν�λ������
+ *  プロセッサ依存の終了時処理
  */
 extern void	cpu_terminate(void);
 
 /*
- * i386�������ȥǥ�����ץ�������
+ * i386セグメントデスクリプタの設定
  */
 extern void set_segment_descriptor(int sel, unsigned addr, unsigned limit, unsigned type, unsigned dpl);
 extern void set_gate_descriptor(int sel, unsigned selector, void *func, unsigned type, unsigned dpl);

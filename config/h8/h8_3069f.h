@@ -11,32 +11,32 @@
  *                   Tomakomai National College of Technology, JAPAN
  *  Copyright (C) 2001-2004 by Kunihiko Ohnaka
  * 
- *  �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ�狼��Free Software Foundation 
- *  �ˤ�äƸ�ɽ����Ƥ��� GNU General Public License �� Version 2 �˵�
- *  �Ҥ���Ƥ���������������˸¤ꡤ�ܥ��եȥ��������ܥ��եȥ�����
- *  ����Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ������ۡʰʲ���
- *  ���ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
- *      ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
- *      ����������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
- *      �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
- *      ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
- *      �ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
- *        �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
- *        ��𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
- *      ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  によって公表されている GNU General Public License の Version 2 に記
+ *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+ *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+ *  利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
  *
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- *  ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����Ŭ�Ѳ�ǽ����
- *  �ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ����������Ѥˤ��ľ
- *  ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ�����ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+ *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+ *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
  *  @(#) $Id: h8_3069f.h,v 1.4 2007/03/23 07:22:15 honda Exp $
  */
@@ -45,7 +45,7 @@
 #define _H8_3069F_H_
 
 /*
- *  H8/3069F �����
+ *  H8/3069F 用定義
  */
 
 /* Interrupt numbers */
@@ -115,10 +115,10 @@
 
 /* 
  * register address 
- *��������I/O�쥸����(1) 0xfe,e000��0xfe,e0ff
- *��������I/O�쥸����(2) 0xff,ff20��0xff,ffe9
- *���������ޥ˥奢��ˤϲ���20�ӥåȤ������ܤ���Ƥ��ʤ��Τ�
- *�����������4�ӥåȡ�0xf0,0000�ˤ��䤦��
+ *　　内部I/Oレジスタ(1) 0xfe,e000〜0xfe,e0ff
+ *　　内部I/Oレジスタ(2) 0xff,ff20〜0xff,ffe9
+ *　　　　マニュアルには下位20ビットしか記載されていないので
+ *　　　　上位4ビット（0xf0,0000）を補う。
  */
 
 /* I/O ports */
@@ -910,7 +910,7 @@
 #define H8ASTCR_AST0    	(1<<H8ASTCR_AST0_BIT)
 
 /*
- *  ��¢��������
+ *  内蔵メモリの定義
  */
 #define H8IN_ROM_BASE		0x000000
 #define H8IN_ROM_SIZE		0x080000
@@ -919,11 +919,11 @@
 
 
 /*
- *  I/O�ݡ���
+ *  I/Oポート
  */
-#define H8PORT_NUM		12	/*  �ݡ���1���ݡ���B (DDR�Ͱ����¸��) */
+#define H8PORT_NUM		12	/*  ポート1〜ポートB (DDR値一時保存用) */
 
-/*  �ݡ���1  */
+/*  ポート1  */
 #define H8P10DDR		0x01
 #define H8P11DDR		0x02
 #define H8P12DDR		0x04
@@ -942,7 +942,7 @@
 #define H8P16DR			0x40
 #define H8P17DR			0x80
 
-/*  �ݡ���2  */
+/*  ポート2  */
 #define H8P20DDR		0x01
 #define H8P21DDR		0x02
 #define H8P22DDR		0x04
@@ -970,7 +970,7 @@
 #define H8P26PCR		0x40
 #define H8P27PCR		0x80
 
-/*  �ݡ���3  */
+/*  ポート3  */
 #define H8P30DDR		0x01
 #define H8P31DDR		0x02
 #define H8P32DDR		0x04
@@ -989,7 +989,7 @@
 #define H8P36DR			0x40
 #define H8P37DR			0x80
 
-/*  �ݡ���4  */
+/*  ポート4  */
 #define H8P40DDR		0x01
 #define H8P41DDR		0x02
 #define H8P42DDR		0x04
@@ -1017,7 +1017,7 @@
 #define H8P46PCR		0x40
 #define H8P47PCR		0x80
 
-/*  �ݡ���5  */
+/*  ポート5  */
 #define H8P50DDR		0x01
 #define H8P51DDR		0x02
 #define H8P52DDR		0x04
@@ -1033,7 +1033,7 @@
 #define H8P52PCR		0x04
 #define H8P53PCR		0x08
 
-/*  �ݡ���6   */
+/*  ポート6   */
 #define H8P60DDR		0x01
 #define H8P61DDR		0x02
 #define H8P62DDR		0x04
@@ -1052,7 +1052,7 @@
 #define H8P66DR			0x40
 #define H8P67DR			0x80
 
-/*  �ݡ���7   */
+/*  ポート7   */
 #define H8P70DDR		0x01
 #define H8P71DDR		0x02
 #define H8P72DDR		0x04
@@ -1062,7 +1062,7 @@
 #define H8P76DDR		0x40
 #define H8P77DDR		0x80
 
-/*  �ݡ���8  */
+/*  ポート8  */
 #define H8P80DDR		0x01
 #define H8P81DDR		0x02
 #define H8P82DDR		0x04
@@ -1075,7 +1075,7 @@
 #define H8P83DR			0x08
 #define H8P84DR			0x10
 
-/*  �ݡ���9   */
+/*  ポート9   */
 #define H8P90DDR		0x01
 #define H8P91DDR		0x02
 #define H8P92DDR		0x04
@@ -1090,7 +1090,7 @@
 #define H8P94DR			0x10
 #define H8P95DR			0x20
 
-/*  �ݡ���A  */
+/*  ポートA  */
 #define H8PA0DDR		0x01
 #define H8PA1DDR		0x02
 #define H8PA2DDR		0x04
@@ -1109,7 +1109,7 @@
 #define H8PA6DR			0x40
 #define H8PA7DR			0x80
 
-/*  �ݡ���B  */
+/*  ポートB  */
 #define H8PB0DDR		0x01
 #define H8PB1DDR		0x02
 #define H8PB2DDR		0x04
@@ -1128,7 +1128,7 @@
 #define H8PB6DR			0x40
 #define H8PB7DR			0x80
 
-/*  �ġ����Ѵ�  */
+/*  Ｄ／Ａ変換  */
 #define H8DADR0         0xFFFF9C
 #define H8DADR1         0xFFFF9D
 #define H8DACR          0xFFFF9E
@@ -1139,7 +1139,7 @@
 #define H8DACR_DAE      0x20
 #define H8DASTCR_DASTE  0x01
 
-/*  �������Ѵ�  */
+/*  Ａ／Ｄ変換  */
 #define H8ADDRA         0xFFFFE0
 #define H8ADDRB         0xFFFFE2
 #define H8ADDRC         0xFFFFE4
@@ -1171,7 +1171,7 @@
 
 /*  DMA  */
 
-/* DMAC ����ͥ�0A */
+/* DMAC チャネル0A */
 #define H8DMA_MAR0AR		0xffff20
 #define H8DMA_MAR0AE		0xffff21
 #define H8DMA_MAR0AH		0xffff22
@@ -1181,7 +1181,7 @@
 #define H8DMA_ETCR0AL		0xffff25
 #define H8DMA_DTCR0A		0xffff27
 
-/* DMAC ����ͥ�0B */
+/* DMAC チャネル0B */
 #define H8DMA_MAR0BR		0xffff28
 #define H8DMA_MAR0BE		0xffff29
 #define H8DMA_MAR0BH		0xffff2A
@@ -1191,7 +1191,7 @@
 #define H8DMA_ETCR0BL		0xffff2D
 #define H8DMA_DTCR0B		0xffff2F
 
-/* DMAC ����ͥ�1A */
+/* DMAC チャネル1A */
 #define H8DMA_MAR1AR		0xffff30
 #define H8DMA_MAR1AE		0xffff31
 #define H8DMA_MAR1AH		0xffff32
@@ -1201,7 +1201,7 @@
 #define H8DMA_ETCR1AL		0xffff35
 #define H8DMA_DTCR1A		0xffff37
 
-/* DMAC ����ͥ�1B */
+/* DMAC チャネル1B */
 #define H8DMA_MAR1BR		0xffff38
 #define H8DMA_MAR1BE		0xffff39
 #define H8DMA_MAR1BH		0xffff3A
@@ -1211,7 +1211,7 @@
 #define H8DMA_ETCR1BL		0xffff3D
 #define H8DMA_DTCR1B		0xffff3F
 
-/* �ǡ����ȥ�󥹥ե�����ȥ�����쥸���� (DTCR) */
+/* データトランスファコントロールレジスタ (DTCR) */
 #define H8DMA_DTCR_DTE		0x80
 #define H8DMA_DTCR_DTSZ 	0x40
 #define H8DMA_DTCR_DTID		0x20

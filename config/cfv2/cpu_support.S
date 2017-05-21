@@ -8,38 +8,38 @@
  *  Copyright (C) 2007 by KURUSUGAWA Electronics Industry Inc, JAPAN
  *  Copyright (C) 2008 by Takahisa Yokota
  *
- *  �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ�狼��Free Software Foundation 
- *  �ˤ�äƸ�ɽ����Ƥ��� GNU General Public License �� Version 2 �˵�
- *  �Ҥ���Ƥ���������������˸¤ꡤ�ܥ��եȥ��������ܥ��եȥ�����
- *  ����Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ������ۡʰʲ���
- *  ���ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
- *      ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
- *      ����������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
- *      �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
- *      ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
- *      �ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
- *        �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
- *        ��𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
- *      ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  によって公表されている GNU General Public License の Version 2 に記
+ *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+ *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+ *  利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
  * 
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- *  ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����Ŭ�Ѳ�ǽ����
- *  �ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ����������Ѥˤ��ľ
- *  ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ�����ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+ *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+ *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
  *  @(#) $Id: cpu_support.S,v 1.16 2005/11/12 14:58:46 hiro Exp $
  */
 
 /*
- *	�ץ����å���¸�⥸�塼�� ������֥��������MCF52235�ѡ�
+ *	プロセッサ依存モジュール アセンブリ言語部（MCF52235用）
  */
 
 #define	_MACRO_ONLY
@@ -47,32 +47,32 @@
 #include "offset.h"
 
 /*
- *  �������ǥ����ѥå���
+ *  タスクディスパッチャ
  *
- *  dispatch �ϡ��ޥ����⡼�ɡ�����߶ػ߾��֤ǸƤӽФ��ʤ���Фʤ��
- *  ����exit_and_dispatch �⡤�ޥ����⡼�ɡ�����߶ػ߾��֤ǸƤӽФ���
- *  ����§�Ǥ��뤬�������ͥ뵯ư�����б����뤿�ᡤ����ߥ⡼�ɤǸƤӽ�
- *  �������ˤ��б����Ƥ��롥
+ *  dispatch は，マスタモード・割込み禁止状態で呼び出さなければならな
+ *  い．exit_and_dispatch も，マスタモード・割込み禁止状態で呼び出すの
+ *  が原則であるが，カーネル起動時に対応するため，割込みモードで呼び出
+ *  した場合にも対応している．
  */
 	.text
 	.globl dispatch
 	.globl exit_and_dispatch
 dispatch:
 	lea  -44(%sp), %sp
-	movem.l %d2-%d7/%a2-%a6, (%sp)	/* �쥸��������¸ */
-	move.l runtsk, %a0		/* A0 �� runtsk �� */
-	move.l %sp, TCB_msp(%a0)	/* �����������å�����¸ */
+	movem.l %d2-%d7/%a2-%a6, (%sp)	/* レジスタを保存 */
+	move.l runtsk, %a0		/* A0 を runtsk に */
+	move.l %sp, TCB_msp(%a0)	/* タスクスタックを保存 */
 	move.l #dispatch_r, %d2
-	move.l %d2, TCB_pc(%a0)	/* �¹ԺƳ����Ϥ���¸ */
+	move.l %d2, TCB_pc(%a0)	/* 実行再開番地を保存 */
 	jbra dispatcher
 
 dispatch_r:
-	movem.l (%sp), %d2-%d7/%a2-%a6	/* �쥸���������� */
+	movem.l (%sp), %d2-%d7/%a2-%a6	/* レジスタを復帰 */
 	lea 44(%sp), %sp
 	btst.b #TCB_enatex_bit, TCB_enatex(%a0)
-	jbeq dispatch_r_1		/* enatex �� FALSE �ʤ�꥿���� */
-	tst.l TCB_texptn(%a0)		/* texptn �� 0 �Ǥʤ����           */
-	jbne call_texrtn		/*   �������㳰�����롼����θƽФ� */
+	jbeq dispatch_r_1		/* enatex が FALSE ならリターン */
+	tst.l TCB_texptn(%a0)		/* texptn が 0 でなければ           */
+	jbne call_texrtn		/*   タスク例外処理ルーチンの呼出し */
 dispatch_r_1:
 	rts
 
@@ -81,51 +81,51 @@ exit_and_dispatch:
 
 dispatcher:
 	/*
-	 *  �����Ǥϥޥ����⡼�ɡ�����߶ػ߾��֤Ǥʤ���Фʤ�ʤ���
+	 *  ここではマスタモード・割込み禁止状態でなければならない．
 	 */
 	move.l schedtsk, %a0
-	move.l %a0, runtsk		/* schedtsk �� runtsk �� */
-	jbeq   dispatcher_1		/* runtsk �����뤫�� */
-	move.l TCB_msp(%a0), %sp	/* �����������å������� */
-	move.l TCB_pc(%a0),  %a1	/* �¹ԺƳ����Ϥ����� */
+	move.l %a0, runtsk		/* schedtsk を runtsk に */
+	jbeq   dispatcher_1		/* runtsk があるか？ */
+	move.l TCB_msp(%a0), %sp	/* タスクスタックを復帰 */
+	move.l TCB_pc(%a0),  %a1	/* 実行再開番地を復帰 */
 	jmp (%a1)
 dispatcher_1:
 	addq.l  #1, intnest
 	move.l  #STACKTOP, %sp
-	stop #0x2000			/* ������Ԥ��ʳ���ߥ⡼�ɡ� */
+	stop #0x2000			/* 割込み待ち（割込みモード） */
 	/*
-	 *  �����ǳ���ߥ⡼�ɤ��ڤ괹����Τϡ�����ߥϥ�ɥ����
-	 *  �Υ������ǥ����ѥå����ɻߤȤ���2�Ĥΰ�̣�����롥
+	 *  ここで割込みモードに切り換えるのは，割込みハンドラ内で
+	 *  のタスクディスパッチの防止という2つの意味がある．
 	 *
-	 *  ���� stop̿��ϡ�IPM �� 0 �ˤ��뤬������� task_intmask ��
-	 *  ���ꤹ�٤��Ǥ��롥M68040 �Ǥϡ�stop ̿��Υѥ�᡼�������
-	 *  �����Ȥ�ʤ����ᡤ���򤨤� 0 �ˤ��Ƥ����stop ̿��� 8��
-	 *  �¤٤ơ�task_intmask ���ͤ�����ʬ�����Ϥ��뤬�������ޤ�
-	 *  ���յ��Ϥʤ��ȹͤ����ˡ�
+	 *  この stop命令は，IPM を 0 にするが，本来は task_intmask に
+	 *  設定すべきである．M68040 では，stop 命令のパラメータに定数
+	 *  しかとれないため，やむをえず 0 にしている（stop 命令を 8つ
+	 *  並べて，task_intmask の値で飛び分ける手はあるが，そこまで
+	 *  やる意義はないと考えた）．
 	 *
-	 *  �ץ����å����Ԥ��⡼�ɤ˰ܹԤ���������ȡ�����ߵ��ĤȤϡ�
-	 *  �Բ�ʬ�˹Ԥʤ�ɬ�פ������M68040 �Ǥ� stop̿���ξ���Ԥʤ�
-	 *  �Τ�����ʤ��ˡ�������Բ�ʬ�˹Ԥʤ�ʤ���硤����ߤ����
-	 *  ����ľ��˳���ߤ����ꡤ������ǥ��������¹Բ�ǽ���֤ˤʤ�
-	 *  �ȡ��¹Ԥ��٤�������������ˤ⤫����餺�ץ����å����Ԥ��⡼
-	 *  �ɤˤʤäƤ��ޤ���
+	 *  プロセッサを待ちモードに移行させる処理と，割込み許可とは，
+	 *  不可分に行なう必要がある（M68040 では stop命令で両方行なう
+	 *  ので問題ない）．これを不可分に行なわない場合，割込みを許可
+	 *  した直後に割込みが入り，その中でタスクが実行可能状態になる
+	 *  と，実行すべきタスクがあるにもかかわらずプロセッサが待ちモー
+	 *  ドになってしまう．
 	 *
-	 *  ����ߤ��ԤĴ֤ϡ�runtsk �� NULL��=0�ˤ����ꤷ�ʤ���Фʤ�
-	 *  �ʤ������Τ褦�����ꤷ�ʤ��ȡ�����ߥϥ�ɥ餫�� iget_tid 
-	 *  ��ƤӽФ����ݤ�ư����ͤ˹��פ��ʤ��ʤ롥
+	 *  割込みを待つ間は，runtsk を NULL（=0）に設定しなければなら
+	 *  ない．このように設定しないと，割込みハンドラから iget_tid 
+	 *  を呼び出した際の動作が仕様に合致しなくなる．
 	 */
-	move.w #0x2700, %sr		/* ����߶ػ� */
+	move.w #0x2700, %sr		/* 割込み禁止 */
 	clr.l intnest
-	tst.l reqflg			/* reqflg �� FALSE �ʤ� */
-	jbeq dispatcher_1		/*      dispatcher_1 �� */
-	clr.l reqflg			/* reqflg �� FALSE �� */
+	tst.l reqflg			/* reqflg が FALSE なら */
+	jbeq dispatcher_1		/*      dispatcher_1 へ */
+	clr.l reqflg			/* reqflg を FALSE に */
 	jbra dispatcher
 
 /*
  *  no_reg_exception()
- *  CPU�㳰�Ȥ�����Ͽ����Ƥ��ʤ��㳰��ȯ������ȸƤӽФ����
- *  �㳰��ȯ������������pc,sr,pr,r0��15����Ϥ��ƥ����ͥ�
- *  ����ߤ��롣
+ *  CPU例外として登録されていない例外が発生すると呼び出される
+ *  例外が発生した時点のpc,sr,pr,r0〜15を出力してカーネル
+ *  を停止する。
  */
 	.text
 	.align 2
@@ -151,17 +151,17 @@ no_reg_exception:
 	jbsr  cpu_experr
 
 /*
- *  ��������ư������
+ *  タスク起動時処理
  */
 	.text
 	.globl activate_r
 activate_r:
 	/*
-	 *  ��������ưľ��ϥ������㳰�������ػߤ���Ƥ��뤿�ᡤ�����ǥ�
-	 *  �����㳰�����롼�����ƤӽФ���������Ω���ʤ���
+	 *  タスク起動直後はタスク例外処理が禁止されているため，ここでタ
+	 *  スク例外処理ルーチンを呼び出す条件は成り立たない．
 	 */
-#ifdef SUPPORT_CHG_IPM			/* t_unlock_cpu �����ν��� */
-	move.w %sr, %d0			/* ����ߥޥ����� task_intmask �� */
+#ifdef SUPPORT_CHG_IPM			/* t_unlock_cpu 相当の処理 */
+	move.w %sr, %d0			/* 割込みマスクを task_intmask に */
 	and.l  #~0x00000700, %d0
 	clr.l	%d1
 	move.w task_intmask, %d1
@@ -169,68 +169,68 @@ activate_r:
 	move.w %d0, %sr
 #else /* SUPPORT_CHG_IPM */
 	move.w %sr, %d0			
-	and.l #~0x00000700, %d0		/* ����ߵ��� */
+	and.l #~0x00000700, %d0		/* 割込み許可 */
 	move.w %d0, %sr
 #endif /* SUPPORT_CHG_IPM */
-	move.l (%sp)+, %a0		/* �������ε�ư���Ϥ� a0 �� */
+	move.l (%sp)+, %a0		/* タスクの起動番地を a0 に */
 	jmp (%a0)
 
 /**
  *
- *  CPU�㳰������������³��
+ *  CPU例外の入口処理の続き
  *
- *  CPU�㳰�ϥ�ɥ�ϡ��󥿥�������ƥ����ȤǼ¹Ԥ��롥���Τ��ᡤCPU��
- *  ���ϥ�ɥ��ƤӽФ����˳���ߥ⡼�ɤ˰ܹԤ����꥿���󤷤Ƥ������
- *  ���Υ⡼�ɤ��᤹�����Υ⡼�ɤ��᤹����ˡ�����ߥ⡼�ɤ˰ܹԤ�����
- *  �� SR �����ߥ����å������¸���롥CPU�㳰������������ƥ����Ȥ�
- *  ȯ������reqflg �� TRUE �ˤʤä����ˡ�ret_exc ��ʬ�����롥
- *  reqflg ������å��������˳���ߤ�ػߤ��ʤ��ȡ�reqflg ������å���
- *  �˵�ư���줿����ߥϥ�ɥ���ǥǥ����ѥå����׵ᤵ�줿���ˡ��ǥ�
- *  ���ѥå�����ʤ���
- *  ��
- *  ��������̿��ξ���������Ϥ�2�Х��ȿʤ��ɬ�פ����뤬
- *  �б����Ƥ��ʤ�
- *  ��GDB stub���֥졼���ݥ���ȤȤ��ƻ��Ѥ��롣��
- *  ��
- * ����CPU�㳰�װ����Ÿ�������롼�����r0,r1����¸����
- * ��������߶ػߤˤ����塢
- *��������d1������߼���ľ���SR�Υ��ԡ�
- *��������a0��C����롼�������Ƭ���ɥ쥹
- * �����ξ��֤Ǥ�������롣
- * ����
- * �����쥸��������
- * ������r4��C����롼����ΰ���
- * ���������������å�����Ѥޤ줿SR�Υ��ɥ쥹
- * ������r7�������������å��ݥ���
+ *  CPU例外ハンドラは，非タスクコンテキストで実行する．そのため，CPU例
+ *  外ハンドラを呼び出す前に割込みモードに移行し，リターンしてきた後に
+ *  元のモードに戻す．元のモードに戻すために，割込みモードに移行する前
+ *  の SR を割込みスタック上に保存する．CPU例外がタスクコンテキストで
+ *  発生し，reqflg が TRUE になった時に，ret_exc へ分岐する．
+ *  reqflg をチェックする前に割込みを禁止しないと，reqflg をチェック後
+ *  に起動された割込みハンドラ内でディスパッチが要求された場合に，ディ
+ *  スパッチされない．
+ *  　
+ *  一般不当命令の場合は戻り番地を2バイト進める必要があるが
+ *  対応していない
+ *  （GDB stubがブレークポイントとして使用する。）
+ *  　
+ * 　　CPU例外要因毎に展開されるルーチンでr0,r1を保存し、
+ * 　　割込み禁止にした後、
+ *　　　　d1：割込み受付直後のSRのコピー
+ *　　　　a0：C言語ルーチンの先頭アドレス
+ * 　　の状態でここに来る。
+ * 　　
+ * 　　レジスタ割当
+ * 　　　r4：C言語ルーチンの引数
+ * 　　　　　スタック上に積まれたSRのアドレス
+ * 　　　r7：タスクスタックポインタ
  */
 	.text
 	.align 2
 	.globl cpu_exception_entry
 cpu_exception_entry:
-	/*  ����ߡ�CPU�㳰�ͥ��ȥ����󥿤Υ����å� 	*/
-	tst.l	intnest         /* CPU�㳰ȯ�����Υ���ƥ����Ȥ�Ƚ��  	*/
-	bne	_exc_from_int   /* ¿���㳰�ʤ饸����   		*/
+	/*  割込み／CPU例外ネストカウンタのチェック 	*/
+	tst.l	intnest         /* CPU例外発生時のコンテキストを判定  	*/
+	bne	_exc_from_int   /* 多重例外ならジャンプ   		*/
 	addq.l  #1, intnest
 
-        /* 	���ʤ�CPU�㳰�ξ��					*/
-				/* �����å������ؤ�����			*/
-				/* �����������å��ݥ��󥿤���¸        	*/
+        /* 	初段のCPU例外の場合					*/
+				/* スタック入れ替え前の			*/
+				/* タスクスタックポインタを保存        	*/
 	move.l  %sp, %a1
-				/* ����ߥ����å����ڤ��ؤ�		*/
+				/* 割込みスタックに切り替え		*/
 	move.l  #STACKTOP, %sp
-	move.l	%a1,-(%sp) 	/*       ��  			*/
-	move.w 	%d1, %sr	/*  ����ߵ���                          */
-				/*    �����������å��ݥ��󥿤�		*/
-				/*    ����ߥ����å����Ѥ�  		*/
-	jsr	(%a0)		/* C����롼����ƤӽФ�		*/
+	move.l	%a1,-(%sp) 	/*       　  			*/
+	move.w 	%d1, %sr	/*  割込み許可                          */
+				/*    タスクスタックポインタを		*/
+				/*    割込みスタックに積む  		*/
+	jsr	(%a0)		/* C言語ルーチン呼び出し		*/
 									
-        move.l  #(MAX_IPM << 8), %d0 /*  ����߶ػ�		*/
+        move.l  #(MAX_IPM << 8), %d0 /*  割込み禁止		*/
         ori.l   #0x00003000, %d0
 	move.w	%d0, %sr
-				/* �����/CPU�㳰�ͥ��ȥ����󥿤򥯥ꥢ */
+				/* 割込み/CPU例外ネストカウンタをクリア */
 	clr.l	intnest
-	move.l	(%sp),%sp	/* �����å����ؤ�  			*/
-				/* reqflg�Υ����å�                    	*/
+	move.l	(%sp),%sp	/* スタック切替え  			*/
+				/* reqflgのチェック                    	*/
 	tst.l	reqflg
 	jbne	ret_exc
 	movem.l (%sp), %d0-%d1/%a0-%a1
@@ -238,126 +238,126 @@ cpu_exception_entry:
 	rte
 
 /*
- *  ����ߤθ�������³��
+ *  割込みの口処理の続き
  *
- * ����������װ����Ÿ�������롼�����r0,r1����¸����
- * ��������߶ػߤˤ����塢
- *��������d1������߼���ľ���SR�Υ��ԡ�
- *��������a0:C����롼�������Ƭ���ɥ쥹
- * �����ξ��֤Ǥ�������롣
- * ����
- * �����쥸��������
- * ������r7�������������å��ݥ���
+ * 　　割込み要因毎に展開されるルーチンでr0,r1を保存し、
+ * 　　割込み禁止にした後、
+ *　　　　d1：割込み受付直後のSRのコピー
+ *　　　　a0:C言語ルーチンの先頭アドレス
+ * 　　の状態でここに来る。
+ * 　　
+ * 　　レジスタ割当
+ * 　　　r7：タスクスタックポインタ
  */
 	.text
 	.align 2
 	.globl interrupt_entry
 interrupt_entry:
-	/*  ����ߡ�CPU�㳰�ͥ��ȥ����󥿤Υ����å� 	*/
-	tst.l	intnest		/* ¿�ų���ߤʤ饸����   		*/
+	/*  割込み／CPU例外ネストカウンタのチェック 	*/
+	tst.l	intnest		/* 多重割込みならジャンプ   		*/
 	bne	_interrupt_from_int
-	addq.l	#1, intnest	/* ����ߥͥ��ȥ����󥿤򥤥󥯥���� */
+	addq.l	#1, intnest	/* 割込みネストカウンタをインクリメント */
 
-                                /* ���ʤγ���ߤξ��		*/
-				/* �����å������ؤ�����			*/
-				/* �����������å��ݥ��󥿤���¸        	*/
-	move.l  %sp, %a1	/* ����ߥ����å����ڤ��ؤ�		*/
+                                /* 初段の割込みの場合		*/
+				/* スタック入れ替え前の			*/
+				/* タスクスタックポインタを保存        	*/
+	move.l  %sp, %a1	/* 割込みスタックに切り替え		*/
 	move.l  #STACKTOP, %sp 
-	move.l	%a1,-(%sp) 	/*    �����������å��ݥ��󥿤�		*/
-	move.w  %d1, %sr	/*  ����ߵ���  */
-				/*    ����ߥ����å����Ѥ�  		*/
-	jsr	(%a0)		/* C����롼����ƤӽФ�		*/
-				/*  ����߶ػ�		*/
+	move.l	%a1,-(%sp) 	/*    タスクスタックポインタを		*/
+	move.w  %d1, %sr	/*  割込み許可  */
+				/*    割込みスタックに積む  		*/
+	jsr	(%a0)		/* C言語ルーチン呼び出し		*/
+				/*  割込み禁止		*/
         move.l  #(MAX_IPM << 8), %d0
         ori.l   #0x00002000, %d0
-	move.w	%d0, %sr	/*  ����߶ػ�			*/
-				/* ����ߡ�CPU�㳰�ͥ��ȥ����󥿤򥯥ꥢ*/
+	move.w	%d0, %sr	/*  割込み禁止			*/
+				/* 割込み／CPU例外ネストカウンタをクリア*/
 	clr.l	intnest
-	move.l	(%sp),%sp	/* �����å����ؤ�  			*/
-				/* reqflg�Υ����å�                    	*/
+	move.l	(%sp),%sp	/* スタック切替え  			*/
+				/* reqflgのチェック                    	*/
 	tst.l	reqflg
 	jbne	ret_int
 	movem.l (%sp), %d0-%d1/%a0-%a1
 	adda.l  #16,%sp
 	rte
 
-/* ¿�ų���ߤξ�� 							*/
-/* 	�����ȯ�����Υ���ƥ����Ȥ�Ƚ�̸塢 				*/
-/*   		����߶ػ� 						*/
-/*   		a0��C����롼�������Ƭ���ɥ쥹				*/
-/*   		d0�������ߥͥ��Ȳ��			                */
-/*��������      d1������߼���ľ���SR�Υ��ԡ�                          */
-/* 	�ξ��֤Ǥ���������Ǥ��� 					*/
+/* 多重割込みの場合 							*/
+/* 	割込み発生時のコンテキストを判別後、 				*/
+/*   		割込み禁止 						*/
+/*   		a0：C言語ルーチンの先頭アドレス				*/
+/*   		d0：割り込みネスト回数			                */
+/*　　　　      d1：割込み受付直後のSRのコピー                          */
+/* 	の状態でここに飛んでくる 					*/
 _exc_from_int:
 _interrupt_from_int:
-	addq.l	#1, intnest		/* ����ߥͥ��ȥ����󥿤򥤥󥯥���� */
-	move.w	%d1,%sr			/*  ����ߵ���	*/
+	addq.l	#1, intnest		/* 割込みネストカウンタをインクリメント */
+	move.w	%d1,%sr			/*  割込み許可	*/
 	
-	jsr	(%a0)			/*  C����롼����ƤӽФ� 	*/
+	jsr	(%a0)			/*  C言語ルーチン呼び出し 	*/
 	
         move.l  #(MAX_IPM << 8), %d0
         ori.l   #0x00002000, %d0
-	move.w	%d0, %sr	/*  ����߶ػ�			*/
-	/* ����ߡ�CPU�㳰�ͥ��ȥ����󥿤�ǥ��������	*/
+	move.w	%d0, %sr	/*  割込み禁止			*/
+	/* 割込み／CPU例外ネストカウンタをディクリメント	*/
 	subq.l	#1, intnest
 	movem.l (%sp), %d0-%d1/%a0-%a1
 	adda.l  #16,%sp
 	rte
 
 /*
- *  ����ߥϥ�ɥ顿CPU�㳰�ϥ�ɥ�и�����
+ *  割込みハンドラ／CPU例外ハンドラ出口処理
  *
- *  ret_int �ϳ���߶ػ߾��֤ǡ�ret_exc �ϥޥ����⡼�ɡ�
- *  ����߶ػ߾��֤ǸƤӽФ��ʤ���Фʤ�ʤ����ޤ� ret_exc �ϡ��������
- *  ���쥸��������¸�������֤ǸƤӽФ����ȡ�
+ *  ret_int は割込み禁止状態で，ret_exc はマスタモード・
+ *  割込み禁止状態で呼び出さなければならない．また ret_exc は，スクラッ
+ *  チレジスタを保存した状態で呼び出すこと．
  */
 	.text
 	.align 2
 ret_int:
 ret_exc:
-	clr.l reqflg			/* reqflg �� FALSE �� */
-	move.l runtsk, %a0		/* A0 �� runtsk */
-	tst.l enadsp			/* enadsp �� FALSE �ʤ� */
-	jbeq  ret_int_1			/*         ret_int_1 �� */
-	cmp.l schedtsk, %a0		/* runtsk �� schedtsk ��Ʊ���ʤ� */
-	jbeq ret_int_1			/*                  ret_int_1 �� */
+	clr.l reqflg			/* reqflg を FALSE に */
+	move.l runtsk, %a0		/* A0 ← runtsk */
+	tst.l enadsp			/* enadsp が FALSE なら */
+	jbeq  ret_int_1			/*         ret_int_1 へ */
+	cmp.l schedtsk, %a0		/* runtsk と schedtsk が同じなら */
+	jbeq ret_int_1			/*                  ret_int_1 へ */
 	lea	-44(%sp), %sp
-	movem.l %d2-%d7/%a2-%a6, (%sp)	/* �Ĥ�Υ쥸��������¸ */
-	move.l %sp, TCB_msp(%a0)	/* �����������å�����¸ */
+	movem.l %d2-%d7/%a2-%a6, (%sp)	/* 残りのレジスタを保存 */
+	move.l %sp, TCB_msp(%a0)	/* タスクスタックを保存 */
 	move.l #ret_int_r, %d2
-	move.l %d2, TCB_pc(%a0)	/* �¹ԺƳ����Ϥ���¸ */
+	move.l %d2, TCB_pc(%a0)	/* 実行再開番地を保存 */
 	jbra dispatcher
 ret_int_r:
-	movem.l (%sp), %d2-%d7/%a2-%a6	/* �쥸���������� */
+	movem.l (%sp), %d2-%d7/%a2-%a6	/* レジスタを復帰 */
 	lea  44(%sp), %sp
 ret_int_1:
 	btst.b #TCB_enatex_bit, TCB_enatex(%a0)
-	jbeq ret_int_2			/* enatex �� FALSE �ʤ�꥿���� */
-	tst.l TCB_texptn(%a0)		/* texptn �� 0 �ʤ�꥿���� */
+	jbeq ret_int_2			/* enatex が FALSE ならリターン */
+	tst.l TCB_texptn(%a0)		/* texptn が 0 ならリターン */
 	jbeq ret_int_2
-	jsr call_texrtn			/* �������㳰�����롼����θƽФ� */
+	jsr call_texrtn			/* タスク例外処理ルーチンの呼出し */
 ret_int_2:
 #ifdef SUPPORT_CHG_IPM
-	move.l  16(%sp),  %d0	               /* �����γ���ߥޥ����� */
-	and.l   #~0x00000700, %d0		/*        task_intmask �� */
+	move.l  16(%sp),  %d0	               /* 戻り先の割込みマスクを */
+	and.l   #~0x00000700, %d0		/*        task_intmask に */
 	clr.l	%d1
 	move.w	task_intmask, %d1
 	or.l	%d1, %d0
 	move.l  %d0, 16(%sp)
 #endif /* SUPPORT_CHG_IPM */
-	movem.l (%sp), %d0-%d1/%a0-%a1	/* ������å��쥸���������� */
+	movem.l (%sp), %d0-%d1/%a0-%a1	/* スクラッチレジスタを復帰 */
 	adda.l  #16, %sp
 	rte
 
 /*
- *  ���������Ԥ�
+ *  微少時間待ち
  */
 	.globl _sil_dly_nse
 _sil_dly_nse:
-	subi.l #SIL_DLY_TIM1, %d0	/* D0 ���� SIL_DLY_TIM1 ����� */
-	jbhi _sil_dly_nse_1		/* ��̤� 0 �ʲ��ʤ�꥿���� */
+	subi.l #SIL_DLY_TIM1, %d0	/* D0 から SIL_DLY_TIM1 を引く */
+	jbhi _sil_dly_nse_1		/* 結果が 0 以下ならリターン */
 	rts
 _sil_dly_nse_1:
-	subi.l #SIL_DLY_TIM2, %d0	/* D0 ���� SIL_DLY_TIM2 ����� */
-	jbhi _sil_dly_nse_1		/* ��̤� 0 ����礭����Х롼�� */
+	subi.l #SIL_DLY_TIM2, %d0	/* D0 から SIL_DLY_TIM2 を引く */
+	jbhi _sil_dly_nse_1		/* 結果が 0 より大きければループ */
 	rts

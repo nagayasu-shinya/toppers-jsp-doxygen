@@ -52,46 +52,46 @@
  *  TOPPERS PROJECT BE LIABLE FOR ANY TYPE OF DAMAGE DIRECTLY OR
  *  INDIRECTLY CAUSED FROM THE USE OF THIS SOFTWARE.
  * 
- *  �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ������������˸¤ꡤ�ܥ��եȥ���
- *  �����ܥ��եȥ���������Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ�
- *  �����ۡʰʲ������ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭�����
- *      ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ�����
- *      ��������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻���
- *      �Ǥ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ����Ѽԥ�
- *      �˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ�����̵��
- *      �ڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻���
- *      �Ǥ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ������������ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭������
- *        ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ���
- *        �𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»��
- *      ����⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ��ޤ���
- *      �ܥ��եȥ������Υ桼���ޤ��ϥ���ɥ桼������Τ����ʤ���ͳ�˴��
- *      �����ᤫ��⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+ *  上記著作権者は，以下の (1)〜(4) の条件を満たす場合に限り，本ソフトウェ
+ *  ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改変・
+ *  再配布（以下，利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作権
+ *      表示，この利用条件および下記の無保証規定が，そのままの形でソース
+ *      コード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使用
+ *      できる形で再配布する場合には，再配布に伴うドキュメント（利用者マ
+ *      ニュアルなど）に，上記の著作権表示，この利用条件および下記の無保
+ *      証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使用
+ *      できない形で再配布する場合には，次のいずれかの条件を満たすこと．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著作
+ *        権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに報
+ *        告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損害
+ *      からも，上記著作権者およびTOPPERSプロジェクトを免責すること．また，
+ *      本ソフトウェアのユーザまたはエンドユーザからのいかなる理由に基づ
+ *      く請求からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
  * 
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ���
- *  ��TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����λ�����Ū���Ф�
- *  ��Ŭ������ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ�����������
- *  �ˤ��ľ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ����
- *  ��ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者およ
+ *  びTOPPERSプロジェクトは，本ソフトウェアに関して，特定の使用目的に対す
+ *  る適合性も含めて，いかなる保証も行わない．また，本ソフトウェアの利用
+ *  により直接的または間接的に生じたいかなる損害に関しても，その責任を負
+ *  わない．
  * 
  *  @(#) $Id: tlcs900vec.cpp,v 1.4 2007/04/17 05:08:07 honda Exp $
  */
-// tlcs900vec.cpp : ���󥽡��� ���ץꥱ��������ѤΥ���ȥ� �ݥ���Ȥ����
+// tlcs900vec.cpp : コンソール アプリケーション用のエントリ ポイントの定義
 //
 //------------------------------------------------------------------------------
-// �ѹ�����
-//version yyyy/mm/dd ����
+// 変更履歴
+//version yyyy/mm/dd 概要
 //---------- -------------------------------------------------------------------
-// 01.00   2004/01/02 ����
-// 01.01   2004/08/06 FIX VECTOR �������ͤ�ͭ�ä��Τ�ѥ�᥿�ˤ��ѹ���ǽ�Ȥ���
-//                    EXCINIB �����󤬣��ξ������꽤����                      
-//                    M30262F8FG���������������ߥ٥�����1��¿���Զ�罤����
-//                    M30620FCAFP��JSP1.3�ѥ٥������������ɤ��拾��ѥ��벽��
+// 01.00   2004/01/02 初版
+// 01.01   2004/08/06 FIX VECTOR が固定値で有ったのをパラメタにて変更可能とした
+//                    EXCINIB の配列が０の場合の問題修正。                      
+//                    M30262F8FGの生成時、割り込みベクタが1行多い不具合修正。
+//                    M30620FCAFPのJSP1.3用ベクタ生成コードを条件コンパイル化。
 //----------------------------------------------------------------------------- 
 
 #include <stdio.h>
@@ -119,7 +119,7 @@ static char const default_input_file[] = "kernel_cfg.i";
 static char const default_output_file[] = "tlcs900vec.inc";
 static char const default_unused_int[] = "unused_interrupt";
 
-//start��������
+//start出力設定
 static char const start_extern[] ="\n\textern large _start";
 static char const start_vector[] = "\tdl\t_start\t; 01  0xffff00";
 static char const lf[] = "\n";
@@ -162,18 +162,18 @@ int main(int argc, char* argv[])
 	strcpy(unused_vec[0], default_unused_int);
 	strcpy(unused_vec[1], default_unused_int);
 
-	//���ץ�������
+	//オプション指定
 	for(i = 1 ; i < argc ; i++){
 		s = argv[i];
 		if(*s++ == '-'){
 			c = *s++;
 			skip_space(&s);
 			switch(c){
-			case 'O':		// �����ȥץåȥե����������
+			case 'O':		// アウトプットファイルの設定
 			case 'o':
 				strcpy(output_file, s);
 				break;
-			case 'R':		// ����ץåȥե����������
+			case 'R':		// インプットファイルの設定
 			case 'r':
 				strcpy(input_file, s);
 				break;
@@ -197,7 +197,7 @@ int main(int argc, char* argv[])
 	for(i = 0 ; i < num_include ; i++){
 		printf("include file = %s\n", include_file[i]);
 	}
-	//�ե���������
+	//ファイル入力
 	for(;;){
 		if((fgets(buf, BUF_SIZE, pfi)) == NULL)
 			break;
@@ -205,10 +205,10 @@ int main(int argc, char* argv[])
 		switch(vec_state){
 		case INT_STATE:
 		case EXC_STATE:
-			//����ʸ��ʸ���ޤǤ������ν���
+			//入力文の文末まできた時の処理
 			if(test_string(&s, ";"))
 				vec_state = NORMAL_STATE;
-			//ʸ������г���
+			//文字列抽出開始
 			else if(test_string(&s, "{")){
 				v = &vec_table[vec_state][num_vec[vec_state]];
 				p = &v->no_name[0];
@@ -219,12 +219,12 @@ int main(int argc, char* argv[])
 				while(*s != ','){
 					if(*s == 0)
 						continue;
-					//(,),space�ξ��ϼ��Υݥ��󥿤�ʤ��
+					//(,),spaceの場合は次のポインタを進める
 					if(*s == '(' || *s == ')'|| *s <= ' '){
 						s++;
 						continue;
 					}
-					//s��[0-9]�Ǥʤ����
+					//sが[0-9]でない場合
 					if(*s < '0' || *s > '9')
 						dec = false;
 					*p++ = *s++;
@@ -339,11 +339,11 @@ int main(int argc, char* argv[])
 		if((v->no >= MAX_EXC && v->no < 32) || v->no >= MAX_INT)
 			strcpy(unused_vec[EXC_STATE], v->no_label);
 	}
-	//extern start�����
+	//extern startを出力
 	fputs(start_extern, pfo);
 
 	if(num_nodec > 0)
-		printf("%d�Υ������ץ�����ֹ������Ǥ��ޤ���\n", num_nodec);
+		printf("%dのエクセプション番号を特定できません！\n", num_nodec);
 	else{
 		fputs(lf, pfo);
 		for(i = 0 ; i < 2 ; i++){
@@ -374,13 +374,13 @@ static void set_TLSS_TLCS900(FILE* pfo, int m)
 			fputs(start_vector, pfo);
 			fputs(lf, pfo);}
 		else
-			//������ʬ������
+			//この部分で設定
 			set_vector(pfo, INT_STATE, iVec_num+1);
 	}
 }
 
 /*
- * extern ����򤹤�(̾�������˥�������С������פʤ��)
+ * extern 宣言をする(名前の前にアンダーバーが不要なもの)
  */
 static void set_global(FILE* pfo, char const * t)
 {
@@ -389,7 +389,7 @@ static void set_global(FILE* pfo, char const * t)
 	fputs(lf, pfo);
 }
 /*
- * extern ����򤹤�(̾�������˥�������С���ɬ�פʤ��)
+ * extern 宣言をする(名前の前にアンダーバーが必要なもの)
  */
 static void set_global_function(FILE* pfo, char const * t)
 {
@@ -399,7 +399,7 @@ static void set_global_function(FILE* pfo, char const * t)
 }
 
 /*
- * �٥��ȥ�����ꤹ��
+ * ベクトルを設定する
  */
 static void set_vector(FILE* pfo, int kind, int no)
 {
@@ -455,7 +455,7 @@ static void set_vector(FILE* pfo, int kind, int no)
 
 
 /*
- * ʸ�������Ӥ���Ʊ��ʤ��TURE
+ * 文字列を比較して同一ならばTURE
  */
 static bool test_string(char** s, char const *t)
 {
@@ -480,7 +480,7 @@ static bool test_string(char** s, char const *t)
 }
 
 /*
- * ����Υ���饯���ޤǥ����å�
+ * 指定のキャラクタまでスキップ
  */
 static bool skip_char(char** s, char const c)
 {
@@ -504,7 +504,7 @@ static bool skip_char(char** s, char const c)
 }
 
 /*
- * ���ڡ����ޤ��ϥ��֤򥹥��åפ���
+ * スペースまたはタブをスキップする
  */
 static bool skip_space(char** s)
 {

@@ -8,58 +8,58 @@
 #   Copyright (C) 2007 by KURUSUGAWA Electronics Industry Inc, JAPAN
  *  Copyright (C) 2008 by Takahisa Yokota
  * 
- *  �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ�狼��Free Software Foundation 
- *  �ˤ�äƸ�ɽ����Ƥ��� GNU General Public License �� Version 2 �˵�
- *  �Ҥ���Ƥ���������������˸¤ꡤ�ܥ��եȥ��������ܥ��եȥ�����
- *  ����Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ������ۡʰʲ���
- *  ���ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
- *      ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
- *      ����������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
- *      �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
- *      ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
- *      �ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
- *        �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
- *        ��𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
- *      ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  によって公表されている GNU General Public License の Version 2 に記
+ *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+ *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+ *  利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
  * 
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- *  ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����Ŭ�Ѳ�ǽ����
- *  �ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ����������Ѥˤ��ľ
- *  ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ�����ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+ *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+ *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
  *  @(#) $Id: m52235evb.h,v 1.2 2003/06/04 01:52:23 hiro Exp $
  */
 
 /*
- *  �ե꡼�������롦���ߥ�������� M52235EVB
- *  �ܡ��ɸ�ͭ�����
+ *  フリースケール・セミコンダクタ M52235EVB
+ *  ボード固有の定義
  */
 
 #ifndef _M52235EVB_H_
 #define _M52235EVB_H_
 #include "m52235.h"
 /*
- *  ����ߥ�٥�����Τ�������
+ *  割込みレベル設定のための定義
  */
-#define	TIRQ_NMI	0x7u		/* �Υ�ޥ����֥����� */
-#define	TIRQ_LEVEL6	0x6u		/* ����ߥ�٥�6 */
-#define	TIRQ_LEVEL5	0x5u		/* ����ߥ�٥�5 */
-#define	TIRQ_LEVEL4	0x4u		/* ����ߥ�٥�4 */
-#define	TIRQ_LEVEL3	0x3u		/* ����ߥ�٥�3 */
-#define	TIRQ_LEVEL2	0x2u		/* ����ߥ�٥�2 */
-#define	TIRQ_LEVEL1	0x1u		/* ����ߥ�٥�1 */
+#define	TIRQ_NMI	0x7u		/* ノンマスカブル割込み */
+#define	TIRQ_LEVEL6	0x6u		/* 割込みレベル6 */
+#define	TIRQ_LEVEL5	0x5u		/* 割込みレベル5 */
+#define	TIRQ_LEVEL4	0x4u		/* 割込みレベル4 */
+#define	TIRQ_LEVEL3	0x3u		/* 割込みレベル3 */
+#define	TIRQ_LEVEL2	0x2u		/* 割込みレベル2 */
+#define	TIRQ_LEVEL1	0x1u		/* 割込みレベル1 */
 
 #ifndef _MACRO_ONLY
 /*
- *  GDB STUB�ƽФ��롼����
+ *  GDB STUB呼出しルーチン
  */
 
 extern void mcfuart_putc_pol(ID portid, char c);	/*  mcfuart.c  */
@@ -72,7 +72,7 @@ extern void mcfuart_putc_pol(ID portid, char c);	/*  mcfuart.c  */
 Inline void
 gdb_stub_exit (void)
 {
-	/* �ƥ��Ȥ��Ƥ��ʤ� */
+	/* テストしていない */
 	Asm("trap #3"::);
 }
 

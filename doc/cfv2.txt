@@ -1,8 +1,8 @@
 
-	    �� TOPPERS/JSP�����ͥ� �桼�����ޥ˥奢�� ��
-		    ��ColdFire Version 2 �������åȰ�¸����
+	    ＝ TOPPERS/JSPカーネル ユーザズマニュアル ＝
+		    （ColdFire Version 2 ターゲット依存部）
 
-             ��Release 1.4.1�б����ǽ�����: 6-Oct-2004��
+             （Release 1.4.1対応，最終更新: 6-Oct-2004）
 
 ------------------------------------------------------------------------ 
  TOPPERS/JSP Kernel
@@ -16,299 +16,299 @@
  Copyright (C) 2007 by KURUSUGAWA Electronics Industry Inc, JAPAN
  Copyright (C) 2008 by Takahisa Yokota
 
- �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ�狼��Free Software Foundation 
- �ˤ�äƸ�ɽ����Ƥ��� GNU General Public License �� Version 2 �˵�
- �Ҥ���Ƥ���������������˸¤ꡤ�ܥ��եȥ��������ܥ��եȥ�����
- ����Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ������ۡʰʲ���
- ���ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
-     ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
-     ����������˴ޤޤ�Ƥ��뤳�ȡ�
- (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
-     �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
-     �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
-     ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
-     �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
-     �ȡ�
-   (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
-       �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
-   (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
-       ��𤹤뤳�ȡ�
- (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
-     ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+ 上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ によって公表されている GNU General Public License の Version 2 に記
+ 述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+ を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+ 利用と呼ぶ）することを無償で許諾する．
+ (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+     権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+     スコード中に含まれていること．
+ (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+     用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+     者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+     の無保証規定を掲載すること．
+ (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+     用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+     と．
+   (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+       作権表示，この利用条件および下記の無保証規定を掲載すること．
+   (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+       報告すること．
+ (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+     害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
 
- �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����Ŭ�Ѳ�ǽ����
- �ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ����������Ѥˤ��ľ
- ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ�����ʤ���
+ 本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+ 含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+ 接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
 
  @(#) $Id: m68k.txt,v 1.13 2004/10/06 06:51:51 honda Exp $
 ------------------------------------------------------------------------
 
 
-����ColdFire V2 �������åȰ�¸���γ���
+１．ColdFire V2 ターゲット依存部の概要
 
-1.1 �������åȥ����ƥ�
+1.1 ターゲットシステム
 
-ColdFire V2�ץ����å��Υ������åȥ����ƥ�Ȥ��Ƥϡ��ե꡼�������롦���ߥ���
-������������Ҥ�CPU�ܡ���M52235EVB(MCF52235�ˤΤߤ򥵥ݡ��Ȥ��Ƥ��롥
+ColdFire V2プロセッサのターゲットシステムとしては，フリースケール・セミコン
+ダクタ株式会社のCPUボードM52235EVB(MCF52235）のみをサポートしている．
 
-1.2 ��ȯ�Ķ��ȼ¹ԴĶ�
+1.2 開発環境と実行環境
 
-��ȯ�Ķ��ˤϡ�GCC�ʤɤ�GNU��ȯ�Ķ����Ѥ������֥������ȥե�����ե����ޥ�
-�Ȥ�ELF��ɸ��Ȥ��롥
+開発環境には，GCCなどのGNU開発環境を用い，オブジェクトファイルフォーマッ
+トはELFを標準とする．
 
-�¹ԴĶ��Ȥ��ơ�ROM����ľ�ܵ�ư������ˡ��GDB�����֤��Ѥ�����ˡ�򥵥ݡ���
-���Ƥ��롥GDB�����֤��Ѥ�����ˤϡ�Makefile��ǡ�DBGENV��GDB_STUB��
-�������ʥǥե���ȡˡ�ROM��˥����Ѥ�����ˤϡ�DBGENV��������ʤ���
+実行環境として，ROMから直接起動する方法とGDBスタブを用いる方法をサポート
+している．GDBスタブを用いる場合には，Makefile中で，DBGENVにGDB_STUBを
+定義する（デフォルト）．ROMモニタを用いる場合には，DBGENVを定義しない．
 
-(��)RAM�˥����ͥ�����֤����M52235EVB�Ǥϥ����������ޤ�ʤ����ᡢGDB_STUB
-�ϸ������Ѥ��ʤ�
+(注)RAMにカーネルを配置するとM52235EVBではサイズが収まらないため、GDB_STUB
+は現状使用しない
 
-1.3 ���ݡ��Ȥ��뵡ǽ�γ���
+1.3 サポートする機能の概要
 
-ColdFire V2��¸�ε�ǽ�Ȥ��ơ�����ߥޥ������ѹ������ȡ�chg_ixx��get_ixx�ˤ�
-���ݡ��Ȥ��Ƥ��롥�ޤ���M52235EVB�ܡ��ɰ�¸�ε�ǽ�Ȥ��ơ���ǽɾ���ѥ����ƥ�
-���ﻲ�ȵ�ǽ��vxget_tim�ˤ򥵥ݡ��Ȥ��Ƥ��롥����ߤζػߤ�
-���ġ�dis_int��ena_int�ˤϥ��ݡ��Ȥ��Ƥ��ʤ���
+ColdFire V2依存の機能として，割込みマスクの変更・参照（chg_ixx，get_ixx）を
+サポートしている．また，M52235EVBボード依存の機能として，性能評価用システム
+時刻参照機能（vxget_tim）をサポートしている．割込みの禁止と
+許可（dis_int，ena_int）はサポートしていない．
 
 
-����ColdFire�ץ����å���¸���ε�ǽ
+２．ColdFireプロセッサ依存部の機能
 
-������Ǥϡ������ͥ뤪��ӥ����ƥॵ���ӥ��ε�ǽ����ǡ�ColdFire��¸����
-ʬ�ˤĤ��Ʋ��⤹�롥
+この節では，カーネルおよびシステムサービスの機能の中で，ColdFire依存の部
+分について解説する．
 
-2.1 �ǡ�����
+2.1 データ型
 
-signed int����unsigned int����size_t���Υ������ϡ��������32�ӥåȤǤ�
-�롥
+signed int型，unsigned int型，size_t型のサイズは，いずれも32ビットであ
+る．
 
-2.2 ����ߴ�����ǽ�ȳ���ߥϥ�ɥ�
+2.2 割込み管理機能と割込みハンドラ
 
-�����ͥ�������γ���ߤ�NMI�ΤߤǤ��롥��äơ�CPU���å����֤������롼
-������Ǥϡ�NMI�ʳ��γ���ߤϤ��٤ƶػߤ���Ƥ��롥����Ū�ˤϡ�IPM
-��Interrupt Priority Mask�ˤ�7�����ꤵ��롥
+カーネル管理外の割込みはNMIのみである．よって，CPUロック状態や初期化ルー
+チン内では，NMI以外の割込みはすべて禁止されている．具体的には，IPM
+（Interrupt Priority Mask）が7に設定される．
 
-DEF_INH�ǻ��ꤹ�����ߥϥ�ɥ��ֹ��inhno�ˤϡ�MCF52235�Ǥ��㳰�٥�����
-���ɽ�������Υǡ�������INHNO�ˤ�unsigned int�����������Ƥ��롥
-DEF_INH�ǡ��㳰�٥����ֹ�Ȥ���ͭ���Ǥʤ��ͤ䡤��������ߤ��б����ʤ�
-�ֹ����ꤷ������ư����ݾڤ���ʤ���
+DEF_INHで指定する割込みハンドラ番号（inhno）は，MCF52235での例外ベクタ番
+号を表し，そのデータ型（INHNO）はunsigned int型に定義されている．
+DEF_INHで，例外ベクタ番号として有効でない値や，外部割込みに対応しない
+番号を指定した場合の動作は保証されない．
 
-MCF52235��¸�ε�ǽ�Ȥ��ơ�SR��Status Register�����IPM��Interrupt
-Priority Mask�ˤ��ͤ��ѹ����뤿��Υ����ӥ�������chg_ipm�ȡ����Ȥ��뤿
-��Υ����ӥ�������get_ipm�򥵥ݡ��Ȥ��Ƥ��롥�ʤ���IPM���ͤ�ɽ���ǡ���
-��IPM�ϡ�unsigned int�����������Ƥ��롥
+MCF52235依存の機能として，SR（Status Register）中のIPM（Interrupt
+Priority Mask）の値を変更するためのサービスコールchg_ipmと，参照するた
+めのサービスコールget_ipmをサポートしている．なお，IPMの値を表すデータ
+型IPMは，unsigned int型に定義されている．
 
-�����Υ����ӥ�������ϡ�����������ƥ����Ȥ�CPU���å�������֤ξ��
-�ˤΤ߸ƤӽФ����Ȥ��Ǥ��롥chg_ipm�ˤ��IPM��0�ʳ��ʤ��ʤ�������餫
-�γ���ߤ��ػߤ���Ƥ�����֡ˤˤ������Ǥ⡤�ǥ����ѥå��϶ػߤ��줺��
-chg_ipm�ˤ���ѹ�����IPM���ͤϡ��ǥ����ѥå���Υ������˰����Ѥ���롥
-�㤨�С����륿������IPM��1���ѹ������塤���餫�γ���ߤˤ���̤Υ�����
-���ڤ��ؤ��ȡ��ڤ��ؤ�ä���Υ������Ǥ�IPM��1�ˤʤ롥��������IPM��0 
-�ʳ������ꤷ�Ƥ��Ƥ⡤�¹ԤǤ��륿�������ʤ��ʤä����ˤ�IPM�ϰ��Ū
-��0�ˤʤ롥����ϡ�COLDFIRE��̿�᥻�åȤ��餯�����»���Ǥ���ʲ�����
-���ʤ��櫓�ǤϤʤ��ˡ�
+これらのサービスコールは，タスクコンテキストでCPUロック解除状態の場合
+にのみ呼び出すことができる．chg_ipmによりIPMを0以外（すなわち，何らか
+の割込みが禁止されている状態）にした場合でも，ディスパッチは禁止されず，
+chg_ipmにより変更したIPMの値は，ディスパッチ後のタスクに引き継がれる．
+例えば，あるタスクでIPMを1に変更した後，何らかの割込みにより別のタスク
+に切り替わると，切り替わった後のタスクでもIPMは1になる．ただし，IPMを0 
+以外に設定していても，実行できるタスクがなくなった場合にはIPMは一時的
+に0になる．これは，COLDFIREの命令セットからくる制限事項である（解決手段
+がないわけではない）．
 
-chg_ipm�򥵥ݡ��Ȥ��뤿��ˡ�����ߥϥ�ɥ�ν����������ʤɤ˥����Хإ�
-�ɤ������Ƥ��롥�����ǡ�SUPPORT_CHG_IPM�Ȥ����ޥ����ˤ�ꡤ�����Υ���
-�ӥ�������򥵥ݡ��Ȥ��뤫�ɤ������ڤ��ؤ�����褦�ˤ��Ƥ��롥
-SUPPORT_CHG_IPM�ϡ�cpu_config.h����ǥޥ����������Ƥ��롥
+chg_ipmをサポートするために，割込みハンドラの出入口処理などにオーバヘッ
+ドを生じている．そこで，SUPPORT_CHG_IPMというマクロにより，これらのサー
+ビスコールをサポートするかどうかを切り替えられるようにしている．
+SUPPORT_CHG_IPMは，cpu_config.hの中でマクロ定義されている．
 
-ColdFire V2��¸�γ���ߥޥ������ѹ������ȤΤ���Υ����ӥ�������λ��ͤϼ���
-�̤ꡥ
+ColdFire V2依存の割込みマスクの変更・参照のためのサービスコールの仕様は次の
+通り．
 
-(1) chg_ipm			����ߥޥ������ѹ�
+(1) chg_ipm			割込みマスクの変更
 
-��C����API��
+【C言語API】
 	ER ercd = chg_ipm(IPM ipm);
 
-�ڥѥ�᡼����
-	IPM	ipm		���ꤹ�٤� IPM ����
+【パラメータ】
+	IPM	ipm		設定すべき IPM の値
 
-�ڥ꥿����ѥ�᡼����
-	ER	ercd		���顼������
+【リターンパラメータ】
+	ER	ercd		エラーコード
 
-�ڥ��顼�����ɡ�
-	E_CTX		����ƥ����ȥ��顼
-	E_PAR		�ѥ�᡼�����顼��ipm ��������
+【エラーコード】
+	E_CTX		コンテキストエラー
+	E_PAR		パラメータエラー（ipm が不正）
 
-�ڵ�ǽ��
+【機能】
 
-IPM��Interrupt Priority Mask�ˤ� ipm �ǻ��ꤵ�줿�ͤ����ꤹ�롥���ꤷ
-���ͤ� 0��6 �ʳ��ξ�硤E_PAR���顼�Ȥʤ롥IPM �� 1��6 �����ꤷ�����
-�Ǥ⡤�ǥ����ѥå��϶ػߤ���ʤ����ޤ������ꤷ�� IPM ���ͤϡ��ǥ����ѥ�
-���������Ѥ���롥�ǥ����ѥå���ػߤ��������ˤϡ�dis_dsp ��ʻ�Ѥ�
-��Ф褤��
+IPM（Interrupt Priority Mask）を ipm で指定された値に設定する．指定し
+た値が 0〜6 以外の場合，E_PARエラーとなる．IPM を 1〜6 に設定した場合
+でも，ディスパッチは禁止されない．また，設定した IPM の値は，ディスパッ
+チ後も引き継がれる．ディスパッチを禁止したい場合には，dis_dsp と併用す
+ればよい．
 
-�ʤ������Υ����ӥ���������Ѥ��ơ�IPM �� 7 �ʤ��٤Ƥγ���ߤ�ػߡˤ�
-���ꤹ�뤳�ȤϤǤ��ʤ���IPM �� 7 �ˤ��������ˤϡ�loc_cpu ��Ȥ��٤�
-�Ǥ��롥
+なお，このサービスコールを用いて，IPM を 7 （すべての割込みを禁止）に
+設定することはできない．IPM を 7 にしたい場合には，loc_cpu を使うべき
+である．
 
-���Υ����ӥ�������ϡ�����������ƥ����Ȥ� CPU���å�������֤λ��Τ߸�
-�ӽФ����Ȥ��Ǥ��롥�󥿥�������ƥ����Ȥ� CPU���å����֤ǸƤӽФ�����
-��ˤϡ�E_CTX���顼�Ȥʤ롥
+このサービスコールは，タスクコンテキストで CPUロック解除状態の時のみ呼
+び出すことができる．非タスクコンテキストや CPUロック状態で呼び出した場
+合には，E_CTXエラーとなる．
 
-(2) get_ipm			����ߥޥ����λ���
+(2) get_ipm			割込みマスクの参照
 
-��C����API��
+【C言語API】
 	ER ercd = get_ipm(IPM *p_ipm);
 
-�ڥѥ�᡼����
-	�ʤ�
+【パラメータ】
+	なし
 
-�ڥ꥿����ѥ�᡼����
-	ER	ercd		���顼������
-	IPM	ipm		���ߤ� IPM ����
+【リターンパラメータ】
+	ER	ercd		エラーコード
+	IPM	ipm		現在の IPM の値
 
-�ڥ��顼�����ɡ�
-	E_CTX		����ƥ����ȥ��顼
+【エラーコード】
+	E_CTX		コンテキストエラー
 
-�ڵ�ǽ��
+【機能】
 
-���ߤ� IPM��Interrupt Priority Mask�ˤ��ͤ��ɤ߽Ф���ipm ���֤���
+現在の IPM（Interrupt Priority Mask）の値を読み出し，ipm に返す．
 
-���Υ����ӥ�������ϡ�����������ƥ����Ȥ� CPU���å�������֤λ��Τ߸�
-�ӽФ����Ȥ��Ǥ��롥�󥿥�������ƥ����Ȥ� CPU���å����֤ǸƤӽФ�����
-��ˤϡ�E_CTX���顼�Ȥʤ롥
+このサービスコールは，タスクコンテキストで CPUロック解除状態の時のみ呼
+び出すことができる．非タスクコンテキストや CPUロック状態で呼び出した場
+合には，E_CTXエラーとなる．
 
-2.3 CPU�㳰������ǽ��CPU�㳰�ϥ�ɥ�
+2.3 CPU例外管理機能とCPU例外ハンドラ
 
-DEF_EXC �ǻ��ꤹ�����ߥϥ�ɥ��ֹ��excno�ˤϡ�COLDFIRE�Ǥ��㳰�٥���
-�ֹ��ɽ�������Υǡ�������EXCNO�ˤ� unsigned int�����������Ƥ��롥
-DEF_EXC �ǡ��㳰�٥����ֹ�Ȥ���ͭ���Ǥʤ��ͤ䡤CPU�㳰���б����ʤ���
-�����ꤷ������ư����ݾڤ���ʤ���
+DEF_EXC で指定する割込みハンドラ番号（excno）は，COLDFIREでの例外ベクタ
+番号を表し，そのデータ型（EXCNO）は unsigned int型に定義されている．
+DEF_EXC で，例外ベクタ番号として有効でない値や，CPU例外に対応しない番
+号を指定した場合の動作は保証されない．
 
-2.4 �������ȥ��åץ⥸�塼��
+2.4 スタートアップモジュール
 
-COLFIRE��¸�Υ������ȥ��åץ⥸�塼���start.S�ˤǤϡ����ν����������
-�Ԥ���
+COLFIRE依存のスタートアップモジュール（start.S）では，次の初期化処理を
+行う．
 
-(A) �ϡ��ɥ������ν����
+(A) ハードウェアの初期化
 
-�ǽ��SRAM��FlashROM�����֥��ɥ쥹�����ꤹ�롣
+最初にSRAM、FlashROMの配置アドレスを設定する。
 
-(B) �ץ����å��⡼�ɤν�����ȥ����å��ݥ��󥿤ν����
+(B) プロセッサモードの初期化とスタックポインタの初期化
 
-�ץ����å��Υ⡼�ɤ򡤥����ѥХ����⡼�ɡ�����ߥ⡼�ɤ����ꤷ��NMI �ʳ�
-�Τ��٤Ƥγ���ߤ�ػߤ��롥�������ȥ��åץ⥸�塼��ϡ������ѥХ����⡼��
-�ǵ�ư���ʤ���Фʤ�ʤ��Τǡ������ǥ����ѥХ����⡼�ɤ����ꤹ��Τϡ�����
-�ϥ���Ǥ��롥
+プロセッサのモードを，スーパバイザモード・割込みモードに設定し，NMI 以外
+のすべての割込みを禁止する．スタートアップモジュールは，スーパバイザモード
+で起動しなければならないので，ここでスーパバイザモードに設定するのは，本当
+はムダである．
 
-���ˡ�����ߥ����å��ݥ��󥿡�SPI�ˤ� STACKTOP �����ꤹ�롥�����ǳ��
-�ߥ����å��ݥ��󥿤����ꤵ�줿�����å��ΰ�ϡ������ͥ뵯ư����󥿥���
-����ƥ������ѤΥ����å��ΰ�Ȥ��ƻȤ��롥STACKTOP �ϡ�sys_config.h 
-����������뤳�Ȥ����ꤷ�Ƥ��롥�ޤ����ե졼��ݥ��󥿤� 0 �˽������
-�롥
+次に，割込みスタックポインタ（SPI）を STACKTOP に設定する．ここで割込
+みスタックポインタに設定されたスタック領域は，カーネル起動後は非タスク
+コンテキスト用のスタック領域として使われる．STACKTOP は，sys_config.h 
+部で定義することを想定している．また，フレームポインタを 0 に初期化す
+る．
 
-(B) hardware_init_hook �θƽФ�
+(B) hardware_init_hook の呼出し
 
-hardware_init_hook �� 0 �Ǥʤ����ˤϡ�hardware_init_hook ��ƤӽФ���
-hardware_init_hook �ϡ������ͥ뤬��ư��������˹Ԥ�ɬ�פ����륿������
-�Ȱ�¸�ν������Ԥ�������Ѱդ��Ƥ��롥hardware_init_hook ���ɤ��Ǥ�
-�������Ƥ��ʤ���硤��󥫤Ǥ��Υ���ܥ�� 0 ���������ʥ�󥫥���
-��ץ���˵��Ҥ���ˡ�
+hardware_init_hook が 0 でない場合には，hardware_init_hook を呼び出す．
+hardware_init_hook は，カーネルが起動される前に行う必要があるターゲッ
+ト依存の初期化を行うために用意している．hardware_init_hook がどこでも
+定義されていない場合，リンカでこのシンボルを 0 に定義する（リンカスク
+リプト内に記述あり）．
 
-(C) bss���������� data���������ν����
+(C) bssセクションと dataセクションの初期化
 
-bss���������򥼥����ꥢ���롥�ޤ���data�����������������롥
+bssセクションをゼロクリアする．また，dataセクションを初期化する．
 
-(D) software_init_hook �θƽФ�
+(D) software_init_hook の呼出し
 
-software_init_hook �� 0 �Ǥʤ����ˤϡ�software_init_hook ��ƤӽФ���
-software_init_hook �ϡ������ͥ뤬��ư��������˹Ԥ�ɬ�פ����륽�եȥ���
-���Ķ��ʶ���Ū�ˤϡ��饤�֥��˰�¸�ν������Ԥ�������Ѱդ��Ƥ��롥
-software_init_hook ���ɤ��Ǥ��������Ƥ��ʤ���硤��󥫤Ǥ��Υ����
-��� 0 ���������ʥ�󥫥�����ץ���˵��Ҥ���ˡ�
+software_init_hook が 0 でない場合には，software_init_hook を呼び出す．
+software_init_hook は，カーネルが起動される前に行う必要があるソフトウェ
+ア環境（具体的には，ライブラリ）依存の初期化を行うために用意している．
+software_init_hook がどこでも定義されていない場合，リンカでこのシンボ
+ルを 0 に定義する（リンカスクリプト内に記述あり）．
 
-(E) �����ͥ�ε�ư
+(E) カーネルの起動
 
-kernel_start ��ʬ�����������ͥ��ư���롥kernel_start ����꥿����
-�Ƥ��뤳�Ȥ����ꤷ�Ƥ��ʤ���
+kernel_start へ分岐し，カーネルを起動する．kernel_start からリターンし
+てくることは想定していない．
 
 
-����M52235EVB �����ƥ��¸���ε�ǽ
+３．M52235EVB システム依存部の機能
 
-   �äˤʤ�
+   特になし
 
-������ȯ�Ķ��ι���
+４．開発環境の構築
 
-��ȯ�Ķ��ι�����ˡ�ˤĤ��Ƥϡ�GNU��ȯ�Ķ����ۥޥ˥奢��򻲾Ȥ��뤳�ȡ�
+開発環境の構築方法については，GNU開発環境構築マニュアルを参照すること．
 
-4.1 ��ȯ�Ķ��ΥС������
+4.1 開発環境のバージョン
 
-ư���ǧ�����ġ���ΥС������ϰʲ����̤�Ǥ��롥
+動作確認したツールのバージョンは以下の通りである．
 
     BINUTILS : 2.18
     GCC-CORE : 3.6.3
 
-GCC 3.3���Ѥ����硤����ѥ��餬ɸ��C�饤�֥��ؿ���ƤӽФ������ɤ�
-�������뤿�ᡤNEWLIB��ɬ�פˤʤ롥NEWLIB��ɸ��C�饤�֥����󥯤���
-����ˡ�Makefile���LIBS������˰ʲ��Τ褦�� -lc ���ɲä���ɬ�פ����롥
+GCC 3.3を用いる場合，コンパイラが標準Cライブラリ関数を呼び出すコードを
+生成するため，NEWLIBが必要になる．NEWLIBの標準Cライブラリをリンクする
+ために，Makefile中のLIBSの定義に以下のように -lc を追加する必要がある．
 
     LIBS := $(LIBS) $(CXXLIBS) -lc -lgcc
 
 
-��������¾
+５．その他
 
-5.1 �ǥ��쥯�ȥꡦ�ե����빽��
+5.1 ディレクトリ・ファイル構成
 
-M68040�������åȰ�¸���γƥե�����γ��פϼ����̤ꡥ
+M68040ターゲット依存部の各ファイルの概要は次の通り．
 
     config/cfv2/
-	Makefile.config	Makefile��ColdFire V2��¸���
-	cpu_config.c	�ץ����å���¸���δؿ�
-	cpu_config.h	�ץ����å���¸���ι������
-	cpu_context.h	����ƥ��������
-	cpu_defs.h	�ץ����å���¸���Υ��ץꥱ������������
-	cpu_insn.h	���٥�Υץ����å����롼����
-	cpu_rename.def	�����ͥ����������̾�Υ�͡������
-	cpu_rename.h	�����ͥ����������̾�Υ�͡���
-	cpu_support.S	�ץ����å���¸���Υ��֥롼����
-	cpu_unrename.h	�����ͥ����������̾�Υ�͡�����
-	m52235.h		MCF52235�����
-	makeoffset.c	offset.h�������ݡ��ȥץ������
-	mcfpit.h		MCF52235��¡PIT�����ޡ��ɥ饤��
-	mcfuart.c		MCF52235��¡UART�ѥ��ꥢ��ɥ饤��
-	mcfuart.h		MCF52235��¡UART�ѥ��ꥢ��ɥ饤��
-	start.S		�������ȥ��åץ⥸�塼��
-	tinet_cpu_config.h	TINET�ѥإå�
-	tinet_cpu_defs.h	TINET�ѥإå�
-	tool_config.h	��ȯ�Ķ���¸���ι��������GNU��ȯ�Ķ��ѡ�
-	tool_defs.h	��ȯ�Ķ���¸���Υ��ץꥱ��������������GNU��ȯ�Ķ��ѡ�
+	Makefile.config	MakefileのColdFire V2依存定義
+	cpu_config.c	プロセッサ依存部の関数
+	cpu_config.h	プロセッサ依存部の構成定義
+	cpu_context.h	コンテキスト操作
+	cpu_defs.h	プロセッサ依存部のアプリケーション用定義
+	cpu_insn.h	低レベルのプロセッサ操作ルーチン
+	cpu_rename.def	カーネルの内部識別名のリネーム定義
+	cpu_rename.h	カーネルの内部識別名のリネーム
+	cpu_support.S	プロセッサ依存部のサブルーチン
+	cpu_unrename.h	カーネルの内部識別名のリネーム解除
+	m52235.h		MCF52235の定義
+	makeoffset.c	offset.h生成サポートプログラム
+	mcfpit.h		MCF52235内臓PITタイマードライバ
+	mcfuart.c		MCF52235内臓UART用シリアルドライバ
+	mcfuart.h		MCF52235内臓UART用シリアルドライバ
+	start.S		スタートアップモジュール
+	tinet_cpu_config.h	TINET用ヘッダ
+	tinet_cpu_defs.h	TINET用ヘッダ
+	tool_config.h	開発環境依存部の構成定義（GNU開発環境用）
+	tool_defs.h	開発環境依存部のアプリケーション用定義（GNU開発環境用）
 	util.h
 	vector_table.c
 
     config/cfv2/m52235evb/
-	Makefile.config	Makefile��M52235EVB��¸���
+	Makefile.config	MakefileのM52235EVB依存定義
 	Makefile.tinet
-	cfv2.h		ColdFireV2�����
-	cfv2elf.ld	��󥫥�����ץ�
-	cfv2elf.stub.ld	��󥫥�����ץ�(stub��)
-	hw_serial.cfg	SIO�ɥ饤�ФΥ���ե�����졼�����ե�����
-	hw_serial.h	SIO�ɥ饤��
-	hw_timer.h	���������롼����
-	m52235evb.h	M52235EVB�ܡ��ɤΥϡ��ɥ������񸻤����
-	sys_config.c	�����ƥ��¸���δؿ�
-	sys_config.h	�����ƥ��¸���ι������
-	sys_defs.h	�����ƥ��¸���Υ��ץꥱ������������
-	sys_rename.def	�����ͥ����������̾�Υ�͡������
-	sys_rename.h	�����ͥ����������̾�Υ�͡���
-	sys_support.S	�����ƥ��¸���Υ��֥롼����
-	sys_unrename.h	�����ͥ����������̾�Υ�͡�����
-	tinet_sys_config.c	TINET�ѥ����ƥ��¸���δؿ�
-	tinet_sys_config.h	TINET�ѥ����ƥ��¸���ι������
-	user_config.h	�桼�����������
+	cfv2.h		ColdFireV2の定義
+	cfv2elf.ld	リンカスクリプト
+	cfv2elf.stub.ld	リンカスクリプト(stub用)
+	hw_serial.cfg	SIOドライバのコンフィギュレーションファイル
+	hw_serial.h	SIOドライバ
+	hw_timer.h	タイマ操作ルーチン
+	m52235evb.h	M52235EVBボードのハードウェア資源の定義
+	sys_config.c	システム依存部の関数
+	sys_config.h	システム依存部の構成定義
+	sys_defs.h	システム依存部のアプリケーション用定義
+	sys_rename.def	カーネルの内部識別名のリネーム定義
+	sys_rename.h	カーネルの内部識別名のリネーム
+	sys_support.S	システム依存部のサブルーチン
+	sys_unrename.h	カーネルの内部識別名のリネーム解除
+	tinet_sys_config.c	TINET用システム依存部の関数
+	tinet_sys_config.h	TINET用システム依存部の構成定義
+	user_config.h	ユーザー定義情報
 
-5.2 �������åȤؤΥ���������ɤȼ¹�
+5.2 ターゲットへのダウンロードと実行
 
-�������åȤؤΥ���������ɤȼ¹Լ��ˤĤ��Ƥϡ�GNU��ȯ�Ķ����ۥޥ˥�
-�������������Ƥ��뤬���ʲ��Ǥϡ�ColdFire V2����� M52235EVB�ܡ��ɤξ�
-�����ͭ�λ���ˤĤ����������롥
+ターゲットへのダウンロードと実行手順については，GNU開発環境構築マニュ
+アルに説明されているが，以下では，ColdFire V2および M52235EVBボードの場
+合に特有の事項について説明する．
 
-ROM����ľ�ܵ�ư������ˡ
+ROMから直接起動する方法
 
-  CF Flasher��BDM��ͳ�ǽ񤭹��ळ�Ȥˤ��ROM���鵯ư�Ǥ��롣
+  CF FlasherでBDM経由で書き込むことによりROMから起動できる。
 
 
-�ʾ�
+以上

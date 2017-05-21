@@ -10,32 +10,32 @@
  *  Copyright (C) 2002-2004 by Hokkaido Industrial Research Institute, JAPAN
  *  Copyright (C) 2010 by Cronus Computer Works, JAPAN
  * 
- *  �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ�狼��Free Software Foundation 
- *  �ˤ�äƸ�ɽ����Ƥ��� GNU General Public License �� Version 2 �˵�
- *  �Ҥ���Ƥ���������������˸¤ꡤ�ܥ��եȥ��������ܥ��եȥ�����
- *  ����Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ������ۡʰʲ���
- *  ���ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
- *      ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
- *      ����������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
- *      �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
- *      ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
- *      �ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
- *        �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
- *        ��𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
- *      ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  によって公表されている GNU General Public License の Version 2 に記
+ *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+ *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+ *  利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
  * 
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- *  ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����Ŭ�Ѳ�ǽ����
- *  �ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ����������Ѥˤ��ľ
- *  ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ�����ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+ *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+ *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
  *  @(#) $Id
  */
@@ -46,18 +46,18 @@
 #include "sh726xscif.h"
 
 /*
- *  �������åȥ����ƥ��¸�ν����
+ *  ターゲットシステム依存の初期化
  */
 /*
- *  ���ꥢ��I/O�ݡ��Ȥν���� banner���ϤΤ��ᥫ���ͥ�ν������̵�ط��˹Ԥ�
+ *  シリアルI/Oポートの初期化 banner出力のためカーネルの初期化と無関係に行う
  */
 void
 sys_initialize ()
 {
 	SIOPCB *siopcb;
 
-	/* ���Ѥ�����յ���Ϥ�����ͭ���ˤ��Ƥ����� */
-	/*  SCIF�ǡ��������ϥݡ��Ȥ�����  */
+	/* 使用する周辺機器はここで有効にしておく。 */
+	/*  SCIFデータ入出力ポートの設定  */
 
 #ifndef GDB_STUB
 
@@ -76,15 +76,15 @@ sys_initialize ()
 	/* CMT0 */
 	sil_wrb_mem (STBCR4, (VB) ((VB) sil_reb_mem (STBCR4) & ~0x04));
 	/*
-	 *  �ǥХ�����¸�Υ����ץ������
+	 *  デバイス依存のオープン処理．
 	 */
-	/*�Хʡ����Ϥ��뤿�� */
+	/*バナー出力するため */
 	sh2scif_initialize();
 	siopcb = sh2scif_opn_por (LOGTASK_PORTID, 0);
 }
 
 /*
- *  �������åȥ����ƥ�ν�λ
+ *  ターゲットシステムの終了
  */
 void
 sys_exit ()
@@ -93,7 +93,7 @@ sys_exit ()
 }
 
 /*
- *  �������åȥ����ƥ��ʸ������
+ *  ターゲットシステムの文字出力
  */
 void
 sys_putc (char c)
@@ -104,16 +104,16 @@ sys_putc (char c)
 	sh2_putc (LOGTASK_PORTID, c);
 }
 
-/* �ϡ��ɥ����������� */
-/* �����ǤϥХ�������Τ߹Ԥ������յ���������sys_initialize�ǹԤ��� */
+/* ハードウェアの設定 */
+/* ここではバスの設定のみ行う。周辺機器の設定はsys_initializeで行う。 */
 #ifndef GDB_STUB
 void
 hardware_init_hook (void)
 {
-	/* �����å�ȯ����ν���� */
-	sil_wrh_mem (FRQCR, 0x0104);	/* �����å����� I��=200MHz, B��=66.666MHz, P��=33.333MHz */
+	/* クロック発振器の初期化 */
+	sil_wrh_mem (FRQCR, 0x0104);	/* クロック設定 Iφ=200MHz, Bφ=66.666MHz, Pφ=33.333MHz */
 
-	/* �Х�����ȥ���������� */
+	/* バスコントローラの設定 */
 	sil_wrw_mem (CMNCR, 0x00001010);
 	sil_wrw_mem (CS0BCR, 0x24920400);
 	sil_wrw_mem (CS0WCR, 0x00001382);
@@ -123,10 +123,10 @@ hardware_init_hook (void)
 	sil_wrw_mem (RTCSR, 0xa55a0010);
 	sil_wrw_mem (RTCOR, 0xa55a0040);
 
-	/* I/O�ݡ��Ȥ����� */
-	sil_wrh_mem (PBIORL, 0x0c00);	/* PC11,PC10 �������� (LED��³�ݡ���) */
+	/* I/Oポートの設定 */
+	sil_wrh_mem (PBIORL, 0x0c00);	/* PC11,PC10 出力方向 (LED接続ポート) */
 	sil_wrh_mem (PBCRL4, 0x5a00);
-	sil_wrh_mem (PBCRL3, 0x0000);	/* PC11,PC10�⡼�� �ݡ������� (LED��³�ݡ���) */
+	sil_wrh_mem (PBCRL3, 0x0000);	/* PC11,PC10モード ポート選択 (LED接続ポート) */
 	sil_wrh_mem (PBCRL2, 0x0000);
 	sil_wrh_mem (PBCRL1, 0x0000);
 	sil_wrh_mem (PCIORL, 0x0000);
@@ -155,23 +155,23 @@ hardware_init_hook (void)
 	sil_wrh_mem (PFCRL2, 0x0000);
 	sil_wrh_mem (PFCRL1, 0x0000);
 
-	/* CMT �إ����å����� */
+	/* CMT へクロック供給 */
 	sil_wrb_mem (STBCR4, (VB) ((VB) sil_reb_mem (STBCR4) & ~0x04));
 
-	/* 100usec �Ԥ� */
-	sil_wrh_mem (CMSTR, 0x0000);	/* STR0=0 ������0 ��� */
-	sil_wrh_mem (CMCSR_0, 0x0000);	/* CKS=00 �����å����� P��/8 */
-	sil_wrh_mem (CMCNT_0, 0);		/* ������0 ���ꥢ�������󥹥���������� */
+	/* 100usec 待ち */
+	sil_wrh_mem (CMSTR, 0x0000);	/* STR0=0 カウンタ0 停止 */
+	sil_wrh_mem (CMCSR_0, 0x0000);	/* CKS=00 クロック選択 PΦ/8 */
+	sil_wrh_mem (CMCNT_0, 0);		/* カウンタ0 クリア，↓コンスタント値設定 */
 	sil_wrh_mem (CMCOR_0, ((((PCLOCK / 8)/1000000) * 100) - 1));
-	sil_wrh_mem (CMSTR, 0x0001);	/* STR0=1 ������0 ���� */
+	sil_wrh_mem (CMSTR, 0x0001);	/* STR0=1 カウンタ0 開始 */
 	while ((sil_reh_mem (CMCSR_0) & 0x0080) == 0);
-									/* CMF==1 �ˤʤ�ޤ��Ԥ� */
+									/* CMF==1 になるまで待つ */
 
-	sil_wrh_mem (SDRAM_MODE, 0x000);	/* SDRAM�⡼�ɥ쥸���������� */
+	sil_wrh_mem (SDRAM_MODE, 0x000);	/* SDRAMモードレジスタを設定 */
 
-	/* ����å�������� */
-	sil_wrw_mem (CCR1, 0x00000808);	/* ����å����ե�å��� */
-	sil_wrw_mem (CCR1, CCR_MODE);	/* ����å���⡼�ɤ����� */
+	/* キャッシュの設定 */
+	sil_wrw_mem (CCR1, 0x00000808);	/* キャッシュをフラッシュ */
+	sil_wrw_mem (CCR1, CCR_MODE);	/* キャッシュモードを設定 */
 }
 #else /*  GDB_STUB  */
 void

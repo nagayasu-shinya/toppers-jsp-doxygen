@@ -48,32 +48,32 @@
 ;   TOPPERS PROJECT BE LIABLE FOR ANY TYPE OF DAMAGE DIRECTLY OR
 ;   INDIRECTLY CAUSED FROM THE USE OF THIS SOFTWARE.
 ;
-;   �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ������������˸¤ꡤ�ܥ��եȥ���
-;   �����ܥ��եȥ���������Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ�
-;   �����ۡʰʲ������ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
-;   (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭�����
-;       ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ�����
-;       ��������˴ޤޤ�Ƥ��뤳�ȡ�
-;   (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻���
-;       �Ǥ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ����Ѽԥ�
-;       �˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ�����̵��
-;       �ڵ����Ǻܤ��뤳�ȡ�
-;   (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻���
-;       �Ǥ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ������������ȡ�
-;     (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭������
-;         ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
-;     (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ���
-;         �𤹤뤳�ȡ�
-;   (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»��
-;       ����⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ��ޤ���
-;       �ܥ��եȥ������Υ桼���ޤ��ϥ���ɥ桼������Τ����ʤ���ͳ�˴��
-;       �����ᤫ��⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+;   上記著作権者は，以下の (1)〜(4) の条件を満たす場合に限り，本ソフトウェ
+;   ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改変・
+;   再配布（以下，利用と呼ぶ）することを無償で許諾する．
+;   (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作権
+;       表示，この利用条件および下記の無保証規定が，そのままの形でソース
+;       コード中に含まれていること．
+;   (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使用
+;       できる形で再配布する場合には，再配布に伴うドキュメント（利用者マ
+;       ニュアルなど）に，上記の著作権表示，この利用条件および下記の無保
+;       証規定を掲載すること．
+;   (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使用
+;       できない形で再配布する場合には，次のいずれかの条件を満たすこと．
+;     (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著作
+;         権表示，この利用条件および下記の無保証規定を掲載すること．
+;     (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに報
+;         告すること．
+;   (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損害
+;       からも，上記著作権者およびTOPPERSプロジェクトを免責すること．また，
+;       本ソフトウェアのユーザまたはエンドユーザからのいかなる理由に基づ
+;       く請求からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
 ;  
-;   �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ���
-;   ��TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����λ�����Ū���Ф�
-;   ��Ŭ������ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ�����������
-;   �ˤ��ľ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ����
-;   ��ʤ���
+;   本ソフトウェアは，無保証で提供されているものである．上記著作権者およ
+;   びTOPPERSプロジェクトは，本ソフトウェアに関して，特定の使用目的に対す
+;   る適合性も含めて，いかなる保証も行わない．また，本ソフトウェアの利用
+;   により直接的または間接的に生じたいかなる損害に関しても，その責任を負
+;   わない．
 ;  
 ;   @(#) $Id: start.app,v 1.1 2006/04/10 08:19:25 honda Exp $
 ;
@@ -82,14 +82,14 @@
 	module start_app
 
 ;
-;	�����ͥ��ѤΥ������ȥ��åץ⥸�塼���TLCS-900�ѡ�
+;	カーネル用のスタートアップモジュール（TLCS-900用）
 ;
 #include "jsp_rename.h"
 #include "cpu_rename.h"
 #include "sys_rename.h"
 #include "tlcs900vec.inc"
 
-; �������ȥ���ܥ����
+; 外部参照シンボル定義
 	extern large	__StackTop
 	extern large	__AreaRAM
 	extern large	__AreaRAM_size
@@ -104,75 +104,75 @@ f_code section code large align=1,1
 
 	public _start
 _start:
-; ����߶ػ�
-	di		; �ꥻ�åȻ���IFF��7�����ꤵ��뤿��DI���֤Ȥʤ�
-			; �ϡ��ɥ������ꥻ�åȻ���di̿������
-			; ���եȤˤ� jp _start �����ǽ�����θ�������ɤ�Ĥ�
+; 割込み禁止
+	di		; リセット時はIFFに7が設定されるためDI状態となる
+			; ハードウェアリセット時はdi命令不要
+			; ソフトにて jp _start する可能性を考慮しコードを残す
 
-; �����å������
+; スタック初期化
 	ld		xsp, __StackTop
 
-; INTNEST�쥸���������
+; INTNESTレジスタ初期化
 	ld		hl, 0
 	ldc		intnest, hl
 
-; hardware_init_hook ��ƽФ���0 �Ǥʤ�����
-; �������åȥϡ��ɥ������˰�¸����ɬ�פʽ����������������
-; �ϡ�hardware_init_hook �Ȥ����ؿ����Ѱդ��롥
+; hardware_init_hook を呼出し（0 でない場合）
+; ターゲットハードウェアに依存して必要な初期化処理がある場合
+; は，hardware_init_hook という関数を用意する．
 	ld		xhl, hardware_init_hook
 	cp		xhl, 0
 	call	nz, hardware_init_hook
 
-; �����̵��RAM�ΰ�Υ��ꥢ
-	ld		xde, __AreaRAM			; ��Ƭ���Ϥȥ���������
+; 初期値無しRAM領域のクリア
+	ld		xde, __AreaRAM			; 先頭番地とサイズ取得
 	ld		xbc, __AreaRAM_size
-	ld		ix, bc					; �ǲ���bit�ݻ�(��ǻ���)
-	srl		1, xbc					; 2byteñ�̤ǽ������뤿�᥵����/2
+	ld		ix, bc					; 最下位bit保持(後で使用)
+	srl		1, xbc					; 2byte単位で処理するためサイズ/2
 	jr		z, area_clr_byte
-	ld		xhl, xde				; ��Ƭ�����ݻ�(��ǻ���)
-	ldw		(xde+), 0				; ��Ƭ���ϥ��ꥢ
-	sub		xbc, 1					; �������ǥ������
+	ld		xhl, xde				; 先頭番地保持(後で使用)
+	ldw		(xde+), 0				; 先頭番地クリア
+	sub		xbc, 1					; サイズデクリメント
 	jr		z, area_clr_byte
-	ldirw	(xde+), (xhl+)			; ��Ƭ����(����0����)���ͤ����Ϥ�...
-									; �����Τ�BC�쥸����ʬ�֥��å�������
+	ldirw	(xde+), (xhl+)			; 先頭番地(前で0設定)の値を次番地へ...
+									; の要領でBCレジスタ分ブロックロード
 	cp		qbc, 0
-	jr		eq, area_clr_byte			; ���16bit��0�ʤ齪λ
+	jr		eq, area_clr_byte			; 上位16bitが0なら終了
 	ld		wa, qbc
-area_clr_loop:						; ���16bit(0x10000ñ��)�Ǥν���
-	ldirw	(xde+), (xhl+)			; 0x10000ʬ�֥��å�������
+area_clr_loop:						; 上位16bit(0x10000単位)での処理
+	ldirw	(xde+), (xhl+)			; 0x10000分ブロックロード
 	djnz	wa, area_clr_loop
 area_clr_byte:
-	bit		0, ix					; �ΰ襵����������ʤ�1byte���ꥢ
+	bit		0, ix					; 領域サイズが奇数なら1byteクリア
 	jr		z, area_clr_end
 	ldb		(xde), 0
 area_clr_end:
 
-; �����ͭ��RAM�ΰ�ؤΥǡ���������
-	ld		xde, __DataRAM			; �����ɸ��������������Ϥȥ���������
+; 初期値有りRAM領域へのデータロード
+	ld		xde, __DataRAM			; ロード元・ロード先番地とサイズ取得
 	ld		xhl, __DataRAM_ini
 	ld		xbc, __DataRAM_size
-	or		xbc, xbc				; ������0�ʤ齪λ
+	or		xbc, xbc				; サイズ0なら終了
 	jr		z, data_ld_end
-	ldirb	(xde+), (xhl+)			; BC�쥸����ʬ�֥��å�������
+	ldirb	(xde+), (xhl+)			; BCレジスタ分ブロックロード
 	cp		qbc, 0
-	jr		eq, data_ld_end			; ���16bit��0�ʤ齪λ
+	jr		eq, data_ld_end			; 上位16bitが0なら終了
 	ld		wa, qbc
-data_ld_loop:						; ���16bit(0x10000ñ��)�Ǥν���
-	ldirb	(xde+), (xhl+)			; 0x10000ʬ�֥��å�������
+data_ld_loop:						; 上位16bit(0x10000単位)での処理
+	ldirb	(xde+), (xhl+)			; 0x10000分ブロックロード
 	djnz	wa, data_ld_loop
 data_ld_end:
 
-; software_init_hook ��ƽФ���0 �Ǥʤ�����
-; ���եȥ������Ķ����ä˥饤�֥��ˤ˰�¸����ɬ�פʽ������
-; ����������ϡ�software_init_hook �Ȥ����ؿ����Ѱդ��롥
+; software_init_hook を呼出し（0 でない場合）
+; ソフトウェア環境（特にライブラリ）に依存して必要な初期化処
+; 理がある場合は，software_init_hook という関数を用意する．
 	ld		xhl, software_init_hook
 	cp		xhl, 0
 	call	nz, software_init_hook
 
-; �����ͥ뵯ư
+; カーネル起動
 	jp		_kernel_start
 
-; EXIT�롼��
+; EXITループ
 exit:
 	jr		exit
 

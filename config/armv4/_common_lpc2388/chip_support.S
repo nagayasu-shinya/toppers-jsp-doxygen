@@ -10,32 +10,32 @@
  *              Graduate School of Information Science, Nagoya Univ., JAPAN
  *                2009 by Suikan
  *
- *  �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ�狼��Free Software Foundation
- *  �ˤ�äƸ�ɽ����Ƥ��� GNU General Public License �� Version 2 �˵�
- *  �Ҥ���Ƥ���������������˸¤ꡤ�ܥ��եȥ��������ܥ��եȥ�����
- *  ����Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ������ۡʰʲ���
- *  ���ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
- *      ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
- *      ����������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
- *      �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
- *      ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
- *      �ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
- *        �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
- *        ��𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
- *      ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
+ *  によって公表されている GNU General Public License の Version 2 に記
+ *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+ *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+ *  利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
  *
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- *  ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����Ŭ�Ѳ�ǽ����
- *  �ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ����������Ѥˤ��ľ
- *  ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ�����ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+ *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+ *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  *
  */
 
@@ -44,9 +44,9 @@
 #include "jsp_kernel.h"
 
 /*
- *  ���٥�Υ������åȥ����ƥ��¸�ν����
+ *  低レベルのターゲットシステム依存の初期化
  *
- *  �������ȥ��åץ⥸�塼�����ǡ��������������˸ƤӽФ���롥
+ *  スタートアップモジュールの中で，メモリ初期化の前に呼び出される．
  */
 
 #define VICIntEnable		0xFFFFF010
@@ -61,18 +61,18 @@
         .text
         .align 2
         .global hardware_init_hook
-		/* VIC�ν�������ޥ˥奢��ˤ����פǤ���褦�˽񤤤Ƥ��뤬���ºݤˤ�ɬ�� */
+		/* VICの初期化。マニュアルには不要であるように書いているが、実際には必要 */
 hardware_init_hook:
 		ldr		r0,	=0xFFFFFFFF
-        ldr     r1,	=VICIntEnClr      	/* �����ߥ��͡��֥�쥸�����Υ��ɥ쥹  */
-        str     r0,	[r1]   				/* �����ߤ������ǥ������֥� */
-        ldr     r1,	=VICSoftIntClear   	/* ���եȥ����������ߥ쥸�����Υ��ɥ쥹  */
-        str     r0,	[r1]   				/* ���եȥ����������ߤ��������ꥢ */
+        ldr     r1,	=VICIntEnClr      	/* 割り込みイネーブルレジスタのアドレス  */
+        str     r0,	[r1]   				/* 割り込みを全部ディセーブル */
+        ldr     r1,	=VICSoftIntClear   	/* ソフトウェア割り込みレジスタのアドレス  */
+        str     r0,	[r1]   				/* ソフトウェア割り込みを全部クリア */
         ldr		r0, =0;
-        ldr     r1,	=VICIntSelect      	/* ����������쥸�����Υ��ɥ쥹  */
-        str     r0,	[r1]   				/* ���٤Ƥγ����ߤ�IRQ�˳�����Ƥ� */
-        ldr     r1,	=VICAddress      	/* �����ߥϥ�ɥ饢�ɥ쥹�쥸�����Υ��ɥ쥹  */
-        str     r0,	[r1]   				/* �쥸�����ν�������������ʤ��ȳ����ߤϤ�����ʤ� */
+        ldr     r1,	=VICIntSelect      	/* 割り込み選択レジスタのアドレス  */
+        str     r0,	[r1]   				/* すべての割り込みをIRQに割り当てる */
+        ldr     r1,	=VICAddress      	/* 割り込みハンドラアドレスレジスタのアドレス  */
+        str     r0,	[r1]   				/* レジスタの初期化。これをやらないと割り込みはかからない */
 
 init_done:
         mov     pc, lr
@@ -94,8 +94,8 @@ software_term_hook:
 
 /*
  *
- *  ����ߤν������������
- *  VIC��IRQAddress��������ƥ����פ��롣�Ǹ�˽񤭹��ळ��
+ *  割込みの出入り口処理。
+ *  VICのIRQAddressを取得してジャンプする。最後に書き込むこと
  *
  */
         .text
@@ -104,23 +104,23 @@ software_term_hook:
 IRQ_Handler:
 
         /*
-         * ����ߥ⡼��
+         * 割込みモード
          *
-         * cpsr��spsr_irq�������褬r14_irq(lp)�����ꡤ
-         * spsr_irq��r14_irq��r13(sp)_irq�� r14,r13�Ȥʤ롥
+         * cpsrがspsr_irqに復帰先がr14_irq(lp)に入り，
+         * spsr_irqとr14_irqとr13(sp)_irqが r14,r13となる．
          */
 
         /*
-         *  ��������ư����⡼��(�����ѡ��Х������⡼��)��
+         *  タスクの動作時モード(スーパーバイザーモード)へ
          */
         mov   sp,#(CPSR_SVC | CPSR_FIQ_BIT | CPSR_IRQ_BIT)
         msr   cpsr_all, sp
-        stmfd sp!, {r0-r3,ip,lr,pc} /* pc�ϥ��ߡ� */
+        stmfd sp!, {r0-r3,ip,lr,pc} /* pcはダミー */
 
 
 
         /*
-         * spsr��������Ϥ�������뤿���IRQ�⡼�ɤ�
+         * spsrと戻り番地を取得するためにIRQモードへ
          */
         mov   r0,#(CPSR_IRQ | CPSR_FIQ_BIT | CPSR_IRQ_BIT)
         msr   cpsr,r0
@@ -128,9 +128,9 @@ IRQ_Handler:
         mrs   r1,spsr
 
         /*
-         *  �����ѡ��Х������⡼�ɤ�
+         *  スーパーバイザーモードに
          */
-        and   r2,  r1, #CPSR_FIQ_BIT /* FIQ�ӥåȤηѾ� */
+        and   r2,  r1, #CPSR_FIQ_BIT /* FIQビットの継承 */
         orr   r2,  r2, #(CPSR_SVC|CPSR_IRQ_BIT)
         msr   cpsr_all, r2
         str   r0, [sp,#0x18] /* Store pc */
@@ -138,7 +138,7 @@ IRQ_Handler:
 
 
         /*
-         *  ¿�ų����ߤ�Ƚ��
+         *  多重割り込みか判定
          */
         ldr     r2, =interrupt_count
         ldr     r3, [r2]
@@ -146,18 +146,18 @@ IRQ_Handler:
         str     r0, [r2]
         cmp     r3, #0x00
 
-        moveq   r2,sp            /* �ͥ��ȳ����ߤǤʤ���� */
-        ldreq   sp,=STACKTOP     /* �����å����ѹ�    */
-        stmeqfd sp!,{r2}         /* �����������å�����¸ */
+        moveq   r2,sp            /* ネスト割り込みでない場合 */
+        ldreq   sp,=STACKTOP     /* スタックの変更    */
+        stmeqfd sp!,{r2}         /* タスクスタックの保存 */
 
-        ldr     r0,  =VICAddress       	/* ����ߵ����ơ��֥���ɤ߽Ф�  */
-        ldr     r0,  [r0]   			/* r0<-����ߥϥ�ɥ�            */
+        ldr     r0,  =VICAddress       	/* 割込み疑似テーブルの読み出し  */
+        ldr     r0,  [r0]   			/* r0<-割込みハンドラ            */
 
         /*
-         * �����ߵ���
+         * 割り込み許可
          */
         mrs     r2, cpsr
-        and     r2,  r2, #~CPSR_IRQ_BIT /* ����ߵ��� */
+        and     r2,  r2, #~CPSR_IRQ_BIT /* 割込み許可 */
         msr     cpsr,r2
 
         /*
@@ -167,18 +167,18 @@ IRQ_Handler:
         mov     pc,  r0
 
         /*
-         * �����߶ػ�
+         * 割り込み禁止
          */
         mrs     r2, cpsr
-        and     r2,  r2, #CPSR_FIQ_BIT /* FIQ�ӥåȤηѾ� */
+        and     r2,  r2, #CPSR_FIQ_BIT /* FIQビットの継承 */
         orr     r2,  r2, #(CPSR_SVC|CPSR_IRQ_BIT)
         msr     cpsr,r2
 
-        ldr     r0,  =VICAddress       	/* ����ߵ����ơ��֥���ɤ߽Ф�  */
-        str     r0,  [r0]   			/* �����ߥ����Υ�å�            */
+        ldr     r0,  =VICAddress       	/* 割込み疑似テーブルの読み出し  */
+        str     r0,  [r0]   			/* 割り込みアクノレッジ            */
 
         /*
-         * ����ߥͥ��Ȳ��(interrupt_count) �ǥ������
+         * 割込みネスト回数(interrupt_count) デクリメント
          */
         ldr     r2, =interrupt_count
         ldr     r1, [r2]
@@ -188,7 +188,7 @@ IRQ_Handler:
         bne     return_to_task_irq
 
         /*
-         * �����������å�������
+         * タスクスタックの復帰
          */
         ldmfd   sp!,{r0}
         mov     sp, r0
@@ -203,20 +203,20 @@ IRQ_Handler:
 
 return_to_task_irq:
         /*
-         *  ��������
-         *  �����ߵ��ĤȤʤ뤬����������ƥ����Ⱦ����¸���Ƥ��뤿�ᡤ
-         *  ����Ϥʤ�
+         *  復帰処理
+         *  割り込み許可となるがタスクコンテキスト上に保存しているため，
+         *  問題はない
          */
-        ldmfd   sp!,{r1}           /* CPSR���������� */
-        mrs     r2, cpsr           /* FIQ��Ѿ�            */
+        ldmfd   sp!,{r1}           /* CPSRの復帰処理 */
+        mrs     r2, cpsr           /* FIQを継承            */
         and     r2, r2, #CPSR_FIQ_BIT
         and     r1, r1, #~CPSR_FIQ_BIT
         orr     r1, r1, r2
-        msr     spsr, r1              /* ������cpsr��spsr������ */
-        ldmfd   sp!,{r0-r3,ip,lr,pc}^ /* ������������ ^�դ��ʤΤǡ�cpsr <- spsr */
+        msr     spsr, r1              /* 戻り先のcpsrをspsrに設定 */
+        ldmfd   sp!,{r0-r3,ip,lr,pc}^ /* タスクに復帰 ^付きなので、cpsr <- spsr */
 
         /*
-         *  ̤����γ���ߤ����ä��Ȥ��˸ƤӽФ�
+         *  未定義の割込みが入ったときに呼び出す
          */
 undefined_interrupt:
          b      undef_interrupt

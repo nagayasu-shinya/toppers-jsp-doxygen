@@ -1,8 +1,8 @@
 
-        �� TOPPERS/JSP�����ͥ� �桼�����ޥ˥奢�� ��
-                    ��m16c:TM��ȯ�Ķ���
+        ＝ TOPPERS/JSPカーネル ユーザズマニュアル ＝
+                    （m16c:TM開発環境）
 
-        ��Release 1.4.4 �б����ǽ�����: 28-Dec-2010��
+        （Release 1.4.4 対応，最終更新: 28-Dec-2010）
 
 ------------------------------------------------------------------------
  TOPPERS/JSP Kernel
@@ -18,38 +18,38 @@
  Copyright (C) 2010 by Naoki Saito
             Nagoya Municipal Industrial Research Institute, JAPAN
 
- �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ�狼��Free Software Foundation 
- �ˤ�äƸ�ɽ����Ƥ��� GNU General Public License �� Version 2 �˵�
- �Ҥ���Ƥ���������������˸¤ꡤ�ܥ��եȥ��������ܥ��եȥ�����
- ����Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ������ۡʰʲ���
- ���ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
-     ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
-     ����������˴ޤޤ�Ƥ��뤳�ȡ�
- (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
-     �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
-     �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
-     ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
-     �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
-     �ȡ�
-   (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
-       �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
-   (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
-       ��𤹤뤳�ȡ�
- (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
-     ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+ 上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ によって公表されている GNU General Public License の Version 2 に記
+ 述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+ を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+ 利用と呼ぶ）することを無償で許諾する．
+ (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+     権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+     スコード中に含まれていること．
+ (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+     用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+     者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+     の無保証規定を掲載すること．
+ (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+     用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+     と．
+   (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+       作権表示，この利用条件および下記の無保証規定を掲載すること．
+   (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+       報告すること．
+ (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+     害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
 
- �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����Ŭ�Ѳ�ǽ����
- �ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ����������Ѥˤ��ľ
- ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ�����ʤ���
+ 本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+ 含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+ 接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
 ------------------------------------------------------------------------
 
-���Υɥ�����ȤǤϡ�M16C�ѤΥ�ͥ������쥯�ȥ��˥����Ҥγ�ȯ�ġ����
-���Ѥ��ơ�TOPPERS/JSP�����ͥ���ۤ��뤿���ɬ�פʥե�����ˤĤ��Ʋ��⤹�롥
+このドキュメントでは、M16C用のルネサスエレクトロニクス社の開発ツールを
+使用して，TOPPERS/JSPカーネルを構築するために必要なファイルについて解説する．
 
-1. �ǥ��쥯�ȥ�ι���
+1. ディレクトリの構成
 
 jsp
   +--config
@@ -63,73 +63,73 @@ jsp
         +-----m16c-renesas
 
 
-2.�ǥ��쥯�ȥ�ȥե����������
+2.ディレクトリとファイルの説明
 
 (1) config/m16c-renesas
-	M16C ��¸���Υե����뤬�֤����ǥ��쥯�ȥꡥ
+	M16C 依存部のファイルが置かれるディレクトリ．
 (2) utils/m16c-renesas
-	�ӥ�ɤκݤ˻Ȥ��롤�ʲ��Υġ��뤬�֤����ǥ��쥯�ȥꡥ
-		������ߤ� CPU �㳰�Υ٥�����ư��������ġ���(m16cvec.exe)
-		��TCB �Υ��ե��å��ͤ򥢥���֥饽���������ꤹ��ġ���(m16coffset.exe)
-		(�ʲ��ϡ�make ���Ѥ��ƥӥ�ɤ�����Τ߻Ȥ���)
-		���������ΰ�¸�ط����������� perl ������ץ�(makedep.m16c)
+	ビルドの際に使われる，以下のツールが置かれるディレクトリ．
+		・割込みや CPU 例外のベクタを自動生成するツール(m16cvec.exe)
+		・TCB のオフセット値をアセンブラソースに設定するツール(m16coffset.exe)
+		(以下は，make を用いてビルドする時のみ使われる)
+		・ソースの依存関係を生成する perl スクリプト(makedep.m16c)
 (3) tools/M16C-RENESAS
-	���糫ȯ�Ķ� TM ���Ѥ��� TOPPERS/JSP �����ͥ���ۤ��뤿���
-	�ե����뤬�֤����ǥ��쥯�ȥꡥ
+	統合開発環境 TM を用いて TOPPERS/JSP カーネルを構築するための
+	ファイルが置かれるディレクトリ．
 
 
 2.1 config/m16c-renesas
 
 a. Makefile.config
-    make ���ޥ�ɤ��Ѥ���M16C�� TOPPERS/JSP ���ۤ������ make �ե�����
+    make コマンドを用いてM16C用 TOPPERS/JSP を構築する場合の make ファイル
 b. oaks16/Makefile.config 
-    make ���ޥ�ɤ��Ѥ��� M16C-OAKS16�� TOPPERS/JSP ���ۤ������ make �ե�����
+    make コマンドを用いて M16C-OAKS16用 TOPPERS/JSP を構築する場合の make ファイル
 c. oaks16_mini/Makefile.config 
-    make ���ޥ�ɤ��Ѥ��� M16C-OAKS16 MINI�� TOPPERS/JSP ���ۤ������ make �ե�����
-d. ����¾ ---- M16C��¸���Υ�����
+    make コマンドを用いて M16C-OAKS16 MINI用 TOPPERS/JSP を構築する場合の make ファイル
+d. その他 ---- M16C依存部のコード
 
 
 2.2 utils/m16c-renesas
 
 a. makedep.m16c
-    make���Ѥ��Ƴ�ȯ���硢�������ΰ�¸�ط�����������PERL������ץ�
+    makeを用いて開発を場合、ソースの依存関係を生成するPERLスクリプト
 b: m16coffset.c
-    m16coffset ���ޥ��C���쵭��
+    m16coffset コマンドC言語記述
 c: m16cvec.c
-    m16cvec ���ޥ��C���쵭��
+    m16cvec コマンドC言語記述
 d: Makefile
-    MinGW ��GCC���Ѥ��� m16coffset, m16cvec ���ޥ�ɤ�ӥ�ɤ���ݤ�
-    �Ѥ���ե�����
+    MinGW のGCCを用いて m16coffset, m16cvec コマンドをビルドする際に
+    用いるファイル
 
 2.3 tools/M16C-RENESAS
 
 a.Jsp14sample1.tmi,Jsp14sample1.tmk 
-   TM���Ѥ��� OAKS16�Ѥ� TOPPERS/JSP ���ۤ��뤿��Υץ��������ȥե�����
+   TMを用いて OAKS16用の TOPPERS/JSP を構築するためのプロジェクトファイル
 b.Jsp14sample1m.tmi,Jsp14samplem1.tmk
-   TM���Ѥ��� OAKS16 MINI�Ѥ� TOPPERS/JSP ���ۤ��뤿��Υץ��������ȥե�����
+   TMを用いて OAKS16 MINI用の TOPPERS/JSP を構築するためのプロジェクトファイル
 c.Jsp14sample1_m3029.tmi,Jsp14samplem1_m3029.tmk 
-   TM���Ѥ��� M3029�Ѥ� TOPPERS/JSP ���ۤ��뤿��Υץ��������ȥե�����
+   TMを用いて M3029用の TOPPERS/JSP を構築するためのプロジェクトファイル
 d.Jsp14sample1.id 
-   �������� MOT �ե������OAKS16 �ܡ��ɤΥե�å���ROM�ν񤭹�����˻��Ѥ���ID�ե�����
+   生成した MOT ファイルをOAKS16 ボードのフラッシュROMの書き込む時に使用するIDファイル
 e.Jsp14sample1m.id 
-   �������� MOT �ե������OAKS16 MINI�ܡ��ɤΥե�å���ROM�ν񤭹�����˻��Ѥ���ID�ե�����
+   生成した MOT ファイルをOAKS16 MINIボードのフラッシュROMの書き込む時に使用するIDファイル
 f.Jsp14sample1_m3029.id 
-   �������� MOT �ե������ M3029 �Υե�å���ROM�ν񤭹�����˻��Ѥ���ID�ե�����
+   生成した MOT ファイルを M3029 のフラッシュROMの書き込む時に使用するIDファイル
 g.sample1.cfg 
-   OAKS16, M3029�� �� TOPPERS/JSP ���ۤ��뤿��Υ���ե�����졼�����ե�����
+   OAKS16, M3029用 の TOPPERS/JSP を構築するためのコンフィギュレーションファイル
 h.sample1m.cfg 
-   OAKS16 MINI�Ѥ� TOPPERS/JSP ���ۤ��뤿��Υ���ե�����ե�����
+   OAKS16 MINI用の TOPPERS/JSP を構築するためのコンフィギュファイル
 
 
 2.4  sample
 
 a.Makefile.m16c-oaks16 
-   make���ޥ�ɤ��Ѥ���OAKS16�Ѥ�TOPPERS/JSP���ۤ��뤿���make�ե�����
+   makeコマンドを用いてOAKS16用のTOPPERS/JSPを構築するためのmakeファイル
 
 
-3��m16cvec, m16coffset ���ޥ�ɤι�����ˡ
+3．m16cvec, m16coffset コマンドの構築方法
 
-m16cvec �ڤ� m16coffset ���ޥ�ɤι��ۤ� MinGW ���Ѥ��ƥ���ѥ����Ԥ���
-����ѥ��뤹��ݡ�utils/m16c-renesas �ǥ��쥯�ȥ�ذ�ư����
-ñ�� make ���ޥ�ɤ�¹Ԥ���Ф褤��
-ư���ǧ���� GCC �ΥС������� 4.5.0 �Ǥ��롥
+m16cvec 及び m16coffset コマンドの構築は MinGW を用いてコンパイルを行う．
+コンパイルする際，utils/m16c-renesas ディレクトリへ移動し，
+単に make コマンドを実行すればよい．
+動作確認した GCC のバージョンは 4.5.0 である．

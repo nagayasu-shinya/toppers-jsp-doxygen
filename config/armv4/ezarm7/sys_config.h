@@ -6,117 +6,117 @@
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
  * 
- *  ��L���쌠�҂́C�ȉ��� (1)�`(4) �̏������CFree Software Foundation 
- *  �ɂ���Č��\����Ă��� GNU General Public License �� Version 2 �ɋL
- *  �q����Ă�������𖞂����ꍇ�Ɍ���C�{�\�t�g�E�F�A�i�{�\�t�g�E�F�A
- *  �����ς������̂��܂ށD�ȉ������j���g�p�E�����E���ρE�Ĕz�z�i�ȉ��C
- *  ���p�ƌĂԁj���邱�Ƃ𖳏��ŋ�������D
- *  (1) �{�\�t�g�E�F�A���\�[�X�R�[�h�̌`�ŗ��p����ꍇ�ɂ́C��L�̒���
- *      ���\���C���̗��p��������щ��L�̖��ۏ؋K�肪�C���̂܂܂̌`�Ń\�[
- *      �X�R�[�h���Ɋ܂܂�Ă��邱�ƁD
- *  (2) �{�\�t�g�E�F�A���C���C�u�����`���ȂǁC���̃\�t�g�E�F�A�J���Ɏg
- *      �p�ł���`�ōĔz�z����ꍇ�ɂ́C�Ĕz�z�ɔ����h�L�������g�i���p
- *      �҃}�j���A���Ȃǁj�ɁC��L�̒��쌠�\���C���̗��p��������щ��L
- *      �̖��ۏ؋K����f�ڂ��邱�ƁD
- *  (3) �{�\�t�g�E�F�A���C�@��ɑg�ݍ��ނȂǁC���̃\�t�g�E�F�A�J���Ɏg
- *      �p�ł��Ȃ��`�ōĔz�z����ꍇ�ɂ́C���̂����ꂩ�̏����𖞂�����
- *      �ƁD
- *    (a) �Ĕz�z�ɔ����h�L�������g�i���p�҃}�j���A���Ȃǁj�ɁC��L�̒�
- *        �쌠�\���C���̗��p��������щ��L�̖��ۏ؋K����f�ڂ��邱�ƁD
- *    (b) �Ĕz�z�̌`�Ԃ��C�ʂɒ�߂���@�ɂ���āCTOPPERS�v���W�F�N�g��
- *        �񍐂��邱�ƁD
- *  (4) �{�\�t�g�E�F�A�̗��p�ɂ�蒼�ړI�܂��͊ԐړI�ɐ����邢���Ȃ鑹
- *      �Q������C��L���쌠�҂����TOPPERS�v���W�F�N�g��Ɛӂ��邱�ƁD
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  によって公表されている GNU General Public License の Version 2 に記
+ *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+ *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+ *  利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
  * 
- *  �{�\�t�g�E�F�A�́C���ۏ؂Œ񋟂���Ă�����̂ł���D��L���쌠�҂�
- *  ���TOPPERS�v���W�F�N�g�́C�{�\�t�g�E�F�A�Ɋւ��āC���̓K�p�\����
- *  �܂߂āC�����Ȃ�ۏ؂��s��Ȃ��D�܂��C�{�\�t�g�E�F�A�̗��p�ɂ�蒼
- *  �ړI�܂��͊ԐړI�ɐ����������Ȃ鑹�Q�Ɋւ��Ă��C���̐ӔC�𕉂�Ȃ��D
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+ *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+ *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
  *  @(#) $Id$
  */
 
 /*
- *  �^�[�Q�b�g�V�X�e���ˑ����W���[���iExcalibur-ARM�p�j
+ *  ターゲットシステム依存モジュール（Excalibur-ARM用）
  *
- *  ���̃C���N���[�h�t�@�C���́Ct_config.h �݂̂���C���N���[�h�����D
- *  ���̃t�@�C�����璼�ڃC���N���[�h���Ă͂Ȃ�Ȃ��D
+ *  このインクルードファイルは，t_config.h のみからインクルードされる．
+ *  他のファイルから直接インクルードしてはならない．
  */
 
 #ifndef _SYS_CONFIG_H_
 #define _SYS_CONFIG_H_
 
 /*
- *  �J�[�l���̓������ʖ��̃��l�[��
+ *  カーネルの内部識別名のリネーム
  */
 #include <sys_rename.h>
 
 /*
- * �����݃n���h���̍ő吔
+ * 割込みハンドラの最大数
  */
 #define MAX_INT_NUM 32
 
 /*
- *  vxget_tim ���T�|�[�g���邩�ǂ����̒�`
+ *  vxget_tim をサポートするかどうかの定義
  */
 #define    SUPPORT_VXGET_TIM
 
 /*
- *  �V���A���|�[�g�ԍ��Ɋւ����`
+ *  シリアルポート番号に関する定義
  */
-#define TNUM_PORT   1   /* �T�|�[�g����V���A���|�[�g�̐� */
-#define TNUM_SIOP   1   /* �T�|�[�g����V���A��I/O�|�[�g�̐� */
+#define TNUM_PORT   1   /* サポートするシリアルポートの数 */
+#define TNUM_SIOP   1   /* サポートするシリアルI/Oポートの数 */
 
 /*
- *  �V���A���|�[�g�ԍ��Ɋւ����`
+ *  シリアルポート番号に関する定義
  */
-#define LOGTASK_PORTID  1   /* �V�X�e�����O�ɗp����V���A���|�[�g�ԍ� */
+#define LOGTASK_PORTID  1   /* システムログに用いるシリアルポート番号 */
 
 /*
- *  �����ݑ҂���Ԃł̎��s���[�`��
+ *  割込み待ち状態での実行ルーチン
  */
 #define WAIT_INTERRUPT  mcr p14, 0, r3, c7, c0, 0
 
 #ifndef _MACRO_ONLY
 
 /*
- *  �^�[�Q�b�g�V�X�e���ˑ��̏�����
+ *  ターゲットシステム依存の初期化
  */
 extern void    sys_initialize(void);
 
 /*
- *  �^�[�Q�b�g�V�X�e���̏I��
+ *  ターゲットシステムの終了
  *
- *  �V�X�e�����I�����鎞�Ɏg���DROM���j�^�ďo���Ŏ������邱�Ƃ�z�肵
- *  �Ă���D
+ *  システムを終了する時に使う．ROMモニタ呼出しで実現することを想定し
+ *  ている．
  */
 extern void    sys_exit(void);
 
 /*
- *  �^�[�Q�b�g�V�X�e���̕����o��
+ *  ターゲットシステムの文字出力
  *
- *  �V�X�e���̒჌�x���̕����o�̓��[�`���DROM���j�^�ďo���Ŏ������邱
- *  �Ƃ�z�肵�Ă���D
+ *  システムの低レベルの文字出力ルーチン．ROMモニタ呼出しで実現するこ
+ *  とを想定している．
  */
 extern void    sys_putc(char c);
 
 /*
- *  �����݃n���h���o�^�p�e�[�u��
+ *  割込みハンドラ登録用テーブル
  */
 extern FP   int_table[MAX_INT_NUM];
 
 /*
- * �����݃n���h���}�X�N�o�^�p�e�[�u��
+ * 割込みハンドラマスク登録用テーブル
  */
 extern UW   int_mask_table[MAX_INT_NUM];
 
 /*
- *  IRQ�n���h��(sys_support.S)
+ *  IRQハンドラ(sys_support.S)
  */
 extern void IRQ_Handler(void);
 
 /*
- *  �����݃n���h���̏o���������̐����}�N��
+ *  割込みハンドラの出入口処理の生成マクロ
  *
  */
 #define INTHDR_ENTRY(inthdr)  extern void inthdr(void);
@@ -124,19 +124,19 @@ extern void IRQ_Handler(void);
 #define INT_ENTRY(inthdr) inthdr
 
 /*
- *  �����݃n���h���̐ݒ�
+ *  割込みハンドラの設定
  *
- *  �����ݔԍ� inhno �̊����݃n���h���̋N���Ԓn�� inthdr �ɐݒ肷��D
+ *  割込み番号 inhno の割込みハンドラの起動番地を inthdr に設定する．
  */
 extern void define_inh(INHNO inhno, FP inthdr);
 
 /*
- * �����ݗD��x��ݒ�D
+ * 割込み優先度を設定．
  */
 extern void define_ipm(INHNO inhno, PRI pri);
 
 /*
- * ����`�̊����݂��������ꍇ
+ * 未定義の割込みが入った場合
  */
 extern void undef_interrupt();
 

@@ -7,32 +7,32 @@
  *                              Toyohashi Univ. of Technology, JAPAN
  *  Copyright (C) 2005-2006 by Logic Research Co., Ltd.
  * 
- *  �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ�狼��Free Software Foundation 
- *  �ˤ�äƸ�ɽ����Ƥ��� GNU General Public License �� Version 2 �˵�
- *  �Ҥ���Ƥ���������������˸¤ꡤ�ܥ��եȥ��������ܥ��եȥ�����
- *  ����Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ������ۡʰʲ���
- *  ���ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
- *      ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
- *      ����������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
- *      �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
- *      ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
- *      �ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
- *        �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
- *        ��𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
- *      ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  によって公表されている GNU General Public License の Version 2 に記
+ *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+ *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+ *  利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
  * 
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- *  ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����Ŭ�Ѳ�ǽ����
- *  �ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ����������Ѥˤ��ľ
- *  ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ�����ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+ *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+ *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
  */
 
@@ -43,25 +43,25 @@
 
 
         /*
-         * Vector�ơ��֥�ȥ����ץơ��֥�
-         * �������Ϲ��0x3c
+         * Vectorテーブルとジャンプテーブル
+         * サイズは合計0x3c
          */
         .section .data.vctsram,"a"
         .code 32
         .align 0
         .global vct_tb_sram
 vct_tb_sram:
-        ldr pc, reset_vector       /* �ꥻ�å�             */
-        ldr pc, undef_vector       /* ̤���̿��           */
-        ldr pc, swi_vector         /* ���եȥ����������   */
-        ldr pc, prefech_vector     /* �ץ�ե��å����ܡ��� */
-        ldr pc, data_abort_vector  /* �ǡ������ܡ���       */
+        ldr pc, reset_vector       /* リセット             */
+        ldr pc, undef_vector       /* 未定義命令           */
+        ldr pc, swi_vector         /* ソフトウェア割込み   */
+        ldr pc, prefech_vector     /* プリフェッチアボード */
+        ldr pc, data_abort_vector  /* データアボード       */
          nop
         ldr pc, irq_vector         /* IRQ                  */
         ldr pc, fiq_vector         /* IRQ                  */
 
 /*
- *  �٥������ơ��֥�
+ *  ベクターテーブル
  */
 reset_vector:
         .long   start
@@ -82,9 +82,9 @@ fiq_vector:
 
 
 /*
- *  ���٥�Υ������åȥ����ƥ��¸�ν����
+ *  低レベルのターゲットシステム依存の初期化
  *
- *  �������ȥ��åץ⥸�塼�����ǡ��������������˸ƤӽФ���롥          
+ *  スタートアップモジュールの中で，メモリ初期化の前に呼び出される．          
  */       
 
         .text
@@ -109,7 +109,7 @@ software_term_hook:
 
 /*
  *
- *  ����ߤν����������
+ *  割込みの出入り口処理
  *         
  */        
         .text
@@ -118,23 +118,23 @@ software_term_hook:
 IRQ_Handler:
 
         /* 
-         * ����ߥ⡼�� 
+         * 割込みモード 
          * 
-         * cpsr��spsr_irq�������褬r14_irq(lp)�����ꡤ
-         * spsr_irq��r14_irq��r13(sp)_irq�� r14,r13�Ȥʤ롥
+         * cpsrがspsr_irqに復帰先がr14_irq(lp)に入り，
+         * spsr_irqとr14_irqとr13(sp)_irqが r14,r13となる．
          */
 
         /* 
-         *  ��������ư����⡼��(�����ѡ��Х������⡼��)��
+         *  タスクの動作時モード(スーパーバイザーモード)へ
          */
         mov   sp,#(CPSR_SVC | CPSR_FIQ_BIT | CPSR_IRQ_BIT) 
         msr   cpsr_all, sp
-        stmfd sp!, {r0-r3,ip,lr,pc} /* pc�ϥ��ߡ� */
+        stmfd sp!, {r0-r3,ip,lr,pc} /* pcはダミー */
 
  
   
         /*
-         * spsr��������Ϥ�������뤿���IRQ�⡼�ɤ�
+         * spsrと戻り番地を取得するためにIRQモードへ
          */
         mov   r0,#(CPSR_IRQ | CPSR_FIQ_BIT | CPSR_IRQ_BIT)
         msr   cpsr,r0
@@ -142,9 +142,9 @@ IRQ_Handler:
         mrs   r1,spsr
    
         /*
-         *  �����ѡ��Х������⡼�ɤ�
+         *  スーパーバイザーモードに
          */
-        and   r2,  r1, #CPSR_FIQ_BIT /* FIQ�ӥåȤηѾ� */
+        and   r2,  r1, #CPSR_FIQ_BIT /* FIQビットの継承 */
         orr   r2,  r2, #(CPSR_SVC|CPSR_IRQ_BIT)        
         msr   cpsr_all, r2
         str   r0, [sp,#0x18] /* Store pc */
@@ -152,7 +152,7 @@ IRQ_Handler:
 
 
         /*
-         *  ¿�ų����ߤ�Ƚ��
+         *  多重割り込みか判定
          */
         ldr     r2, =interrupt_count
         ldr     r3, [r2]
@@ -160,19 +160,19 @@ IRQ_Handler:
         str     r0, [r2]
         cmp     r3, #0x00
 
-        moveq   r2,sp            /* �ͥ��ȳ����ߤǤʤ���� */
-        ldreq   sp,=STACKTOP     /* �����å����ѹ�    */
-        stmeqfd sp!,{r2}         /* �����������å�����¸ */
+        moveq   r2,sp            /* ネスト割り込みでない場合 */
+        ldreq   sp,=STACKTOP     /* スタックの変更    */
+        stmeqfd sp!,{r2}         /* タスクスタックの保存 */
 
 
         /*
-         *  �������װ���Ƚ�ꡥ
+         *  割り込み要因の判定．
          */
         ldr     r1, =IRQSTA
 
 		ldr     r0, =IRQEN
 		ldr     r2, [r0]
-		stmfd   sp!, {r2}			/* �ޥ����ӥåȤ����� */
+		stmfd   sp!, {r2}			/* マスクビットの退避 */
 
         ldr     r2, [r1]
         mov     r0, #1
@@ -185,26 +185,26 @@ find_bit_loop:
         bpl     find_bit_loop
 find_bit_end:
         mov     r3, r0
-        ldr     r0,=int_mask_table    /* ����ߥޥ����ơ��֥�θƤӽФ�*/
-        ldr     r0,[r0,r3,lsl #2]     /* r0<-����ߥޥ���              */    
-        ldr     r1, =IRQCLR			  /* ����ߥ쥸�����ؤΥ��å�      */
+        ldr     r0,=int_mask_table    /* 割込みマスクテーブルの呼び出し*/
+        ldr     r0,[r0,r3,lsl #2]     /* r0<-割込みマスク              */    
+        ldr     r1, =IRQCLR			  /* 割込みレジスタへのセット      */
         str     r0,[r1]
 
-        ldr     r0,  =int_table       /* ����ߵ����ơ��֥���ɤ߽Ф�  */
-        ldr     r0,  [r0,r3,lsl #2]   /* r0<-����ߥϥ�ɥ�            */    
+        ldr     r0,  =int_table       /* 割込み疑似テーブルの読み出し  */
+        ldr     r0,  [r0,r3,lsl #2]   /* r0<-割込みハンドラ            */    
 
 
         /*
-         *  ̤����γ���ߤ������å�
+         *  未定義の割込みかチェック
          */
         cmp     r0, #0x00
         beq     undefined_interrupt
         
         /* 
-         * �����ߵ��� 
+         * 割り込み許可 
          */                
         mrs     r2, cpsr
-        and     r2,  r2, #~CPSR_IRQ_BIT /* ����ߵ��� */
+        and     r2,  r2, #~CPSR_IRQ_BIT /* 割込み許可 */
         msr     cpsr,r2
 
         /* 
@@ -214,19 +214,19 @@ find_bit_end:
         bx      r0
 
         /* 
-         * �����߶ػ� 
+         * 割り込み禁止 
          */
         mrs     r2, cpsr
-        and     r2,  r2, #CPSR_FIQ_BIT /* FIQ�ӥåȤηѾ� */         
+        and     r2,  r2, #CPSR_FIQ_BIT /* FIQビットの継承 */         
         orr     r2,  r2, #(CPSR_SVC|CPSR_IRQ_BIT)
         msr     cpsr,r2
 
-        ldmfd   sp!, {r0}                /* �ޥ����ӥåȤ����� */
-        ldr     r1,  =IRQEN        /*�����ߵ���*/
+        ldmfd   sp!, {r0}                /* マスクビットの復帰 */
+        ldr     r1,  =IRQEN        /*割り込み許可*/
         str     r0,  [r1]
 
         /* 
-         * ����ߥͥ��Ȳ��(interrupt_count) �ǥ������ 
+         * 割込みネスト回数(interrupt_count) デクリメント 
          */
         ldr     r2, =interrupt_count
         ldr     r1, [r2]        
@@ -236,7 +236,7 @@ find_bit_end:
         bne     return_to_task_irq
         
         /* 
-         * �����������å������� 
+         * タスクスタックの復帰 
          */
         ldmfd   sp!,{r0}         
         mov     sp, r0        
@@ -251,20 +251,20 @@ find_bit_end:
 
 return_to_task_irq:
         /*
-         *  ��������
-         *  �����ߵ��ĤȤʤ뤬����������ƥ����Ⱦ����¸���Ƥ��뤿�ᡤ
-         *  ����Ϥʤ�
+         *  復帰処理
+         *  割り込み許可となるがタスクコンテキスト上に保存しているため，
+         *  問題はない
          */
-        ldmfd   sp!,{r1}           /* CPSR���������� */
-        mrs     r2, cpsr           /* FIQ��Ѿ�            */
+        ldmfd   sp!,{r1}           /* CPSRの復帰処理 */
+        mrs     r2, cpsr           /* FIQを継承            */
         and     r2, r2, #CPSR_FIQ_BIT
         and     r1, r1, #~CPSR_FIQ_BIT
         orr     r1, r1, r2                 
-        msr     spsr, r1           /* �����ߵ���   */
-        ldmfd   sp!,{r0-r3,ip,lr,pc}^ /*���������� + ����ߵ��� */
+        msr     spsr, r1           /* 割り込み許可   */
+        ldmfd   sp!,{r0-r3,ip,lr,pc}^ /*タスク復帰 + 割込み許可 */
 
         /*
-         *  ̤����γ���ߤ����ä��Ȥ��˸ƤӽФ�
+         *  未定義の割込みが入ったときに呼び出す
          */    
 undefined_interrupt:
          b      undef_interrupt

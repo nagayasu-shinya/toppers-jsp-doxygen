@@ -48,38 +48,38 @@
  *  TOPPERS PROJECT BE LIABLE FOR ANY TYPE OF DAMAGE DIRECTLY OR
  *  INDIRECTLY CAUSED FROM THE USE OF THIS SOFTWARE.
  * 
- *  �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ������������˸¤ꡤ�ܥ��եȥ���
- *  �����ܥ��եȥ���������Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ�
- *  �����ۡʰʲ������ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭�����
- *      ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ�����
- *      ��������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻���
- *      �Ǥ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ����Ѽԥ�
- *      �˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ�����̵��
- *      �ڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻���
- *      �Ǥ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ������������ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭������
- *        ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ���
- *        �𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»��
- *      ����⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ��ޤ���
- *      �ܥ��եȥ������Υ桼���ޤ��ϥ���ɥ桼������Τ����ʤ���ͳ�˴��
- *      �����ᤫ��⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+ *  上記著作権者は，以下の (1)〜(4) の条件を満たす場合に限り，本ソフトウェ
+ *  ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改変・
+ *  再配布（以下，利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作権
+ *      表示，この利用条件および下記の無保証規定が，そのままの形でソース
+ *      コード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使用
+ *      できる形で再配布する場合には，再配布に伴うドキュメント（利用者マ
+ *      ニュアルなど）に，上記の著作権表示，この利用条件および下記の無保
+ *      証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使用
+ *      できない形で再配布する場合には，次のいずれかの条件を満たすこと．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著作
+ *        権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに報
+ *        告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損害
+ *      からも，上記著作権者およびTOPPERSプロジェクトを免責すること．また，
+ *      本ソフトウェアのユーザまたはエンドユーザからのいかなる理由に基づ
+ *      く請求からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
  * 
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ���
- *  ��TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����λ�����Ū���Ф�
- *  ��Ŭ������ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ�����������
- *  �ˤ��ľ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ����
- *  ��ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者およ
+ *  びTOPPERSプロジェクトは，本ソフトウェアに関して，特定の使用目的に対す
+ *  る適合性も含めて，いかなる保証も行わない．また，本ソフトウェアの利用
+ *  により直接的または間接的に生じたいかなる損害に関しても，その責任を負
+ *  わない．
  * 
  *  @(#) $Id: sys_config.c,v 1.1 2006/04/10 08:19:25 honda Exp $
  */
 
 /*
- *	�������åȥ����ƥ��¸�⥸�塼���Zup-F16��ĥ�ܡ����ѡ�
+ *	ターゲットシステム依存モジュール（Zup-F16拡張ボード用）
  */
 
 
@@ -89,46 +89,46 @@
 #include "hw_serial.h"
 
 
-/* �����ƥ����������ե饰 */
+/* システムログ送信中フラグ */
 BOOL	log_io_busy;
 
 /*
- *  �������åȥ����ƥ��¸ ������롼����
+ *  ターゲットシステム依存 初期化ルーチン
  */
 
 void
 sys_initialize()
 {
 	/*
-	 *  �Хʡ�ɽ���ѥ��ꥢ��ݡ��Ȥν����
+	 *  バナー表示用シリアルポートの初期化
 	 *
-	 *  �����Хåե����ե饰��̵�����ݡ���󥰤ˤ�����������μ�����
-	 *  �Ǥ��ʤ����ᡤ������λ������׵�ե饰��ݡ���󥰤����������
-	 *  �Ѥ˥����ƥ����������ե饰���Ѥ��롥
+	 *  送信バッファ空フラグが無く，ポーリングによる送信処理の実装が
+	 *  できないため，送信完了割込み要求フラグをポーリングし，初回送信
+	 *  用にシステムログ送信中フラグを用いる．
 	 */
-	/* �����ƥ����������ե饰����� */
+	/* システムログ送信中フラグ初期化 */
 	log_io_busy = FALSE;
 
-	/* ���ꥢ��I/O�ɥ饤�н����	*/
-	/* �������	*/
+	/* シリアルI/Oドライバ初期化	*/
+	/* 受信停止	*/
 	sil_wrb_mem((VP)(TADR_SFR_SC1MOD0), 0x00 );
-	/* �ݡ�������(TXD1)�Ȥ��ƻ���	*/
+	/* ポート設定(TXD1)として使用	*/
 	sil_wrb_mem((VP)(TADR_SFR_P9FC), 0x08 );
 	sil_wrb_mem((VP)(TADR_SFR_P9CR), 0x08 );
-	/* ư��⡼������	*/
+	/* 動作モード設定	*/
 	sil_wrb_mem((VP)(TADR_SFR_SC1MOD0), (VB)(TBIT_SIOSMU8 | TBIT_SIOSCBRG) );
-							/* 8bitUART�⡼��,�ܡ��졼�ȥ����ͥ졼������	*/
-	sil_reb_mem((VP)(TADR_SFR_SC1CR));	/* �ɽФ��ˤ�ꥨ�顼�ե饰���ꥢ	*/
-	sil_wrb_mem((VP)(TADR_SFR_SC1CR), 0x00 );	/* �ѥ�ƥ�̵��	*/
+							/* 8bitUARTモード,ボーレートジェネレータ使用	*/
+	sil_reb_mem((VP)(TADR_SFR_SC1CR));	/* 読出しによりエラーフラグクリア	*/
+	sil_wrb_mem((VP)(TADR_SFR_SC1CR), 0x00 );	/* パリティ無し	*/
 	sil_wrb_mem((VP)(TADR_SFR_BR1CR), (VB)BRCR_19200);
-							/* ��T2����,19200bps,������ǽ̤����	*/
+							/* φT2使用,19200bps,補正機能未使用	*/
 	sil_wrb_mem((VP)(TADR_SFR_BR1ADD), BRADD_19200);
 	sil_wrb_mem((VP)(TADR_SFR_SC1MOD1), TBIT_SIOI2S);
 
-	/* ���ꥢ�������׵�ե饰���ꥢ	 */
-	sil_wrb_mem((VP)(TADR_SFR_INTCLR), TBIT_TX1_CLR );	/* �����׵᥯�ꥢ	*/
+	/* シリアル割込み要求フラグクリア	 */
+	sil_wrb_mem((VP)(TADR_SFR_INTCLR), TBIT_TX1_CLR );	/* 送信要求クリア	*/
 
-	/* LED�����	*/
+	/* LED初期化	*/
 	sil_wrb_mem((VP)(TADR_SFR_PA), 0xff );
 	sil_wrb_mem((VP)(TADR_SFR_PAFC), 0x00 );
 	sil_wrb_mem((VP)(TADR_SFR_PACR), 0xff );
@@ -136,7 +136,7 @@ sys_initialize()
 }
 
 /*
- *  �������åȥ����ƥ�ν�λ�롼����
+ *  ターゲットシステムの終了ルーチン
  */
 
 void
@@ -146,35 +146,35 @@ sys_exit(void)
 }
 
 /*
- *  �����ƥ������ʸ�������ؿ�
+ *  システムログ用文字送信関数
  *
- *  �ܴؿ���CPU���å�����(����߶ػ�)�Ǽ¹Ԥ��뤳��
+ *  本関数はCPUロック状態(割込み禁止)で実行すること
  */
 void
 sys_putc(char c)
 {
-	/* ���ԥ����ɤξ�����'\r'������	*/
+	/* 改行コードの場合先に'\r'を送る	*/
 	if(c == '\n'){
 		if( log_io_busy == TRUE ){
-			/* ����������ξ��ϳ�����׵�ե饰��ݡ����	*/
+			/* 既に送信中の場合は割込み要求フラグをポーリング	*/
 			while( (sil_reb_mem((VP)(TADR_SFR_INTES1)) & TBIT_INTC_H) == 0 );
-			sil_wrb_mem((VP)TADR_SFR_INTCLR, (TBIT_TX1_CLR) );	/* �����׵᥯�ꥢ	*/
+			sil_wrb_mem((VP)TADR_SFR_INTCLR, (TBIT_TX1_CLR) );	/* 送信要求クリア	*/
 			sil_wrb_mem((VP)(TADR_SFR_SC1BUF), '\r');
 		}
 		else{
-			/* �������֤ˤ���ʸ��������	*/
+			/* 送信状態にして文字を送信	*/
 			log_io_busy = TRUE;
 			sil_wrb_mem((VP)(TADR_SFR_SC1BUF), '\r');
 		}
 	}
 	if( log_io_busy == TRUE ){
-		/* ����������ξ��ϳ�����׵�ե饰��ݡ����	*/
+		/* 既に送信中の場合は割込み要求フラグをポーリング	*/
 		while( (sil_reb_mem((VP)(TADR_SFR_INTES1)) & TBIT_INTC_H) == 0 );
-		sil_wrb_mem((VP)TADR_SFR_INTCLR, (TBIT_TX1_CLR) );	/* �����׵᥯�ꥢ	*/
+		sil_wrb_mem((VP)TADR_SFR_INTCLR, (TBIT_TX1_CLR) );	/* 送信要求クリア	*/
 		sil_wrb_mem((VP)(TADR_SFR_SC1BUF), c);
 	}
 	else{
-		/* �������֤ˤ���ʸ��������	*/
+		/* 送信状態にして文字を送信	*/
 		log_io_busy = TRUE;
 		sil_wrb_mem((VP)(TADR_SFR_SC1BUF), c);
 	}

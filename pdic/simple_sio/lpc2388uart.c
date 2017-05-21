@@ -6,75 +6,75 @@
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
  * 
- *  �嵭����Ԥϡ��ʲ��� (1)��(4) �ξ�狼��Free Software Foundation 
- *  �ˤ�äƸ�ɽ����Ƥ��� GNU General Public License �� Version 2 �˵�
- *  �Ҥ���Ƥ���������������˸¤ꡤ�ܥ��եȥ��������ܥ��եȥ�����
- *  ����Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ�������ѡ������ۡʰʲ���
- *  ���ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
- *      ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
- *      ����������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
- *      �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
- *      ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
- *      �ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
- *        �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
- *        ��𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
- *      ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  によって公表されている GNU General Public License の Version 2 に記
+ *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+ *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+ *  利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
  * 
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- *  ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����Ŭ�Ѳ�ǽ����
- *  �ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ����������Ѥˤ��ľ
- *  ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤������Ǥ�����ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+ *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+ *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
  */
 
 /*
- *   CQ-FRK-NXP-ARM UART�� �ʰ�SIO�ɥ饤��
+ *   CQ-FRK-NXP-ARM UART用 簡易SIOドライバ
  *
- *   ���Υե�����ϡ�TOPPERS/JSP 1.4.2�� pdic/simple_sio/st16c2550.c��
- *   ��͡��ष�������μ��̻Ҥ��ѹ�������ΤǤ��롣
+ *   このファイルは、TOPPERS/JSP 1.4.2の pdic/simple_sio/st16c2550.cを
+ *   リネームし、内部の識別子を変更したものである。
  */
 #include <s_services.h>
 #include "lpc2388uart.h"
 
 /*
- * 8250, 16450, 16550�ƥ쥸�����Υ��ɥ쥹�����ե��åȡ�UART_RHR������Ȥ��롣
- * �����ƥऴ�Ȥ˰ۤʤ�Τ�UART_BOUNDARY�ˤ�äƥ쥸���������ֶ�������ꤹ�롣
- * ���Ȥ��Ф��٤ƤΥ쥸������8�ӥåȶ��������֤���Ƥ���ʤ顢UART_BOUNDARY��1,
- * 16bit�����ʤ�2, 32�ӥåȶ����ʤ�4����ꤹ�롣
- * UART_BOUNDARY��sys_config.h��������롣
+ * 8250, 16450, 16550各レジスタのアドレス・オフセット。UART_RHRを基点とする。
+ * システムごとに異なるのでUART_BOUNDARYによってレジスタの配置境界を指定する。
+ * たとえばすべてのレジスタが8ビット境界で配置されているなら、UART_BOUNDARYは1,
+ * 16bit境界なら2, 32ビット境界なら4を指定する。
+ * UART_BOUNDARYはsys_config.hで定義する。
  */
 
 
-#define UART_RBR   (0x00 * UART_BOUNDARY)   /*  �����Хåե��쥸����  */
-#define UART_THR   (0x00 * UART_BOUNDARY)   /*  �����ǡ������ۡ���ɡ��쥸���� */
-#define UART_DLL   (0x00 * UART_BOUNDARY)   /*  ʬ���쥸�������̥Х���       */
-#define UART_IER   (0x01 * UART_BOUNDARY)   /*  ����ߥ��͡��֥�쥸����       */
-#define UART_DLM   (0x01 * UART_BOUNDARY)   /*  ʬ���쥸������̥Х���       */
-#define UART_IIR   (0x02 * UART_BOUNDARY)   /*  ����߼��̥쥸����  */
-#define UART_FCR   (0x02 * UART_BOUNDARY)   /*  FIFO����쥸����  */
-#define UART_LCR   (0x03 * UART_BOUNDARY)   /*  �饤������쥸���� */
-#define UART_MCR   (0x04 * UART_BOUNDARY)   /*  ��ǥ�����쥸���� */
-#define UART_LSR   (0x05 * UART_BOUNDARY)   /*  �饤�󡦥��ơ��������쥸���� */
-#define UART_MSR   (0x06 * UART_BOUNDARY)   /*  ��ǥࡦ���ơ��������쥸���� */
-#define UART_SCR   (0x07 * UART_BOUNDARY)   /*  ������å����ѥåɡ��쥸���� */
-#define UART_GCTL  (0x09 * UART_BOUNDARY)	  /*  Blackfin�Τߡ��������Х�����쥸���� */
+#define UART_RBR   (0x00 * UART_BOUNDARY)   /*  受信バッファレジスタ  */
+#define UART_THR   (0x00 * UART_BOUNDARY)   /*  送信データ・ホールド・レジスタ */
+#define UART_DLL   (0x00 * UART_BOUNDARY)   /*  分周レジスタ下位バイト       */
+#define UART_IER   (0x01 * UART_BOUNDARY)   /*  割込みイネーブルレジスタ       */
+#define UART_DLM   (0x01 * UART_BOUNDARY)   /*  分周レジスタ上位バイト       */
+#define UART_IIR   (0x02 * UART_BOUNDARY)   /*  割込み識別レジスタ  */
+#define UART_FCR   (0x02 * UART_BOUNDARY)   /*  FIFO制御レジスタ  */
+#define UART_LCR   (0x03 * UART_BOUNDARY)   /*  ライン制御レジスタ */
+#define UART_MCR   (0x04 * UART_BOUNDARY)   /*  モデム制御レジスタ */
+#define UART_LSR   (0x05 * UART_BOUNDARY)   /*  ライン・ステータス・レジスタ */
+#define UART_MSR   (0x06 * UART_BOUNDARY)   /*  モデム・ステータス・レジスタ */
+#define UART_SCR   (0x07 * UART_BOUNDARY)   /*  スクラッチ・パッド・レジスタ */
+#define UART_GCTL  (0x09 * UART_BOUNDARY)	  /*  Blackfinのみ。グローバル制御レジスタ */
 
 /*
- * �쥸�����Υӥåȥޥ������ü쵡ǽ���ɲä��ʤ��¤ꡢ�񤭴����ʤ��Ƥ褤��
+ * レジスタのビットマスク。特殊機能を追加しない限り、書き換えなくてよい。
  */
 
-#define ISR_TX            0x02       /* ����������ȯ�� */
-#define IER_TX            0x02       /* ���������ߵ��� */
-#define ISR_RX            0x01       /* ����������ȯ�� */
-#define IER_RX            0x01       /* ���������ߵ��� */
+#define ISR_TX            0x02       /* 送信割り込み発生 */
+#define IER_TX            0x02       /* 送信割り込み許可 */
+#define ISR_RX            0x01       /* 受信割り込み発生 */
+#define IER_RX            0x01       /* 受信割り込み許可 */
 
 #define LCR_DL_MODE       0x80       /* Divisor Enable */
 #define LCR_NP_8_1        0x03       /* 8bit,1stop,Noparity,No break */
@@ -85,28 +85,28 @@
 
 #define MCR_INT_ENABLE    0x08
 
-#define GCTL_UCEN		  0x01		/* Blackfin�Τ� */
+#define GCTL_UCEN		  0x01		/* Blackfinのみ */
 
 
 /*
- * TNUM_SIOP_UART, UART0_ADDRESS, UART0_DIVISOR ��sys_config.h��������롣
- *	TNUM_SIOP_UART : PDIC����������UART�θĿ�
- *  �ʲ���PDIC����������ǽ��UART�ξ���
- *  	UART0_ADDRESS : 		THR�Υ��ɥ쥹
- *  	UART0_DIVISOR : 		DLM, DLL�ν����(16bitɽ��)
- *      UART0_14550_FIFO : 		14550�ߴ���FIFO����ĤȤ��˥ޥ������������
- *		UART0_BLACKFIN_UCEN : 	Blackfin���ѡ��ޥ������������Ƚ���������ɤ�UART_GCTL��UCEN��1�ˤ��롣
- *	����ܰʹߤ�UART������ʤ�ʲ��Τ褦��³���롣
- *  	UART1_ADDRESS : 		THR�Υ��ɥ쥹
- *  	UART1_DIVISOR : 		DLM, DLL�ν����(16bitɽ��)
- *      UART1_14550_FIFO : 		14550�ߴ���FIFO����ĤȤ��˥ޥ������������
- *		UART1_BLACKFIN_UCEN : 	Blackfin���ѡ��ޥ������������Ƚ���������ɤ�UART_GCTL��UCEN��1�ˤ��롣
+ * TNUM_SIOP_UART, UART0_ADDRESS, UART0_DIVISOR はsys_config.hで定義する。
+ *	TNUM_SIOP_UART : PDICが管理するUARTの個数
+ *  以下、PDICが管理する最初のUARTの情報
+ *  	UART0_ADDRESS : 		THRのアドレス
+ *  	UART0_DIVISOR : 		DLM, DLLの初期値(16bit表記)
+ *      UART0_14550_FIFO : 		14550互換のFIFOを持つときにマクロを宣言する
+ *		UART0_BLACKFIN_UCEN : 	Blackfin専用。マクロを宣言すると初期化コードがUART_GCTLのUCENを1にする。
+ *	二つ目以降のUARTがあるなら以下のように続ける。
+ *  	UART1_ADDRESS : 		THRのアドレス
+ *  	UART1_DIVISOR : 		DLM, DLLの初期値(16bit表記)
+ *      UART1_14550_FIFO : 		14550互換のFIFOを持つときにマクロを宣言する
+ *		UART1_BLACKFIN_UCEN : 	Blackfin専用。マクロを宣言すると初期化コードがUART_GCTLのUCENを1にする。
  *	...
  */
 
 
 /******************************************************************************************
- * ���ꥢ��I/O�ݡ��Ƚ�����֥��å�
+ * シリアルI/Oポート初期化ブロック
  */
 #if TNUM_SIOP_UART == 0 
 #error "If you don't use UART, please remove this file from your make file" 
@@ -116,30 +116,30 @@
 #error "Only TNUM_SIOP_UART < 4 is supported" 
 #endif /* TNUM_SIOP_UART >= 2 */    
 
-/* �ǥ��Х����׻��ޥ��� */
+/* ディバイザ計算マクロ */
 #define DLM(divisor) (divisor/256)
 #define DLL(divisor) (divisor%256)
 
 const SIOPINIB siopinib_table[TNUM_SIOP_UART] = {
 /*-----------------------------------------------------------------
- *			PDIC����������ǽ��UART�ν�����ѥ�᡼�� 
+ *			PDICが管理する最初のUARTの初期化パラメータ 
  */
     {UART0_ADDRESS,  DLM(UART0_DIVISOR), DLL(UART0_DIVISOR), 
 #ifdef UART0_BLACKFIN_UCEN
-		1	/* �ޥ���UART0_BLACKFIN_UCEN���������Ƥ����顢GCTL��UCEN��1�ˤ��ƥ����å���ư���� */
+		1	/* マクロUART0_BLACKFIN_UCENが定義されていたら、GCTLのUCENを1にしてクロックを動かす */
 #else
 		0
 #endif
 	}
 
 /*-----------------------------------------------------------------
- *			PDIC����������2���ܤ�UART�ν�����ѥ�᡼�� 
+ *			PDICが管理する2番目のUARTの初期化パラメータ 
  */
 
 #if TNUM_SIOP_UART > 1
     ,{UART1_ADDRESS,    DLM(UART1_DIVISOR), DLL(UART1_DIVISOR),	
 #ifdef UART1_BLACKFIN_UCEN
-		1	/* �ޥ���UART1_BLACKFIN_UCEN���������Ƥ����顢GCTL��UCEN��1�ˤ��ƥ����å���ư���� */
+		1	/* マクロUART1_BLACKFIN_UCENが定義されていたら、GCTLのUCENを1にしてクロックを動かす */
 #else
 		0
 #endif
@@ -149,12 +149,12 @@ const SIOPINIB siopinib_table[TNUM_SIOP_UART] = {
 #endif /* if TNUM_SIOP_UART > 1*/
 
 /*-----------------------------------------------------------------
- *			PDIC����������3���ܤ�UART�ν�����ѥ�᡼�� 
+ *			PDICが管理する3番目のUARTの初期化パラメータ 
  */
 #if TNUM_SIOP_UART > 2
     ,{UART2_ADDRESS,    DLM(UART2_DIVISOR), DLL(UART2_DIVISOR),
 #ifdef UART2_BLACKFIN_UCEN
-		1	/* �ޥ���UART2_BLACKFIN_UCEN���������Ƥ����顢GCTL��UCEN��1�ˤ��ƥ����å���ư���� */
+		1	/* マクロUART2_BLACKFIN_UCENが定義されていたら、GCTLのUCENを1にしてクロックを動かす */
 #else
 		0
 #endif
@@ -166,25 +166,25 @@ const SIOPINIB siopinib_table[TNUM_SIOP_UART] = {
 };
 
 /*
- * ���ꥢ��I/O�ݡ��Ƚ�����֥��å������ޤǡ�
+ * シリアルI/Oポート初期化ブロックここまで。
  ******************************************************************************************/
 
 
 
 /*
- *  ���ꥢ��I/O�ݡ��Ƚ�����֥��å��μ�Ф�
+ *  シリアルI/Oポート初期化ブロックの取出し
  */
 #define INDEX_SIOPINIB(siopid)  ((UINT)((siopid) - 1))
 #define get_siopinib(siopid)  (&(siopinib_table[INDEX_SIOPINIB(siopid)]))
 
 
 /*
- *  ���ꥢ��I/O�ݡ��ȴ����֥��å��Υ��ꥢ
+ *  シリアルI/Oポート管理ブロックのエリア
  */
 SIOPCB  siopcb_table[TNUM_SIOP_UART];
 
 /*
- *  ���ꥢ��I/O�ݡ���ID��������֥��å�����Ф�����Υޥ���
+ *  シリアルI/OポートIDから管理ブロックを取り出すためのマクロ
  */
 #define INDEX_SIOP(siopid)  ((UINT)((siopid) - 1))
 #define get_siopcb(siopid)  (&(siopcb_table[INDEX_SIOP(siopid)]))
@@ -211,7 +211,7 @@ uart_read(UW addr, UW offset)
 
 
 /*
- * ʸ�������������?
+ * 文字を受信したか?
  */ 
 Inline BOOL
 uart_getready(SIOPCB *siopcb)
@@ -224,7 +224,7 @@ uart_getready(SIOPCB *siopcb)
 }
 
 /*
- * ʸ���������Ǥ��뤫?
+ * 文字を送信できるか?
  */
 Inline BOOL
 uart_putready(SIOPCB *siopcb)
@@ -237,7 +237,7 @@ uart_putready(SIOPCB *siopcb)
 }
 
 /*
- *  ��������ʸ���μ��Ф�
+ *  受信した文字の取り出し
  */
 Inline UB
 uart_getchar(SIOPCB *siopcb)
@@ -246,7 +246,7 @@ uart_getchar(SIOPCB *siopcb)
 }
 
 /*
- *  ��������ʸ���ν񤭹���
+ *  送信する文字の書き込み
  */
 Inline void
 uart_putchar(SIOPCB *siopcb, UB c)
@@ -255,7 +255,7 @@ uart_putchar(SIOPCB *siopcb, UB c)
 }
 
 /*
- *  ��������ߵ���
+ *  送信割込み許可
  */
 Inline void
 uart_enable_send(SIOPCB *siopcb)
@@ -265,7 +265,7 @@ uart_enable_send(SIOPCB *siopcb)
 }
 
 /*
- *  ��������߶ػ�
+ *  送信割込み禁止
  */
 Inline void
 uart_disable_send(SIOPCB *siopcb)
@@ -276,7 +276,7 @@ uart_disable_send(SIOPCB *siopcb)
 }
 
 /*
- *  ��������ߵ���
+ *  受信割込み許可
  */
 Inline void
 uart_enable_rcv(SIOPCB *siopcb)
@@ -286,7 +286,7 @@ uart_enable_rcv(SIOPCB *siopcb)
 }
 
 /*
- *  ��������߶ػ�
+ *  受信割込み禁止
  */
 Inline void
 uart_disable_rcv(SIOPCB *siopcb)
@@ -298,7 +298,7 @@ uart_disable_rcv(SIOPCB *siopcb)
 
 
 /*
- *  SIO�ɥ饤�Фν�����롼����
+ *  SIOドライバの初期化ルーチン
  */
 void
 uart_initialize()
@@ -307,7 +307,7 @@ uart_initialize()
     UINT    i;
 
     /*
-     *  ���ꥢ��I/O�ݡ��ȴ����֥��å��ν����
+     *  シリアルI/Oポート管理ブロックの初期化
      */
     for (siopcb = siopcb_table, i = 0; i < TNUM_SIOP_UART; siopcb++, i++) {
         siopcb->siopinib = &(siopinib_table[i]);
@@ -325,14 +325,14 @@ uart_init_siopinib(const SIOPINIB *siopinib)
 {
 
 	/*
-	 *  Blackfin ADSP-BF531/2/3, BF534/6/7, BF561����¢UART�˸�ͭ�κ�ȡ�
-	 *  Power Down�⡼�ɤβ����
+	 *  Blackfin ADSP-BF531/2/3, BF534/6/7, BF561の内蔵UARTに固有の作業。
+	 *  Power Downモードの解除。
 	 */
 	if ( siopinib->set_ucen )
 		uart_write(siopinib->reg_base, UART_GCTL, 
 			   (uart_read(siopinib->reg_base, UART_GCTL) | GCTL_UCEN ));
     /*
-     *  ʬ���������
+     *  分周比の設定
      */
     /* Divisor Enable */
     uart_write(siopinib->reg_base, UART_LCR,
@@ -343,30 +343,30 @@ uart_init_siopinib(const SIOPINIB *siopinib)
     uart_write(siopinib->reg_base, UART_LCR,
                 (uart_read(siopinib->reg_base, UART_LCR) & ~LCR_DL_MODE));
 
-    /* �⡼������, �ѥ�ƥ�̵�� 8bit data, 1 stop bit */
+    /* モード設定, パリティ無し 8bit data, 1 stop bit */
     uart_write(siopinib->reg_base, UART_LCR, LCR_NP_8_1);
 
-    /* ����߶ػ� */
+    /* 割込み禁止 */
     uart_write(siopinib->reg_base, UART_IER, 0x00);
 }
 
 
 /*
- *  �����ͥ뵯ư���ΥХʡ������Ѥν����
+ *  カーネル起動時のバナー出力用の初期化
  */
 void 
 uart_init(void)
 {
     int i;
 	/*
-	 * ���٤Ƥ�uart���������롣id ��1����TNUM_SIOP_UART�ޤǡ�
+	 * すべてのuartを初期化する。id は1からTNUM_SIOP_UARTまで。
 	 */
 	for ( i=1; i<=TNUM_SIOP_UART; i++ )
 	    uart_init_siopinib(get_siopinib(i));
 }
 
 /*
- * �����ץ󤷤Ƥ���ݡ��Ȥ����뤫
+ * オープンしているポートがあるか
  */
 BOOL
 uart_openflag(void)
@@ -374,7 +374,7 @@ uart_openflag(void)
 	int i;
 	
 	/*
-	 * �����Ƥ���ݡ��Ȥ������0���֤����ʤ����0���֤���
+	 * 開いているポートがあれば0を返す。なければ0を返す。
 	 */
 	for ( i=0; i<TNUM_SIOP_UART; i++ )
 		if (siopcb_table[0].openflag)
@@ -384,7 +384,7 @@ uart_openflag(void)
 
 
 /*
- * ���ꥢ��I/O�ݡ��ȤΥ����ץ�
+ * シリアルI/Oポートのオープン
  */
 SIOPCB *
 uart_opn_por(ID siopid, VP_INT exinf)
@@ -396,14 +396,14 @@ uart_opn_por(ID siopid, VP_INT exinf)
     siopinib = siopcb->siopinib;
     
     /*
-     * �����
+     * 初期化
      */
     uart_init_siopinib(siopcb->siopinib);
     
-    /* ��������ߵ��� */
+    /* 受信割込み許可 */
     uart_write(siopcb->siopinib->reg_base, UART_IER, IER_RX);
     
-    /* ��������򥤥͡��֥� */
+    /* 割込み線をイネーブル */
     uart_write(siopcb->siopinib->reg_base, UART_MCR, MCR_INT_ENABLE);
 
     siopcb->exinf = exinf;
@@ -414,19 +414,19 @@ uart_opn_por(ID siopid, VP_INT exinf)
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��ȤΥ�������
+ *  シリアルI/Oポートのクローズ
  */
 void
 uart_cls_por(SIOPCB *siopcb)
 {
-    /* ����߶ػ� */
+    /* 割込み禁止 */
     uart_write(siopcb->siopinib->reg_base, UART_IER, 0x00);   
     siopcb->openflag = FALSE;
 }
 
 
 /*
- *  ���ꥢ��I/O�ݡ��ȤؤΥݡ���󥰤Ǥν���
+ *  シリアルI/Oポートへのポーリングでの出力
  */
 void
 uart_pol_putc(char c, ID siopid)
@@ -443,7 +443,7 @@ uart_pol_putc(char c, ID siopid)
 
 
 /*
- *  ���ꥢ��I/O�ݡ��Ȥؤ�ʸ������
+ *  シリアルI/Oポートへの文字送信
  */
 BOOL
 uart_snd_chr(SIOPCB *siopcb, char c)
@@ -456,7 +456,7 @@ uart_snd_chr(SIOPCB *siopcb, char c)
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��Ȥ����ʸ������
+ *  シリアルI/Oポートからの文字受信
  */
 INT
 uart_rcv_chr(SIOPCB *siopcb)
@@ -472,7 +472,7 @@ uart_rcv_chr(SIOPCB *siopcb)
 
 
 /*
- *  ���ꥢ��I/O�ݡ��Ȥ���Υ�����Хå��ε���
+ *  シリアルI/Oポートからのコールバックの許可
  */
 void
 uart_ena_cbr(SIOPCB *siopcb, UINT cbrtn)
@@ -489,7 +489,7 @@ uart_ena_cbr(SIOPCB *siopcb, UINT cbrtn)
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��Ȥ���Υ�����Хå��ζػ�
+ *  シリアルI/Oポートからのコールバックの禁止
  */
 void
 uart_dis_cbr(SIOPCB *siopcb, UINT cbrtn)
@@ -505,14 +505,14 @@ uart_dis_cbr(SIOPCB *siopcb, UINT cbrtn)
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��Ȥ��Ф������߽���
+ *  シリアルI/Oポートに対する割込み処理
  */
 static void
 uart_rx_isr_siop(SIOPCB *siopcb)
 {
     if (uart_getready(siopcb)) {
         /*
-         *  �������Υ�����Хå��롼�����ƤӽФ���
+         *  受信通知コールバックルーチンを呼び出す．
          */
         uart_ierdy_rcv(siopcb->exinf);
     }
@@ -523,20 +523,20 @@ uart_tx_isr_siop(SIOPCB *siopcb)
 {
     if (uart_putready(siopcb)) {
         /*
-         *  ������ǽ������Хå��롼�����ƤӽФ���
+         *  送信可能コールバックルーチンを呼び出す．
          */
         uart_ierdy_snd(siopcb->exinf);
     }
 }
 
 /*
- *  SIO�γ���ߥ����ӥ��롼����
- *	ADSP-BF533����¢UART���������̡��γ�����׵��Ф����ᡢ
- *  ISR��ʬ���Ƥ��롣�ޤ���ADSP-BF537�Τ褦����İʾ��
- *  UART����ľ����θ���ơ�uart0�Τ褦�˥ݡ����ֹ��
- *  ̾���˥ϡ��ɥ����ɤ��Ƥ��롣
- *  �����������Υݡ����ֹ�Ȥϡ�SIO�Υݡ����ֹ�Ǥ��äơ�
- *  �ϡ��ɥ�������UART�ֹ��Ʊ�����Ȥϸ¤�ʤ���
+ *  SIOの割込みサービスルーチン
+ *	ADSP-BF533の内蔵UARTは送受に別々の割込み要求を出すため、
+ *  ISRも分けている。また、ADSP-BF537のように二つ以上の
+ *  UARTを持つ場合を考慮して、uart0のようにポート番号を
+ *  名前にハードコードしている。
+ *  ただし、このポート番号とは、SIOのポート番号であって、
+ *  ハードウェアのUART番号と同じだとは限らない。
  */
 
 /*
@@ -545,14 +545,14 @@ uart_tx_isr_siop(SIOPCB *siopcb)
 void
 uart0_rx_isr()
 {
-		/* ���̤μ���������Ƥ� */
+		/* 下位の受信処理を呼ぶ */
     uart_rx_isr_siop(&(siopcb_table[0]));
 }
 
 void
 uart0_tx_isr()
 {
-		/* ���̤�����������Ƥ� */
+		/* 下位の送信処理を呼ぶ */
     uart_tx_isr_siop(&(siopcb_table[0]));
 }
 
@@ -562,14 +562,14 @@ uart0_tx_isr()
 void
 uart1_rx_isr()
 {
-		/* ���̤μ���������Ƥ� */
+		/* 下位の受信処理を呼ぶ */
     uart_rx_isr_siop(&(siopcb_table[1]));
 }
 
 void
 uart1_tx_isr()
 {
-		/* ���̤�����������Ƥ� */
+		/* 下位の送信処理を呼ぶ */
     uart_tx_isr_siop(&(siopcb_table[1]));
 }
 
@@ -579,14 +579,14 @@ uart1_tx_isr()
 void
 uart2_rx_isr()
 {
-		/* ���̤μ���������Ƥ� */
+		/* 下位の受信処理を呼ぶ */
     uart_rx_isr_siop(&(siopcb_table[2]));
 }
 
 void
 uart2_tx_isr()
 {
-		/* ���̤�����������Ƥ� */
+		/* 下位の送信処理を呼ぶ */
     uart_tx_isr_siop(&(siopcb_table[2]));
 }
 
@@ -595,32 +595,32 @@ uart2_tx_isr()
 
 
 /*
- * UART�������ǳ���ߤ�ͭ������ʤ�����Τۤ�������Ū�ˤϡ�
- * ��Υ롼����ǤϤʤ�����������ߥ����ӥ��롼����Ȥ��ƻȤ���
+ * UARTの送受で割込みを共有する場合（こちらのほうが一般的）は、
+ * 上のルーチンではなくこちらを割込みサービスルーチンとして使う。
  */
 void
 uart0_isr()
 {
-		/* ���̤μ���������Ƥ� */
+		/* 下位の受信処理を呼ぶ */
     uart_rx_isr_siop(&(siopcb_table[0]));
-		/* ���̤�����������Ƥ� */
+		/* 下位の送信処理を呼ぶ */
     uart_tx_isr_siop(&(siopcb_table[0]));
 }
 
 void
 uart1_isr()
 {
-		/* ���̤μ���������Ƥ� */
+		/* 下位の受信処理を呼ぶ */
     uart_rx_isr_siop(&(siopcb_table[1]));
-		/* ���̤�����������Ƥ� */
+		/* 下位の送信処理を呼ぶ */
     uart_tx_isr_siop(&(siopcb_table[1]));
 }
 
 void
 uart2_isr()
 {
-		/* ���̤μ���������Ƥ� */
+		/* 下位の受信処理を呼ぶ */
     uart_rx_isr_siop(&(siopcb_table[2]));
-		/* ���̤�����������Ƥ� */
+		/* 下位の送信処理を呼ぶ */
     uart_tx_isr_siop(&(siopcb_table[2]));
 }

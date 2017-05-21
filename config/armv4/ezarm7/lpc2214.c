@@ -7,84 +7,84 @@
  *                              Toyohashi Univ. of Technology, JAPAN
  *  Copyright (C) 2005- by Monami software, LP.
  * 
- *  ��L���쌠�҂́C�ȉ��� (1)�`(4) �̏������CFree Software Foundation 
- *  �ɂ���Č��\����Ă��� GNU General Public License �� Version 2 �ɋL
- *  �q����Ă�������𖞂����ꍇ�Ɍ���C�{�\�t�g�E�F�A�i�{�\�t�g�E�F�A
- *  �����ς������̂��܂ށD�ȉ������j���g�p�E�����E���ρE�Ĕz�z�i�ȉ��C
- *  ���p�ƌĂԁj���邱�Ƃ𖳏��ŋ�������D
- *  (1) �{�\�t�g�E�F�A���\�[�X�R�[�h�̌`�ŗ��p����ꍇ�ɂ́C��L�̒���
- *      ���\���C���̗��p��������щ��L�̖��ۏ؋K�肪�C���̂܂܂̌`�Ń\�[
- *      �X�R�[�h���Ɋ܂܂�Ă��邱�ƁD
- *  (2) �{�\�t�g�E�F�A���C���C�u�����`���ȂǁC���̃\�t�g�E�F�A�J���Ɏg
- *      �p�ł���`�ōĔz�z����ꍇ�ɂ́C�Ĕz�z�ɔ����h�L�������g�i���p
- *      �҃}�j���A���Ȃǁj�ɁC��L�̒��쌠�\���C���̗��p��������щ��L
- *      �̖��ۏ؋K����f�ڂ��邱�ƁD
- *  (3) �{�\�t�g�E�F�A���C�@��ɑg�ݍ��ނȂǁC���̃\�t�g�E�F�A�J���Ɏg
- *      �p�ł��Ȃ��`�ōĔz�z����ꍇ�ɂ́C���̂����ꂩ�̏����𖞂�����
- *      �ƁD
- *    (a) �Ĕz�z�ɔ����h�L�������g�i���p�҃}�j���A���Ȃǁj�ɁC��L�̒�
- *        �쌠�\���C���̗��p��������щ��L�̖��ۏ؋K����f�ڂ��邱�ƁD
- *    (b) �Ĕz�z�̌`�Ԃ��C�ʂɒ�߂���@�ɂ���āCTOPPERS�v���W�F�N�g��
- *        �񍐂��邱�ƁD
- *  (4) �{�\�t�g�E�F�A�̗��p�ɂ�蒼�ړI�܂��͊ԐړI�ɐ����邢���Ȃ鑹
- *      �Q������C��L���쌠�҂����TOPPERS�v���W�F�N�g��Ɛӂ��邱�ƁD
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  によって公表されている GNU General Public License の Version 2 に記
+ *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+ *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+ *  利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
  * 
- *  �{�\�t�g�E�F�A�́C���ۏ؂Œ񋟂���Ă�����̂ł���D��L���쌠�҂�
- *  ���TOPPERS�v���W�F�N�g�́C�{�\�t�g�E�F�A�Ɋւ��āC���̓K�p�\����
- *  �܂߂āC�����Ȃ�ۏ؂��s��Ȃ��D�܂��C�{�\�t�g�E�F�A�̗��p�ɂ�蒼
- *  �ړI�܂��͊ԐړI�ɐ����������Ȃ鑹�Q�Ɋւ��Ă��C���̐ӔC�𕉂�Ȃ��D
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+ *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+ *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
  *  @(#) $Id$
  */
 
 /*
- *    LPC2214 �����@�\�p�h���C�o
+ *    LPC2214 内部機能用ドライバ
  */
 #include <s_services.h>
 #include <lpc2214.h>
 
 /*
- * ����UART�p �Ȉ�SIO�h���C�o
+ * 内部UART用 簡易SIOドライバ
  */
 
 /*
- *  �V���A��I/O�|�[�g�������u���b�N
+ *  シリアルI/Oポート初期化ブロック
  */
 typedef struct sio_port_initialization_block {
 
 } SIOPINIB;
 
 /*
- *  �V���A��I/O�|�[�g�Ǘ��u���b�N
+ *  シリアルI/Oポート管理ブロック
  */
 struct sio_port_control_block {
-    const SIOPINIB  *siopinib; /* �V���A��I/O�|�[�g�������u���b�N */
-    VP_INT          exinf;     /* �g����� */
-    BOOL    openflag;          /* �I�[�v���ς݃t���O */
-    BOOL    sendflag;          /* ���M�����݃C�l�[�u���t���O */
-    BOOL    getready;          /* ��������M������� */
-    BOOL    putready;          /* �����𑗐M�ł����� */
+    const SIOPINIB  *siopinib; /* シリアルI/Oポート初期化ブロック */
+    VP_INT          exinf;     /* 拡張情報 */
+    BOOL    openflag;          /* オープン済みフラグ */
+    BOOL    sendflag;          /* 送信割込みイネーブルフラグ */
+    BOOL    getready;          /* 文字を受信した状態 */
+    BOOL    putready;          /* 文字を送信できる状態 */
 };
 
 /*
- * �V���A��I/O�|�[�g�������u���b�N
+ * シリアルI/Oポート初期化ブロック
  */
 const SIOPINIB siopinib_table[TNUM_SIOP] = {{}};
 
 /*
- *  �V���A��I/O�|�[�g�Ǘ��u���b�N�̃G���A
+ *  シリアルI/Oポート管理ブロックのエリア
  */
 SIOPCB  siopcb_table[TNUM_SIOP];
 
 /*
- *  �V���A��I/O�|�[�gID����Ǘ��u���b�N�����o�����߂̃}�N��
+ *  シリアルI/OポートIDから管理ブロックを取り出すためのマクロ
  */
 #define INDEX_SIOP(siopid)  ((UINT)((siopid) - 1))
 #define get_siopcb(siopid)  (&(siopcb_table[INDEX_SIOP(siopid)]))
 
 
 /*
- * ��������M������?
+ * 文字を受信したか?
  */ 
 Inline BOOL
 uart_getready(SIOPCB *siopcb)
@@ -93,7 +93,7 @@ uart_getready(SIOPCB *siopcb)
 }
 
 /*
- * �����𑗐M�ł��邩?
+ * 文字を送信できるか?
  */
 Inline BOOL
 uart_putready(SIOPCB *siopcb)
@@ -102,7 +102,7 @@ uart_putready(SIOPCB *siopcb)
 }
 
 /*
- *  ��M���������̎��o��
+ *  受信した文字の取り出し
  */
 Inline UB
 uart_getchar(SIOPCB *siopcb)
@@ -111,7 +111,7 @@ uart_getchar(SIOPCB *siopcb)
 }
 
 /*
- *  ���M���镶���̏�������
+ *  送信する文字の書き込み
  */
 void
 uart_putchar(SIOPCB *siopcb, UB c)
@@ -120,7 +120,7 @@ uart_putchar(SIOPCB *siopcb, UB c)
 }
 
 /*
- *  ���M�����݋���
+ *  送信割込み許可
  */
 Inline void
 uart_enable_send(SIOPCB *siopcb)
@@ -132,7 +132,7 @@ uart_enable_send(SIOPCB *siopcb)
 }
 
 /*
- *  ���M�����݋֎~
+ *  送信割込み禁止
  */
 Inline void
 uart_disable_send(SIOPCB *siopcb)
@@ -144,7 +144,7 @@ uart_disable_send(SIOPCB *siopcb)
 }
 
 /*
- *  ��M�����݋���
+ *  受信割込み許可
  */
 Inline void
 uart_enable_rcv(SIOPCB *siopcb)
@@ -156,7 +156,7 @@ uart_enable_rcv(SIOPCB *siopcb)
 }
 
 /*
- *  ��M�����݋֎~
+ *  受信割込み禁止
  */
 Inline void
 uart_disable_rcv(SIOPCB *siopcb)
@@ -170,7 +170,7 @@ uart_disable_rcv(SIOPCB *siopcb)
 
 
 /*
- * �J�[�l���N�����̃��O�o�͗p�̏�����
+ * カーネル起動時のログ出力用の初期化
  */
 void
 uart_init(void){
@@ -179,21 +179,21 @@ uart_init(void){
 
 #if 0
     /*
-     *  GP34�`41 �� FFUART �Ƃ��ė��p
+     *  GP34〜41 を FFUART として利用
      */
     wbits = sil_rew_mem(GPIO_GAFR0_y);
     wbits = (wbits & 0xfff0000f) | 0x000a9550;
     sil_wrw_mem(GPIO_GAFR0_y, wbits);
 
     /*
-     *  TXD, RTS/RTS ���o�͂ɂ���
+     *  TXD, RTS/RTS を出力にする
      */
     wbits = sil_rew_mem(GPIO_GPDR_y);
     wbits = (wbits & 0xfffffc7f) | 0x00000380;
     sil_wrw_mem(GPIO_GPDR_y, wbits);
     
     /*
-     * RS232C �h���C�o�n�[�h�E�F�A�̃C�l�[�u��
+     * RS232C ドライバハードウェアのイネーブル
      */
     wbits = sil_rew_mem(CQ_PXA250_CONFIG);
     wbits |= 0x200;
@@ -201,10 +201,10 @@ uart_init(void){
 #endif
 
     /*
-     *  UART_BPS ��14�ȉ��̂Ƃ��A
-     *  ���Z���ʂ��I�[�o�t���[����B
-     *  ���ۂɂ���Ȑ��l�ɂ��邱�Ƃ�
-     *  ���肦�Ȃ����O�̂��߁B
+     *  UART_BPS が14以下のとき、
+     *  演算結果がオーバフローする。
+     *  実際にそんな数値にすることは
+     *  ありえないが念のため。
      */
 #if (UART_BPS < 15)
 #error UART_BPS is too small or undefined.
@@ -223,7 +223,7 @@ uart_init(void){
 
 
 /*
- *  �I���`�b�v��UART����̃|�[�����O�o��
+ *  オンチップのUARTからのポーリング出力
  */
 void
 uart_putc(char c)
@@ -238,8 +238,8 @@ uart_putc(char c)
 }
 
 /*
- *  SIO�h���C�o�̏��������[�`��
- *  1�|�[�g�����Ȃ����߁C���܂�Ӗ��͂Ȃ�
+ *  SIOドライバの初期化ルーチン
+ *  1ポートしかないため，あまり意味はない
  */
 void
 uart_initialize()
@@ -248,7 +248,7 @@ uart_initialize()
     UINT    i;
 
     /*
-     *  �V���A��I/O�|�[�g�Ǘ��u���b�N�̏�����
+     *  シリアルI/Oポート管理ブロックの初期化
      */
     for (siopcb = siopcb_table, i = 0; i < TNUM_SIOP; siopcb++, i++) {
         siopcb->siopinib = &(siopinib_table[i]);
@@ -258,7 +258,7 @@ uart_initialize()
 }
 
 /*
- * �I�[�v�����Ă���|�[�g�����邩
+ * オープンしているポートがあるか
  */
 BOOL
 uart_openflag(void)
@@ -268,7 +268,7 @@ uart_openflag(void)
 
 
 /*
- * �V���A��I/O�|�[�g�̃I�[�v��
+ * シリアルI/Oポートのオープン
  */
 SIOPCB *
 uart_opn_por(ID siopid, VP_INT exinf)
@@ -295,7 +295,7 @@ uart_opn_por(ID siopid, VP_INT exinf)
 }
 
 /*
- *  �V���A��I/O�|�[�g�̃N���[�Y
+ *  シリアルI/Oポートのクローズ
  */
 void
 uart_cls_por(SIOPCB *siopcb)
@@ -304,7 +304,7 @@ uart_cls_por(SIOPCB *siopcb)
 }
 
 /*
- *  �V���A��I/O�|�[�g�ւ̕������M
+ *  シリアルI/Oポートへの文字送信
  */
 BOOL
 uart_snd_chr(SIOPCB *siopcb, char c)
@@ -317,7 +317,7 @@ uart_snd_chr(SIOPCB *siopcb, char c)
 }
 
 /*
- *  �V���A��I/O�|�[�g����̕�����M
+ *  シリアルI/Oポートからの文字受信
  */
 INT
 uart_rcv_chr(SIOPCB *siopcb)
@@ -329,7 +329,7 @@ uart_rcv_chr(SIOPCB *siopcb)
 }
 
 /*
- *  �V���A��I/O�|�[�g����̃R�[���o�b�N�̋���
+ *  シリアルI/Oポートからのコールバックの許可
  */
 void
 uart_ena_cbr(SIOPCB *siopcb, UINT cbrtn)
@@ -346,7 +346,7 @@ uart_ena_cbr(SIOPCB *siopcb, UINT cbrtn)
 
 
 /*
- *  �V���A��I/O�|�[�g����̃R�[���o�b�N�̋֎~
+ *  シリアルI/Oポートからのコールバックの禁止
  */
 void
 uart_dis_cbr(SIOPCB *siopcb, UINT cbrtn)
@@ -364,20 +364,20 @@ uart_dis_cbr(SIOPCB *siopcb, UINT cbrtn)
 
 
 /*
- *  �V���A��I/O�|�[�g�ɑ΂��銄���ݏ���
+ *  シリアルI/Oポートに対する割込み処理
  */
 static void
 uart_isr_siop(SIOPCB *siopcb)
 {
     if (uart_getready(siopcb)) {
         /*
-         *  ��M�ʒm�R�[���o�b�N���[�`�����Ăяo���D
+         *  受信通知コールバックルーチンを呼び出す．
          */
         uart_ierdy_rcv(siopcb->exinf);
     }
     if (uart_putready(siopcb)) {
         /*
-         *  ���M�\�R�[���o�b�N���[�`�����Ăяo���D
+         *  送信可能コールバックルーチンを呼び出す．
          */
         uart_ierdy_snd(siopcb->exinf);
     }
@@ -385,7 +385,7 @@ uart_isr_siop(SIOPCB *siopcb)
 
 
 /*
- *  SIO�̊����݃T�[�r�X���[�`��
+ *  SIOの割込みサービスルーチン
  */
 void
 uart_isr()
