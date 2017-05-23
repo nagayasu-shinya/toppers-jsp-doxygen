@@ -157,11 +157,11 @@ bitmap_search(UINT bitmap)
 
 #endif /* CPU_BITMAP_SEARCH */
 
-/*
- *  最高優先順位タスクのサーチ
- */
 #ifdef __tsksched
 
+/**
+ * @brief 最高優先順位タスクのサーチ
+ */
 TCB *
 search_schedtsk()
 {
