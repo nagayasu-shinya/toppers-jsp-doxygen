@@ -1,3 +1,6 @@
+#ifndef _ITRON_H_
+#define _ITRON_H_
+
 /*
  *  TOPPERS/JSP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
@@ -38,34 +41,25 @@
  *  @(#) $Id: itron.h,v 1.16 2004/12/22 03:38:00 hiro Exp $
  */
 
-/*
- *  ITRON仕様共通規定のデータ型・定数・マクロ
- *
- *  このファイルには，スタンダードプロファイルには必要ない定義も含んで
- *  いる．データ型の定義は，スタンダードプロファイルを満たすちょうどの
- *  長さにはしていない．
- *
- *  アセンブリ言語のソースファイルやシステムコンフィギュレーションファ
- *  イルからこのファイルをインクルードする時は，_MACRO_ONLY を定義して
- *  おくことで，マクロ定義以外の記述を除くことができる．
- *
- *  このインクルードファイルは，kernel.h と sil.h でインクルードされる．
- *  また，ITRON仕様共通規定に準拠するソフトウェア部品のインクルードファ
- *  イルは，このファイルを直接インクルードしてもよい．この例外を除いて，
- *  他のファイルから直接インクルードされることはない．
- *
- *  このファイルをインクルードする前に，t_stddef.h をインクルードして
- *  おくことが必要である．
- */
-
 /**
- * @file ITRON仕様共通規定のデータ型・定数・マクロ
+ * @file
+ * @brief ITRON仕様共通規定のデータ型・定数・マクロ
+ *
+ * このファイルには，スタンダードプロファイルには必要ない定義も含んでいる．
+ * データ型の定義は，スタンダードプロファイルを満たすちょうどの長さにはしていない．
+ * アセンブリ言語のソースファイルやシステムコンフィギュレーションファイルから
+ * このファイルをインクルードする時は，_MACRO_ONLY を定義しておくことで，
+ * マクロ定義以外の記述を除くことができる．
+ * このインクルードファイルは，kernel.h と sil.h でインクルードされる．
+ * また，ITRON仕様共通規定に準拠するソフトウェア部品のインクルードファイルは，
+ * このファイルを直接インクルードしてもよい．この例外を除いて，
+ * 他のファイルから直接インクルードされることはない．
+ * このファイルをインクルードする前に，t_stddef.h をインクルードしておくことが必要である．
+ *
  * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  * @copyright 2004      by Embedded and Real-Time Systems Laboratory Graduate School of Information Science, Nagoya Univ., JAPAN
  */
 
-#ifndef _ITRON_H_
-#define _ITRON_H_
 
 #ifdef __cplusplus
 extern "C" {
