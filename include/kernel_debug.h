@@ -39,12 +39,15 @@
  *  @(#) $Id: kernel_debug.h,v 1.2 2003/07/01 13:36:30 hiro Exp $
  */
 
-/*
- *    μITRON4.0仕様 デバッグ用インクルードファイル
+/**
+ * @file
+ * @brief μITRON4.0仕様 デバッグ用インクルードファイル
  *
- *  このファイルは，μITRON4.0仕様のスタンダードプロファイル外の定義と，
- *  ITRONデバッギングインタフェース仕様に含まれる定義の中で，JSPカーネ
- *  ルのデバッグサポート機能に必要な定義を含む．
+ * このファイルは，μITRON4.0仕様のスタンダードプロファイル外の定義と，
+ * ITRONデバッギングインタフェース仕様に含まれる定義の中で，
+ * JSPカーネルのデバッグサポート機能に必要な定義を含む．
+ *
+ * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
 
 #ifdef __cplusplus
@@ -54,126 +57,126 @@ extern "C" {
 /*
  *  タスク状態の定義
  */
-#define TTS_RUN        0x01u          /* 実行状態 */
-#define TTS_RDY        0x02u          /* 実行可能状態 */
-#define TTS_WAI        0x04u          /* 待ち状態 */
-#define TTS_SUS        0x08u          /* 強制待ち状態 */
-#define TTS_WAS        (TTS_WAI | TTS_SUS)    /* 二重待ち状態 */
-#define TTS_DMT        0x10u          /* 休止状態 */
+#define TTS_RUN        0x01u          /**< 実行状態 */
+#define TTS_RDY        0x02u          /**< 実行可能状態 */
+#define TTS_WAI        0x04u          /**< 待ち状態 */
+#define TTS_SUS        0x08u          /**< 強制待ち状態 */
+#define TTS_WAS        (TTS_WAI | TTS_SUS)    /**< 二重待ち状態 */
+#define TTS_DMT        0x10u          /**< 休止状態 */
 
-#define TTW_SLP        0x0001u        /* 起床待ち状態 */
-#define TTW_DLY        0x0002u        /* 時間経過待ち状態 */
-#define TTW_SEM        0x0004u        /* セマフォ資源の獲得待ち状態 */
-#define TTW_FLG        0x0008u        /* イベントフラグ待ち状態 */
-#define TTW_SDTQ       0x0010u        /* データキューへの送信待ち状態 */
-#define TTW_RDTQ       0x0020u        /* データキューからの受信待ち状態 */
-#define TTW_MBX        0x0040u        /* メールボックスからの受信待ち状態 */
-#define TTW_MTX        0x0080u        /* ミューテックスのロック待ち状態 */
-#define TTW_SMBF       0x0100u        /* メッセージバッファへの送信待ち */
-#define TTW_RMBF       0x0200u        /* メッセージバッファからの受信待ち */
-#define TTW_CAL        0x0400u        /* ランデブの呼出し待ち状態 */
-#define TTW_ACP        0x0800u        /* ランデブの受付待ち状態 */
-#define TTW_RDV        0x1000u        /* ランデブの終了待ち状態 */
-#define TTW_MPF        0x2000u        /* 固定長メモリブロックの獲得待ち */
-#define TTW_MPL        0x4000u        /* 可変長メモリブロックの獲得待ち */
+#define TTW_SLP        0x0001u        /**< 起床待ち状態 */
+#define TTW_DLY        0x0002u        /**< 時間経過待ち状態 */
+#define TTW_SEM        0x0004u        /**< セマフォ資源の獲得待ち状態 */
+#define TTW_FLG        0x0008u        /**< イベントフラグ待ち状態 */
+#define TTW_SDTQ       0x0010u        /**< データキューへの送信待ち状態 */
+#define TTW_RDTQ       0x0020u        /**< データキューからの受信待ち状態 */
+#define TTW_MBX        0x0040u        /**< メールボックスからの受信待ち状態 */
+#define TTW_MTX        0x0080u        /**< ミューテックスのロック待ち状態 */
+#define TTW_SMBF       0x0100u        /**< メッセージバッファへの送信待ち */
+#define TTW_RMBF       0x0200u        /**< メッセージバッファからの受信待ち */
+#define TTW_CAL        0x0400u        /**< ランデブの呼出し待ち状態 */
+#define TTW_ACP        0x0800u        /**< ランデブの受付待ち状態 */
+#define TTW_RDV        0x1000u        /**< ランデブの終了待ち状態 */
+#define TTW_MPF        0x2000u        /**< 固定長メモリブロックの獲得待ち */
+#define TTW_MPL        0x4000u        /**< 可変長メモリブロックの獲得待ち */
 
 /*
  *  機能コードの定義
  */
-#define TFN_CRE_TSK     (-5)
-#define TFN_DEL_TSK     (-6)
-#define TFN_ACT_TSK     (-7)
-#define TFN_CAN_ACT     (-8)
-#define TFN_STA_TSK     (-9)
-#define TFN_EXT_TSK    (-10)
-#define TFN_EXD_TSK    (-11)
-#define TFN_TER_TSK    (-12)
-#define TFN_CHG_PRI    (-13)
-#define TFN_GET_PRI    (-14)
-#define TFN_REF_TSK    (-15)
-#define TFN_REF_TST    (-16)
+#define TFN_CRE_TSK      (-5)
+#define TFN_DEL_TSK      (-6)
+#define TFN_ACT_TSK      (-7)
+#define TFN_CAN_ACT      (-8)
+#define TFN_STA_TSK      (-9)
+#define TFN_EXT_TSK     (-10)
+#define TFN_EXD_TSK     (-11)
+#define TFN_TER_TSK     (-12)
+#define TFN_CHG_PRI     (-13)
+#define TFN_GET_PRI     (-14)
+#define TFN_REF_TSK     (-15)
+#define TFN_REF_TST     (-16)
 
-#define TFN_SLP_TSK    (-17)
-#define TFN_TSLP_TSK   (-18)
-#define TFN_WUP_TSK    (-19)
-#define TFN_CAN_WUP    (-20)
-#define TFN_REL_WAI    (-21)
-#define TFN_SUS_TSK    (-22)
-#define TFN_RSM_TSK    (-23)
-#define TFN_FRSM_TSK   (-24)
-#define TFN_DLY_TSK    (-25)
+#define TFN_SLP_TSK     (-17)
+#define TFN_TSLP_TSK    (-18)
+#define TFN_WUP_TSK     (-19)
+#define TFN_CAN_WUP     (-20)
+#define TFN_REL_WAI     (-21)
+#define TFN_SUS_TSK     (-22)
+#define TFN_RSM_TSK     (-23)
+#define TFN_FRSM_TSK    (-24)
+#define TFN_DLY_TSK     (-25)
 
-#define TFN_DEF_TEX    (-27)
-#define TFN_RAS_TEX    (-28)
-#define TFN_DIS_TEX    (-29)
-#define TFN_ENA_TEX    (-30)
-#define TFN_SNS_TEX    (-31)
-#define TFN_REF_TEX    (-32)
+#define TFN_DEF_TEX     (-27)
+#define TFN_RAS_TEX     (-28)
+#define TFN_DIS_TEX     (-29)
+#define TFN_ENA_TEX     (-30)
+#define TFN_SNS_TEX     (-31)
+#define TFN_REF_TEX     (-32)
 
-#define TFN_CRE_SEM    (-33)
-#define TFN_DEL_SEM    (-34)
-#define TFN_SIG_SEM    (-35)
-#define TFN_WAI_SEM    (-37)
-#define TFN_POL_SEM    (-38)
-#define TFN_TWAI_SEM   (-39)
-#define TFN_REF_SEM    (-40)
+#define TFN_CRE_SEM     (-33)
+#define TFN_DEL_SEM     (-34)
+#define TFN_SIG_SEM     (-35)
+#define TFN_WAI_SEM     (-37)
+#define TFN_POL_SEM     (-38)
+#define TFN_TWAI_SEM    (-39)
+#define TFN_REF_SEM     (-40)
 
-#define TFN_CRE_FLG    (-41)
-#define TFN_DEL_FLG    (-42)
-#define TFN_SET_FLG    (-43)
-#define TFN_CLR_FLG    (-44)
-#define TFN_WAI_FLG    (-45)
-#define TFN_POL_FLG    (-46)
-#define TFN_TWAI_FLG   (-47)
-#define TFN_REF_FLG    (-48)
+#define TFN_CRE_FLG     (-41)
+#define TFN_DEL_FLG     (-42)
+#define TFN_SET_FLG     (-43)
+#define TFN_CLR_FLG     (-44)
+#define TFN_WAI_FLG     (-45)
+#define TFN_POL_FLG     (-46)
+#define TFN_TWAI_FLG    (-47)
+#define TFN_REF_FLG     (-48)
 
-#define TFN_CRE_DTQ    (-49)
-#define TFN_DEL_DTQ    (-50)
-#define TFN_SND_DTQ    (-53)
-#define TFN_PSND_DTQ   (-54)
-#define TFN_TSND_DTQ   (-55)
-#define TFN_FSND_DTQ   (-56)
-#define TFN_RCV_DTQ    (-57)
-#define TFN_PRCV_DTQ   (-58)
-#define TFN_TRCV_DTQ   (-59)
-#define TFN_REF_DTQ    (-60)
+#define TFN_CRE_DTQ     (-49)
+#define TFN_DEL_DTQ     (-50)
+#define TFN_SND_DTQ     (-53)
+#define TFN_PSND_DTQ    (-54)
+#define TFN_TSND_DTQ    (-55)
+#define TFN_FSND_DTQ    (-56)
+#define TFN_RCV_DTQ     (-57)
+#define TFN_PRCV_DTQ    (-58)
+#define TFN_TRCV_DTQ    (-59)
+#define TFN_REF_DTQ     (-60)
 
-#define TFN_CRE_MBX    (-61)
-#define TFN_DEL_MBX    (-62)
-#define TFN_SND_MBX    (-63)
-#define TFN_RCV_MBX    (-65)
-#define TFN_PRCV_MBX   (-66)
-#define TFN_TRCV_MBX   (-67)
-#define TFN_REF_MBX    (-68)
+#define TFN_CRE_MBX     (-61)
+#define TFN_DEL_MBX     (-62)
+#define TFN_SND_MBX     (-63)
+#define TFN_RCV_MBX     (-65)
+#define TFN_PRCV_MBX    (-66)
+#define TFN_TRCV_MBX    (-67)
+#define TFN_REF_MBX     (-68)
 
-#define TFN_CRE_MPF    (-69)
-#define TFN_DEL_MPF    (-70)
-#define TFN_REL_MPF    (-71)
-#define TFN_GET_MPF    (-73)
-#define TFN_PGET_MPF   (-74)
-#define TFN_TGET_MPF   (-75)
-#define TFN_REF_MPF    (-76)
+#define TFN_CRE_MPF     (-69)
+#define TFN_DEL_MPF     (-70)
+#define TFN_REL_MPF     (-71)
+#define TFN_GET_MPF     (-73)
+#define TFN_PGET_MPF    (-74)
+#define TFN_TGET_MPF    (-75)
+#define TFN_REF_MPF     (-76)
 
-#define TFN_SET_TIM    (-77)
-#define TFN_GET_TIM    (-78)
+#define TFN_SET_TIM     (-77)
+#define TFN_GET_TIM     (-78)
 
-#define TFN_CRE_CYC    (-79)
-#define TFN_DEL_CYC    (-80)
-#define TFN_STA_CYC    (-81)
-#define TFN_STP_CYC    (-82)
-#define TFN_REF_CYC    (-83)
+#define TFN_CRE_CYC     (-79)
+#define TFN_DEL_CYC     (-80)
+#define TFN_STA_CYC     (-81)
+#define TFN_STP_CYC     (-82)
+#define TFN_REF_CYC     (-83)
 
-#define TFN_ROT_RDQ    (-85)
-#define TFN_GET_TID    (-86)
-#define TFN_LOC_CPU    (-89)
-#define TFN_UNL_CPU    (-90)
-#define TFN_DIS_DSP    (-91)
-#define TFN_ENA_DSP    (-92)
-#define TFN_SNS_CTX    (-93)
-#define TFN_SNS_LOC    (-94)
-#define TFN_SNS_DSP    (-95)
-#define TFN_SNS_DPN    (-96)
-#define TFN_REF_SYS    (-97)
+#define TFN_ROT_RDQ     (-85)
+#define TFN_GET_TID     (-86)
+#define TFN_LOC_CPU     (-89)
+#define TFN_UNL_CPU     (-90)
+#define TFN_DIS_DSP     (-91)
+#define TFN_ENA_DSP     (-92)
+#define TFN_SNS_CTX     (-93)
+#define TFN_SNS_LOC     (-94)
+#define TFN_SNS_DSP     (-95)
+#define TFN_SNS_DPN     (-96)
+#define TFN_REF_SYS     (-97)
 
 #define TFN_DEF_INH    (-101)
 #define TFN_CRE_ISR    (-102)
