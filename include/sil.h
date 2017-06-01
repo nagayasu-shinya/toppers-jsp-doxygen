@@ -1,3 +1,6 @@
+#ifndef _SIL_H_
+#define _SIL_H_
+
 /*
  *  TOPPERS/JSP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
@@ -38,25 +41,28 @@
  *  @(#) $Id: sil.h,v 1.9 2006/02/12 05:27:25 hiro Exp $
  */
 
-/*
- *	システムインタフェースレイヤ（ターゲット共通部）
+/**
+ * @file
+ * @brief システムインタフェースレイヤ（ターゲット共通部）
  *
- *  アセンブリ言語のソースファイルやシステムコンフィギュレーションファ
- *  イルからこのファイルをインクルードする時は，_MACRO_ONLY を定義して
- *  おくことで，マクロ定義以外の記述を除くことができる．
+ * アセンブリ言語のソースファイルやシステムコンフィギュレーションファイルから
+ * このファイルをインクルードする時は， _MACRO_ONLY を定義しておくことで，
+ * マクロ定義以外の記述を除くことができる．
+ * @n
+ * このインクルードファイルは，標準インクルードファイル（s_services.h） でインクルードされる．
+ * また，カーネルから呼ばれるデバイスドライバのインクルードファイルで，
+ * インライン関数などでシステムインタフェースレイヤを用いている場合にも，
+ * このファイルがインクルードされる．
+ * この例外を除いて，他のファイルから直接インクルードされることはない．
+ * @n
+ * この中でインクルードしているファイルを除いて，
+ * 他のインクルードファイルに依存していない．
  *
- *  このインクルードファイルは，標準インクルードファイル（s_services.h）
- *  でインクルードされる．また，カーネルから呼ばれるデバイスドライバの
- *  インクルードファイルで，インライン関数などでシステムインタフェース
- *  レイヤを用いている場合にも，このファイルがインクルードされる．この
- *  例外を除いて，他のファイルから直接インクルードされることはない．
- *
- *  この中でインクルードしているファイルを除いて，他のインクルードファ
- *  イルに依存していない．
+ * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
+ * @copyright 2005-2006 by Embedded and Real-Time Systems Laboratory Graduate School of Information Science, Nagoya Univ., JAPAN
  */
 
-#ifndef _SIL_H_
-#define _SIL_H_
+
 
 #ifdef __cplusplus
 extern "C" {
@@ -86,8 +92,8 @@ extern "C" {
 /*
  *  エンディアン定数の定義
  */
-#define	SIL_ENDIAN_LITTLE	0	/* リトルエンディアン */
-#define	SIL_ENDIAN_BIG		1	/* ビッグエンディアン */
+#define SIL_ENDIAN_LITTLE 0    /**< リトルエンディアン */
+#define SIL_ENDIAN_BIG    1    /**< ビッグエンディアン */
 
 #ifndef _MACRO_ONLY
 
@@ -96,30 +102,26 @@ extern "C" {
  */
 #ifndef SIL_PRE_LOC
 #include <kernel.h>
-#define	SIL_PRE_LOC	BOOL _sil_loc_ = sns_loc()
-#define	SIL_LOC_INT()	((void)(!(_sil_loc_) \
-				&& (sns_ctx() ? iloc_cpu() : loc_cpu())))
-#define	SIL_UNL_INT()	((void)(!(_sil_loc_) \
-				&& (sns_ctx() ? iunl_cpu() : unl_cpu())))
+#define SIL_PRE_LOC    BOOL _sil_loc_ = sns_loc()
+#define SIL_LOC_INT()  ((void) (!(_sil_loc_) && (sns_ctx() ? iloc_cpu() : loc_cpu())))
+#define SIL_UNL_INT()  ((void) (!(_sil_loc_) && (sns_ctx() ? iunl_cpu() : unl_cpu())))
 #endif /* SIL_PRE_LOC */
 
 /*
  *  微少時間待ち
  */
-extern void	sil_dly_nse(UINT dlytim) throw();
+extern void    sil_dly_nse(UINT dlytim) throw();
 
 /*
  *  エンディアンの反転
  */
 #ifndef SIL_REV_ENDIAN_H
-#define	SIL_REV_ENDIAN_H(data) \
-	((VH)((((UH)(data) & 0xff) << 8) | (((UH)(data) >> 8) & 0xff)))
+#define SIL_REV_ENDIAN_H(data) ((VH) ((((UH) (data) & 0xff) << 8) | (((UH) (data) >> 8) & 0xff)))
 #endif /* SIL_REV_ENDIAN_H */
 
 #ifndef SIL_REV_ENDIAN_W
-#define	SIL_REV_ENDIAN_W(data) \
-	((VW)((((UW)(data) & 0xff) << 24) | (((UW)(data) & 0xff00) << 8) \
-		| (((UW)(data)>> 8) & 0xff00) | (((UW)(data) >> 24) & 0xff)))
+#define    SIL_REV_ENDIAN_W(data) \
+    ((VW) ((((UW) (data) & 0xff) << 24) | (((UW) (data) & 0xff00) << 8) | (((UW) (data)>> 8) & 0xff00) | (((UW) (data) >> 24) & 0xff)))
 #endif /* SIL_REV_ENDIAN_H */
 
 /*
@@ -135,16 +137,16 @@ extern void	sil_dly_nse(UINT dlytim) throw();
 Inline VB
 sil_reb_mem(VP mem)
 {
-	VB	data;
+    VB    data;
 
-	data = *((volatile VB *) mem);
-	return(data);
+    data = *((volatile VB *) mem);
+    return(data);
 }
 
 Inline void
 sil_wrb_mem(VP mem, VB data)
 {
-	*((volatile VB *) mem) = data;
+    *((volatile VB *) mem) = data;
 }
 
 #endif /* _int8_ */
@@ -157,32 +159,32 @@ sil_wrb_mem(VP mem, VB data)
 Inline VH
 sil_reh_mem(VP mem)
 {
-	VH	data;
+    VH    data;
 
-	data = *((volatile VH *) mem);
-	return(data);
+    data = *((volatile VH *) mem);
+    return(data);
 }
 
 Inline void
 sil_wrh_mem(VP mem, VH data)
 {
-	*((volatile VH *) mem) = data;
+    *((volatile VH *) mem) = data;
 }
 
-#if SIL_ENDIAN == SIL_ENDIAN_BIG	/* ビッグエンディアンプロセッサ */
+#if SIL_ENDIAN == SIL_ENDIAN_BIG    /* ビッグエンディアンプロセッサ */
 
-#define	sil_reh_bem(mem)	sil_reh_mem(mem)
-#define	sil_wrh_bem(mem, data)	sil_wrh_mem(mem, data)
+#define sil_reh_bem(mem)        sil_reh_mem(mem)
+#define sil_wrh_bem(mem, data)  sil_wrh_mem(mem, data)
 
 #ifndef OMIT_SIL_REH_LEM
 
 Inline VH
 sil_reh_lem(VP mem)
 {
-	VH	data;
+    VH    data;
 
-	data = *((volatile VH *) mem);
-	return(SIL_REV_ENDIAN_H(data));
+    data = *((volatile VH *) mem);
+    return(SIL_REV_ENDIAN_H(data));
 }
 
 #endif /* OMIT_SIL_REH_LEM */
@@ -191,24 +193,24 @@ sil_reh_lem(VP mem)
 Inline void
 sil_wrh_lem(VP mem, VH data)
 {
-	*((volatile VH *) mem) = SIL_REV_ENDIAN_H(data);
+    *((volatile VH *) mem) = SIL_REV_ENDIAN_H(data);
 }
 
 #endif /* OMIT_SIL_WRH_LEM */
 #else /* SIL_ENDIAN == SIL_ENDIAN_BIG *//* リトルエンディアンプロセッサ */
 
-#define	sil_reh_lem(mem)	sil_reh_mem(mem)
-#define	sil_wrh_lem(mem, data)	sil_wrh_mem(mem, data)
+#define sil_reh_lem(mem)       sil_reh_mem(mem)
+#define sil_wrh_lem(mem, data) sil_wrh_mem(mem, data)
 
 #ifndef OMIT_SIL_REH_BEM
 
 Inline VH
 sil_reh_bem(VP mem)
 {
-	VH	data;
+    VH    data;
 
-	data = *((volatile VH *) mem);
-	return(SIL_REV_ENDIAN_H(data));
+    data = *((volatile VH *) mem);
+    return(SIL_REV_ENDIAN_H(data));
 }
 
 #endif /* OMIT_SIL_REH_BEM */
@@ -217,7 +219,7 @@ sil_reh_bem(VP mem)
 Inline void
 sil_wrh_bem(VP mem, VH data)
 {
-	*((volatile VH *) mem) = SIL_REV_ENDIAN_H(data);
+    *((volatile VH *) mem) = SIL_REV_ENDIAN_H(data);
 }
 
 #endif /* OMIT_SIL_WRH_BEM */
@@ -231,32 +233,32 @@ sil_wrh_bem(VP mem, VH data)
 Inline VW
 sil_rew_mem(VP mem)
 {
-	VW	data;
+    VW    data;
 
-	data = *((volatile VW *) mem);
-	return(data);
+    data = *((volatile VW *) mem);
+    return(data);
 }
 
 Inline void
 sil_wrw_mem(VP mem, VW data)
 {
-	*((volatile VW *) mem) = data;
+    *((volatile VW *) mem) = data;
 }
 
-#if SIL_ENDIAN == SIL_ENDIAN_BIG	/* ビッグエンディアンプロセッサ */
+#if SIL_ENDIAN == SIL_ENDIAN_BIG    /* ビッグエンディアンプロセッサ */
 
-#define	sil_rew_bem(mem)	sil_rew_mem(mem)
-#define	sil_wrw_bem(mem, data)	sil_wrw_mem(mem, data)
+#define    sil_rew_bem(mem)       sil_rew_mem(mem)
+#define    sil_wrw_bem(mem, data) sil_wrw_mem(mem, data)
 
 #ifndef OMIT_SIL_REW_LEM
 
 Inline VW
 sil_rew_lem(VP mem)
 {
-	VW	data;
+    VW    data;
 
-	data = *((volatile VW *) mem);
-	return(SIL_REV_ENDIAN_W(data));
+    data = *((volatile VW *) mem);
+    return(SIL_REV_ENDIAN_W(data));
 }
 
 #endif /* OMIT_SIL_REW_LEM */
@@ -265,24 +267,24 @@ sil_rew_lem(VP mem)
 Inline void
 sil_wrw_lem(VP mem, VW data)
 {
-	*((volatile VW *) mem) = SIL_REV_ENDIAN_W(data);
+    *((volatile VW *) mem) = SIL_REV_ENDIAN_W(data);
 }
 
 #endif /* OMIT_SIL_WRW_LEM */
 #else /* SIL_ENDIAN == SIL_ENDIAN_BIG *//* リトルエンディアンプロセッサ */
 
-#define	sil_rew_lem(mem)	sil_rew_mem(mem)
-#define	sil_wrw_lem(mem, data)	sil_wrw_mem(mem, data)
+#define sil_rew_lem(mem)       sil_rew_mem(mem)
+#define sil_wrw_lem(mem, data) sil_wrw_mem(mem, data)
 
 #ifndef OMIT_SIL_REW_BEM
 
 Inline VW
 sil_rew_bem(VP mem)
 {
-	VW	data;
+    VW    data;
 
-	data = *((volatile VW *) mem);
-	return(SIL_REV_ENDIAN_W(data));
+    data = *((volatile VW *) mem);
+    return(SIL_REV_ENDIAN_W(data));
 }
 
 #endif /* OMIT_SIL_REW_BEM */
@@ -291,7 +293,7 @@ sil_rew_bem(VP mem)
 Inline void
 sil_wrw_bem(VP mem, VW data)
 {
-	*((volatile VW *) mem) = SIL_REV_ENDIAN_W(data);
+    *((volatile VW *) mem) = SIL_REV_ENDIAN_W(data);
 }
 
 #endif /* OMIT_SIL_WRW_BEM */
