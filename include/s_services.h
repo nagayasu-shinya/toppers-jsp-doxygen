@@ -1,12 +1,15 @@
+#ifndef _S_SERVICES_H_
+#define _S_SERVICES_H_
+
 /*
  *  TOPPERS/JSP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
  *      Just Standard Profile Kernel
- * 
+ *
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
- * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -27,36 +30,36 @@
  *        報告すること．
  *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
  *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
- * 
+ *
  *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
  *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
- * 
+ *
  *  @(#) $Id: s_services.h,v 1.4 2003/06/18 12:46:54 hiro Exp $
  */
 
-/*
- *	デバイスドライバ用 標準インクルードファイル
+/**
+ * @file
+ * @brief デバイスドライバ用 標準インクルードファイル
  *
- *  このインクルードファイルは，直接ハードウェアにアクセスするデバイス
- *  ドライバのソースファイルでインクルードするべき標準インクルードファ
- *  イルである．この中で，sil.h（さらにここから，t_stddef.h，itron.h，
- *  tool_defs.h，sys_defs.h，cpu_defs.h，t_syslog.h）と t_config.h（さ
- *  らにここから，sys_config.h，cpu_config.h，tool_config.h）をインク
- *  ルードしている．
+ * このインクルードファイルは，
+ * 直接ハードウェアにアクセスするデバイスドライバのソースファイルで
+ * インクルードするべき標準インクルードファイルである．
+ * この中で，
+ * sil.h（さらにここから，t_stddef.h，itron.h，tool_defs.h，sys_defs.h，cpu_defs.h，t_syslog.h）と
+ * t_config.h（さらにここから，sys_config.h，cpu_config.h，tool_config.h）をインクルードしている．
+ * @n
+ * また，アプリケーションから呼ばれるデバイスドライバのインクルードファイルで，
+ * インライン関数などでシステムインタフェースレイヤを用いている場合にも，
+ * このファイルをインクルードする．
+ * @n
+ * アセンブリ言語のソースファイルやシステムコンフィギュレーションファ
+ * イルからこのファイルをインクルードする時は，_MACRO_ONLY を定義して
+ * おくことで，マクロ定義以外の記述を除くことができる．
  *
- *  また，アプリケーションから呼ばれるデバイスドライバのインクルードファ
- *  イルで，インライン関数などでシステムインタフェースレイヤを用いてい
- *  る場合にも，このファイルをインクルードする．
- *
- *  アセンブリ言語のソースファイルやシステムコンフィギュレーションファ
- *  イルからこのファイルをインクルードする時は，_MACRO_ONLY を定義して
- *  おくことで，マクロ定義以外の記述を除くことができる．
+ * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
-
-#ifndef _S_SERVICES_H_
-#define _S_SERVICES_H_
 
 #ifdef __cplusplus
 extern "C" {
