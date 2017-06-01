@@ -84,67 +84,68 @@ extern "C" {
  *  コンパイラ依存のデータ型のデフォルト定義
  */
 #ifndef _bool_
-#define _bool_ int           /* ブール型 */
+#  define _bool_ int           /** ブール型 */
 #endif /* _bool_ */
 
-/*
- *  ITRON仕様共通データ型
- */
 #ifndef _MACRO_ONLY
 
+/** @name ITRON仕様共通データ型 */
+//@{
+
 #ifdef _int8_
-typedef signed   _int8_  B;  /** 符号付き8ビット整数       */
-typedef unsigned _int8_  UB; /** 符号無し8ビット整数       */
-typedef          _int8_  VB; /** 型が定まらない8ビットの値 */
+typedef signed   _int8_  B;  /**< 符号付き8ビット整数       */
+typedef unsigned _int8_  UB; /**< 符号無し8ビット整数       */
+typedef          _int8_  VB; /**< 型が定まらない8ビットの値 */
 #endif /* _int8_ */
 
 #ifdef _int16_
-typedef signed   _int16_ H;  /** 符号付き16ビット整数       */
-typedef unsigned _int16_ UH; /** 符号無し16ビット整数       */
-typedef          _int16_ VH; /** 型が定まらない16ビットの値 */
+typedef signed   _int16_ H;  /**< 符号付き16ビット整数       */
+typedef unsigned _int16_ UH; /**< 符号無し16ビット整数       */
+typedef          _int16_ VH; /**< 型が定まらない16ビットの値 */
 #endif /* _int16_ */
 
-typedef signed   _int32_ W;  /** 符号付き32ビット整数       */
-typedef unsigned _int32_ UW; /** 符号無し32ビット整数       */
-typedef          _int32_ VW; /** 型が定まらない32ビットの値 */
+typedef signed   _int32_ W;  /**< 符号付き32ビット整数       */
+typedef unsigned _int32_ UW; /**< 符号無し32ビット整数       */
+typedef          _int32_ VW; /**< 型が定まらない32ビットの値 */
 
 #ifdef _int64_
-typedef signed   _int64_ D;  /** 符号付き64ビット整数       */
-typedef unsigned _int64_ UD; /** 符号無し64ビット整数       */
-typedef          _int64_ VD; /** 型が定まらない64ビットの値 */
+typedef signed   _int64_ D;  /**< 符号付き64ビット整数       */
+typedef unsigned _int64_ UD; /**< 符号無し64ビット整数       */
+typedef          _int64_ VD; /**< 型が定まらない64ビットの値 */
 #endif /* _int64_ */
 
-typedef void *VP;            /** 型が定まらないものへのポインタ   */
-typedef void (*FP)();        /** プログラムの起動番地（ポインタ） */
+typedef void *VP;            /**< 型が定まらないものへのポインタ   */
+typedef void (*FP)();        /**< プログラムの起動番地（ポインタ） */
 
-typedef signed   int INT;    /** 自然なサイズの符号付き整数 */
-typedef unsigned int UINT;   /** 自然なサイズの符号無し整数 */
+typedef signed   int INT;    /**< 自然なサイズの符号付き整数 */
+typedef unsigned int UINT;   /**< 自然なサイズの符号無し整数 */
 
-typedef _bool_ BOOL;         /** 真偽値 */
+typedef _bool_ BOOL;         /**< 真偽値 */
 
-typedef INT    FN;           /** 機能コード                 */
-typedef INT    ER;           /** エラーコード               */
-typedef INT    ID;           /** オブジェクトのID番号       */
-typedef UINT   ATR;          /** オブジェクトの属性         */
-typedef UINT   STAT;         /** オブジェクトの状態         */
-typedef UINT   MODE;         /** サービスコールの動作モード */
-typedef INT    PRI;          /** 優先度                     */
-typedef size_t SIZE;         /** メモリ領域のサイズ         */
+typedef INT    FN;           /**< 機能コード                 */
+typedef INT    ER;           /**< エラーコード               */
+typedef INT    ID;           /**< オブジェクトのID番号       */
+typedef UINT   ATR;          /**< オブジェクトの属性         */
+typedef UINT   STAT;         /**< オブジェクトの状態         */
+typedef UINT   MODE;         /**< サービスコールの動作モード */
+typedef INT    PRI;          /**< 優先度                     */
+typedef size_t SIZE;         /**< メモリ領域のサイズ         */
 
-typedef INT    TMO;          /** タイムアウト指定 */
-typedef UINT   RELTIM;       /** 相対時間         */
-typedef UW     SYSTIM;       /** システム時刻     */
+typedef INT    TMO;          /**< タイムアウト指定 */
+typedef UINT   RELTIM;       /**< 相対時間         */
+typedef UW     SYSTIM;       /**< システム時刻     */
 
 #ifdef _vp_int_
-typedef _vp_int_ VP_INT;     /** VP または INT */
+typedef _vp_int_ VP_INT;     /**< VP または INT */
 #else /* _vp_int_ */
-typedef VP       VP_INT;     /** VP または INT */
+typedef VP       VP_INT;     /**< VP または INT */
 #endif /* _vp_int_ */
 
-typedef INT ER_BOOL;         /** ER または BOOL */
-typedef INT ER_ID;           /** ER または ID   */
-typedef INT ER_UINT;         /** ER または UINT */
+typedef INT ER_BOOL;         /**< ER または BOOL */
+typedef INT ER_ID;           /**< ER または ID   */
+typedef INT ER_UINT;         /**< ER または UINT */
 
+//@}
 #endif /* _MACRO_ONLY */
 
 /*
@@ -162,50 +163,50 @@ typedef INT ER_UINT;         /** ER または UINT */
  */
 #ifndef _MACRO_ONLY
 #  ifndef NULL            /* stddef.h に含まれているはず */
-#    define NULL 0        /** 無効ポインタ */
+#    define NULL 0        /**< 無効ポインタ */
 #  endif /* NULL */
 #endif /* _MACRO_ONLY */
 
-#define TRUE  1        /** 真 */
-#define FALSE 0        /** 偽 */
-#define E_OK  0        /** 正常終了 */
+#define TRUE  1        /**< 真 */
+#define FALSE 0        /**< 偽 */
+#define E_OK  0        /**< 正常終了 */
 
-/*
- *  エラーコード
- */
-#define E_SYS    (-5)        /** システムエラー                   */
-#define E_NOSPT  (-9)        /** 未サポート機能                   */
-#define E_RSFN  (-10)        /** 予約機能コード                   */
-#define E_RSATR (-11)        /** 予約属性                         */
-#define E_PAR   (-17)        /** パラメータエラー                 */
-#define E_ID    (-18)        /** 不正ID番号                       */
-#define E_CTX   (-25)        /** コンテキストエラー               */
-#define E_MACV  (-26)        /** メモリアクセス違反               */
-#define E_OACV  (-27)        /** オブジェクトアクセス違反         */
-#define E_ILUSE (-28)        /** サービスコール不正使用           */
-#define E_NOMEM (-33)        /** メモリ不足                       */
-#define E_NOID  (-34)        /** ID番号不足                       */
-#define E_OBJ   (-41)        /** オブジェクト状態エラー           */
-#define E_NOEXS (-42)        /** オブジェクト未生成               */
-#define E_QOVR  (-43)        /** キューイングオーバーフロー       */
-#define E_RLWAI (-49)        /** 待ち状態の強制解除               */
-#define E_TMOUT (-50)        /** ポーリング失敗またはタイムアウト */
-#define E_DLT   (-51)        /** 待ちオブジェクトの削除           */
-#define E_CLS   (-52)        /** 待ちオブジェクトの状態変化       */
-#define E_WBLK  (-57)        /** ノンブロッキング受付け           */
-#define E_BOVR  (-58)        /** バッファオーバーフロー           */
+
+#define E_SYS    (-5)        /**< システムエラー                   */
+#define E_NOSPT  (-9)        /**< 未サポート機能                   */
+#define E_RSFN  (-10)        /**< 予約機能コード                   */
+#define E_RSATR (-11)        /**< 予約属性                         */
+#define E_PAR   (-17)        /**< パラメータエラー                 */
+#define E_ID    (-18)        /**< 不正ID番号                       */
+#define E_CTX   (-25)        /**< コンテキストエラー               */
+#define E_MACV  (-26)        /**< メモリアクセス違反               */
+#define E_OACV  (-27)        /**< オブジェクトアクセス違反         */
+#define E_ILUSE (-28)        /**< サービスコール不正使用           */
+#define E_NOMEM (-33)        /**< メモリ不足                       */
+#define E_NOID  (-34)        /**< ID番号不足                       */
+#define E_OBJ   (-41)        /**< オブジェクト状態エラー           */
+#define E_NOEXS (-42)        /**< オブジェクト未生成               */
+#define E_QOVR  (-43)        /**< キューイングオーバーフロー       */
+#define E_RLWAI (-49)        /**< 待ち状態の強制解除               */
+#define E_TMOUT (-50)        /**< ポーリング失敗またはタイムアウト */
+#define E_DLT   (-51)        /**< 待ちオブジェクトの削除           */
+#define E_CLS   (-52)        /**< 待ちオブジェクトの状態変化       */
+#define E_WBLK  (-57)        /**< ノンブロッキング受付け           */
+#define E_BOVR  (-58)        /**< バッファオーバーフロー           */
+
+
 
 /*
  *  オブジェクト属性
  */
-#define TA_NULL 0u           /** オブジェクト属性を指定しない */
+#define TA_NULL 0u           /**< オブジェクト属性を指定しない */
 
-/*
- *  タイムアウト指定
- */
-#define TMO_POL    0         /** ポーリング       */
-#define TMO_FEVR (-1)        /** 永久待ち         */
-#define TMO_NBLK (-2)        /** ノンブロッキング */
+/** @name タイムアウト指定 */
+//@{
+#define TMO_POL    0         /**< ポーリング       */
+#define TMO_FEVR (-1)        /**< 永久待ち         */
+#define TMO_NBLK (-2)        /**< ノンブロッキング */
+//@}
 
 /*
  *  ITRON仕様共通マクロ
