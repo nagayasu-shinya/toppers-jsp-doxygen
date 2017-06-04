@@ -1,12 +1,15 @@
+#ifndef _T_CONFIG_H_
+#define _T_CONFIG_H_
+
 /*
  *  TOPPERS/JSP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
  *      Just Standard Profile Kernel
- * 
+ *
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
- * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -27,34 +30,32 @@
  *        報告すること．
  *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
  *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
- * 
+ *
  *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
  *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
- * 
+ *
  *  @(#) $Id: t_config.h,v 1.4 2003/07/08 14:49:42 hiro Exp $
  */
 
-/*
- *	ターゲット依存情報の定義
+/**
+ * @fiel
+ * @brief ターゲット依存情報の定義
  *
- *  アセンブリ言語のソースファイルやシステムコンフィギュレーションファ
- *  イルからこのファイルをインクルードする時は，_MACRO_ONLY を定義して
- *  おくことで，マクロ定義以外の記述を除くことができる．
+ * アセンブリ言語のソースファイルやシステムコンフィギュレーションファイルから
+ * このファイルをインクルードする時は，_MACRO_ONLY を定義しておくことで，
+ * マクロ定義以外の記述を除くことができる．
+ * @n
+ * このインクルードファイルは，標準インクルードファイル（s_services.h  と jsp_kernel.h）で
+ * インクルードされる．また，カーネル上で動作するプログラムで，
+ * ターゲット依存情報を参照したい場にも，このファイルがインクルードされる．
+ * この例外を除いて，他のファイルから直接インクルードされることはない．
+ * @n
+ * このファイルをインクルードする前に，kernel.h か sil.h をインクルー ドしておくことが必要である．
  *
- *  このインクルードファイルは，標準インクルードファイル（s_services.h 
- *  と jsp_kernel.h）でインクルードされる．また，カーネル上で動作する
- *  プログラムで，ターゲット依存情報を参照したい場にも，このファイルが
- *  インクルードされる．この例外を除いて，他のファイルから直接インクルー
- *  ドされることはない．
- *
- *  このファイルをインクルードする前に，kernel.h か sil.h をインクルー
- *  ドしておくことが必要である．
+ * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
-
-#ifndef _T_CONFIG_H_
-#define _T_CONFIG_H_
 
 #ifdef __cplusplus
 extern "C" {
