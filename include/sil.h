@@ -5,13 +5,13 @@
  *  TOPPERS/JSP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
  *      Just Standard Profile Kernel
- * 
+ *
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
  *  Copyright (C) 2005,2006 by Embedded and Real-Time Systems Laboratory
  *              Graduate School of Information Science, Nagoya Univ., JAPAN
- * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -32,12 +32,12 @@
  *        報告すること．
  *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
  *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
- * 
+ *
  *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
  *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
- * 
+ *
  *  @(#) $Id: sil.h,v 1.9 2006/02/12 05:27:25 hiro Exp $
  */
 
