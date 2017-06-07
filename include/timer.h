@@ -1,12 +1,15 @@
+#ifndef _TIMER_H_
+#define _TIMER_H_
+
 /*
  *  TOPPERS/JSP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
  *      Just Standard Profile Kernel
- * 
+ *
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
- * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -27,42 +30,42 @@
  *        報告すること．
  *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
  *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
- * 
+ *
  *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
  *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
- * 
+ *
  *  @(#) $Id: timer.h,v 1.8 2003/07/01 13:32:34 hiro Exp $
  */
 
-/*
- *	システムクロックドライバ
+/**
+ * @file
+ * @brief システムクロックドライバ
  *
- *  ハードウェアタイマを用いて周期的に割込みを発生させ，isig_tim を呼
- *  び出してカーネルにタイムティックを供給する．
+ * ハードウェアタイマを用いて周期的に割込みを発生させ，
+ * isig_tim を呼び出してカーネルにタイムティックを供給する．
+ *
+ * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
-
-#ifndef _TIMER_H_
-#define _TIMER_H_
 
 /*
  *  タイマの起動処理
  *
  *  タイマを初期化し，周期的なタイマ割込み要求を発生させる．
  */
-extern void	timer_initialize(VP_INT exinf);
+extern void timer_initialize(VP_INT exinf);
 
 /*
  *  タイマ割込みハンドラ
  */
-extern void	timer_handler(void);
+extern void timer_handler(void);
 
 /*
  *  タイマの停止処理
  *
  *  タイマの動作を停止させる．
  */
-extern void	timer_terminate(VP_INT exinf);
+extern void timer_terminate(VP_INT exinf);
 
 #endif /* _TIMER_H_ */

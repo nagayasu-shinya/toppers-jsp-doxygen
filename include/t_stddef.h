@@ -1,14 +1,17 @@
+#ifndef _T_STDDEF_H_
+#define _T_STDDEF_H_
+
 /*
  *  TOPPERS/JSP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
  *      Just Standard Profile Kernel
- * 
+ *
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
  *  Copyright (C) 2004 by Embedded and Real-Time Systems Laboratory
  *              Graduate School of Information Science, Nagoya Univ., JAPAN
- * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -29,27 +32,28 @@
  *        報告すること．
  *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
  *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
- * 
+ *
  *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
  *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
- * 
+ *
  *  @(#) $Id: t_stddef.h,v 1.7 2004/01/05 05:11:37 hiro Exp $
  */
 
-/*
- *	カーネル・アプリケーション 共通インクルードファイル
+/**
+ * @file
+ * @brief カーネル・アプリケーション 共通インクルードファイル
  *
- *  このインクルードファイルは，kernel.h と sil.h の先頭でインクルード
- *  される．他のファイルから直接インクルードされることはない．
+ * このインクルードファイルは，kernel.h と sil.h の先頭でインクルードされる．
+ * 他のファイルから直接インクルードされることはない．
+ * @n
+ * この中でインクルードしているファイルを除いて，他のインクルードファイルに依存していない．
  *
- *  この中でインクルードしているファイルを除いて，他のインクルードファ
- *  イルに依存していない．
+ * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
+ * @copyright 2004      by Embedded and Real-Time Systems Laboratory Graduate School of Information Science, Nagoya Univ., JAPAN
  */
 
-#ifndef _T_STDDEF_H_
-#define _T_STDDEF_H_
 
 /*
  *  開発環境に依存する定義
@@ -70,7 +74,7 @@
  *  コンパイラの拡張機能のためのマクロのデフォルト定義
  */
 #ifndef Inline
-#define	Inline		static inline
+#define Inline static inline
 #endif /* Inline */
 
 /*
@@ -86,12 +90,12 @@
 #undef assert
 #ifndef NDEBUG
 #define assert(exp) \
-	((void)(!(exp) ? (_syslog_3(LOG_EMERG, LOG_TYPE_ASSERT,		\
-				(VP_INT)(__FILE__), (VP_INT)(__LINE__),	\
-				(VP_INT)(#exp)),			\
-				kernel_abort(), 0) : 0))
+    ((void)(!(exp) ? (_syslog_3(LOG_EMERG, LOG_TYPE_ASSERT,        \
+                (VP_INT) (__FILE__), (VP_INT) (__LINE__),    \
+                (VP_INT) (#exp)),            \
+                kernel_abort(), 0) : 0))
 #else /* NDEBUG */
-#define	assert(exp)	((void) 0)
+#define assert(exp) ((void) 0)
 #endif /* NDEBUG */
 
 #endif /* _T_STDDEF_H_ */
