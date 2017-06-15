@@ -40,6 +40,8 @@
 
 /**
  * @file タスク管理モジュール
+ * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
+ * @copyright 2005,2006 by Embedded and Real-Time Systems Laboratory Graduate School of Information Science, Nagoya Univ., JAPAN
  */
 
 #include "jsp_kernel.h"
