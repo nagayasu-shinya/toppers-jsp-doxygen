@@ -46,13 +46,13 @@
  * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
 
-/*
- *  優先度の範囲の判定
+/**
+ * @brief 優先度の範囲の判定
  */
 #define VALID_TPRI(tpri) (TMIN_TPRI <= (tpri) && (tpri) <= TMAX_TPRI)
 
 /*
- *  タスク優先度のチェック（E_PAR）
+ * タスク優先度のチェック（E_PAR）
  */
 #define CHECK_TPRI(tpri) {   \
     if (!VALID_TPRI(tpri)) { \
@@ -75,8 +75,8 @@
     }                                                 \
 }
 
-/*
- *  タイムアウト指定値のチェック（E_PAR）
+/**
+ * @brief タイムアウト指定値のチェック（E_PAR）
  */
 #define CHECK_TMOUT(tmout) {      \
     if (!(TMO_FEVR <= (tmout))) { \
@@ -85,8 +85,8 @@
     }                             \
 }
 
-/*
- *  その他のパラメータエラーのチェック（E_PAR）
+/**
+ * @brief その他のパラメータエラーのチェック（E_PAR）
  */
 #define CHECK_PAR(exp) { \
     if (!(exp)) {        \
@@ -99,17 +99,11 @@
  *  オブジェクトIDの範囲の判定
  */
 #define VALID_TSKID(tskid) (TMIN_TSKID <= (tskid) && (tskid) <= tmax_tskid)
-
 #define VALID_SEMID(semid) (TMIN_SEMID <= (semid) && (semid) <= tmax_semid)
-
 #define VALID_FLGID(flgid) (TMIN_FLGID <= (flgid) && (flgid) <= tmax_flgid)
-
 #define VALID_DTQID(dtqid) (TMIN_DTQID <= (dtqid) && (dtqid) <= tmax_dtqid)
-
 #define VALID_MBXID(mbxid) (TMIN_MBXID <= (mbxid) && (mbxid) <= tmax_mbxid)
-
 #define VALID_MPFID(mpfid) (TMIN_MPFID <= (mpfid) && (mpfid) <= tmax_mpfid)
-
 #define VALID_CYCID(cycid) (TMIN_CYCID <= (cycid) && (cycid) <= tmax_cycid)
 
 /*

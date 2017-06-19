@@ -39,7 +39,6 @@
  *  @(#) $Id: wait.h,v 1.6 2003/06/04 01:46:16 hiro Exp $
  */
 
-
 /**
  * @file
  * @brief 待ち状態管理モジュール
@@ -50,12 +49,11 @@
 #include "task.h"
 #include "time_event.h"
 
-/*
- *  待ち状態への移行
+/**
+ * @brief 待ち状態への移行
  *
- *  実行中のタスクを待ち状態に移行させる．具体的には，実行中のタスクを
- *  レディキューから削除し，TCB の winfoフィールド，WINFO の tmevtbフ
- *  ィールドを設定する．
+ * 実行中のタスクを待ち状態に移行させる．具体的には，実行中のタスクをレディキューから削除し，
+ * TCB の winfoフィールド，WINFO の tmevtbフィールドを設定する．
  */
 Inline void
 make_wait(WINFO *winfo)
@@ -65,38 +63,36 @@ make_wait(WINFO *winfo)
     winfo->tmevtb = NULL;
 }
 
-/*
- *  待ち状態への移行（タイムアウト指定）
+/**
+ * @brief 待ち状態への移行（タイムアウト指定）
  *
- *  実行中のタスクを，タイムアウト指定付きで待ち状態に移行させる．具体
- *  的には，実行中のタスクをレディキューから削除し，TCB の winfoフィー
- *  ルド，WINFO の tmevtbフィールドを設定する．また，タイムイベントブ
- *  ロックを登録する．
+ * 実行中のタスクを，タイムアウト指定付きで待ち状態に移行させる．
+ * 具体的には，実行中のタスクをレディキューから削除し，TCB の winfoフィールド，
+ * WINFO の tmevtbフィールドを設定する．また，タイムイベントブロックを登録する．
  */
 extern void make_wait_tmout(WINFO *winfo, TMEVTB *tmevtb, TMO tmout);
 
-/*
- *  待ち解除
+/**
+ * @brief 待ち解除
  *
- *  tcb で指定されるタスクの待ち状態を解除する．具体的には，タイムイベ
- *  ントブロックが登録されていれば，それを登録解除する．また，タスク状
- *  態を更新し，待ち解除したタスクからの返値を E_OK とする．待ちキュー
- *  からの削除は行わない．待ち解除したタスクへのディスパッチが必要な場
- *  合には TRUE を返す．
+ * tcb で指定されるタスクの待ち状態を解除する．具体的には，
+ * タイムイベントブロックが登録されていれば，それを登録解除する．
+ * また，タスク状態を更新し，待ち解除したタスクからの返値を E_OK とする．
+ * 待ちキューからの削除は行わない．待ち解除したタスクへのディスパッチが必要な場合には TRUE を返す．
  */
 extern BOOL wait_complete(TCB *tcb);
 
 /*
- *  タイムアウトに伴う待ち解除
+ * brief タイムアウトに伴う待ち解除
  *
- *  tcb で指定されるタスクが，待ちキューにつながれていれば待ちキューか
- *  ら削除し，タスク状態を更新する．また，待ち解除したタスクからの返値
- *  を，wait_tmoutでは E_TMOUT，wait_tmout_ok では E_OK とする．待ち解
- *  除したタスクへのディスパッチが必要な時は，reqflg を TRUE にする．
- *  wait_tmout_ok は，dly_tsk で使うためのもので，待ちキューから削除す
- *  る処理を行わない．
- *  いずれの関数も，タイムイベントのコールバック関数として用いるための
- *  もので，割込みハンドラから呼び出されることを想定している．
+ * tcb で指定されるタスクが，待ちキューにつながれていれば待ちキューか
+ * ら削除し，タスク状態を更新する．また，待ち解除したタスクからの返値
+ * を，wait_tmoutでは E_TMOUT，wait_tmout_ok では E_OK とする．待ち解
+ * 除したタスクへのディスパッチが必要な時は，reqflg を TRUE にする．
+ * wait_tmout_ok は，dly_tsk で使うためのもので，待ちキューから削除す
+ * る処理を行わない．
+ * いずれの関数も，タイムイベントのコールバック関数として用いるための
+ * もので，割込みハンドラから呼び出されることを想定している．
  */
 extern void wait_tmout(TCB *tcb);
 extern void wait_tmout_ok(TCB *tcb);
@@ -127,23 +123,23 @@ extern BOOL wait_release(TCB *tcb);
  *  ている場合も，これらのルーチンは使えない．
  */
 
-/*
- *  同期・通信オブジェクトの初期化ブロックの共通部分
+/**
+ * @brief 同期・通信オブジェクトの初期化ブロックの共通部分
  */
 typedef struct wait_object_initialization_block {
     ATR    wobjatr;    /* オブジェクト属性 */
 } WOBJINIB;
 
-/*
- *  同期・通信オブジェクトの管理ブロックの共通部分
+/**
+ * @brief 同期・通信オブジェクトの管理ブロックの共通部分
  */
 typedef struct wait_object_control_block {
     QUEUE           wait_queue;    /* 待ちキュー */
     const WOBJINIB *wobjinib;      /* 初期化ブロックへのポインタ */
 } WOBJCB;
 
-/*
- *  同期・通信オブジェクト待ち情報ブロックの定義
+/**
+ * @brief 同期・通信オブジェクト待ち情報ブロックの定義
  */
 typedef struct wait_object_waiting_information {
     WINFO    winfo;     /* 標準の待ち情報ブロック */
@@ -160,11 +156,11 @@ typedef struct wait_object_waiting_information {
 extern void wobj_make_wait(WOBJCB *wobjcb, WINFO_WOBJ *winfo);
 extern void wobj_make_wait_tmout(WOBJCB *wobjcb, WINFO_WOBJ *winfo, TMEVTB *tmevtb, TMO tmout);
 
-/*
- *  タスク優先度変更時の処理
+/**
+ * @brief タスク優先度変更時の処理
  *
- *  同期・通信オブジェクトに対する待ち状態にあるタスクの優先度が変更さ
- *  れた場合に，待ちキューの中でのタスクの位置を修正する．
+ * 同期・通信オブジェクトに対する待ち状態にあるタスクの優先度が変更された場合に，
+ * 待ちキューの中でのタスクの位置を修正する．
  */
 extern void wobj_change_priority(WOBJCB *wobjcb, TCB *tcb);
 
