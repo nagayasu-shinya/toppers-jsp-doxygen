@@ -1,12 +1,15 @@
+#ifndef _SYSLOG_H_
+#define _SYSLOG_H_
+
 /*
  *  TOPPERS/JSP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
  *      Just Standard Profile Kernel
- * 
+ *
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
- * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -27,21 +30,21 @@
  *        報告すること．
  *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
  *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
- * 
+ *
  *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
  *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
- * 
+ *
  *  @(#) $Id: syslog.h,v 1.3 2003/07/08 14:44:19 hiro Exp $
  */
 
-/*
- *	システムログ機能
+/**
+ * @file
+ * @brief システムログ機能
+ *
+ * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
-
-#ifndef _SYSLOG_H_
-#define _SYSLOG_H_
 
 #include <t_syslog.h>
 
@@ -49,37 +52,37 @@
  *  ログバッファとそれにアクセスするためのポインタ
  */
 #ifndef TCNT_SYSLOG_BUFFER
-#define TCNT_SYSLOG_BUFFER	32	/* ログバッファのサイズ */
+#define TCNT_SYSLOG_BUFFER    32    /* ログバッファのサイズ */
 #endif /* TCNT_SYSLOG_BUFFER */
 
-extern SYSLOG	syslog_buffer[];	/* ログバッファ */
-extern UINT	syslog_count;		/* ログバッファ中のログの数 */
-extern UINT	syslog_head;		/* 先頭のログの格納位置 */
-extern UINT	syslog_tail;		/* 次のログの格納位置 */
-extern UINT	syslog_lost;		/* 失われたログの数 */
+extern SYSLOG syslog_buffer[];    /* ログバッファ */
+extern UINT   syslog_count;       /* ログバッファ中のログの数 */
+extern UINT   syslog_head;        /* 先頭のログの格納位置 */
+extern UINT   syslog_tail;        /* 次のログの格納位置 */
+extern UINT   syslog_lost;        /* 失われたログの数 */
 
 /*
  *  出力すべきログ情報の重要度（ビットマップ）
  */
-extern UINT	syslog_logmask;		/* ログバッファに記録すべき重要度 */
-extern UINT	syslog_lowmask;		/* 低レベル出力すべき重要度 */
+extern UINT syslog_logmask;        /* ログバッファに記録すべき重要度 */
+extern UINT syslog_lowmask;        /* 低レベル出力すべき重要度 */
 
 #ifndef OMIT_SYSLOG
 
 /*
  *  システムログ機能の初期化
  */
-extern void	syslog_initialize(void);
+extern void syslog_initialize(void);
 
 /*
  *  システムログ機能の終了処理
  */
-extern void	syslog_terminate(void);
+extern void syslog_terminate(void);
 
 #else /* OMIT_SYSLOG */
 
-#define syslog_initialize()	((void) 0)
-#define syslog_terminate()	((void) 0)
+#define syslog_initialize()  ((void) 0)
+#define syslog_terminate()   ((void) 0)
 
 #endif /* OMIT_SYSLOG */
 #endif /* _SYSLOG_H_ */

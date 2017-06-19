@@ -1,12 +1,14 @@
+#ifndef _QUEUE_H_
+#define _QUEUE_H_
 /*
  *  TOPPERS/JSP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
  *      Just Standard Profile Kernel
- * 
+ *
  *  Copyright (C) 2000 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
- * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -27,35 +29,33 @@
  *        報告すること．
  *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
  *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
- * 
+ *
  *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
  *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
- * 
+ *
  *  @(#) $Id: queue.h,v 1.5 2003/06/04 01:46:16 hiro Exp $
  */
 
-/*
- *	キュー操作ライブラリ
+/**
+ * @file
+ * @brief キュー操作ライブラリ
  *
- *  このキュー操作ライブラリでは，キューヘッダを含むリング構造のダブル
- *  リンクキューを扱う．具体的には，キューヘッダの次エントリはキューの
- *  先頭のエントリ，前エントリはキューの末尾のエントリとする．また，キ
- *  ューの先頭のエントリの前エントリと，キューの末尾のエントリの次エン
- *  トリは，キューヘッダとする．空のキューは，次エントリ，前エントリと
- *  も自分自身を指すキューヘッダであらわす．
+ * このキュー操作ライブラリでは，キューヘッダを含むリング構造のダブルリンクキューを扱う．
+ * 具体的には，キューヘッダの次エントリはキューの先頭のエントリ，前エントリはキューの末尾のエントリとする．
+ * また，キューの先頭のエントリの前エントリと，キューの末尾のエントリの次エントリは，キューヘッダとする．
+ * 空のキューは，次エントリ，前エントリとも自分自身を指すキューヘッダであらわす．
+ *
+ * @copyright 2000 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
-
-#ifndef	_QUEUE_H_
-#define	_QUEUE_H_
 
 /*
  *  キューのデータ構造の定義
  */
 typedef struct queue {
-	struct queue *next;		/* 次エントリへのポインタ */
-	struct queue *prev;		/* 前エントリへのポインタ */
+    struct queue *next;        /* 次エントリへのポインタ */
+    struct queue *prev;        /* 前エントリへのポインタ */
 } QUEUE;
 
 /*
@@ -66,7 +66,7 @@ typedef struct queue {
 Inline void
 queue_initialize(QUEUE *queue)
 {
-	queue->prev = queue->next = queue;
+    queue->prev = queue->next = queue;
 }
 
 /*
@@ -78,10 +78,10 @@ queue_initialize(QUEUE *queue)
 Inline void
 queue_insert_prev(QUEUE *queue, QUEUE *entry)
 {
-	entry->prev = queue->prev;
-	entry->next = queue;
-	queue->prev->next = entry;
-	queue->prev = entry;
+    entry->prev = queue->prev;
+    entry->next = queue;
+    queue->prev->next = entry;
+    queue->prev = entry;
 }
 
 /*
@@ -92,8 +92,8 @@ queue_insert_prev(QUEUE *queue, QUEUE *entry)
 Inline void
 queue_delete(QUEUE *entry)
 {
-	entry->prev->next = entry->next;
-	entry->next->prev = entry->prev;
+    entry->prev->next = entry->next;
+    entry->next->prev = entry->prev;
 }
 
 /*
@@ -106,13 +106,13 @@ queue_delete(QUEUE *entry)
 Inline QUEUE *
 queue_delete_next(QUEUE *queue)
 {
-	QUEUE	*entry;
+    QUEUE    *entry;
 
-	assert(queue->next != queue);
-	entry = queue->next;
-	queue->next = entry->next;
-	entry->next->prev = queue;
-	return(entry);
+    assert(queue->next != queue);
+    entry = queue->next;
+    queue->next = entry->next;
+    entry->next->prev = queue;
+    return entry;
 }
 
 /*
@@ -123,11 +123,11 @@ queue_delete_next(QUEUE *queue)
 Inline BOOL
 queue_empty(QUEUE *queue)
 {
-	if (queue->next == queue) {
-		assert(queue->prev == queue);
-		return(TRUE);
-	}
-	return(FALSE);
+    if (queue->next == queue) {
+        assert(queue->prev == queue);
+        return TRUE;
+    }
+    return FALSE;
 }
 
 #endif /* _QUEUE_H_ */

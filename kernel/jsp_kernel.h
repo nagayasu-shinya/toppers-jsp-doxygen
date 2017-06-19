@@ -1,12 +1,15 @@
+#ifndef _JSP_KERNEL_H_
+#define _JSP_KERNEL_H_
+
 /*
  *  TOPPERS/JSP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
  *      Just Standard Profile Kernel
- * 
+ *
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
- * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -27,28 +30,27 @@
  *        報告すること．
  *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
  *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
- * 
+ *
  *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
  *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
- * 
+ *
  *  @(#) $Id: jsp_kernel.h,v 1.10 2003/07/01 13:31:35 hiro Exp $
  */
 
-/*
- *	JSPカーネル 標準インクルードファイル
+/**
+ * @file
+ * @brief JSPカーネル 標準インクルードファイル
  *
- *  このインクルードファイルは，カーネルを構成するプログラムのソースファ
- *  イルで必ずインクルードするべき標準インクルードファイルである．
+ * このインクルードファイルは，カーネルを構成するプログラムのソースファイルで必ずインクルードするべき
+ * 標準インクルードファイルである．
+ * @n
+ * アセンブリ言語のソースファイルやシステムコンフィギュレーションファイルからこのファイルをインクルードする時は，
+ * _MACRO_ONLY を定義しておくことで，マクロ定義以外の記述を除くことができる．
  *
- *  アセンブリ言語のソースファイルやシステムコンフィギュレーションファ
- *  イルからこのファイルをインクルードする時は，_MACRO_ONLY を定義して
- *  おくことで，マクロ定義以外の記述を除くことができる．
+ * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
-
-#ifndef _JSP_KERNEL_H_
-#define _JSP_KERNEL_H_
 
 /*
  *  カーネルの内部識別名のリネーム
@@ -68,19 +70,19 @@
 /*
  *  オブジェクトIDの最小値の定義
  */
-#define	TMIN_TSKID	1	/* タスクIDの最小値 */
-#define	TMIN_SEMID	1	/* セマフォIDの最小値 */
-#define	TMIN_FLGID	1	/* フラグIDの最小値 */
-#define	TMIN_DTQID	1	/* データキューIDの最小値 */
-#define	TMIN_MBXID	1	/* メールボックスIDの最小値 */
-#define	TMIN_MPFID	1	/* 固定長メモリプールIDの最小値 */
-#define	TMIN_CYCID	1	/* 周期ハンドラIDの最小値 */
+#define TMIN_TSKID    1    /* タスクIDの最小値 */
+#define TMIN_SEMID    1    /* セマフォIDの最小値 */
+#define TMIN_FLGID    1    /* フラグIDの最小値 */
+#define TMIN_DTQID    1    /* データキューIDの最小値 */
+#define TMIN_MBXID    1    /* メールボックスIDの最小値 */
+#define TMIN_MPFID    1    /* 固定長メモリプールIDの最小値 */
+#define TMIN_CYCID    1    /* 周期ハンドラIDの最小値 */
 
 /*
  *  優先度の段階数の定義
  */
-#define	TNUM_TPRI	(TMAX_TPRI - TMIN_TPRI + 1)
-#define	TNUM_MPRI	(TMAX_MPRI - TMIN_MPRI + 1)
+#define TNUM_TPRI    (TMAX_TPRI - TMIN_TPRI + 1)
+#define TNUM_MPRI    (TMAX_MPRI - TMIN_MPRI + 1)
 
 /*
  *  カーネル内で用いるマクロの定義
@@ -95,32 +97,32 @@
 /*
  *  各モジュールの初期化（kernel_cfg.c）
  */
-extern void	object_initialize(void);
+extern void object_initialize(void);
 
 /*
  *  初期化ルーチンの実行（kernel_cfg.c）
  */
-extern void	call_inirtn(void);
+extern void call_inirtn(void);
 
 /*
  *  終了処理ルーチンの実行（kernel_cfg.c）
  */
-extern void	call_terrtn(void);
+extern void call_terrtn(void);
 
 /*
  *  起動メッセージの表示（banner.c）
  */
-extern void	print_banner(void);
+extern void print_banner(void);
 
 /*
  *  カーネルの終了処理（startup.c）
  */
-extern void	kernel_exit(void);
+extern void kernel_exit(void);
 
 /*
  *  カーネル動作状態フラグ（startup.c）
  */
-extern BOOL	iniflg;
+extern BOOL iniflg;
 
 #endif /* _MACRO_ONLY */
 #endif /* _JSP_KERNEL_H_ */

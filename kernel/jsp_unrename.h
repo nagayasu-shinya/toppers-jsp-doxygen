@@ -1,7 +1,6 @@
-/* This file is generated from jsp_rename.def by genrename. */
-
 #ifdef _JSP_UNRENAME_H_
 #undef _JSP_UNRENAME_H_
+/* This file is generated from jsp_rename.def by genrename. */
 
 /*
  *  startup.c

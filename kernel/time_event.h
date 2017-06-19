@@ -1,12 +1,15 @@
+#ifndef _TIME_EVENT_H_
+#define _TIME_EVENT_H_
+
 /*
  *  TOPPERS/JSP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
  *      Just Standard Profile Kernel
- * 
+ *
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
- * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -27,21 +30,21 @@
  *        報告すること．
  *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
  *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
- * 
+ *
  *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
  *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
- * 
+ *
  *  @(#) $Id: time_event.h,v 1.8 2003/06/18 12:48:24 hiro Exp $
  */
 
-/*
- *	タイムイベント管理モジュール
+/**
+ * @file
+ * @brief タイムイベント管理モジュール
+ *
+ * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
-
-#ifndef _TIME_EVENT_H_
-#define _TIME_EVENT_H_
 
 /*
  *  イベント発生時刻のデータ型の定義
@@ -51,41 +54,41 @@
  *  ればならないため，EVTTIM は 17bit 以上であることが必要である．その
  *  ため，16bit の場合がある UINT ではなく，UW に定義している．
  */
-typedef UW	EVTTIM;
+typedef UW EVTTIM;
 
 /*
  *  相対時間（RELTIM）に指定できる最大値
  */
-#define	TMAX_RELTIM	((((EVTTIM) 1) << (sizeof(EVTTIM) * CHAR_BIT - 1)) - 1)
+#define TMAX_RELTIM    ((((EVTTIM) 1) << (sizeof(EVTTIM) * CHAR_BIT - 1)) - 1)
 
-/* 
+/*
  *  タイムイベントブロックのデータ型の定義
  */
-typedef void	(*CBACK)(VP);	/* コールバック関数の型 */
+typedef void (*CBACK)(VP);    /* コールバック関数の型 */
 
 typedef struct time_event_block {
-	UINT	index;		/* タイムイベントヒープ中での位置 */
-	CBACK	callback;	/* コールバック関数 */
-	VP	arg;		/* コールバック関数へ渡す引数 */
+    UINT  index;      /* タイムイベントヒープ中での位置 */
+    CBACK callback;   /* コールバック関数 */
+    VP    arg;        /* コールバック関数へ渡す引数 */
 } TMEVTB;
 
 /*
  *  タイムイベントヒープ中のノードのデータ型の定義
  */
 typedef struct time_event_node {
-	EVTTIM	time;		/* イベント発生時刻 */
-	TMEVTB	*tmevtb;	/* 対応するタイムイベントブロック */
+    EVTTIM  time;      /* イベント発生時刻 */
+    TMEVTB *tmevtb;    /* 対応するタイムイベントブロック */
 } TMEVTN;
 
 /*
  *  タイムイベントヒープ（kernel_cfg.c）
  */
-extern TMEVTN	tmevt_heap[];
+extern TMEVTN tmevt_heap[];
 
 /*
  *  システム時刻のオフセット
  */
-extern SYSTIM	systim_offset;
+extern SYSTIM systim_offset;
 
 /*
  *  現在のシステム時刻（単位: ミリ秒）
@@ -93,12 +96,12 @@ extern SYSTIM	systim_offset;
  *  システム起動時に 0 に初期化され，以降，isig_tim が呼ばれる度に単調
  *  に増加する．set_tim によって変更されない．
  */
-extern SYSTIM	current_time;
+extern SYSTIM current_time;
 
 /*
  *  次のタイムティックのシステム時刻（単位: 1ミリ秒）
  */
-extern SYSTIM	next_time;
+extern SYSTIM next_time;
 
 /*
  *  システム時刻積算用変数（単位: 1/TIM_DENOミリ秒）
@@ -107,7 +110,7 @@ extern SYSTIM	next_time;
  *  TIC_DENO が 1 の時は，下位桁は常に 0 であるため，この変数は必要ない．
  */
 #if TIC_DENO != 1
-extern UINT	next_subtime;
+extern UINT    next_subtime;
 #endif /* TIC_DENO != 1 */
 
 /*
@@ -117,9 +120,9 @@ extern UINT	next_subtime;
  *  時は，next_time を EVTTIM に変換したものに一致する．
  */
 #if TIC_DENO == 1
-#define	base_time	((EVTTIM) next_time)
+#define base_time    ((EVTTIM) next_time)
 #else /* TIC_DENO == 1 */
-#define	base_time	((EVTTIM)(next_time + (next_subtime > 0 ? 1 : 0)))
+#define base_time    ((EVTTIM) (next_time + (next_subtime > 0 ? 1 : 0)))
 #endif /* TIC_DENO == 1 */
 
 /*
@@ -127,24 +130,24 @@ extern UINT	next_subtime;
  *
  *  タイムイベントヒープに登録されているタイムイベントの数に一致する．
  */
-extern UINT	last_index;
+extern UINT last_index;
 
 /*
  *  タイムイベント管理モジュールの初期化
  */
-extern void	tmevt_initialize(void);
+extern void tmevt_initialize(void);
 
 /*
  *  タイムイベントの挿入位置の探索
  */
-extern UINT	tmevt_up(UINT index, EVTTIM time);
-extern UINT	tmevt_down(UINT index, EVTTIM time);
+extern UINT tmevt_up(UINT index, EVTTIM time);
+extern UINT tmevt_down(UINT index, EVTTIM time);
 
 /*
  *  タイムイベントヒープへの登録と削除
  */
-extern void	tmevtb_insert(TMEVTB *tmevtb, EVTTIM time);
-extern void	tmevtb_delete(TMEVTB *tmevtb);
+extern void tmevtb_insert(TMEVTB *tmevtb, EVTTIM time);
+extern void tmevtb_delete(TMEVTB *tmevtb);
 
 /*
  *  タイムイベントブロックの登録（相対時間指定）
@@ -155,11 +158,11 @@ extern void	tmevtb_delete(TMEVTB *tmevtb);
 Inline void
 tmevtb_enqueue(TMEVTB *tmevtb, RELTIM time, CBACK callback, VP arg)
 {
-	assert(time <= TMAX_RELTIM);
+    assert(time <= TMAX_RELTIM);
 
-	tmevtb->callback = callback;
-	tmevtb->arg = arg;
-	tmevtb_insert(tmevtb, base_time + time);
+    tmevtb->callback = callback;
+    tmevtb->arg = arg;
+    tmevtb_insert(tmevtb, base_time + time);
 }
 
 /*
@@ -171,9 +174,9 @@ tmevtb_enqueue(TMEVTB *tmevtb, RELTIM time, CBACK callback, VP arg)
 Inline void
 tmevtb_enqueue_evttim(TMEVTB *tmevtb, EVTTIM time, CBACK callback, VP arg)
 {
-	tmevtb->callback = callback;
-	tmevtb->arg = arg;
-	tmevtb_insert(tmevtb, time);
+    tmevtb->callback = callback;
+    tmevtb->arg = arg;
+    tmevtb_insert(tmevtb, time);
 }
 
 /*
@@ -182,7 +185,7 @@ tmevtb_enqueue_evttim(TMEVTB *tmevtb, EVTTIM time, CBACK callback, VP arg)
 Inline void
 tmevtb_dequeue(TMEVTB *tmevtb)
 {
-	tmevtb_delete(tmevtb);
+    tmevtb_delete(tmevtb);
 }
 
 #endif /* _TIME_EVENT_H_ */

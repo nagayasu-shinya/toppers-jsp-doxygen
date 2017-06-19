@@ -1,12 +1,15 @@
+#ifndef _MEMPFIX_H_
+#define _MEMPFIX_H_
+
 /*
  *  TOPPERS/JSP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
  *      Just Standard Profile Kernel
- * 
+ *
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
- * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -27,21 +30,21 @@
  *        報告すること．
  *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
  *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
- * 
+ *
  *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
  *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
- * 
+ *
  *  @(#) $Id: mempfix.h,v 1.5 2003/06/04 01:46:16 hiro Exp $
  */
 
-/*
- *	固定長メモリプール機能
+/**
+ * @file
+ * @brief 固定長メモリプール機能
+ *
+ * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
-
-#ifndef _MEMPFIX_H_
-#define _MEMPFIX_H_
 
 #include "queue.h"
 
@@ -49,37 +52,37 @@
  *  固定長メモリプール初期化ブロック
  */
 typedef struct fixed_memorypool_initialization_block {
-	ATR	mpfatr;		/* 固定長メモリプール属性 */
-	UINT	blksz;		/* メモリブロックのサイズ（丸めた値） */
-	VP	mpf;		/* 固定長メモリプール領域の先頭番地 */
-	VP	limit;		/* 固定長メモリプール領域の上限番地 */
+    ATR  mpfatr;      /* 固定長メモリプール属性 */
+    UINT blksz;      /* メモリブロックのサイズ（丸めた値） */
+    VP   mpf;        /* 固定長メモリプール領域の先頭番地 */
+    VP   limit;      /* 固定長メモリプール領域の上限番地 */
 } MPFINIB;
 
 /*
  *  空ブロックリストの定義
  */
 typedef struct free_list {
-	struct free_list *next;
+    struct free_list *next;
 } FREEL;
 
 /*
  *  固定長メモリプール管理ブロック
  */
 typedef struct fixed_memorypool_control_block {
-	QUEUE	wait_queue;	/* 固定長メモリプール待ちキュー */
-	const MPFINIB *mpfinib;	/* 固定長メモリプール初期化ブロック */
-	VP	unused;		/* 未使用領域の先頭番地 */
-	FREEL	*freelist;	/* 空きブロックのリスト */
+    QUEUE wait_queue;        /* 固定長メモリプール待ちキュー */
+    const MPFINIB *mpfinib;  /* 固定長メモリプール初期化ブロック */
+    VP    unused;            /* 未使用領域の先頭番地 */
+    FREEL *freelist;         /* 空きブロックのリスト */
 } MPFCB;
 
 /*
  *  固定長メモリプール機能の初期化
  */
-extern void	mempfix_initialize(void);
+extern void mempfix_initialize(void);
 
 /*
  *  固定長メモリプールからブロックを獲得
  */
-extern BOOL	mempfix_get_block(MPFCB *mpfcb, VP *p_blk);
+extern BOOL mempfix_get_block(MPFCB *mpfcb, VP *p_blk);
 
 #endif /* _MEMPFIX_H_ */
