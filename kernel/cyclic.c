@@ -2,13 +2,13 @@
  *  TOPPERS/JSP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
  *      Just Standard Profile Kernel
- * 
+ *
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
  *  Copyright (C) 2006 by Embedded and Real-Time Systems Laboratory
  *              Graduate School of Information Science, Nagoya Univ., JAPAN
- * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -29,17 +29,21 @@
  *        報告すること．
  *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
  *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
- * 
+ *
  *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
  *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
- * 
+ *
  *  @(#) $Id: cyclic.c,v 1.11 2006/02/12 05:29:32 hiro Exp $
  */
 
-/*
- *	周期ハンドラ機能
+/**
+ * @file
+ * @brief 周期ハンドラ機能
+ *
+ * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
+ * @copyright 2006      by Embedded and Real-Time Systems Laboratory Graduate School of Information Science, Nagoya Univ., JAPAN
  */
 
 #include "jsp_kernel.h"
@@ -49,33 +53,33 @@
 /*
  *  周期ハンドラIDの最大値（kernel_cfg.c）
  */
-extern const ID	tmax_cycid;
+extern const ID tmax_cycid;
 
 /*
  *  周期ハンドラ初期化ブロックのエリア（kernel_cfg.c）
  */
-extern const CYCINIB	cycinib_table[];
+extern const CYCINIB cycinib_table[];
 
 /*
  *  周期ハンドラ管理ブロックのエリア（kernel_cfg.c）
  */
-extern CYCCB	cyccb_table[];
+extern CYCCB cyccb_table[];
 
 /*
  *  周期ハンドラの数
  */
-#define TNUM_CYC	((UINT)(tmax_cycid - TMIN_CYCID + 1))
+#define TNUM_CYC ((UINT) (tmax_cycid - TMIN_CYCID + 1))
 
 /*
  *  周期ハンドラIDから周期ハンドラ管理ブロックを取り出すためのマクロ
  */
-#define INDEX_CYC(cycid)	((UINT)((cycid) - TMIN_CYCID))
-#define get_cyccb(cycid)	(&(cyccb_table[INDEX_CYC(cycid)]))
+#define INDEX_CYC(cycid) ((UINT) ((cycid) - TMIN_CYCID))
+#define get_cyccb(cycid) (&(cyccb_table[INDEX_CYC(cycid)]))
 
 /*
  *  引数まで定義した周期ハンドラの型
  */
-typedef void	(*CYCHDR)(VP_INT exinf);
+typedef void (*CYCHDR)(VP_INT exinf);
 
 /*
  *  周期ハンドラ機能の初期化
@@ -85,20 +89,19 @@ typedef void	(*CYCHDR)(VP_INT exinf);
 void
 cyclic_initialize()
 {
-	UINT	i;
-	CYCCB	*cyccb;
+    UINT  i;
+    CYCCB *cyccb;
 
-	for (cyccb = cyccb_table, i = 0; i < TNUM_CYC; cyccb++, i++) {
-		cyccb->cycinib = &(cycinib_table[i]);
-		if ((cyccb->cycinib->cycatr & TA_STA) != 0) {
-			cyccb->cycsta = TRUE;
-			tmevtb_enqueue_cyc(cyccb,
-					(EVTTIM)(cyccb->cycinib->cycphs));
-		}
-		else {
-			cyccb->cycsta = FALSE;
-		}
-	}
+    for (cyccb = cyccb_table, i = 0; i < TNUM_CYC; cyccb++, i++) {
+        cyccb->cycinib = &(cycinib_table[i]);
+        if ((cyccb->cycinib->cycatr & TA_STA) != 0) {
+            cyccb->cycsta = TRUE;
+            tmevtb_enqueue_cyc(cyccb, (EVTTIM) (cyccb->cycinib->cycphs));
+        }
+        else {
+            cyccb->cycsta = FALSE;
+        }
+    }
 }
 
 #endif /* __cycini */
@@ -111,9 +114,8 @@ cyclic_initialize()
 void
 tmevtb_enqueue_cyc(CYCCB *cyccb, EVTTIM evttim)
 {
-	tmevtb_enqueue_evttim(&(cyccb->tmevtb), evttim,
-				(CBACK) call_cychdr, (VP) cyccb);
-	cyccb->evttim = evttim;
+    tmevtb_enqueue_evttim(&(cyccb->tmevtb), evttim, (CBACK) call_cychdr, (VP) cyccb);
+    cyccb->evttim = evttim;
 }
 
 #endif /* __cycenq */
@@ -126,28 +128,28 @@ tmevtb_enqueue_cyc(CYCCB *cyccb, EVTTIM evttim)
 SYSCALL ER
 sta_cyc(ID cycid)
 {
-	CYCCB	*cyccb;
-	ER	ercd;
+    CYCCB *cyccb;
+    ER    ercd;
 
-	LOG_STA_CYC_ENTER(cycid);
-	CHECK_TSKCTX_UNL();
-	CHECK_CYCID(cycid);
-	cyccb = get_cyccb(cycid);
+    LOG_STA_CYC_ENTER(cycid);
+    CHECK_TSKCTX_UNL();
+    CHECK_CYCID(cycid);
+    cyccb = get_cyccb(cycid);
 
-	t_lock_cpu();
-	if (cyccb->cycsta) {
-		tmevtb_dequeue(&(cyccb->tmevtb));
-	}
-	else {
-		cyccb->cycsta = TRUE;
-	}
-	tmevtb_enqueue_cyc(cyccb, base_time + cyccb->cycinib->cyctim);
-	ercd = E_OK;
-	t_unlock_cpu();
+    t_lock_cpu();
+    if (cyccb->cycsta) {
+        tmevtb_dequeue(&(cyccb->tmevtb));
+    }
+    else {
+        cyccb->cycsta = TRUE;
+    }
+    tmevtb_enqueue_cyc(cyccb, base_time + cyccb->cycinib->cyctim);
+    ercd = E_OK;
+    t_unlock_cpu();
 
-    exit:
-	LOG_STA_CYC_LEAVE(ercd);
-	return(ercd);
+exit:
+    LOG_STA_CYC_LEAVE(ercd);
+    return ercd;
 }
 
 #endif /* __sta_cyc */
@@ -160,25 +162,25 @@ sta_cyc(ID cycid)
 SYSCALL ER
 stp_cyc(ID cycid)
 {
-	CYCCB	*cyccb;
-	ER	ercd;
+    CYCCB *cyccb;
+    ER    ercd;
 
-	LOG_STP_CYC_ENTER(cycid);
-	CHECK_TSKCTX_UNL();
-	CHECK_CYCID(cycid);
-	cyccb = get_cyccb(cycid);
+    LOG_STP_CYC_ENTER(cycid);
+    CHECK_TSKCTX_UNL();
+    CHECK_CYCID(cycid);
+    cyccb = get_cyccb(cycid);
 
-	t_lock_cpu();
-	if (cyccb->cycsta) {
-		cyccb->cycsta = FALSE;
-		tmevtb_dequeue(&(cyccb->tmevtb));
-	}
-	ercd = E_OK;
-	t_unlock_cpu();
+    t_lock_cpu();
+    if (cyccb->cycsta) {
+        cyccb->cycsta = FALSE;
+        tmevtb_dequeue(&(cyccb->tmevtb));
+    }
+    ercd = E_OK;
+    t_unlock_cpu();
 
-    exit:
-	LOG_STP_CYC_LEAVE(ercd);
-	return(ercd);
+exit:
+    LOG_STP_CYC_LEAVE(ercd);
+    return ercd;
 }
 
 #endif /* __stp_cyc */
@@ -191,23 +193,23 @@ stp_cyc(ID cycid)
 void
 call_cychdr(CYCCB *cyccb)
 {
-	/*
-	 *  次回の起動のためのタイムイベントブロックを登録する．
-	 *
-	 *  同じタイムティックで周期ハンドラを再度起動すべき場合には，
-	 *  この関数から isig_tim に戻った後に，再度この関数が呼ばれる
-	 *  ことになる．
-	 */
-	tmevtb_enqueue_cyc(cyccb, cyccb->evttim + cyccb->cycinib->cyctim);
+    /*
+     *  次回の起動のためのタイムイベントブロックを登録する．
+     *
+     *  同じタイムティックで周期ハンドラを再度起動すべき場合には，
+     *  この関数から isig_tim に戻った後に，再度この関数が呼ばれる
+     *  ことになる．
+     */
+    tmevtb_enqueue_cyc(cyccb, cyccb->evttim + cyccb->cycinib->cyctim);
 
-	/*
-	 *  周期ハンドラを，CPUロック解除状態で呼び出す．
-	 */
-	i_unlock_cpu();
-	LOG_CYC_ENTER(cyccb);
-	(*((CYCHDR)(cyccb->cycinib->cychdr)))(cyccb->cycinib->exinf);
-	LOG_CYC_LEAVE(cyccb);
-	i_lock_cpu();
+    /*
+     *  周期ハンドラを，CPUロック解除状態で呼び出す．
+     */
+    i_unlock_cpu();
+    LOG_CYC_ENTER(cyccb);
+    (*((CYCHDR) (cyccb->cycinib->cychdr)))(cyccb->cycinib->exinf);
+    LOG_CYC_LEAVE(cyccb);
+    i_lock_cpu();
 }
 
 #endif /* __cyccal */
