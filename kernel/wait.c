@@ -2,11 +2,11 @@
  *  TOPPERS/JSP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
  *      Just Standard Profile Kernel
- * 
+ *
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
- * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -27,24 +27,27 @@
  *        報告すること．
  *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
  *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
- * 
+ *
  *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
  *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
- * 
+ *
  *  @(#) $Id: wait.c,v 1.6 2003/06/04 01:46:16 hiro Exp $
  */
 
-/*
- *	待ち状態管理モジュール
+/**
+ * @file
+ * @brief 待ち状態管理モジュール
+ *
+ * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
 
 #include "jsp_kernel.h"
 #include "wait.h"
 
 /*
- *  待ち状態への移行（タイムアウト指定）
+ * 待ち状態への移行（タイムアウト指定）
  *
  */
 #ifdef __waimake
@@ -52,17 +55,16 @@
 void
 make_wait_tmout(WINFO *winfo, TMEVTB *tmevtb, TMO tmout)
 {
-	make_non_runnable(runtsk);
-	runtsk->winfo = winfo;
-	if (tmout > 0) {
-		winfo->tmevtb = tmevtb;
-		tmevtb_enqueue(tmevtb, (RELTIM) tmout,
-					(CBACK) wait_tmout, (VP) runtsk);
-	}
-	else {
-		assert(tmout == TMO_FEVR);
-		winfo->tmevtb = NULL;
-	}
+    make_non_runnable(runtsk);
+    runtsk->winfo = winfo;
+    if (tmout > 0) {
+        winfo->tmevtb = tmevtb;
+        tmevtb_enqueue(tmevtb, (RELTIM) tmout,
+                    (CBACK) wait_tmout, (VP) runtsk);
+    } else {
+        assert(tmout == TMO_FEVR);
+        winfo->tmevtb = NULL;
+    }
 }
 
 #endif /* __waimake */
@@ -77,22 +79,21 @@ make_wait_tmout(WINFO *winfo, TMEVTB *tmevtb, TMO tmout)
 Inline BOOL
 make_non_wait(TCB *tcb)
 {
-	assert(TSTAT_WAITING(tcb->tstat));
+    assert(TSTAT_WAITING(tcb->tstat));
 
-	if (!(TSTAT_SUSPENDED(tcb->tstat))) {
-		/*
-		 *  待ち状態から実行できる状態への遷移
-		 */
-		return(make_runnable(tcb));
-	}
-	else {
-		/*
-		 *  二重待ち状態から強制待ち状態への遷移
-		 */
-		tcb->tstat = TS_SUSPENDED;
-		LOG_TSKSTAT(tcb);
-		return(FALSE);
-	}
+    if (!(TSTAT_SUSPENDED(tcb->tstat))) {
+        /*
+         *  待ち状態から実行できる状態への遷移
+         */
+        return make_runnable(tcb);
+    } else {
+        /*
+         *  二重待ち状態から強制待ち状態への遷移
+         */
+        tcb->tstat = TS_SUSPENDED;
+        LOG_TSKSTAT(tcb);
+        return FALSE;
+    }
 }
 
 /*
@@ -103,11 +104,11 @@ make_non_wait(TCB *tcb)
 BOOL
 wait_complete(TCB *tcb)
 {
-	if (tcb->winfo->tmevtb != NULL) {
-		tmevtb_dequeue(tcb->winfo->tmevtb);
-	}
-	tcb->winfo->wercd = E_OK;
-	return(make_non_wait(tcb));
+    if (tcb->winfo->tmevtb != NULL) {
+        tmevtb_dequeue(tcb->winfo->tmevtb);
+    }
+    tcb->winfo->wercd = E_OK;
+    return make_non_wait(tcb);
 }
 
 #endif /* __waicmp */
@@ -120,13 +121,13 @@ wait_complete(TCB *tcb)
 void
 wait_tmout(TCB *tcb)
 {
-	if ((tcb->tstat & TS_WAIT_WOBJ) != 0) {
-		queue_delete(&(tcb->task_queue));
-	}
-	tcb->winfo->wercd = E_TMOUT;
-	if (make_non_wait(tcb)) {
-		reqflg = TRUE;
-	}
+    if ((tcb->tstat & TS_WAIT_WOBJ) != 0) {
+        queue_delete(&(tcb->task_queue));
+    }
+    tcb->winfo->wercd = E_TMOUT;
+    if (make_non_wait(tcb)) {
+        reqflg = TRUE;
+    }
 }
 
 #endif /* __waitmo */
@@ -135,10 +136,10 @@ wait_tmout(TCB *tcb)
 void
 wait_tmout_ok(TCB *tcb)
 {
-	tcb->winfo->wercd = E_OK;
-	if (make_non_wait(tcb)) {
-		reqflg = TRUE;
-	}
+    tcb->winfo->wercd = E_OK;
+    if (make_non_wait(tcb)) {
+        reqflg = TRUE;
+    }
 }
 
 #endif /* __waitmook */
@@ -151,12 +152,12 @@ wait_tmout_ok(TCB *tcb)
 void
 wait_cancel(TCB *tcb)
 {
-	if (tcb->winfo->tmevtb != NULL) {
-		tmevtb_dequeue(tcb->winfo->tmevtb);
-	}
-	if ((tcb->tstat & TS_WAIT_WOBJ) != 0) {
-		queue_delete(&(tcb->task_queue));
-	}
+    if (tcb->winfo->tmevtb != NULL) {
+        tmevtb_dequeue(tcb->winfo->tmevtb);
+    }
+    if ((tcb->tstat & TS_WAIT_WOBJ) != 0) {
+        queue_delete(&(tcb->task_queue));
+    }
 }
 
 #endif /* __waican */
@@ -165,9 +166,9 @@ wait_cancel(TCB *tcb)
 BOOL
 wait_release(TCB *tcb)
 {
-	wait_cancel(tcb);
-	tcb->winfo->wercd = E_RLWAI;
-	return(make_non_wait(tcb));
+    wait_cancel(tcb);
+    tcb->winfo->wercd = E_RLWAI;
+    return make_non_wait(tcb);
 }
 
 #endif /* __wairel */
@@ -178,15 +179,15 @@ wait_release(TCB *tcb)
 Inline void
 queue_insert_tpri(TCB *tcb, QUEUE *queue)
 {
-	QUEUE	*entry;
-	UINT	priority = tcb->priority;
+    QUEUE    *entry;
+    UINT    priority = tcb->priority;
 
-	for (entry = queue->next; entry != queue; entry = entry->next) {
-		if (priority < ((TCB *) entry)->priority) {
-			break;
-		}
-	}
-	queue_insert_prev(entry, &(tcb->task_queue));
+    for (entry = queue->next; entry != queue; entry = entry->next) {
+        if (priority < ((TCB *) entry)->priority) {
+            break;
+        }
+    }
+    queue_insert_prev(entry, &(tcb->task_queue));
 }
 
 /*
@@ -195,13 +196,12 @@ queue_insert_tpri(TCB *tcb, QUEUE *queue)
 Inline void
 wobj_queue_insert(WOBJCB *wobjcb)
 {
-	if ((wobjcb->wobjinib->wobjatr & TA_TPRI) != 0) {
-		queue_insert_tpri(runtsk, &(wobjcb->wait_queue));
-	}
-	else {
-		queue_insert_prev(&(wobjcb->wait_queue),
-					&(runtsk->task_queue));
-	}
+    if ((wobjcb->wobjinib->wobjatr & TA_TPRI) != 0) {
+        queue_insert_tpri(runtsk, &(wobjcb->wait_queue));
+    } else {
+        queue_insert_prev(&(wobjcb->wait_queue),
+                    &(runtsk->task_queue));
+    }
 }
 
 /*
@@ -212,11 +212,11 @@ wobj_queue_insert(WOBJCB *wobjcb)
 void
 wobj_make_wait(WOBJCB *wobjcb, WINFO_WOBJ *winfo)
 {
-	runtsk->tstat = (TS_WAITING | TS_WAIT_WOBJ | TS_WAIT_WOBJCB);
-	make_wait(&(winfo->winfo));
-	wobj_queue_insert(wobjcb);
-	winfo->wobjcb = wobjcb;
-	LOG_TSKSTAT(runtsk);
+    runtsk->tstat = (TS_WAITING | TS_WAIT_WOBJ | TS_WAIT_WOBJCB);
+    make_wait(&(winfo->winfo));
+    wobj_queue_insert(wobjcb);
+    winfo->wobjcb = wobjcb;
+    LOG_TSKSTAT(runtsk);
 }
 
 #endif /* __wobjwai */
@@ -224,13 +224,13 @@ wobj_make_wait(WOBJCB *wobjcb, WINFO_WOBJ *winfo)
 
 void
 wobj_make_wait_tmout(WOBJCB *wobjcb, WINFO_WOBJ *winfo,
-					TMEVTB *tmevtb, TMO tmout)
+                    TMEVTB *tmevtb, TMO tmout)
 {
-	runtsk->tstat = (TS_WAITING | TS_WAIT_WOBJ | TS_WAIT_WOBJCB);
-	make_wait_tmout(&(winfo->winfo), tmevtb, tmout);
-	wobj_queue_insert(wobjcb);
-	winfo->wobjcb = wobjcb;
-	LOG_TSKSTAT(runtsk);
+    runtsk->tstat = (TS_WAITING | TS_WAIT_WOBJ | TS_WAIT_WOBJCB);
+    make_wait_tmout(&(winfo->winfo), tmevtb, tmout);
+    wobj_queue_insert(wobjcb);
+    winfo->wobjcb = wobjcb;
+    LOG_TSKSTAT(runtsk);
 }
 
 #endif /* __wobjwaitmo */
@@ -242,10 +242,10 @@ wobj_make_wait_tmout(WOBJCB *wobjcb, WINFO_WOBJ *winfo,
 void
 wobj_change_priority(WOBJCB *wobjcb, TCB *tcb)
 {
-	if ((wobjcb->wobjinib->wobjatr & TA_TPRI) != 0) {
-		queue_delete(&(tcb->task_queue));
-		queue_insert_tpri(tcb, &(wobjcb->wait_queue));
-	}
+    if ((wobjcb->wobjinib->wobjatr & TA_TPRI) != 0) {
+        queue_delete(&(tcb->task_queue));
+        queue_insert_tpri(tcb, &(wobjcb->wait_queue));
+    }
 }
 
 #endif /* __wobjpri */

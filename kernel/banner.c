@@ -67,8 +67,7 @@ COPYRIGHT_CPU COPYRIGHT_SYS;
 
 void print_banner(void)
 {
-    syslog_3(LOG_NOTICE, banner,
-             (TKERNEL_PRVER >> 12) & 0x0f,
-             (TKERNEL_PRVER >>  4) & 0xff,
-              TKERNEL_PRVER        & 0x0f);
+    syslog_3(LOG_NOTICE, banner, (TKERNEL_PRVER >> 12) & 0x0f,
+                                 (TKERNEL_PRVER >>  4) & 0xff,
+                                  TKERNEL_PRVER        & 0x0f);
 }

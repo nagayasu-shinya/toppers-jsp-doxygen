@@ -36,8 +36,11 @@
  *  @(#) $Id: task_manage.c,v 1.9 2007/04/22 18:04:06 hiro Exp $
  */
 
-/*
- *    タスク管理機能
+/**
+ * @file
+ * @brief タスク管理機能
+ *
+ * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
 
 #include "jsp_kernel.h"
@@ -67,19 +70,17 @@ act_tsk(ID tskid)
             dispatch();
         }
         ercd = E_OK;
-    }
-    else if (!(tcb->actcnt)) {
+    } else if (!(tcb->actcnt)) {
         tcb->actcnt = TRUE;
         ercd = E_OK;
-    }
-    else {
+    } else {
         ercd = E_QOVR;
     }
     t_unlock_cpu();
 
-    exit:
+exit:
     LOG_ACT_TSK_LEAVE(ercd);
-    return(ercd);
+    return ercd;
 }
 
 #endif /* __act_tsk */
@@ -106,19 +107,17 @@ iact_tsk(ID tskid)
             reqflg = TRUE;
         }
         ercd = E_OK;
-    }
-    else if (!(tcb->actcnt)) {
+    } else if (!(tcb->actcnt)) {
         tcb->actcnt = TRUE;
         ercd = E_OK;
-    }
-    else {
+    } else {
         ercd = E_QOVR;
     }
     i_unlock_cpu();
 
-    exit:
+exit:
     LOG_IACT_TSK_LEAVE(ercd);
-    return(ercd);
+    return ercd;
 }
 
 #endif /* __iact_tsk */
@@ -132,7 +131,7 @@ SYSCALL ER_UINT
 can_act(ID tskid)
 {
     TCB    *tcb;
-    ER_UINT    ercd;
+    ER_UINT ercd;
 
     LOG_CAN_ACT_ENTER(tskid);
     CHECK_TSKCTX_UNL();
@@ -144,9 +143,9 @@ can_act(ID tskid)
     tcb->actcnt = FALSE;
     t_unlock_cpu();
 
-    exit:
+exit:
     LOG_CAN_ACT_LEAVE(ercd);
-    return(ercd);
+    return ercd;
 }
 
 #endif /* __can_act */
@@ -186,12 +185,10 @@ ext_tsk(void)
          */
         syslog_0(LOG_WARNING,
             "ext_tsk is called from CPU locked state.");
-    }
-    else {
+    } else {
         if (sense_context()) {
             i_lock_cpu();
-        }
-        else  {
+        } else  {
             t_lock_cpu();
         }
     }
@@ -230,12 +227,10 @@ ter_tsk(ID tskid)
     t_lock_cpu();
     if (TSTAT_DORMANT(tstat = tcb->tstat)) {
         ercd = E_OBJ;
-    }
-    else {
+    } else {
         if (TSTAT_RUNNABLE(tstat)) {
             make_non_runnable(tcb);
-        }
-        else if (TSTAT_WAITING(tstat)) {
+        } else if (TSTAT_WAITING(tstat)) {
             wait_cancel(tcb);
         }
         make_dormant(tcb);
@@ -249,9 +244,9 @@ ter_tsk(ID tskid)
     }
     t_unlock_cpu();
 
-    exit:
+exit:
     LOG_TER_TSK_LEAVE(ercd);
-    return(ercd);
+    return ercd;
 }
 
 #endif /* __ter_tsk */
@@ -280,14 +275,12 @@ chg_pri(ID tskid, PRI tskpri)
     t_lock_cpu();
     if (TSTAT_DORMANT(tstat = tcb->tstat)) {
         ercd = E_OBJ;
-    }
-    else if (TSTAT_RUNNABLE(tstat)) {
+    } else if (TSTAT_RUNNABLE(tstat)) {
         if (change_priority(tcb, newpri)) {
             dispatch();
         }
         ercd = E_OK;
-    }
-    else {
+    } else {
         tcb->priority = newpri;
         if ((tstat & TS_WAIT_WOBJCB) != 0) {
             wobj_change_priority(((WINFO_WOBJ *)(tcb->winfo))
@@ -297,9 +290,9 @@ chg_pri(ID tskid, PRI tskpri)
     }
     t_unlock_cpu();
 
-    exit:
+exit:
     LOG_CHG_PRI_LEAVE(ercd);
-    return(ercd);
+    return ercd;
 }
 
 #endif /* __chg_pri */
@@ -323,16 +316,15 @@ get_pri(ID tskid, PRI *p_tskpri)
     t_lock_cpu();
     if (TSTAT_DORMANT(tcb->tstat)) {
         ercd = E_OBJ;
-    }
-    else {
+    } else {
         *p_tskpri = EXT_TSKPRI(tcb->priority);
         ercd = E_OK;
     }
     t_unlock_cpu();
 
-    exit:
+exit:
     LOG_GET_PRI_LEAVE(ercd, *p_tskpri);
-    return(ercd);
+    return ercd;
 }
 
 #endif /* __get_pri */

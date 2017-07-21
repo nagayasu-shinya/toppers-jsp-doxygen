@@ -2,11 +2,11 @@
  *  TOPPERS/JSP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
  *      Just Standard Profile Kernel
- * 
+ *
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
- * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -27,17 +27,20 @@
  *        報告すること．
  *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
  *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
- * 
+ *
  *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
  *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
- * 
+ *
  *  @(#) $Id: task_sync.c,v 1.7 2003/12/20 08:12:24 hiro Exp $
  */
 
-/*
- *	タスク付属同期機能
+/**
+ * @file
+ * @brief タスク付属同期機能
+ *
+ * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
 
 #include "jsp_kernel.h"
@@ -53,29 +56,28 @@
 SYSCALL ER
 slp_tsk()
 {
-	WINFO	winfo;
-	ER	ercd;
+    WINFO winfo;
+    ER    ercd;
 
-	LOG_SLP_TSK_ENTER();
-	CHECK_DISPATCH();
+    LOG_SLP_TSK_ENTER();
+    CHECK_DISPATCH();
 
-	t_lock_cpu();
-	if (runtsk->wupcnt) {
-		runtsk->wupcnt = FALSE;
-		ercd = E_OK;
-	}
-	else {
-		runtsk->tstat = (TS_WAITING | TS_WAIT_SLEEP);
-		make_wait(&winfo);
-		LOG_TSKSTAT(runtsk);
-		dispatch();
-		ercd = winfo.wercd;
-	}
-	t_unlock_cpu();
+    t_lock_cpu();
+    if (runtsk->wupcnt) {
+        runtsk->wupcnt = FALSE;
+        ercd = E_OK;
+    } else {
+        runtsk->tstat = (TS_WAITING | TS_WAIT_SLEEP);
+        make_wait(&winfo);
+        LOG_TSKSTAT(runtsk);
+        dispatch();
+        ercd = winfo.wercd;
+    }
+    t_unlock_cpu();
 
-    exit:
-	LOG_SLP_TSK_LEAVE(ercd);
-	return(ercd);
+exit:
+    LOG_SLP_TSK_LEAVE(ercd);
+    return ercd;
 }
 
 #endif /* __slp_tsk */
@@ -88,34 +90,32 @@ slp_tsk()
 SYSCALL ER
 tslp_tsk(TMO tmout)
 {
-	WINFO	winfo;
-	TMEVTB	tmevtb;
-	ER	ercd;
+    WINFO  winfo;
+    TMEVTB tmevtb;
+    ER     ercd;
 
-	LOG_TSLP_TSK_ENTER(tmout);
-	CHECK_DISPATCH();
-	CHECK_TMOUT(tmout);
+    LOG_TSLP_TSK_ENTER(tmout);
+    CHECK_DISPATCH();
+    CHECK_TMOUT(tmout);
 
-	t_lock_cpu();
-	if (runtsk->wupcnt) {
-		runtsk->wupcnt = FALSE;
-		ercd = E_OK;
-	}
-	else if (tmout == TMO_POL) {
-		ercd = E_TMOUT;
-	}
-	else {
-		runtsk->tstat = (TS_WAITING | TS_WAIT_SLEEP);
-		make_wait_tmout(&winfo, &tmevtb, tmout);
-		LOG_TSKSTAT(runtsk);
-		dispatch();
-		ercd = winfo.wercd;
-	}
-	t_unlock_cpu();
+    t_lock_cpu();
+    if (runtsk->wupcnt) {
+        runtsk->wupcnt = FALSE;
+        ercd = E_OK;
+    } else if (tmout == TMO_POL) {
+        ercd = E_TMOUT;
+    } else {
+        runtsk->tstat = (TS_WAITING | TS_WAIT_SLEEP);
+        make_wait_tmout(&winfo, &tmevtb, tmout);
+        LOG_TSKSTAT(runtsk);
+        dispatch();
+        ercd = winfo.wercd;
+    }
+    t_unlock_cpu();
 
-    exit:
-	LOG_TSLP_TSK_LEAVE(ercd);
-	return(ercd);
+exit:
+    LOG_TSLP_TSK_LEAVE(ercd);
+    return ercd;
 }
 
 #endif /* __tslp_tsk */
@@ -128,37 +128,35 @@ tslp_tsk(TMO tmout)
 SYSCALL ER
 wup_tsk(ID tskid)
 {
-	TCB	*tcb;
-	UINT	tstat;
-	ER	ercd;
+    TCB  *tcb;
+    UINT  tstat;
+    ER    ercd;
 
-	LOG_WUP_TSK_ENTER(tskid);
-	CHECK_TSKCTX_UNL();
-	CHECK_TSKID_SELF(tskid);
-	tcb = get_tcb_self(tskid);
+    LOG_WUP_TSK_ENTER(tskid);
+    CHECK_TSKCTX_UNL();
+    CHECK_TSKID_SELF(tskid);
+    tcb = get_tcb_self(tskid);
 
-	t_lock_cpu();
-	if (TSTAT_DORMANT(tstat = tcb->tstat)) {
-		ercd = E_OBJ;
-	}
-	else if ((tstat & TS_WAIT_SLEEP) != 0) {
-		if (wait_complete(tcb)) {
-			dispatch();
-		}
-		ercd = E_OK;
-	}
-	else if (!(tcb->wupcnt)) {
-		tcb->wupcnt = TRUE;
-		ercd = E_OK;
-	}
-	else {
-		ercd = E_QOVR;
-	}
-	t_unlock_cpu();
+    t_lock_cpu();
+    if (TSTAT_DORMANT(tstat = tcb->tstat)) {
+        ercd = E_OBJ;
+    }
+    else if ((tstat & TS_WAIT_SLEEP) != 0) {
+        if (wait_complete(tcb)) {
+            dispatch();
+        }
+        ercd = E_OK;
+    } else if (!(tcb->wupcnt)) {
+        tcb->wupcnt = TRUE;
+        ercd = E_OK;
+    } else {
+        ercd = E_QOVR;
+    }
+    t_unlock_cpu();
 
-    exit:
-	LOG_WUP_TSK_LEAVE(ercd);
-	return(ercd);
+exit:
+    LOG_WUP_TSK_LEAVE(ercd);
+    return ercd;
 }
 
 #endif /* __wup_tsk */
@@ -171,37 +169,34 @@ wup_tsk(ID tskid)
 SYSCALL ER
 iwup_tsk(ID tskid)
 {
-	TCB	*tcb;
-	UINT	tstat;
-	ER	ercd;
+    TCB *tcb;
+    UINT tstat;
+    ER   ercd;
 
-	LOG_IWUP_TSK_ENTER(tskid);
-	CHECK_INTCTX_UNL();
-	CHECK_TSKID(tskid);
-	tcb = get_tcb(tskid);
+    LOG_IWUP_TSK_ENTER(tskid);
+    CHECK_INTCTX_UNL();
+    CHECK_TSKID(tskid);
+    tcb = get_tcb(tskid);
 
-	i_lock_cpu();
-	if (TSTAT_DORMANT(tstat = tcb->tstat)) {
-		ercd = E_OBJ;
-	}
-	else if ((tstat & TS_WAIT_SLEEP) != 0) {
-		if (wait_complete(tcb)) {
-			reqflg = TRUE;
-		}
-		ercd = E_OK;
-	}
-	else if (!(tcb->wupcnt)) {
-		tcb->wupcnt = TRUE;
-		ercd = E_OK;
-	}
-	else {
-		ercd = E_QOVR;
-	}
-	i_unlock_cpu();
+    i_lock_cpu();
+    if (TSTAT_DORMANT(tstat = tcb->tstat)) {
+        ercd = E_OBJ;
+    } else if ((tstat & TS_WAIT_SLEEP) != 0) {
+        if (wait_complete(tcb)) {
+            reqflg = TRUE;
+        }
+        ercd = E_OK;
+    } else if (!(tcb->wupcnt)) {
+        tcb->wupcnt = TRUE;
+        ercd = E_OK;
+    } else {
+        ercd = E_QOVR;
+    }
+    i_unlock_cpu();
 
-    exit:
-	LOG_IWUP_TSK_LEAVE(ercd);
-	return(ercd);
+exit:
+    LOG_IWUP_TSK_LEAVE(ercd);
+    return ercd;
 }
 
 #endif /* __iwup_tsk */
@@ -214,27 +209,26 @@ iwup_tsk(ID tskid)
 SYSCALL ER_UINT
 can_wup(ID tskid)
 {
-	TCB	*tcb;
-	ER_UINT	ercd;
+    TCB    *tcb;
+    ER_UINT ercd;
 
-	LOG_CAN_WUP_ENTER(tskid);
-	CHECK_TSKCTX_UNL();
-	CHECK_TSKID_SELF(tskid);
-	tcb = get_tcb_self(tskid);
+    LOG_CAN_WUP_ENTER(tskid);
+    CHECK_TSKCTX_UNL();
+    CHECK_TSKID_SELF(tskid);
+    tcb = get_tcb_self(tskid);
 
-	t_lock_cpu();
-	if (TSTAT_DORMANT(tcb->tstat)) {
-		ercd = E_OBJ;
-	}
-	else {
-		ercd = tcb->wupcnt ? 1 : 0;
-		tcb->wupcnt = FALSE;
-	}
-	t_unlock_cpu();
+    t_lock_cpu();
+    if (TSTAT_DORMANT(tcb->tstat)) {
+        ercd = E_OBJ;
+    } else {
+        ercd = tcb->wupcnt ? 1 : 0;
+        tcb->wupcnt = FALSE;
+    }
+    t_unlock_cpu();
 
-    exit:
-	LOG_CAN_WUP_LEAVE(ercd);
-	return(ercd);
+exit:
+    LOG_CAN_WUP_LEAVE(ercd);
+    return ercd;
 }
 
 #endif /* __can_wup */
@@ -247,29 +241,28 @@ can_wup(ID tskid)
 SYSCALL ER
 rel_wai(ID tskid)
 {
-	TCB	*tcb;
-	ER	ercd;
+    TCB *tcb;
+    ER   ercd;
 
-	LOG_REL_WAI_ENTER(tskid);
-	CHECK_TSKCTX_UNL();
-	CHECK_TSKID(tskid);
-	tcb = get_tcb(tskid);
+    LOG_REL_WAI_ENTER(tskid);
+    CHECK_TSKCTX_UNL();
+    CHECK_TSKID(tskid);
+    tcb = get_tcb(tskid);
 
-	t_lock_cpu();
-	if (!(TSTAT_WAITING(tcb->tstat))) {
-		ercd = E_OBJ;
-	}
-	else {
-		if (wait_release(tcb)) {
-			dispatch();
-		}
-		ercd = E_OK;
-	}
-	t_unlock_cpu();
+    t_lock_cpu();
+    if (!(TSTAT_WAITING(tcb->tstat))) {
+        ercd = E_OBJ;
+    } else {
+        if (wait_release(tcb)) {
+            dispatch();
+        }
+        ercd = E_OK;
+    }
+    t_unlock_cpu();
 
-    exit:
-	LOG_REL_WAI_LEAVE(ercd);
-	return(ercd);
+exit:
+    LOG_REL_WAI_LEAVE(ercd);
+    return ercd;
 }
 
 #endif /* __rel_wai */
@@ -282,29 +275,28 @@ rel_wai(ID tskid)
 SYSCALL ER
 irel_wai(ID tskid)
 {
-	TCB	*tcb;
-	ER	ercd;
+    TCB    *tcb;
+    ER    ercd;
 
-	LOG_IREL_WAI_ENTER(tskid);
-	CHECK_INTCTX_UNL();
-	CHECK_TSKID(tskid);
-	tcb = get_tcb(tskid);
+    LOG_IREL_WAI_ENTER(tskid);
+    CHECK_INTCTX_UNL();
+    CHECK_TSKID(tskid);
+    tcb = get_tcb(tskid);
 
-	i_lock_cpu();
-	if (!(TSTAT_WAITING(tcb->tstat))) {
-		ercd = E_OBJ;
-	}
-	else {
-		if (wait_release(tcb)) {
-			reqflg = TRUE;
-		}
-		ercd = E_OK;
-	}
-	i_unlock_cpu();
+    i_lock_cpu();
+    if (!(TSTAT_WAITING(tcb->tstat))) {
+        ercd = E_OBJ;
+    } else {
+        if (wait_release(tcb)) {
+            reqflg = TRUE;
+        }
+        ercd = E_OK;
+    }
+    i_unlock_cpu();
 
-    exit:
-	LOG_IREL_WAI_LEAVE(ercd);
-	return(ercd);
+exit:
+    LOG_IREL_WAI_LEAVE(ercd);
+    return ercd;
 }
 
 #endif /* __irel_wai */
@@ -317,49 +309,45 @@ irel_wai(ID tskid)
 SYSCALL ER
 sus_tsk(ID tskid)
 {
-	TCB	*tcb;
-	UINT	tstat;
-	ER	ercd;
+    TCB  *tcb;
+    UINT  tstat;
+    ER    ercd;
 
-	LOG_SUS_TSK_ENTER(tskid);
-	CHECK_TSKCTX_UNL();
-	CHECK_TSKID_SELF(tskid);
-	tcb = get_tcb_self(tskid);
+    LOG_SUS_TSK_ENTER(tskid);
+    CHECK_TSKCTX_UNL();
+    CHECK_TSKID_SELF(tskid);
+    tcb = get_tcb_self(tskid);
 
-	t_lock_cpu();
-	if (tcb == runtsk && !(enadsp)) {
-		ercd = E_CTX;
-	}
-	else if (TSTAT_DORMANT(tstat = tcb->tstat)) {
-		ercd = E_OBJ;
-	}
-	else if (TSTAT_RUNNABLE(tstat)) {
-		/*
-		 *  実行できる状態から強制待ち状態への遷移
-		 */
-		tcb->tstat = TS_SUSPENDED;
-		LOG_TSKSTAT(tcb);
-		if (make_non_runnable(tcb)) {
-			dispatch();
-		}
-		ercd = E_OK;
-	}
-	else if (TSTAT_SUSPENDED(tstat)) {
-		ercd = E_QOVR;
-	}
-	else {
-		/*
-		 *  待ち状態から二重待ち状態への遷移
-		 */
-		tcb->tstat |= TS_SUSPENDED;
-		LOG_TSKSTAT(tcb);
-		ercd = E_OK;
-	}
-	t_unlock_cpu();
+    t_lock_cpu();
+    if (tcb == runtsk && !(enadsp)) {
+        ercd = E_CTX;
+    } else if (TSTAT_DORMANT(tstat = tcb->tstat)) {
+        ercd = E_OBJ;
+    } else if (TSTAT_RUNNABLE(tstat)) {
+        /*
+         *  実行できる状態から強制待ち状態への遷移
+         */
+        tcb->tstat = TS_SUSPENDED;
+        LOG_TSKSTAT(tcb);
+        if (make_non_runnable(tcb)) {
+            dispatch();
+        }
+        ercd = E_OK;
+    } else if (TSTAT_SUSPENDED(tstat)) {
+        ercd = E_QOVR;
+    } else {
+        /*
+         *  待ち状態から二重待ち状態への遷移
+         */
+        tcb->tstat |= TS_SUSPENDED;
+        LOG_TSKSTAT(tcb);
+        ercd = E_OK;
+    }
+    t_unlock_cpu();
 
-    exit:
-	LOG_SUS_TSK_LEAVE(ercd);
-	return(ercd);
+exit:
+    LOG_SUS_TSK_LEAVE(ercd);
+    return ercd;
 }
 
 #endif /* __sus_tsk */
@@ -372,41 +360,39 @@ sus_tsk(ID tskid)
 SYSCALL ER
 rsm_tsk(ID tskid)
 {
-	TCB	*tcb;
-	UINT	tstat;
-	ER	ercd;
+    TCB  *tcb;
+    UINT  tstat;
+    ER    ercd;
 
-	LOG_RSM_TSK_ENTER(tskid);
-	CHECK_TSKCTX_UNL();
-	CHECK_TSKID(tskid);
-	tcb = get_tcb(tskid);
+    LOG_RSM_TSK_ENTER(tskid);
+    CHECK_TSKCTX_UNL();
+    CHECK_TSKID(tskid);
+    tcb = get_tcb(tskid);
 
-	t_lock_cpu();
-	if (!(TSTAT_SUSPENDED(tstat = tcb->tstat))) {
-		ercd = E_OBJ;
-	}
-	else if (!(TSTAT_WAITING(tstat))) {
-		/*
-		 *  強制待ち状態から実行できる状態への遷移
-		 */
-		if (make_runnable(tcb)) {
-			dispatch();
-		}
-		ercd = E_OK;
-	}
-	else {
-		/*
-		 *  二重待ち状態から待ち状態への遷移
-		 */
-		tcb->tstat &= ~TS_SUSPENDED;
-		LOG_TSKSTAT(tcb);
-		ercd = E_OK;
-	}
-	t_unlock_cpu();
+    t_lock_cpu();
+    if (!(TSTAT_SUSPENDED(tstat = tcb->tstat))) {
+        ercd = E_OBJ;
+    } else if (!(TSTAT_WAITING(tstat))) {
+        /*
+         *  強制待ち状態から実行できる状態への遷移
+         */
+        if (make_runnable(tcb)) {
+            dispatch();
+        }
+        ercd = E_OK;
+    } else {
+        /*
+         *  二重待ち状態から待ち状態への遷移
+         */
+        tcb->tstat &= ~TS_SUSPENDED;
+        LOG_TSKSTAT(tcb);
+        ercd = E_OK;
+    }
+    t_unlock_cpu();
 
-    exit:
-	LOG_RSM_TSK_LEAVE(ercd);
-	return(ercd);
+exit:
+    LOG_RSM_TSK_LEAVE(ercd);
+    return ercd;
 }
 
 #endif /* __rsm_tsk */
@@ -414,7 +400,7 @@ rsm_tsk(ID tskid)
 /*
  *  強制待ち状態からの強制再開
  *
- *  JSPカーネルでは，frsm_tsk と rsm_tsk は同一の処理となる．frsm_tsk 
+ *  JSPカーネルでは，frsm_tsk と rsm_tsk は同一の処理となる．frsm_tsk
  *  が呼ばれると，frsm_tsk と rsm_tsk の両方のサービスコールのトレース
  *  ログが出力される．ログ取得後に rsm_tsk のトレースログを削除するこ
  *  とが必要である．rsm_tsk のトレースログを正しく削除するためには，タ
@@ -426,12 +412,12 @@ rsm_tsk(ID tskid)
 SYSCALL ER
 frsm_tsk(ID tskid)
 {
-	ER	ercd;
+    ER ercd;
 
-	LOG_FRSM_TSK_ENTER(tskid);
-	ercd = rsm_tsk(tskid);
-	LOG_FRSM_TSK_LEAVE(ercd);
-	return(ercd);
+    LOG_FRSM_TSK_ENTER(tskid);
+    ercd = rsm_tsk(tskid);
+    LOG_FRSM_TSK_LEAVE(ercd);
+    return ercd;
 }
 
 #endif /* __frsm_tsk */
@@ -444,28 +430,28 @@ frsm_tsk(ID tskid)
 SYSCALL ER
 dly_tsk(RELTIM dlytim)
 {
-	WINFO	winfo;
-	TMEVTB	tmevtb;
-	ER	ercd;
+    WINFO  winfo;
+    TMEVTB tmevtb;
+    ER     ercd;
 
-	LOG_DLY_TSK_ENTER(dlytim);
-	CHECK_DISPATCH();
-	CHECK_PAR(dlytim <= TMAX_RELTIM);
+    LOG_DLY_TSK_ENTER(dlytim);
+    CHECK_DISPATCH();
+    CHECK_PAR(dlytim <= TMAX_RELTIM);
 
-	t_lock_cpu();
-	runtsk->tstat = TS_WAITING;
-	make_non_runnable(runtsk);
-	runtsk->winfo = &winfo;
-	winfo.tmevtb = &tmevtb;
-	tmevtb_enqueue(&tmevtb, dlytim, (CBACK) wait_tmout_ok, (VP) runtsk);
-	LOG_TSKSTAT(runtsk);
-	dispatch();
-	ercd = winfo.wercd;
-	t_unlock_cpu();
+    t_lock_cpu();
+    runtsk->tstat = TS_WAITING;
+    make_non_runnable(runtsk);
+    runtsk->winfo = &winfo;
+    winfo.tmevtb = &tmevtb;
+    tmevtb_enqueue(&tmevtb, dlytim, (CBACK) wait_tmout_ok, (VP) runtsk);
+    LOG_TSKSTAT(runtsk);
+    dispatch();
+    ercd = winfo.wercd;
+    t_unlock_cpu();
 
-    exit:
-	LOG_DLY_TSK_LEAVE(ercd);
-	return(ercd);
+exit:
+    LOG_DLY_TSK_LEAVE(ercd);
+    return ercd;
 }
 
 #endif /* __dly_tsk */
