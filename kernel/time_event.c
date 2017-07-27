@@ -129,7 +129,7 @@ tmevt_initialize(void)
 UINT
 tmevt_up(UINT index, EVTTIM time)
 {
-    UINT    parent;
+    UINT parent;
 
     while (index > 1) {
         /*
@@ -152,7 +152,7 @@ tmevt_up(UINT index, EVTTIM time)
          */
         index = parent;
     }
-    return(index);
+    return index;
 }
 
 #endif /* __tmeup */
@@ -169,7 +169,7 @@ tmevt_up(UINT index, EVTTIM time)
 UINT
 tmevt_down(UINT index, EVTTIM time)
 {
-    UINT    child;
+    UINT child;
 
     while ((child = LCHILD(index)) <= last_index) {
         /*
@@ -277,8 +277,7 @@ tmevtb_delete(TMEVTB *tmevtb)
          *  探す．
          */
         index = tmevt_up(parent, event_time);
-    }
-    else {
+    } else {
         /*
          *  削除したノードから下に向かって挿入位置を探す．
          */

@@ -129,7 +129,7 @@ sig_sem(ID semid)
 
 exit:
     LOG_SIG_SEM_LEAVE(ercd);
-    return(ercd);
+    return ercd;
 }
 
 #endif /* __sig_sem */

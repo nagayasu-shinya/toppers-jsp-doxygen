@@ -246,7 +246,7 @@ exit:
 SYSCALL ER
 iunl_cpu(void)
 {
-    ER    ercd;
+    ER ercd;
 
     LOG_IUNL_CPU_ENTER();
     CHECK_INTCTX();
@@ -258,7 +258,7 @@ iunl_cpu(void)
 
 exit:
     LOG_IUNL_CPU_LEAVE(ercd);
-    return(ercd);
+    return ercd;
 }
 
 #endif /* __iunl_cpu */

@@ -2,11 +2,11 @@
  *  TOPPERS/JSP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
  *      Just Standard Profile Kernel
- * 
+ *
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
- * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -27,17 +27,20 @@
  *        報告すること．
  *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
  *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
- * 
+ *
  *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
  *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
- * 
+ *
  *  @(#) $Id: exception.c,v 1.9 2003/06/04 01:46:16 hiro Exp $
  */
 
-/*
- *	CPU例外管理機能
+/**
+ * @file
+ * @brief CPU例外管理機能
+ *
+ * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
 
 #include "jsp_kernel.h"
@@ -47,27 +50,26 @@
 /*
  *  CPU例外ハンドラ番号の数（kernel_cfg.c）
  */
-extern const UINT	tnum_excno;
+extern const UINT tnum_excno;
 
 /*
  *  CPU例外ハンドラ初期化ブロックのエリア（kernel_cfg.c）
  */
-extern const EXCINIB	excinib_table[];
+extern const EXCINIB excinib_table[];
 
-/* 
+/*
  *  CPU例外ハンドラ管理機能の初期化
  */
 #ifdef __excini
 
-void
-exception_initialize()
+void exception_initialize(void)
 {
-	UINT		i;
-	const EXCINIB	*excinib;
+    UINT i;
+    const EXCINIB *excinib;
 
-	for (excinib = excinib_table, i = 0; i < tnum_excno; excinib++, i++) {
-		define_exc(excinib->excno, excinib->exchdr);
-	}
+    for (excinib = excinib_table, i = 0; i < tnum_excno; excinib++, i++) {
+        define_exc(excinib->excno, excinib->exchdr);
+    }
 }
 
 #endif /* __excini */
@@ -77,15 +79,14 @@ exception_initialize()
  */
 #ifdef __vxsns_ctx
 
-SYSCALL BOOL
-vxsns_ctx(VP p_excinf)
+SYSCALL BOOL vxsns_ctx(VP p_excinf)
 {
-	BOOL	state;
+    BOOL state;
 
-	LOG_VXSNS_CTX_ENTER(p_excinf);
-	state = exc_sense_context(p_excinf) ? TRUE : FALSE;
-	LOG_VXSNS_CTX_LEAVE(state);
-	return(state);
+    LOG_VXSNS_CTX_ENTER(p_excinf);
+    state = exc_sense_context(p_excinf) ? TRUE : FALSE;
+    LOG_VXSNS_CTX_LEAVE(state);
+    return state;
 }
 
 #endif /* __vxsns_ctx */
@@ -95,15 +96,14 @@ vxsns_ctx(VP p_excinf)
  */
 #ifdef __vxsns_loc
 
-SYSCALL BOOL
-vxsns_loc(VP p_excinf)
+SYSCALL BOOL vxsns_loc(VP p_excinf)
 {
-	BOOL	state;
+    BOOL state;
 
-	LOG_VXSNS_LOC_ENTER(p_excinf);
-	state = exc_sense_lock(p_excinf) ? TRUE : FALSE;
-	LOG_VXSNS_LOC_LEAVE(state);
-	return(state);
+    LOG_VXSNS_LOC_ENTER(p_excinf);
+    state = exc_sense_lock(p_excinf) ? TRUE : FALSE;
+    LOG_VXSNS_LOC_LEAVE(state);
+    return state;
 }
 
 #endif /* __vxsns_loc */
@@ -115,15 +115,14 @@ vxsns_loc(VP p_excinf)
  */
 #ifdef __vxsns_dsp
 
-SYSCALL BOOL
-vxsns_dsp(VP p_excinf)
+SYSCALL BOOL vxsns_dsp(VP p_excinf)
 {
-	BOOL	state;
+    BOOL state;
 
-	LOG_VXSNS_DSP_ENTER(p_excinf);
-	state = !(enadsp) ? TRUE : FALSE;
-	LOG_VXSNS_DSP_LEAVE(state);
-	return(state);
+    LOG_VXSNS_DSP_ENTER(p_excinf);
+    state = !(enadsp) ? TRUE : FALSE;
+    LOG_VXSNS_DSP_LEAVE(state);
+    return state;
 }
 
 #endif /* __vxsns_dsp */
@@ -133,16 +132,15 @@ vxsns_dsp(VP p_excinf)
  */
 #ifdef __vxsns_dpn
 
-SYSCALL BOOL
-vxsns_dpn(VP p_excinf)
+SYSCALL BOOL vxsns_dpn(VP p_excinf)
 {
-	BOOL	state;
+    BOOL state;
 
-	LOG_VXSNS_DPN_ENTER(p_excinf);
-	state = (exc_sense_context(p_excinf) || exc_sense_lock(p_excinf)
-					|| !(enadsp)) ? TRUE : FALSE;
-	LOG_VXSNS_DPN_LEAVE(state);
-	return(state);
+    LOG_VXSNS_DPN_ENTER(p_excinf);
+    state = (exc_sense_context(p_excinf) || exc_sense_lock(p_excinf)
+                    || !(enadsp)) ? TRUE : FALSE;
+    LOG_VXSNS_DPN_LEAVE(state);
+    return state;
 }
 
 #endif /* __vxsns_dpn */
@@ -154,15 +152,14 @@ vxsns_dpn(VP p_excinf)
  */
 #ifdef __vxsns_tex
 
-SYSCALL BOOL
-vxsns_tex(VP p_excinf)
+SYSCALL BOOL vxsns_tex(VP p_excinf)
 {
-	BOOL	state;
+    BOOL state;
 
-	LOG_VXSNS_TEX_ENTER(p_excinf);
-	state = (runtsk != NULL && runtsk->enatex) ? FALSE : TRUE;
-	LOG_VXSNS_TEX_LEAVE(state);
-	return(state);
+    LOG_VXSNS_TEX_ENTER(p_excinf);
+    state = (runtsk != NULL && runtsk->enatex) ? FALSE : TRUE;
+    LOG_VXSNS_TEX_LEAVE(state);
+    return state;
 }
 
 #endif /* __vxsns_tex */

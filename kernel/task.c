@@ -73,7 +73,7 @@ BOOL enadsp;
 /**
  * @brief レディキュー
  */
-QUEUE    ready_queue[TNUM_TPRI];
+QUEUE ready_queue[TNUM_TPRI];
 
 /**
  * @brief レディキューサーチのためのビットマップ
@@ -81,16 +81,15 @@ QUEUE    ready_queue[TNUM_TPRI];
  * ビットマップを UINT で定義しているが，ビットマップサーチ関数で優先
  * 度が16段階以下であることを仮定している．
  */
-UINT    ready_primap;
+UINT ready_primap;
 
 /**
  * @brief タスク管理モジュールの初期化
  */
-void
-task_initialize()
+void task_initialize(void)
 {
-    UINT    i, j;
-    TCB    *tcb;
+    UINT i, j;
+    TCB  *tcb;
 
     runtsk = schedtsk = NULL;
     reqflg = FALSE;
@@ -115,35 +114,36 @@ task_initialize()
 
 #endif /* __tskini */
 
-/*
- *  ビットマップサーチ関数
- *
- *  bitmap 内の 1 のビットの内，最も下位（右）のものをサーチし，そのビ
- *  ット番号を返す．ビット番号は，最下位ビットを 0 とする．bitmap に 0
- *  を指定してはならない．この関数では，優先度が16段階以下であることを
- *  仮定し，bitmap の下位16ビットのみをサーチする．
- *  ビットサーチ命令を持つプロセッサでは，ビットサーチ命令を使うように
- *  書き直した方が効率が良いだろう．このような場合には，cpu_insn.h で
- *  ビットサーチ命令を使った bitmap_search を定義し，CPU_BITMAP_SEARCH
- *  をマクロ定義すればよい．また，ビットサーチ命令のサーチ方向が逆など
- *  の理由で優先度とビットとの対応を変更したい場合には，PRIMAP_BIT を
- *  マクロ定義すればよい．
- *  また，標準ライブラリに ffs があるなら，次のように定義して標準ライ
- *  ブラリを使った方が効率が良い可能性もある．
- *    #define    bitmap_search(bitmap) (ffs(bitmap) - 1)
- */
 #ifndef PRIMAP_BIT
 #define    PRIMAP_BIT(pri)        (1u << (pri))
 #endif /* PRIMAP_BIT */
 
 #ifndef CPU_BITMAP_SEARCH
 
-Inline UINT
-bitmap_search(UINT bitmap)
+/**
+ * @brief ビットマップサーチ関数
+ *
+ * bitmap 内の 1 のビットの内，最も下位（右）のものをサーチし，
+ * そのビット番号を返す．ビット番号は，最下位ビットを 0 とする．
+ * bitmap に 0を指定してはならない．
+ * この関数では，優先度が16段階以下であることを仮定し，bitmap の下位16ビットのみをサーチする．
+ * ビットサーチ命令を持つプロセッサでは，
+ * ビットサーチ命令を使うように書き直した方が効率が良いだろう．
+ * このような場合には，cpu_insn.h でビットサーチ命令を使った bitmap_search を定義し，
+ * CPU_BITMAP_SEARCH をマクロ定義すればよい．
+ * また，ビットサーチ命令のサーチ方向が逆などの理由で優先度とビットとの対応を変更したい場合には，
+ * PRIMAP_BIT をマクロ定義すればよい．
+ * また，標準ライブラリに ffs があるなら，次のように定義して標準ライブラリを使った方が効率が良い可能性もある．
+ *    #define    bitmap_search(bitmap) (ffs(bitmap) - 1)
+ *
+ * @param[in] bitmap ビットサーチする変数
+ * @return LSB から数えた先行ゼロの数
+ */
+Inline UINT bitmap_search(UINT bitmap)
 {
-    static const unsigned char search_table[] = { 0, 1, 0, 2, 0, 1, 0,
-                                                  3, 0, 1, 0, 2, 0, 1, 0 };
-    UINT    n = 0;
+    static const unsigned char search_table[] =
+        { 0, 1, 0, 2, 0, 1, 0, 3, 0, 1, 0, 2, 0, 1, 0 };
+    UINT n = 0;
 
     assert((bitmap & 0xffff) != 0);
     if ((bitmap & 0x00ff) == 0) {
@@ -154,7 +154,7 @@ bitmap_search(UINT bitmap)
         bitmap >>= 4;
         n += 4;
     }
-    return(n + search_table[(bitmap & 0x0f) - 1]);
+    return n + search_table[(bitmap & 0x0f) - 1];
 }
 
 #endif /* CPU_BITMAP_SEARCH */
@@ -163,14 +163,14 @@ bitmap_search(UINT bitmap)
 
 /**
  * @brief 最高優先順位タスクのサーチ
+ * @return 最高優先順位タスクのTCBへのポインタ
  */
-TCB *
-search_schedtsk()
+TCB *search_schedtsk(void)
 {
-    UINT    schedpri;
+    UINT schedpri;
 
     schedpri = bitmap_search(ready_primap);
-    return((TCB *)(ready_queue[schedpri].next));
+    return (TCB *) (ready_queue[schedpri].next);
 }
 
 #endif /* __tsksched */
@@ -180,13 +180,13 @@ search_schedtsk()
 /**
  * @brief 実行できる状態への移行
  *
- * 最高優先順位のタスクを更新するのは，実行できるタスクがなかった場合
- * と，tcb の優先度が最高優先順位のタスクの優先度よりも高い場合である．
+ * 最高優先順位のタスクを更新するのは，実行できるタスクがなかった場合と，
+ * tcb の優先度が最高優先順位のタスクの優先度よりも高い場合である．
+ *
  */
-BOOL
-make_runnable(TCB *tcb)
+BOOL make_runnable(TCB *tcb)
 {
-    UINT    pri = tcb->priority;
+    UINT pri = tcb->priority;
 
     tcb->tstat = TS_RUNNABLE;
     LOG_TSKSTAT(tcb);
@@ -195,9 +195,9 @@ make_runnable(TCB *tcb)
 
     if (schedtsk == (TCB *) NULL || pri < schedtsk->priority) {
         schedtsk = tcb;
-        return(enadsp);
+        return enadsp;
     }
-    return(FALSE);
+    return FALSE;
 }
 
 #endif /* __tskrun */
@@ -212,28 +212,25 @@ make_runnable(TCB *tcb)
  * タスクが最高優先順位になる．そうでない場合は，レディキューをサーチ
  * する必要がある．
  */
-BOOL
-make_non_runnable(TCB *tcb)
+BOOL make_non_runnable(TCB *tcb)
 {
-    UINT    pri = tcb->priority;
-    QUEUE    *queue = &(ready_queue[pri]);
+    UINT   pri = tcb->priority;
+    QUEUE *queue = &(ready_queue[pri]);
 
     queue_delete(&(tcb->task_queue));
     if (queue_empty(queue)) {
         ready_primap &= ~PRIMAP_BIT(pri);
         if (schedtsk == tcb) {
-            schedtsk = (ready_primap == 0) ? (TCB * ) NULL
-                        : search_schedtsk();
-            return(enadsp);
+            schedtsk = (ready_primap == 0) ? (TCB * ) NULL : search_schedtsk();
+            return enadsp;
         }
-    }
-    else {
+    } else {
         if (schedtsk == tcb) {
-            schedtsk = (TCB *)(queue->next);
-            return(enadsp);
+            schedtsk = (TCB *) (queue->next);
+            return enadsp;
         }
     }
-    return(FALSE);
+    return FALSE;
 }
 
 #endif /* __tsknrun */
@@ -243,8 +240,7 @@ make_non_runnable(TCB *tcb)
 /**
  * @brief 休止状態への移行
  */
-void
-make_dormant(TCB *tcb)
+void make_dormant(TCB *tcb)
 {
     tcb->priority = tcb->tinib->ipriority;
     tcb->tstat = TS_DORMANT;
@@ -262,11 +258,10 @@ make_dormant(TCB *tcb)
 /**
  * @brief 休止状態から実行できる状態への移行
  */
-BOOL
-make_active(TCB *tcb)
+BOOL make_active(TCB *tcb)
 {
     activate_context(tcb);
-    return(make_runnable(tcb));
+    return make_runnable(tcb);
 }
 
 #endif /* __tskact */
@@ -276,8 +271,7 @@ make_active(TCB *tcb)
 /**
  * @brief 実行状態のタスクの終了
  */
-void
-exit_task()
+void exit_task(void)
 {
     make_non_runnable(runtsk);
     make_dormant(runtsk);
@@ -300,10 +294,9 @@ exit_task()
  * はなく，変更後の優先度が最高優先順位のタスクの優先度よりも高い場合
  * である．(1) の場合には，レディキューをサーチする必要がある．
  */
-BOOL
-change_priority(TCB *tcb, UINT newpri)
+BOOL change_priority(TCB *tcb, UINT newpri)
 {
-    UINT    oldpri = tcb->priority;
+    UINT oldpri = tcb->priority;
 
     tcb->priority = newpri;
     queue_delete(&(tcb->task_queue));
@@ -316,43 +309,42 @@ change_priority(TCB *tcb, UINT newpri)
     if (schedtsk == tcb) {
         if (newpri >= oldpri) {
             schedtsk = search_schedtsk();
-            return(schedtsk != tcb && enadsp);
+            return schedtsk != tcb && enadsp;
         }
-    }
-    else {
+    } else {
         if (newpri < schedtsk->priority) {
             schedtsk = tcb;
-            return(enadsp);
+            return enadsp;
         }
     }
-    return(FALSE);
+    return FALSE;
 }
 
 #endif /* __tskpri */
 
+#ifdef __tskrot
+
 /**
  * @brief レディキューの回転
  *
- * 最高優先順位のタスクを更新するのは，最高優先順位のタスクがタスクキ
- * ューの末尾に移動した場合である．
+ * 最高優先順位のタスクを更新するのは，
+ * 最高優先順位のタスクがタスクキューの末尾に移動した場合である．
+ *
  */
-#ifdef __tskrot
-
-BOOL
-rotate_ready_queue(UINT pri)
+BOOL rotate_ready_queue(UINT pri)
 {
-    QUEUE    *queue = &(ready_queue[pri]);
-    QUEUE    *entry;
+    QUEUE *queue = &(ready_queue[pri]);
+    QUEUE *entry;
 
     if (!(queue_empty(queue)) && queue->next->next != queue) {
         entry = queue_delete_next(queue);
         queue_insert_prev(queue, entry);
         if (schedtsk == (TCB *) entry) {
-            schedtsk = (TCB *)(queue->next);
-            return(enadsp);
+            schedtsk = (TCB *) (queue->next);
+            return enadsp;
         }
     }
-    return(FALSE);
+    return FALSE;
 }
 
 #endif /* __tskrot */
@@ -360,17 +352,17 @@ rotate_ready_queue(UINT pri)
 /**
  * @brief 引数まで定義したタスク例外処理ルーチンの型
  */
-typedef void    (*TEXRTN)(TEXPTN texptn, VP_INT exinf);
+typedef void (*TEXRTN) (TEXPTN texptn, VP_INT exinf);
 
 #ifdef __tsktex
 
 /**
  * @brrief タスク例外処理ルーチンの呼出し
+ * @return なし
  */
-void
-call_texrtn()
+void call_texrtn(void)
 {
-    TEXPTN    texptn;
+    TEXPTN texptn;
 
     do {
         texptn = runtsk->texptn;
@@ -378,8 +370,7 @@ call_texrtn()
         runtsk->texptn = 0;
         t_unlock_cpu();
         LOG_TEX_ENTER(texptn);
-        (*((TEXRTN)(runtsk->tinib->texrtn)))(texptn,
-                        runtsk->tinib->exinf);
+        (*((TEXRTN) (runtsk->tinib->texrtn)))(texptn, runtsk->tinib->exinf);
         LOG_TEX_LEAVE(texptn);
         if (!t_sense_lock()) {
             t_lock_cpu();
@@ -392,9 +383,9 @@ call_texrtn()
 
 /**
  * @brief タスク例外処理ルーチンの起動
+ * @return なし
  */
-void
-calltex()
+void calltex(void)
 {
     if (runtsk->enatex && runtsk->texptn != 0) {
         call_texrtn();
