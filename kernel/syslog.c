@@ -2,11 +2,11 @@
  *  TOPPERS/JSP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
  *      Just Standard Profile Kernel
- * 
+ *
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
- * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *
+ *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -27,17 +27,20 @@
  *        報告すること．
  *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
  *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
- * 
+ *
  *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
  *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
- * 
+ *
  *  @(#) $Id: syslog.c,v 1.9 2003/06/04 01:46:16 hiro Exp $
  */
 
-/*
- *	システムログ機能
+/**
+ * @file
+ * @brief システムログ機能
+ *
+ * @copyright 2000 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
 
 #undef OMIT_SYSLOG
@@ -48,25 +51,25 @@
 /*
  *  コンテキストに依らないCPUロック／ロック解除
  */
-#define	lock_cpu()	(sense_context() ? i_lock_cpu() : t_lock_cpu())
-#define	unlock_cpu()	(sense_context() ? i_unlock_cpu() : t_unlock_cpu())
+#define lock_cpu()   (sense_context() ? i_lock_cpu()   : t_lock_cpu())
+#define unlock_cpu() (sense_context() ? i_unlock_cpu() : t_unlock_cpu())
 
 #ifdef __logini
 
 /*
  *  ログバッファとそれにアクセスするためのポインタ
  */
-SYSLOG	syslog_buffer[TCNT_SYSLOG_BUFFER];	/* ログバッファ */
-UINT	syslog_count;			/* ログバッファ中のログの数 */
-UINT	syslog_head;			/* 先頭のログの格納位置 */
-UINT	syslog_tail;			/* 次のログの格納位置 */
-UINT	syslog_lost;			/* 失われたログの数 */
+SYSLOG  syslog_buffer[TCNT_SYSLOG_BUFFER];    /* ログバッファ */
+UINT    syslog_count;            /* ログバッファ中のログの数 */
+UINT    syslog_head;             /* 先頭のログの格納位置 */
+UINT    syslog_tail;             /* 次のログの格納位置 */
+UINT    syslog_lost;             /* 失われたログの数 */
 
 /*
  *  出力すべきログ情報の重要度（ビットマップ）
  */
-UINT	syslog_logmask;			/* ログバッファに記録すべき重要度 */
-UINT	syslog_lowmask;			/* 低レベル出力すべき重要度 */
+UINT    syslog_logmask;            /* ログバッファに記録すべき重要度 */
+UINT    syslog_lowmask;            /* 低レベル出力すべき重要度 */
 
 /*
  *  システムログ機能の初期化
@@ -74,17 +77,17 @@ UINT	syslog_lowmask;			/* 低レベル出力すべき重要度 */
 void
 syslog_initialize()
 {
-	syslog_count = 0;
-	syslog_head = syslog_tail = 0;
-	syslog_lost = 0;
+    syslog_count = 0;
+    syslog_head = syslog_tail = 0;
+    syslog_lost = 0;
 
-	syslog_logmask = 0;
-	syslog_lowmask = LOG_UPTO(LOG_NOTICE);
-}     
+    syslog_logmask = 0;
+    syslog_lowmask = LOG_UPTO(LOG_NOTICE);
+}
 
 #endif /* __logini */
 
-/* 
+/*
  *  ログ情報の出力
  *
  *  CPUロック状態や実行コンテキストによらず動作できるように実装してある．
@@ -94,47 +97,46 @@ syslog_initialize()
 SYSCALL ER
 vwri_log(UINT prio, SYSLOG *p_log)
 {
-	BOOL	locked;
+    BOOL locked;
 
-	locked = sense_lock();
-	if (!locked) {
-		lock_cpu();
-	}
+    locked = sense_lock();
+    if (!locked) {
+        lock_cpu();
+    }
 
-	/*
-	 *  ログ時刻の設定
-	 */
-	p_log->logtim = systim_offset + current_time;
+    /*
+     *  ログ時刻の設定
+     */
+    p_log->logtim = systim_offset + current_time;
 
-	/*
-	 *  ログバッファに記録
-	 */
-	if ((syslog_logmask & LOG_MASK(prio)) != 0) {
-		syslog_buffer[syslog_tail] = *p_log;
-		syslog_tail++;
-		if (syslog_tail >= TCNT_SYSLOG_BUFFER) {
-			syslog_tail = 0;
-		}
-		if (syslog_count < TCNT_SYSLOG_BUFFER) {
-			syslog_count++;
-		}
-		else {
-			syslog_head = syslog_tail;
-			syslog_lost++;
-		}
-	}
+    /*
+     *  ログバッファに記録
+     */
+    if ((syslog_logmask & LOG_MASK(prio)) != 0) {
+        syslog_buffer[syslog_tail] = *p_log;
+        syslog_tail++;
+        if (syslog_tail >= TCNT_SYSLOG_BUFFER) {
+            syslog_tail = 0;
+        }
+        if (syslog_count < TCNT_SYSLOG_BUFFER) {
+            syslog_count++;
+        } else {
+            syslog_head = syslog_tail;
+            syslog_lost++;
+        }
+    }
 
-	/*
-	 *  低レベル出力
-	 */
-	if ((syslog_lowmask & LOG_MASK(prio)) != 0) {
-		syslog_print(p_log, sys_putc);
-	}
+    /*
+     *  低レベル出力
+     */
+    if ((syslog_lowmask & LOG_MASK(prio)) != 0) {
+        syslog_print(p_log, sys_putc);
+    }
 
-	if (!locked) {
-		unlock_cpu();
-	}
-	return(E_OK);
+    if (!locked) {
+        unlock_cpu();
+    }
+    return E_OK;
 }
 
 #endif /* __vwri_log */
@@ -149,35 +151,34 @@ vwri_log(UINT prio, SYSLOG *p_log)
 SYSCALL ER_UINT
 vrea_log(SYSLOG *p_log)
 {
-	BOOL	locked;
-	ER_UINT	ercd;
+    BOOL locked;
+    ER_UINT ercd;
 
-	locked = sense_lock();
-	if (!locked) {
-		lock_cpu();
-	}
-	if (syslog_count > 0) {
-		*p_log = syslog_buffer[syslog_head];
-		syslog_count--;
-		syslog_head++;
-		if (syslog_head >= TCNT_SYSLOG_BUFFER) {
-			syslog_head = 0;
-		}
-		ercd = (ER_UINT) syslog_lost;
-		syslog_lost = 0;
-	}
-	else {
-		ercd = E_OBJ;
-	}
-	if (!locked) {
-		unlock_cpu();
-	}
-	return(ercd);
+    locked = sense_lock();
+    if (!locked) {
+        lock_cpu();
+    }
+    if (syslog_count > 0) {
+        *p_log = syslog_buffer[syslog_head];
+        syslog_count--;
+        syslog_head++;
+        if (syslog_head >= TCNT_SYSLOG_BUFFER) {
+            syslog_head = 0;
+        }
+        ercd = (ER_UINT) syslog_lost;
+        syslog_lost = 0;
+    } else {
+        ercd = E_OBJ;
+    }
+    if (!locked) {
+        unlock_cpu();
+    }
+    return ercd;
 }
 
 #endif /* __vrea_log */
 
-/* 
+/*
  *  出力すべきログ情報の重要度の設定
  */
 #ifdef __vmsk_log
@@ -185,14 +186,14 @@ vrea_log(SYSLOG *p_log)
 SYSCALL ER
 vmsk_log(UINT logmask, UINT lowmask)
 {
-	syslog_logmask = logmask;
-	syslog_lowmask = lowmask;
-	return(E_OK);
+    syslog_logmask = logmask;
+    syslog_lowmask = lowmask;
+    return E_OK;
 }
 
 #endif /* __vmsk_log */
 
-/* 
+/*
  *  システムログ機能の終了処理
  *
  *  ログバッファに記録されたログ情報を，低レベル出力機能を用いて出力す
@@ -203,8 +204,8 @@ vmsk_log(UINT logmask, UINT lowmask)
 void
 syslog_terminate()
 {
-	syslog_printf("-- buffered messages --", NULL, sys_putc);
-	syslog_output(sys_putc);
+    syslog_printf("-- buffered messages --", NULL, sys_putc);
+    syslog_output(sys_putc);
 }
 
 #endif /* __logter */
