@@ -77,14 +77,14 @@ extern "C" {
  *  いが，ほとんどの処理系でサポートされている．
  */
 #ifndef _MACRO_ONLY
-#  include <stddef.h>
+#include <stddef.h>
 #endif /* _MACRO_ONLY */
 
 /*
  *  コンパイラ依存のデータ型のデフォルト定義
  */
 #ifndef _bool_
-#  define _bool_ int           /** ブール型 */
+#define _bool_ int           /**< ブール型 */
 #endif /* _bool_ */
 
 #ifndef _MACRO_ONLY
@@ -162,9 +162,9 @@ typedef INT ER_UINT;         /**< ER または UINT */
  *  からも定義しない方が都合がよい．
  */
 #ifndef _MACRO_ONLY
-#  ifndef NULL            /* stddef.h に含まれているはず */
-#    define NULL 0        /**< 無効ポインタ */
-#  endif /* NULL */
+#ifndef NULL          /* stddef.h に含まれているはず */
+#define NULL 0        /**< 無効ポインタ */
+#endif /* NULL */
 #endif /* _MACRO_ONLY */
 
 #define TRUE  1        /**< 真 */
@@ -212,23 +212,22 @@ typedef INT ER_UINT;         /**< ER または UINT */
  *  ITRON仕様共通マクロ
  */
 
-/*
- *  エラーコード生成・分解マクロ
+/**
+ * @brief エラーコード生成・分解マクロ
  *
- *  ANSI C言語の規格では，右シフト演算子（>>）が符号拡張されることを保
- *  証していないため，SERCDマクロの定義を単に ((ercd) >> 8) とすると，
- *  右シフト演算子を符号拡張しないコンパイラでは，SERCD の返値が正の値
- *  になってしまう．
+ * ANSI C言語の規格では，右シフト演算子（>>）が符号拡張されることを保証していないため，
+ * SERCDマクロの定義を単に ((ercd) >> 8) とすると，
+ * 右シフト演算子を符号拡張しないコンパイラでは，SERCD の返値が正の値になってしまう．
  */
 #define ERCD(mercd, sercd) (((sercd) << 8) | ((mercd) & 0xff))
 
 #ifdef _int8_
-#  define MERCD(ercd) ((ER) ((B) (ercd)))
-#  define SERCD(ercd) ((ER) ((B) ((ercd) >> 8)))
+#define MERCD(ercd) ((ER) ((B)  (ercd)))
+#define SERCD(ercd) ((ER) ((B) ((ercd) >> 8)))
 #else /* _int8_ */
-#  define MERCD(ercd) (((ercd) & 0x80) == 0 ? ((ercd) &  0xff) \
-                                            : ((ercd) | ~0xff))
-#  define SERCD(ercd) ((~((~0) >> 8)) | ((ercd) >> 8))
+#define MERCD(ercd) (((ercd) & 0x80) == 0 ? ((ercd) &  0xff) \
+                                          : ((ercd) | ~0xff))
+#define SERCD(ercd) ((~((~0) >> 8)) | ((ercd) >> 8))
 #endif /* _int8_ */
 
 #ifdef __cplusplus

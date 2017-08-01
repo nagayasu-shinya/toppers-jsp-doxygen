@@ -71,34 +71,33 @@
 /*
  *  ログ情報の種別の定義
  *
- *  LOG_TYPE_CYC，LOG_TYPE_ASSERT 以外は，デバッギングインタフェース仕
- *  様と合致している．
+ *  LOG_TYPE_CYC，LOG_TYPE_ASSERT 以外は，デバッギングインタフェース仕 様と合致している．
  */
-#define LOG_TYPE_INH        0x01u    /* 割込みハンドラ */
-#define LOG_TYPE_ISR        0x02u    /* 割込みサービスルーチン */
-#define LOG_TYPE_CYC        0x03u    /* 周期ハンドラ */
-#define LOG_TYPE_EXC        0x04u    /* CPU例外ハンドラ */
-#define LOG_TYPE_TEX        0x05u    /* タスク例外処理ルーチン */
-#define LOG_TYPE_TSKSTAT    0x06u    /* タスク状態変化 */
-#define LOG_TYPE_DSP        0x07u    /* ディスパッチャ */
-#define LOG_TYPE_SVC        0x08u    /* サービスコール */
-#define LOG_TYPE_COMMENT    0x09u    /* コメント */
-#define LOG_TYPE_ASSERT     0x0au    /* アサーションの失敗 */
+#define LOG_TYPE_INH     0x01u    /**< 割込みハンドラ         */
+#define LOG_TYPE_ISR     0x02u    /**< 割込みサービスルーチン */
+#define LOG_TYPE_CYC     0x03u    /**< 周期ハンドラ           */
+#define LOG_TYPE_EXC     0x04u    /**< CPU例外ハンドラ        */
+#define LOG_TYPE_TEX     0x05u    /**< タスク例外処理ルーチン */
+#define LOG_TYPE_TSKSTAT 0x06u    /**< タスク状態変化         */
+#define LOG_TYPE_DSP     0x07u    /**< ディスパッチャ         */
+#define LOG_TYPE_SVC     0x08u    /**< サービスコール         */
+#define LOG_TYPE_COMMENT 0x09u    /**< コメント               */
+#define LOG_TYPE_ASSERT  0x0au    /**< アサーションの失敗     */
 
-#define LOG_ENTER        0x00u    /* 入口／開始 */
-#define LOG_LEAVE        0x80u    /* 出口／終了 */
+#define LOG_ENTER        0x00u    /**< 入口／開始 */
+#define LOG_LEAVE        0x80u    /**< 出口／終了 */
 
 /*
  *  ログ情報の重要度の定義
  */
-#define LOG_EMERG    0u        /* シャットダウンに値するエラー */
+#define LOG_EMERG    0u        /**< シャットダウンに値するエラー */
 #define LOG_ALERT    1u
 #define LOG_CRIT     2u
-#define LOG_ERROR    3u        /* システムエラー */
-#define LOG_WARNING  4u        /* 警告メッセージ */
+#define LOG_ERROR    3u        /**< システムエラー */
+#define LOG_WARNING  4u        /**< 警告メッセージ */
 #define LOG_NOTICE   5u
 #define LOG_INFO     6u
-#define LOG_DEBUG    7u        /* デバッグ用メッセージ */
+#define LOG_DEBUG    7u        /**< デバッグ用メッセージ */
 
 #ifndef _MACRO_ONLY
 
@@ -108,16 +107,16 @@
 #define TMAX_LOGINFO    6
 
 typedef struct {
-    UINT    logtype;           /* ログ情報の種別 */
-    SYSTIM  logtim;            /* ログ時刻 */
-    VP_INT  loginfo[TMAX_LOGINFO];    /* その他のログ情報 */
+    UINT   logtype;           /**< ログ情報の種別 */
+    SYSTIM logtim;            /**< ログ時刻       */
+    VP_INT loginfo[TMAX_LOGINFO];    /* その他のログ情報 */
 } SYSLOG;
 
 /*
  *  ログ情報の重要度のビットマップを作るためのマクロ
  */
-#define LOG_MASK(prio)    (1u << (prio))
-#define LOG_UPTO(prio)    ((1u << ((prio) + 1)) - 1)
+#define LOG_MASK(prio)  (1u << (prio))
+#define LOG_UPTO(prio) ((1u << ((prio) + 1)) - 1)
 
 #ifndef OMIT_SYSLOG
 
@@ -139,7 +138,6 @@ extern ER vmsk_log(UINT logmask, UINT lowmask) throw();
 /*
  *  ログ情報を出力するためのライブラリ関数
  */
-
 Inline ER
 _syslog_0(UINT prio, UINT type)
 {
