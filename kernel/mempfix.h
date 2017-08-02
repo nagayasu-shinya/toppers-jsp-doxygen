@@ -48,31 +48,31 @@
 
 #include "queue.h"
 
-/*
- *  固定長メモリプール初期化ブロック
+/**
+ * @brief 固定長メモリプール初期化ブロック
  */
 typedef struct fixed_memorypool_initialization_block {
-    ATR  mpfatr;      /* 固定長メモリプール属性 */
-    UINT blksz;      /* メモリブロックのサイズ（丸めた値） */
-    VP   mpf;        /* 固定長メモリプール領域の先頭番地 */
-    VP   limit;      /* 固定長メモリプール領域の上限番地 */
+    ATR  mpfatr;     /**< 固定長メモリプール属性 */
+    UINT blksz;      /**< メモリブロックのサイズ（丸めた値） */
+    VP   mpf;        /**< 固定長メモリプール領域の先頭番地 */
+    VP   limit;      /**< 固定長メモリプール領域の上限番地 */
 } MPFINIB;
 
-/*
- *  空ブロックリストの定義
+/**
+ * @brief 空ブロックリストの定義
  */
 typedef struct free_list {
     struct free_list *next;
 } FREEL;
 
-/*
- *  固定長メモリプール管理ブロック
+/**
+ * @brief 固定長メモリプール管理ブロック
  */
 typedef struct fixed_memorypool_control_block {
-    QUEUE wait_queue;        /* 固定長メモリプール待ちキュー */
-    const MPFINIB *mpfinib;  /* 固定長メモリプール初期化ブロック */
-    VP    unused;            /* 未使用領域の先頭番地 */
-    FREEL *freelist;         /* 空きブロックのリスト */
+    QUEUE wait_queue;        /**< 固定長メモリプール待ちキュー */
+    const MPFINIB *mpfinib;  /**< 固定長メモリプール初期化ブロック */
+    VP    unused;            /**< 未使用領域の先頭番地 */
+    FREEL *freelist;         /**< 空きブロックのリスト */
 } MPFCB;
 
 /*

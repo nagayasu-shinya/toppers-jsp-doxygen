@@ -48,24 +48,24 @@
 
 #include "queue.h"
 
-/*
- *  メールボックス初期化ブロック
+/**
+ * @brief メールボックス初期化ブロック
  */
 typedef struct mailbox_initialization_block {
-    ATR mbxatr;     /* メールボックス属性 */
-    PRI maxmpri;    /* メッセージ優先度の最大値 */
+    ATR mbxatr;     /**< メールボックス属性 */
+    PRI maxmpri;    /**< メッセージ優先度の最大値 */
 } MBXINIB;
 
-/*
- *  メールボックス管理ブロック
+/**
+ * @brief メールボックス管理ブロック
  *
  *  メッセージキューがメッセージの優先度順の場合には，last は使わない．
  */
 typedef struct mailbox_control_block {
-    QUEUE wait_queue;   /* メールボックス待ちキュー */
-    const MBXINIB *mbxinib;    /* メールボックス初期化ブロックへのポインタ */
-    T_MSG *head;        /* 先頭のメッセージ */
-    T_MSG *last;        /* 末尾のメッセージ */
+    QUEUE wait_queue;       /**< メールボックス待ちキュー */
+    const MBXINIB *mbxinib; /**< メールボックス初期化ブロックへのポインタ */
+    T_MSG *head;            /**< 先頭のメッセージ */
+    T_MSG *last;            /**< 末尾のメッセージ */
 } MBXCB;
 
 /*

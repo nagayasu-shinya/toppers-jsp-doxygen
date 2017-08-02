@@ -50,12 +50,12 @@
  * @copyright 2000 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
 
-/*
- *  キューのデータ構造の定義
+/**
+ * @brief キューのデータ構造の定義
  */
 typedef struct queue {
-    struct queue *next;        /* 次エントリへのポインタ */
-    struct queue *prev;        /* 前エントリへのポインタ */
+    struct queue *next;        /**< 次エントリへのポインタ */
+    struct queue *prev;        /**< 前エントリへのポインタ */
 } QUEUE;
 
 /*
@@ -63,8 +63,7 @@ typedef struct queue {
  *
  *  queue にはキューヘッダを指定する．
  */
-Inline void
-queue_initialize(QUEUE *queue)
+Inline void queue_initialize(QUEUE *queue)
 {
     queue->prev = queue->next = queue;
 }
@@ -75,8 +74,7 @@ queue_initialize(QUEUE *queue)
  *  queue の前に entry を挿入する．queue にキューヘッダを指定した場合
  *  には，キューの末尾に entry を挿入することになる．
  */
-Inline void
-queue_insert_prev(QUEUE *queue, QUEUE *entry)
+Inline void queue_insert_prev(QUEUE *queue, QUEUE *entry)
 {
     entry->prev = queue->prev;
     entry->next = queue;
@@ -89,8 +87,7 @@ queue_insert_prev(QUEUE *queue, QUEUE *entry)
  *
  *  entry をキューから削除する．
  */
-Inline void
-queue_delete(QUEUE *entry)
+Inline void queue_delete(QUEUE *entry)
 {
     entry->prev->next = entry->next;
     entry->next->prev = entry->prev;
@@ -103,10 +100,9 @@ queue_delete(QUEUE *entry)
  *  にキューヘッダを指定した場合には，キューの先頭のエントリを取り出す
  *  ことになる．queue に空のキューを指定して呼び出してはならない．
  */
-Inline QUEUE *
-queue_delete_next(QUEUE *queue)
+Inline QUEUE *queue_delete_next(QUEUE *queue)
 {
-    QUEUE    *entry;
+    QUEUE *entry;
 
     assert(queue->next != queue);
     entry = queue->next;
@@ -120,8 +116,7 @@ queue_delete_next(QUEUE *queue)
  *
  *  queue にはキューヘッダを指定する．
  */
-Inline BOOL
-queue_empty(QUEUE *queue)
+Inline BOOL queue_empty(QUEUE *queue)
 {
     if (queue->next == queue) {
         assert(queue->prev == queue);

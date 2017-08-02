@@ -67,17 +67,17 @@ typedef UW EVTTIM;
 typedef void (*CBACK)(VP);    /* コールバック関数の型 */
 
 typedef struct time_event_block {
-    UINT  index;      /* タイムイベントヒープ中での位置 */
-    CBACK callback;   /* コールバック関数 */
-    VP    arg;        /* コールバック関数へ渡す引数 */
+    UINT  index;      /**< タイムイベントヒープ中での位置 */
+    CBACK callback;   /**< コールバック関数 */
+    VP    arg;        /**< コールバック関数へ渡す引数 */
 } TMEVTB;
 
-/*
- *  タイムイベントヒープ中のノードのデータ型の定義
+/**
+ * @brief タイムイベントヒープ中のノードのデータ型の定義
  */
 typedef struct time_event_node {
-    EVTTIM  time;      /* イベント発生時刻 */
-    TMEVTB *tmevtb;    /* 対応するタイムイベントブロック */
+    EVTTIM  time;      /**< イベント発生時刻 */
+    TMEVTB *tmevtb;    /**< 対応するタイムイベントブロック */
 } TMEVTN;
 
 /*
@@ -155,8 +155,7 @@ extern void tmevtb_delete(TMEVTB *tmevtb);
  *  time で指定した相対時間が経過後に，arg を引数として callback が呼
  *  び出されるように，タイムイベントブロック tmevtb を登録する．
  */
-Inline void
-tmevtb_enqueue(TMEVTB *tmevtb, RELTIM time, CBACK callback, VP arg)
+Inline void tmevtb_enqueue(TMEVTB *tmevtb, RELTIM time, CBACK callback, VP arg)
 {
     assert(time <= TMAX_RELTIM);
 
@@ -171,8 +170,7 @@ tmevtb_enqueue(TMEVTB *tmevtb, RELTIM time, CBACK callback, VP arg)
  *  time で指定したイベント発生時刻に，arg を引数として callback が呼
  *  び出されるように，タイムイベントブロック tmevtb を登録する．
  */
-Inline void
-tmevtb_enqueue_evttim(TMEVTB *tmevtb, EVTTIM time, CBACK callback, VP arg)
+Inline void tmevtb_enqueue_evttim(TMEVTB *tmevtb, EVTTIM time, CBACK callback, VP arg)
 {
     tmevtb->callback = callback;
     tmevtb->arg = arg;
@@ -182,8 +180,7 @@ tmevtb_enqueue_evttim(TMEVTB *tmevtb, EVTTIM time, CBACK callback, VP arg)
 /*
  *  タイムイベントブロックの登録解除
  */
-Inline void
-tmevtb_dequeue(TMEVTB *tmevtb)
+Inline void tmevtb_dequeue(TMEVTB *tmevtb)
 {
     tmevtb_delete(tmevtb);
 }

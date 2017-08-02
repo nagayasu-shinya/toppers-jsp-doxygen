@@ -55,8 +55,7 @@
  * 実行中のタスクを待ち状態に移行させる．具体的には，実行中のタスクをレディキューから削除し，
  * TCB の winfoフィールド，WINFO の tmevtbフィールドを設定する．
  */
-Inline void
-make_wait(WINFO *winfo)
+Inline void make_wait(WINFO *winfo)
 {
     make_non_runnable(runtsk);
     runtsk->winfo = winfo;
@@ -127,23 +126,23 @@ extern BOOL wait_release(TCB *tcb);
  * @brief 同期・通信オブジェクトの初期化ブロックの共通部分
  */
 typedef struct wait_object_initialization_block {
-    ATR    wobjatr;    /* オブジェクト属性 */
+    ATR    wobjatr;    /**< オブジェクト属性 */
 } WOBJINIB;
 
 /**
  * @brief 同期・通信オブジェクトの管理ブロックの共通部分
  */
 typedef struct wait_object_control_block {
-    QUEUE           wait_queue;    /* 待ちキュー */
-    const WOBJINIB *wobjinib;      /* 初期化ブロックへのポインタ */
+    QUEUE           wait_queue;    /**< 待ちキュー */
+    const WOBJINIB *wobjinib;      /**< 初期化ブロックへのポインタ */
 } WOBJCB;
 
 /**
  * @brief 同期・通信オブジェクト待ち情報ブロックの定義
  */
 typedef struct wait_object_waiting_information {
-    WINFO    winfo;     /* 標準の待ち情報ブロック */
-    WOBJCB  *wobjcb;    /* 待ちオブジェクトの管理ブロック */
+    WINFO    winfo;     /**< 標準の待ち情報ブロック */
+    WOBJCB  *wobjcb;    /**< 待ちオブジェクトの管理ブロック */
 } WINFO_WOBJ;
 
 /*

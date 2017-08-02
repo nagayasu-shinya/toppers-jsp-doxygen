@@ -49,25 +49,25 @@
 #include "queue.h"
 #include "time_event.h"
 
-/*
- *  周期ハンドラ初期化ブロック
+/**
+ * @brief 周期ハンドラ初期化ブロック
  */
 typedef struct cyclic_handler_initialization_block {
-    ATR    cycatr;        /* 周期ハンドラ属性 */
-    VP_INT exinf;         /* 周期ハンドラの拡張情報 */
-    FP     cychdr;        /* 周期ハンドラの起動番地 */
-    RELTIM cyctim;        /* 周期ハンドラの起動周期 */
-    RELTIM cycphs;        /* 周期ハンドラの起動位相 */
+    ATR    cycatr;        /**< 周期ハンドラ属性 */
+    VP_INT exinf;         /**< 周期ハンドラの拡張情報 */
+    FP     cychdr;        /**< 周期ハンドラの起動番地 */
+    RELTIM cyctim;        /**< 周期ハンドラの起動周期 */
+    RELTIM cycphs;        /**< 周期ハンドラの起動位相 */
 } CYCINIB;
 
-/*
- *  周期ハンドラ管理ブロック
+/**
+ * @brief 周期ハンドラ管理ブロック
  */
 typedef struct cyclic_handler_control_block {
-    const CYCINIB *cycinib;    /* 周期ハンドラ初期化ブロックへのポインタ */
-    BOOL    cycsta;            /* 周期ハンドラの動作状態 */
-    EVTTIM  evttim;            /* 次に周期ハンドラを起動する時刻 */
-    TMEVTB  tmevtb;            /* タイムイベントブロック */
+    const CYCINIB *cycinib;    /**< 周期ハンドラ初期化ブロックへのポインタ */
+    BOOL    cycsta;            /**< 周期ハンドラの動作状態 */
+    EVTTIM  evttim;            /**< 次に周期ハンドラを起動する時刻 */
+    TMEVTB  tmevtb;            /**< タイムイベントブロック */
 } CYCCB;
 
 /*

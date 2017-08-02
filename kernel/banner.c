@@ -65,6 +65,9 @@ static const char banner[] = "\n"
 "            Graduate School of Information Science, Nagoya Univ., JAPAN\n"
 COPYRIGHT_CPU COPYRIGHT_SYS;
 
+/**
+ * @brief 起動時にバナーを表示する.
+ */
 void print_banner(void)
 {
     syslog_3(LOG_NOTICE, banner, (TKERNEL_PRVER >> 12) & 0x0f,

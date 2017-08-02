@@ -46,13 +46,13 @@
  * @copyright 2000 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
 
-/*
- *  割込みハンドラ初期化ブロック
+/**
+ * @brief 割込みハンドラ初期化ブロック
  */
 typedef struct interrupt_handler_initialization_block {
-    INHNO inhno;        /* 割込みハンドラ番号 */
-    ATR   inhatr;       /* 割込みハンドラ属性 */
-    FP    inthdr;       /* 割込みハンドラの起動番地 */
+    INHNO inhno;        /**< 割込みハンドラ番号 */
+    ATR   inhatr;       /**< 割込みハンドラ属性 */
+    FP    inthdr;       /**< 割込みハンドラの起動番地 */
 } INHINIB;
 
 /*

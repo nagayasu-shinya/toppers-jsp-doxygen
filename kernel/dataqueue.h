@@ -48,25 +48,25 @@
 
 #include "queue.h"
 
-/*
- *  データキュー初期化ブロック
+/**
+ * @brief データキュー初期化ブロック
  */
 typedef struct dataqueue_initialization_block {
-    ATR  dtqatr;    /* データキュー属性 */
-    UINT dtqcnt;    /* データキュー領域の容量 */
-    VP   dtq;       /* データキュー領域の先頭番地 */
+    ATR  dtqatr;    /**< データキュー属性 */
+    UINT dtqcnt;    /**< データキュー領域の容量 */
+    VP   dtq;       /**< データキュー領域の先頭番地 */
 } DTQINIB;
 
-/*
- *  データキュー管理ブロック
+/**
+ * @brief データキュー管理ブロック
  */
 typedef struct dataqueue_control_block {
-    QUEUE swait_queue;      /* データキュー送信待ちキュー */
-    const DTQINIB *dtqinib; /* データキュー初期化ブロックへのポインタ */
-    QUEUE rwait_queue;      /* データキュー受信待ちキュー */
-    UINT  count;            /* データキュー中のデータの数 */
-    UINT  head;             /* 最初のデータの格納場所 */
-    UINT  tail;             /* 最後のデータの格納場所の次 */
+    QUEUE swait_queue;      /**< データキュー送信待ちキュー */
+    const DTQINIB *dtqinib; /**< データキュー初期化ブロックへのポインタ */
+    QUEUE rwait_queue;      /**< データキュー受信待ちキュー */
+    UINT  count;            /**< データキュー中のデータの数 */
+    UINT  head;             /**< 最初のデータの格納場所 */
+    UINT  tail;             /**< 最後のデータの格納場所の次 */
 } DTQCB;
 
 /*

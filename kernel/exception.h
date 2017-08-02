@@ -46,13 +46,13 @@
  * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
 
-/*
- *  CPU例外ハンドラ初期化ブロック
+/**
+ * @brief CPU例外ハンドラ初期化ブロック
  */
 typedef struct cpu_exception_handler_initialization_block {
-    EXCNO excno;        /* CPU例外ハンドラ番号 */
-    ATR   excatr;       /* CPU例外ハンドラ属性 */
-    FP    exchdr;       /* CPU例外ハンドラの起動番地 */
+    EXCNO excno;        /**< CPU例外ハンドラ番号 */
+    ATR   excatr;       /**< CPU例外ハンドラ属性 */
+    FP    exchdr;       /**< CPU例外ハンドラの起動番地 */
 } EXCINIB;
 
 /*

@@ -48,22 +48,22 @@
 
 #include "queue.h"
 
-/*
- *  セマフォ初期化ブロック
+/**
+ * @brief セマフォ初期化ブロック
  */
 typedef struct semaphore_initialization_block {
-    ATR  sematr;     /* セマフォ属性 */
-    UINT isemcnt;    /* セマフォの資源数の初期値 */
-    UINT maxsem;     /* セマフォの最大資源数 */
+    ATR  sematr;     /**< セマフォ属性 */
+    UINT isemcnt;    /**< セマフォの資源数の初期値 */
+    UINT maxsem;     /**< セマフォの最大資源数 */
 } SEMINIB;
 
-/*
- *  セマフォ管理ブロック
+/**
+ * @brief セマフォ管理ブロック
  */
 typedef struct semaphore_control_block {
-    QUEUE wait_queue;        /* セマフォ待ちキュー */
-    const SEMINIB *seminib;  /* セマフォ初期化ブロックへのポインタ */
-    UINT  semcnt;            /* セマフォ現在カウント値 */
+    QUEUE wait_queue;        /**< セマフォ待ちキュー */
+    const SEMINIB *seminib;  /**< セマフォ初期化ブロックへのポインタ */
+    UINT  semcnt;            /**< セマフォ現在カウント値 */
 } SEMCB;
 
 /*

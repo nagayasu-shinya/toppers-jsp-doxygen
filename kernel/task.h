@@ -88,8 +88,8 @@
 #define TSTAT_WAITING(tstat)    (((tstat) & TS_WAITING)   != 0)
 #define TSTAT_SUSPENDED(tstat)  (((tstat) & TS_SUSPENDED) != 0)
 
-/*
- *  待ち情報ブロック（WINFO）の定義
+/**
+ * @brief 待ち情報ブロック（WINFO）の定義
  *
  *  タスクが待ち状態の間は，TCB およびそこから指される WINFO を次のよ
  *  うに設定しなければならない．
@@ -131,12 +131,12 @@
  *  を使っている．
  */
 typedef union waiting_information {
-    ER     wercd;      /* 待ち解除時のエラーコード */
-    TMEVTB *tmevtb;    /* 待ち状態用のタイムイベントブロック */
+    ER     wercd;      /**< 待ち解除時のエラーコード */
+    TMEVTB *tmevtb;    /**< 待ち状態用のタイムイベントブロック */
 } WINFO;
 
-/*
- *  タスク初期化ブロック
+/**
+ * @brief タスク初期化ブロック
  *
  *  タスクに関する情報を，値が変わらないためにROMに置ける部分（タスク
  *  初期化ブロック）と，値が変化するためにRAMに置かなければならない部
@@ -149,15 +149,15 @@ typedef union waiting_information {
  *  ンに関する情報も含む．
  */
 typedef struct task_initialization_block {
-    ATR    tskatr;      /* タスク属性 */
-    VP_INT exinf;       /* タスクの拡張情報 */
-    FP     task;        /* タスクの起動番地 */
-    UINT   ipriority;   /* タスクの起動時優先度（内部表現） */
-    SIZE   stksz;       /* スタック領域のサイズ（丸めた値） */
-    VP     stk;         /* スタック領域の先頭番地 */
+    ATR    tskatr;      /**< タスク属性 */
+    VP_INT exinf;       /**< タスクの拡張情報 */
+    FP     task;        /**< タスクの起動番地 */
+    UINT   ipriority;   /**< タスクの起動時優先度（内部表現） */
+    SIZE   stksz;       /**< スタック領域のサイズ（丸めた値） */
+    VP     stk;         /**< スタック領域の先頭番地 */
 
-    ATR   texatr;       /* タスク例外処理ルーチン属性 */
-    FP    texrtn;       /* タスク例外処理ルーチンの起動番地 */
+    ATR   texatr;       /**< タスク例外処理ルーチン属性 */
+    FP    texrtn;       /**< タスク例外処理ルーチンの起動番地 */
 } TINIB;
 
 /*
@@ -174,8 +174,8 @@ typedef struct task_initialization_block {
 #define    TBIT_TCB_PRIORITY    4    /* priority フィールドのビット幅 */
 #endif /* TBIT_TCB_PRIORITY */
 
-/*
- *  タスク管理ブロック（TCB）
+/**
+ * @brief タスク管理ブロック（TCB）
  *
  *  JSPでは，タスクの起動要求キューイング数の最大値（TMAX_ACTCNT）と起
  *  床要求キューイング数の最大値（TMAX_WUPCNT）は 1 に固定されているた
@@ -184,18 +184,18 @@ typedef struct task_initialization_block {
  *  いるので，強制待ち要求ネスト数（suscnt）は必要ない．
  */
 typedef struct task_control_block {
-    QUEUE task_queue;      /* タスクキュー */
-    const TINIB *tinib;    /* タスク初期化ブロックへのポインタ */
+    QUEUE task_queue;      /**< タスクキュー */
+    const TINIB *tinib;    /**< タスク初期化ブロックへのポインタ */
 
-    unsigned int tstat    : TBIT_TCB_TSTAT;    /* タスク状態（内部表現）*/
-    unsigned int priority : TBIT_TCB_PRIORITY; /* 現在の優先度（内部表現）*/
-    unsigned int actcnt   : 1;        /* 起動要求キューイング */
-    unsigned int wupcnt   : 1;        /* 起床要求キューイング */
-    unsigned int enatex   : 1;        /* タスク例外処理許可状態 */
+    unsigned int tstat    : TBIT_TCB_TSTAT;    /**< タスク状態（内部表現）*/
+    unsigned int priority : TBIT_TCB_PRIORITY; /**< 現在の優先度（内部表現）*/
+    unsigned int actcnt   : 1;        /**< 起動要求キューイング */
+    unsigned int wupcnt   : 1;        /**< 起床要求キューイング */
+    unsigned int enatex   : 1;        /**< タスク例外処理許可状態 */
 
-    TEXPTN texptn;     /* 保留例外要因 */
-    WINFO  *winfo;     /* 待ち情報ブロックへのポインタ */
-    CTXB   tskctxb;    /* タスクコンテキストブロック */
+    TEXPTN texptn;     /**< 保留例外要因 */
+    WINFO  *winfo;     /**< 待ち情報ブロックへのポインタ */
+    CTXB   tskctxb;    /**< タスクコンテキストブロック */
 } TCB;
 
 /*

@@ -48,21 +48,21 @@
 
 #include "queue.h"
 
-/*
- *  イベントフラグ初期化ブロック
+/**
+ * @brief イベントフラグ初期化ブロック
  */
 typedef struct eventflag_initialization_block {
-    ATR    flgatr;     /* イベントフラグ属性 */
-    FLGPTN iflgptn;    /* イベントフラグのビットパターンの初期値 */
+    ATR    flgatr;     /**< イベントフラグ属性 */
+    FLGPTN iflgptn;    /**< イベントフラグのビットパターンの初期値 */
 } FLGINIB;
 
-/*
- *  イベントフラグ管理ブロック
+/**
+ * @brief イベントフラグ管理ブロック
  */
 typedef struct eventflag_control_block {
-    QUEUE wait_queue;    /* イベントフラグ待ちキュー */
-    const FLGINIB *flginib;    /* イベントフラグ初期化ブロックへのポインタ */
-    FLGPTN flgptn;        /* イベントフラグ現在パターン */
+    QUEUE wait_queue;       /**< イベントフラグ待ちキュー */
+    const FLGINIB *flginib; /**< イベントフラグ初期化ブロックへのポインタ */
+    FLGPTN flgptn;          /**< イベントフラグ現在パターン */
 } FLGCB;
 
 /*
