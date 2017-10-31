@@ -374,7 +374,7 @@ extern void exit_task(void);
  */
 extern BOOL change_priority(TCB *tcb, UINT newpri);
 
-/**
+/** 
  * @brief レディキューの回転
  *
  * レディキュー中の，pri で指定される優先度のタスクキューを回転させる．
