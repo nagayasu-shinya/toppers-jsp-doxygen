@@ -52,41 +52,46 @@
 #include "time_event.h"
 
 /*
- *  タスク優先度の内部表現・外部表現変換マクロ
+ * タスク優先度の内部表現・外部表現変換マクロ
  */
 #define INT_PRIORITY(x) ((UINT) ((x) - TMIN_TPRI))
 #define EXT_TSKPRI(x)   ((PRI)   (x) + TMIN_TPRI)
 
-/*
- *  タスク状態の内部表現
- *
- *  TCB 中のタスク状態では，実行状態（RUNNING）と実行可能状態（READY）
- *  は区別しない．両状態を総称して，実行できる状態（RUNNABLE）と呼ぶ．
- *  二重待ち状態は，(TS_WAITING | TS_SUSPENDED) で表す．TS_WAIT_????
- *  は，待ち状態に伴う付属状態を表し，待ち状態（二重待ち状態を含む）の
- *  場合にのみ設定される．
- */
-#define TS_DORMANT   0x00u    /* 休止状態 */
-#define TS_RUNNABLE  0x01u    /* 実行できる状態 */
-#define TS_WAITING   0x02u    /* 待ち状態 */
-#define TS_SUSPENDED 0x04u    /* 強制待ち状態 */
 
-#define TS_WAIT_SLEEP  0x08u    /* 起床待ち状態 */
-#define TS_WAIT_WOBJ   0x10u    /* 同期・通信オブジェクトに対する待ち状態 */
-#define TS_WAIT_WOBJCB 0x20u    /* 共通部分の待ちキューにつながっている */
-
-/*
- *  タスク状態判別マクロ
+/**
+ * @name タスク状態の内部表現
  *
- *  TSTAT_DORMANT はタスクが休止状態であるかどうかを，TSTAT_RUNNABLE
- *  はタスクが実行できる状態であるかどうかを判別する．TSTAT_WAITING は
- *  待ち状態と二重待ち状態のいずれかであるかどうかを，TSTAT_SUSPENDED
- *  は強制待ち状態と二重待ち状態のいずれかであるかどうかを判別する．
+ * TCB 中のタスク状態では，実行状態（RUNNING）と実行可能状態（READY）
+ * は区別しない．両状態を総称して，実行できる状態（RUNNABLE）と呼ぶ．
+ * 二重待ち状態は，(TS_WAITING | TS_SUSPENDED) で表す．
+ * TS_WAIT_???? は，待ち状態に伴う付属状態を表し，
+ * 待ち状態（二重待ち状態を含む）の場合にのみ設定される．
  */
-#define TSTAT_DORMANT(tstat)    ((tstat) == TS_DORMANT)
-#define TSTAT_RUNNABLE(tstat)   (((tstat) & TS_RUNNABLE)  != 0)
-#define TSTAT_WAITING(tstat)    (((tstat) & TS_WAITING)   != 0)
-#define TSTAT_SUSPENDED(tstat)  (((tstat) & TS_SUSPENDED) != 0)
+/*@{*/
+#define TS_DORMANT   (0x00u)    /**< 休止状態       */
+#define TS_RUNNABLE  (0x01u)    /**< 実行できる状態 */
+#define TS_WAITING   (0x02u)    /**< 待ち状態       */
+#define TS_SUSPENDED (0x04u)    /**< 強制待ち状態   */
+
+#define TS_WAIT_SLEEP  (0x08u)  /**< 起床待ち状態                           */
+#define TS_WAIT_WOBJ   (0x10u)  /**< 同期・通信オブジェクトに対する待ち状態 */
+#define TS_WAIT_WOBJCB (0x20u)  /**< 共通部分の待ちキューにつながっている   */
+/*@}*/
+
+/**
+ * @name タスク状態判別マクロ
+ *
+ * TSTAT_DORMANT はタスクが休止状態であるかどうかを，
+ * TSTAT_RUNNABLE はタスクが実行できる状態であるかどうかを判別する．
+ * TSTAT_WAITING は待ち状態と二重待ち状態のいずれかであるかどうかを，
+ * TSTAT_SUSPENDED は強制待ち状態と二重待ち状態のいずれかであるかどうかを判別する．
+ */
+/*@{*/
+#define TSTAT_DORMANT(tstat)    ( (tstat) == TS_DORMANT)        /**< タスクが休止状態であるかどうか判別         */
+#define TSTAT_RUNNABLE(tstat)   (((tstat) & TS_RUNNABLE)  != 0) /**< タスクが実行できる状態であるかどうかを判別 */
+#define TSTAT_WAITING(tstat)    (((tstat) & TS_WAITING)   != 0) /**< タスクが待ち状態と二重待ち状態のいずれかであるかどうか判別 */
+#define TSTAT_SUSPENDED(tstat)  (((tstat) & TS_SUSPENDED) != 0) /**< 強制待ち状態と二重待ち状態のいずれかであるかどうかを判別   */
+/*@}*/
 
 /**
  * @brief 待ち情報ブロック（WINFO）の定義
