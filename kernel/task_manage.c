@@ -48,13 +48,17 @@
 #include "task.h"
 #include "wait.h"
 
-/*
- *  タスクの起動
- */
 #ifdef __act_tsk
-
-SYSCALL ER
-act_tsk(ID tskid)
+/**
+ * @brief タスクの起動
+ *
+ * @param[in] 起動対象のタスクの ID 番号
+ * @retval E_OK 正常終了
+ * @retval E_ID 不正 ID 番号（tskid が不正あるいは使用できない）
+ * @retval E_NOEXS オブジェクト未生成（対象タスクが未登録）
+ * @retval E_QOVR  キューイングオーバーフロー（起動要求キューイング数のオーバーフロー）
+ */
+SYSCALL ER act_tsk(ID tskid)
 {
     TCB *tcb;
     ER   ercd;
@@ -90,8 +94,16 @@ exit:
  */
 #ifdef __iact_tsk
 
-SYSCALL ER
-iact_tsk(ID tskid)
+/**
+ * @brief タスクの起動
+ *
+ * @param[in] 起動対象のタスクの ID 番号
+ * @retval E_OK 正常終了
+ * @retval E_ID 不正 ID 番号（tskid が不正あるいは使用できない）
+ * @retval E_NOEXS オブジェクト未生成（対象タスクが未登録）
+ * @retval E_QOVR  キューイングオーバーフロー（起動要求キューイング数のオーバーフロー）
+ */
+SYSCALL ER iact_tsk(ID tskid)
 {
     TCB *tcb;
     ER  ercd;
@@ -155,8 +167,12 @@ exit:
  */
 #ifdef __ext_tsk
 
-SYSCALL void
-ext_tsk(void)
+/**
+ * @brief 自タスクの終了
+ * @return なし
+ * @note このサービスコールからはリターンしない
+ */
+SYSCALL void ext_tsk(void)
 {
     LOG_EXT_TSK_ENTER();
 
