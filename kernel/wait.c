@@ -69,15 +69,14 @@ make_wait_tmout(WINFO *winfo, TMEVTB *tmevtb, TMO tmout)
 
 #endif /* __waimake */
 
-/*
- *  待ち解除のためのタスク状態の更新
+/**
+ * @brief  待ち解除のためのタスク状態の更新
  *
- *  tcb で指定されるタスクを，待ち解除するようタスク状態を更新する．待
- *  ち解除するタスクが実行できる状態になる場合は，レディキューにつなぐ．
- *  また，ディスパッチが必要な場合には TRUE を返す．
+ * tcb で指定されるタスクを，待ち解除するようタスク状態を更新する．
+ * 待ち解除するタスクが実行できる状態になる場合は，レディキューにつなぐ．
+ * また，ディスパッチが必要な場合には TRUE を返す．
  */
-Inline BOOL
-make_non_wait(TCB *tcb)
+Inline BOOL make_non_wait(TCB *tcb)
 {
     assert(TSTAT_WAITING(tcb->tstat));
 
