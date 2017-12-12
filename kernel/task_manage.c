@@ -76,7 +76,7 @@
  * @par μITRON3.0仕様との相違
  * 新設のサービスコールである．
  *
- * @param[in] 起動対象のタスクの ID 番号
+ * @param[in] tskid 起動対象のタスクの ID 番号
  * @retval E_OK 正常終了
  * @retval E_ID 不正 ID 番号（tskid が不正あるいは使用できない）
  * @retval E_NOEXS オブジェクト未生成（対象タスクが未登録）
