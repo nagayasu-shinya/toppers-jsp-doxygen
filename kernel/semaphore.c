@@ -204,6 +204,7 @@ exit:
 
 #endif /* __isig_sem */
 
+
 #ifdef __wai_sem
 
 /**
