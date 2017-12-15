@@ -58,7 +58,7 @@
 #define EXT_TSKPRI(x)   ((PRI)   (x) + TMIN_TPRI)
 
 
-/**
+/*
  * @name タスク状態の内部表現
  *
  * TCB 中のタスク状態では，実行状態（RUNNING）と実行可能状態（READY）は区別しない．
@@ -78,7 +78,7 @@
 #define TS_WAIT_WOBJCB (0x20u)  /**< 共通部分の待ちキューにつながっている   */
 /*@}*/
 
-/**
+/*
  * @name タスク状態判別マクロ
  *
  * TSTAT_DORMANT はタスクが休止状態であるかどうかを，
@@ -139,7 +139,7 @@ typedef union waiting_information {
     TMEVTB *tmevtb;    /**< 待ち状態用のタイムイベントブロック */
 } WINFO;
 
-/**
+/*
  * @brief タスク初期化ブロック
  *
  * タスクに関する情報を，値が変わらないためにROMに置ける部分（タスク初期化ブロック）と，
@@ -162,7 +162,7 @@ typedef struct task_initialization_block {
     FP    texrtn;       /**< タスク例外処理ルーチンの起動番地 */
 } TINIB;
 
-/**
+/*
  * @brief TCB 中のフィールドのビット幅の定義
  *
  * TCB 中のフィールドの配置は，性能に大きく影響すると思われるため，
@@ -176,7 +176,7 @@ typedef struct task_initialization_block {
 #define    TBIT_TCB_PRIORITY    4    /* priority フィールドのビット幅 */
 #endif /* TBIT_TCB_PRIORITY */
 
-/**
+/*
  * @brief タスク管理ブロック（TCB）
  *
  * JSPでは，タスクの起動要求キューイング数の最大値（TMAX_ACTCNT）と起床要求キューイング数の最大値（TMAX_WUPCNT）は
@@ -361,7 +361,7 @@ extern BOOL make_active(TCB *tcb);
  */
 extern void exit_task(void);
 
-/**
+/*
  * @brief レディキュー中のタスクの優先度の変更
  *
  * tcb で指定されるレディキュー中のタスクの優先度を newpri（内部表現） に変更する．
@@ -370,7 +370,7 @@ extern void exit_task(void);
  */
 extern BOOL change_priority(TCB *tcb, UINT newpri);
 
-/**
+/*
  * @brief レディキューの回転
  *
  * レディキュー中の，pri で指定される優先度のタスクキューを回転させる．
@@ -380,7 +380,7 @@ extern BOOL change_priority(TCB *tcb, UINT newpri);
  */
 extern BOOL rotate_ready_queue(UINT pri);
 
-/**
+/*
  * @brief タスク例外処理ルーチンの呼出し
  *
  * タスク例外処理ルーチンを呼び出す．呼び出す前に，実行状態のタスクの
@@ -394,7 +394,7 @@ extern BOOL rotate_ready_queue(UINT pri);
  */
 extern void call_texrtn(void);
 
-/**
+/*
  * @brief タスク例外処理ルーチンの起動
  *
  * 実行状態のタスクがタスク例外処理ルーチンの起動条件を満たしていれば，

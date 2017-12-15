@@ -150,7 +150,7 @@ exit:
  * @retval E_OK 正常終了
  * @retval E_PAR パラメータエラー（tskpriが不正）
  */
-SYSCALL ERirot_rdq(PRI tskpri)
+SYSCALL ER irot_rdq(PRI tskpri)
 {
     ER ercd;
 
@@ -468,7 +468,7 @@ exit:
  *     if (!dispatch_disabled)
  *         ena_dsp();
  * }
- * @endocode
+ * @endcode
  *
  * @par μITRON3.0仕様との相違
  * ディスパッチ禁止状態の意味を変更した．
