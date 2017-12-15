@@ -120,13 +120,35 @@ tmevtb_enqueue_cyc(CYCCB *cyccb, EVTTIM evttim)
 
 #endif /* __cycenq */
 
-/*
- *  周期ハンドラの動作開始
- */
 #ifdef __sta_cyc
 
-SYSCALL ER
-sta_cyc(ID cycid)
+/**
+ * @brief 周期ハンドラの動作開始
+ *
+ * @par 機能
+ * cycidで指定される周期ハンドラを，動作している状態に移行させる．
+ * \n
+ * 周期ハンドラ属性にTA_PHS（＝ 0x04）が指定されていない場合には，
+ * このサービスコールが呼び出された時刻に，周期ハンドラの起動周期を加えた時刻を，
+ * 周期ハンドラを次に起動すべき時刻とする．
+ * \n
+ * 対象周期ハンドラに，
+ * 周期ハンドラ属性にTA_PHSが指定されていない動作している状態の周期ハンドラが指定された場合には，
+ * 周期ハンドラを次に起動すべき時刻の再設定のみを行う．
+ * 対象周期ハンドラに，TA_PHS が指定されている動作している状態の周期ハンドラが指定された場合には，何もしない．
+ *
+ * @par μITRON3.0仕様との相違
+ * 周期ハンドラの活性制御を行うサービスコール（act_cyc）の機能を，
+ * 周期ハンドラの動作を開始するサービスコール（sta_cyc）と停止するサービスコール（stp_cyc）に分割した．
+ * μITRON3.0仕様のact_cycでカウントを初期化する指定（TCY_INI）は，
+ * 周期ハンドラ属性でTA_PHSを指定しない場合に対応する．
+ *
+ * @param[in] cycid 動作開始対象の周期ハンドラのID番号
+ * @retval E_OK    正常終了
+ * @retval E_ID    不正ID番号（cycidが不正あるいは使用できない）
+ * @retval E_NOEXS オブジェクト未生成（対象周期ハンドラが未登録）
+ */
+SYSCALL ER sta_cyc(ID cycid)
 {
     CYCCB *cyccb;
     ER    ercd;
@@ -139,8 +161,7 @@ sta_cyc(ID cycid)
     t_lock_cpu();
     if (cyccb->cycsta) {
         tmevtb_dequeue(&(cyccb->tmevtb));
-    }
-    else {
+    } else {
         cyccb->cycsta = TRUE;
     }
     tmevtb_enqueue_cyc(cyccb, base_time + cyccb->cycinib->cyctim);
@@ -154,13 +175,26 @@ exit:
 
 #endif /* __sta_cyc */
 
-/*
- *  周期ハンドラの動作停止
- */
 #ifdef __stp_cyc
 
-SYSCALL ER
-stp_cyc(ID cycid)
+/**
+ * @brief 周期ハンドラの動作停止
+ *
+ * @par 機能
+ * cycidで指定される周期ハンドラを動作していない状態に移行させる．
+ * 対象周期ハンドラに，動作していない状態の周期ハンドラが指定された場合には，
+ * 何もしない．
+ *
+ * @par μITRON3.0仕様との相違
+ * 周期ハンドラの活性制御を行うサービスコール（act_cyc）の機能を，
+ * 周期ハンドラの動作を開始するサ
+ *
+ * @param[in] cycid 動作停止対象の周期ハンドラのID番号
+ * @retval E_OK    正常終了
+ * @retval E_ID    不正ID番号（cycidが不正あるいは使用できない）
+ * @retval E_NOEXS オブジェクト未生成（対象周期ハンドラが未登録）
+ */
+SYSCALL ER stp_cyc(ID cycid)
 {
     CYCCB *cyccb;
     ER    ercd;
