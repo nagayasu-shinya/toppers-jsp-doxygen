@@ -2049,7 +2049,8 @@ __mpfini  __mpfget   __get_mpf  __pget_mpf __tget_mpf __rel_mpf \
 __cycini  __cycenq   __sta_cyc  __stp_cyc  __cyccal \
 __mpfini  __mpfget   __get_mpf  __pget_mpf __tget_mpf __rel_mpf \
 __rot_rdq __irot_rdq __get_tid  __iget_tid __loc_cpu  __iloc_cpu __unl_cpu __iunl_cpu __dis_dsp __ena_dsp __sns_ctx __sns_loc __sns_dsp __sns_dpn __vsns_ini \
-__flgini  __flgcnd   __set_flg  __iset_flg __clr_flg  __wai_flg  __pol_flg __twai_flg
+__flgini  __flgcnd   __set_flg  __iset_flg __clr_flg  __wai_flg  __pol_flg __twai_flg \
+__tskini  __tsksched __tskrun   __tsknrun  __tskdmt   __tskact   __tskext  __tskpri __tskrot __tsktex
 
 
 # If the MACRO_EXPANSION and EXPAND_ONLY_PREDEF tags are set to YES then this

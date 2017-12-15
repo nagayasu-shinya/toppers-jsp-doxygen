@@ -40,6 +40,7 @@
 
 /**
  * @file タスク管理モジュール
+ *
  * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  * @copyright 2005,2006 by Embedded and Real-Time Systems Laboratory Graduate School of Information Science, Nagoya Univ., JAPAN
  */
@@ -50,32 +51,32 @@
 
 #ifdef __tskini
 
-/**
+/*
  * @brief 実行状態のタスク
  */
 TCB *runtsk;
 
-/**
+/*
  * @brief 最高優先順位のタスク
  */
 TCB *schedtsk;
 
-/**
+/*
  * @brief タスクディスパッチ／タスク例外処理ルーチン起動要求フラグ
  */
 BOOL reqflg;
 
-/**
+/*
  * @brief  タスクディスパッチ許可状態
  */
 BOOL enadsp;
 
-/**
+/*
  * @brief レディキュー
  */
 QUEUE ready_queue[TNUM_TPRI];
 
-/**
+/*
  * @brief レディキューサーチのためのビットマップ
  *
  * ビットマップを UINT で定義しているが，ビットマップサーチ関数で優先
@@ -83,7 +84,7 @@ QUEUE ready_queue[TNUM_TPRI];
  */
 UINT ready_primap;
 
-/**
+/*
  * @brief タスク管理モジュールの初期化
  */
 void task_initialize(void)
@@ -120,7 +121,7 @@ void task_initialize(void)
 
 #ifndef CPU_BITMAP_SEARCH
 
-/**
+/*
  * @brief ビットマップサーチ関数
  *
  * bitmap 内の 1 のビットの内，最も下位（右）のものをサーチし，
@@ -161,7 +162,7 @@ Inline UINT bitmap_search(UINT bitmap)
 
 #ifdef __tsksched
 
-/**
+/*
  * @brief 最高優先順位タスクのサーチ
  * @return 最高優先順位タスクのTCBへのポインタ
  */
@@ -177,7 +178,7 @@ TCB *search_schedtsk(void)
 
 #ifdef __tskrun
 
-/**
+/*
  * @brief 実行できる状態への移行
  *
  * 最高優先順位のタスクを更新するのは，実行できるタスクがなかった場合と，
@@ -203,7 +204,7 @@ BOOL make_runnable(TCB *tcb)
 
 #ifdef __tsknrun
 
-/**
+/*
  * @brief 実行できる状態から他の状態への移行
  *
  * 最高優先順位のタスクを更新するのは，tcb が最高優先順位のタスクであった場合である．
@@ -235,7 +236,7 @@ BOOL make_non_runnable(TCB *tcb)
 
 #ifdef __tskdmt
 
-/**
+/*
  * @brief 休止状態への移行
  */
 void make_dormant(TCB *tcb)
@@ -253,7 +254,7 @@ void make_dormant(TCB *tcb)
 
 #ifdef __tskact
 
-/**
+/*
  * @brief 休止状態から実行できる状態への移行
  */
 BOOL make_active(TCB *tcb)
@@ -266,7 +267,7 @@ BOOL make_active(TCB *tcb)
 
 #ifdef __tskext
 
-/**
+/*
  * @brief 実行状態のタスクの終了
  */
 void exit_task(void)
@@ -284,7 +285,7 @@ void exit_task(void)
 
 #ifdef __tskpri
 
-/**
+/*
  * @brief レディキュー中のタスクの優先度の変更
  *
  * 最高優先順位のタスクを更新するのは，(1) tcb が最高優先順位のタスク
@@ -322,7 +323,7 @@ BOOL change_priority(TCB *tcb, UINT newpri)
 
 #ifdef __tskrot
 
-/**
+/*
  * @brief レディキューの回転
  *
  * 最高優先順位のタスクを更新するのは，
@@ -378,7 +379,7 @@ void call_texrtn(void)
 
 #ifndef OMIT_CALLTEX
 
-/**
+/*
  * @brief タスク例外処理ルーチンの起動
  * @return なし
  */
