@@ -49,7 +49,7 @@
 #include "task.h"
 #include "time_event.h"
 
-/**
+/*
  * @brief 待ち状態への移行
  *
  * 実行中のタスクを待ち状態に移行させる．具体的には，実行中のタスクをレディキューから削除し，
@@ -62,7 +62,7 @@ Inline void make_wait(WINFO *winfo)
     winfo->tmevtb = NULL;
 }
 
-/**
+/*
  * @brief 待ち状態への移行（タイムアウト指定）
  *
  * 実行中のタスクを，タイムアウト指定付きで待ち状態に移行させる．
@@ -71,7 +71,7 @@ Inline void make_wait(WINFO *winfo)
  */
 extern void make_wait_tmout(WINFO *winfo, TMEVTB *tmevtb, TMO tmout);
 
-/**
+/*
  * @brief 待ち解除
  *
  * tcb で指定されるタスクの待ち状態を解除する．具体的には，
@@ -122,14 +122,14 @@ extern BOOL wait_release(TCB *tcb);
  *  ている場合も，これらのルーチンは使えない．
  */
 
-/**
+/*
  * @brief 同期・通信オブジェクトの初期化ブロックの共通部分
  */
 typedef struct wait_object_initialization_block {
     ATR    wobjatr;    /**< オブジェクト属性 */
 } WOBJINIB;
 
-/**
+/*
  * @brief 同期・通信オブジェクトの管理ブロックの共通部分
  */
 typedef struct wait_object_control_block {
@@ -137,7 +137,7 @@ typedef struct wait_object_control_block {
     const WOBJINIB *wobjinib;      /**< 初期化ブロックへのポインタ */
 } WOBJCB;
 
-/**
+/*
  * @brief 同期・通信オブジェクト待ち情報ブロックの定義
  */
 typedef struct wait_object_waiting_information {
@@ -155,7 +155,7 @@ typedef struct wait_object_waiting_information {
 extern void wobj_make_wait(WOBJCB *wobjcb, WINFO_WOBJ *winfo);
 extern void wobj_make_wait_tmout(WOBJCB *wobjcb, WINFO_WOBJ *winfo, TMEVTB *tmevtb, TMO tmout);
 
-/**
+/*
  * @brief タスク優先度変更時の処理
  *
  * 同期・通信オブジェクトに対する待ち状態にあるタスクの優先度が変更された場合に，

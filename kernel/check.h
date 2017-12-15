@@ -46,7 +46,7 @@
  * @copyright 2000-2003 by Embedded and Real-Time Systems Laboratory Toyohashi Univ. of Technology, JAPAN
  */
 
-/**
+/*
  * @brief 優先度の範囲の判定
  */
 #define VALID_TPRI(tpri) (TMIN_TPRI <= (tpri) && (tpri) <= TMAX_TPRI)
@@ -75,7 +75,7 @@
     }                                                 \
 }
 
-/**
+/*
  * @brief タイムアウト指定値のチェック（E_PAR）
  */
 #define CHECK_TMOUT(tmout) {      \
@@ -85,7 +85,7 @@
     }                             \
 }
 
-/**
+/*
  * @brief その他のパラメータエラーのチェック（E_PAR）
  */
 #define CHECK_PAR(exp) { \

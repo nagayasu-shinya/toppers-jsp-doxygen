@@ -69,7 +69,7 @@ make_wait_tmout(WINFO *winfo, TMEVTB *tmevtb, TMO tmout)
 
 #endif /* __waimake */
 
-/**
+/*
  * @brief  待ち解除のためのタスク状態の更新
  *
  * tcb で指定されるタスクを，待ち解除するようタスク状態を更新する．
